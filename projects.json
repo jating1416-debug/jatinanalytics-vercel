@@ -1,0 +1,14 @@
+[
+  {
+    "id": "project-1",
+    "title": "Indian Financial Fraud Analysis",
+    "category": "Finance / ML",
+    "description": "Comprehensive dataset and exploratory analysis on financial fraud patterns in India.",
+    "tools": ["Python", "SQL", "Power BI", "Pandas"],
+    "preview_csv": "https://raw.githubusercontent.com/jating1416-debug/portfolio/main/projects/fraud_sample.csv",
+    "powerbi_view": "https://app.powerbi.com/view?r=sample_embed_link",
+    "images": [
+      "https://raw.githubusercontent.com/jating1416-debug/portfolio/main/projects/dashboard1.png"
+    ]
+  }
+]

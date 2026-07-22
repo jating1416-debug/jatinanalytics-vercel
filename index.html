@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jatin Kumar | Data Analyst Portfolio</title>
+    <meta name="description" content="Portfolio of Jatin Kumar - Data Analyst specializing in Python, SQL, Power BI, Excel, and Data Cleaning. View projects and datasets.">
+    <meta name="keywords" content="Jatin Kumar, Data Analyst Portfolio, Power BI, Python Data Analysis, Kaggle Datasets">
+    <meta name="author" content="Jatin Kumar">
+
+    <!-- OpenGraph Tags -->
+    <meta property="og:title" content="Jatin Kumar | Data Analyst Portfolio">
+    <meta property="og:description" content="Turning Data into Decisions with Python, SQL, Power BI & Interactive Analytics Tools.">
+    <meta property="og:type" content="website">
+
+    <!-- JSON-LD Schema for AI Crawlers & Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Jatin Kumar",
+      "jobTitle": "Data Analyst",
+      "url": "https://jatinanalytics.com",
+      "sameAs": [
+        "https://www.linkedin.com/in/jatin-kumar-5a46a720a",
+        "https://github.com/jating1416-debug",
+        "https://www.kaggle.com/jatinkhandelwal112"
+      ],
+      "knowsAbout": ["Python", "SQL", "Power BI", "Excel", "Data Cleaning", "Data Visualization", "Pandas", "NumPy"]
+    }
+    </script>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="navbar">
+        <div class="logo">📊 Jatin Kumar <span class="sub-logo">Data Analyst</span></div>
+        <div class="social-header">
+            <a href="https://www.linkedin.com/in/jatin-kumar-5a46a720a" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/jating1416-debug" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+    </header>
+
+    <!-- Google AdSense Top Slot -->
+    <div class="ad-banner">
+        <p>Advertisement Space</p>
+    </div>
+
+    <!-- Main Container with Sidebar + Content Area (Horizontal Tabs) -->
+    <div class="layout-wrapper">
+        
+        <!-- Left Sidebar (Matching App Screenshot) -->
+        <aside class="sidebar">
+            <div class="profile-card">
+                <div class="avatar">👤</div>
+                <h3>Jatin Kumar</h3>
+                <p class="role">Data Analyst</p>
+            </div>
+
+            <div class="nav-guide">
+                <h4>📍 Page Navigation</h4>
+                <p><strong>👆 Use the tabs above to navigate:</strong></p>
+                <ul>
+                    <li>🏠 <b>Home</b> - About & Skills</li>
+                    <li>🎯 <b>Projects</b> - View all 4+ projects</li>
+                    <li>🖼️ <b>Gallery</b> - All visualizations</li>
+                    <li>📊 <b>Kaggle</b> - Datasets Hub</li>
+                    <li>🧹 <b>Tool</b> - Clean Data ℹ️</li>
+                    <li>📄 <b>Resume</b> - Download CV</li>
+                    <li>📬 <b>Contact</b> - Get in touch</li>
+                </ul>
+            </div>
+
+            <div class="sidebar-links">
+                <h4>🔗 Connect With Me</h4>
+                <a href="https://www.linkedin.com/in/jatin-kumar-5a46a720a" target="_blank" class="s-btn linkedin"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://github.com/jating1416-debug" target="_blank" class="s-btn github"><i class="fab fa-github"></i> GitHub</a>
+                <a href="https://www.kaggle.com/jatinkhandelwal112" target="_blank" class="s-btn kaggle"><i class="fab fa-kaggle"></i> Kaggle</a>
+                <a href="mailto:Jating1416@gmail.com" class="s-btn email"><i class="fas fa-envelope"></i> Email</a>
+            </div>
+
+            <div class="status-box">
+                <h4>🎯 Current Status</h4>
+                <span class="badge-success">✅ Open to Opportunities</span>
+                <p>📍 Seeking: Data Analyst / BI Analyst roles</p>
+            </div>
+
+            <a href="resume.pdf" download class="s-btn download-btn">📥 Download Resume</a>
+            
+            <!-- Sidebar Ad Slot -->
+            <div class="ad-sidebar">
+                <p>Ad Space</p>
+            </div>
+        </aside>
+
+        <!-- Right Main Workspace (Tabs View) -->
+        <main class="main-content">
+            
+            <!-- Horizontal Navigation Tabs (Exact Streamlit Look) -->
+            <ul class="tab-menu">
+                <li class="tab-item active" onclick="openTab(event, 'tab-home')">🏠 Home & About Me</li>
+                <li class="tab-item" onclick="openTab(event, 'tab-projects')">🎯 Projects Showcase</li>
+                <li class="tab-item" onclick="openTab(event, 'tab-gallery')">🖼️ All Images Gallery</li>
+                <li class="tab-item" onclick="openTab(event, 'tab-kaggle')">📊 Kaggle Datasets</li>
+                <li class="tab-item" onclick="openTab(event, 'tab-tool')">🧹 Clean & Visualize Tool <span class="info-badge" title="Limits: 150,000 rows max. Memory auto-wipe.">ℹ️</span></li>
+                <li class="tab-item" onclick="openTab(event, 'tab-resume')">📄 Resume & Profile</li>
+                <li class="tab-item" onclick="openTab(event, 'tab-contact')">📬 Contact Me</li>
+            </ul>
+
+            <!-- TAB 1: HOME -->
+            <div id="tab-home" class="tab-content active">
+                <div class="hero-banner">
+                    <h1>👋 Hi, I'm Jatin Kumar</h1>
+                    <h2>Aspiring Data Analyst | Turning Data into Insights</h2>
+                    <p>Passionate about transforming raw data into actionable business intelligence using <strong>Python, SQL, Power BI, and Excel</strong>.</p>
+                </div>
+
+                <h2>👤 About Me</h2>
+                <div class="grid-2col">
+                    <div>
+                        <p>I'm a <strong>fresher Data Analyst</strong> passionate about uncovering insights from data and creating impactful visualizations. With hands-on experience in <strong>Python, SQL, Excel, and Power BI</strong>, I specialize in:</p>
+                        <ul>
+                            <li>📊 <b>Data Cleaning & Transformation</b> - Turning messy data into structured datasets</li>
+                            <li>📈 <b>Dashboard Development</b> - Building interactive Power BI dashboards</li>
+                            <li>💡 <b>Statistical Analysis</b> - Finding patterns and trends</li>
+                            <li>🎯 <b>Business Intelligence</b> - Converting data into actionable recommendations</li>
+                        </ul>
+                        <p>🎓 <b>Background:</b> Self-taught through online courses and practical projects<br>
+                        🔍 <b>Currently:</b> Actively seeking entry-level Data Analyst opportunities<br>
+                        💪 <b>Strength:</b> Quick learner with strong problem-solving skills</p>
+                    </div>
+                    <div class="metrics-card">
+                        <h3>📊 Quick Stats</h3>
+                        <div class="metric-row"><span>Projects Completed</span> <strong>4+ Live</strong></div>
+                        <div class="metric-row"><span>Tools Mastered</span> <strong>6 Tools</strong></div>
+                        <div class="metric-row"><span>Learning Hours</span> <strong>500+ Self-paced</strong></div>
+                        <div class="metric-row"><span>GitHub Repos</span> <strong>4+ Public</strong></div>
+                    </div>
+                </div>
+
+                <hr>
+                <h2>🛠️ Technical Skills & Toolkit</h2>
+                <div class="grid-3col">
+                    <div class="skill-box">
+                        <h3>📊 Data Analysis</h3>
+                        <span class="badge">Python (Pandas, NumPy)</span>
+                        <span class="badge">SQL (MySQL)</span>
+                        <span class="badge">Excel (Advanced)</span>
+                        <span class="badge">Statistics</span>
+                    </div>
+                    <div class="skill-box">
+                        <h3>📈 Visualization</h3>
+                        <span class="badge">Power BI</span>
+                        <span class="badge">DAX Queries</span>
+                        <span class="badge">Matplotlib</span>
+                        <span class="badge">Seaborn</span>
+                    </div>
+                    <div class="skill-box">
+                        <h3>💼 Business Skills</h3>
+                        <span class="badge">Data Storytelling</span>
+                        <span class="badge">KPI Tracking</span>
+                        <span class="badge">Problem Solving</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 2: PROJECTS SHOWCASE -->
+            <div id="tab-projects" class="tab-content">
+                <h2>🎯 Featured Projects Portfolio</h2>
+                <p>Click on any project to view detailed business analysis, dataset previews, and dashboard visual screenshots.</p>
+                <div id="projects-container">
+                    <!-- Dynamic rendering via script.js -->
+                </div>
+            </div>
+
+            <!-- TAB 3: GALLERY -->
+            <div id="tab-gallery" class="tab-content">
+                <h2>🖼️ Complete Portfolio Gallery</h2>
+                <div class="gallery-controls">
+                    <label>🔍 Filter by Project:</label>
+                    <select id="gallery-project-filter" onchange="filterGalleryImages()">
+                        <option value="all">All Projects</option>
+                    </select>
+                </div>
+                <div id="gallery-grid" class="gallery-grid">
+                    <!-- Dynamic 3-column images rendering -->
+                </div>
+            </div>
+
+            <!-- TAB 4: KAGGLE DATASETS -->
+            <div id="tab-kaggle" class="tab-content">
+                <h2>📊 My Kaggle Datasets</h2>
+                <p>All datasets I have created and published on Kaggle. Click the link to access directly.</p>
+                <div class="kaggle-item">
+                    <h3>💰 Financial Fraud | Indian Financial Fraud Dataset</h3>
+                    <p>Comprehensive dataset of financial fraud cases in India. Contains transaction patterns, fraud indicators, and customer data for fraud detection analysis.</p>
+                    <div class="tags">
+                        <span class="badge">Finance</span>
+                        <span class="badge">Fraud Detection</span>
+                        <span class="badge">Python</span>
+                        <span class="badge">ML</span>
+                    </div>
+                    <a href="https://www.kaggle.com/datasets/jatinkhandelwal112/indian-financial-fraud-dataset" target="_blank" class="btn-kaggle">View on Kaggle 🔗</a>
+                </div>
+
+                <div class="kaggle-profile-box">
+                    <h3>🏆 My Kaggle Profile</h3>
+                    <p>All datasets available here</p>
+                    <a href="https://www.kaggle.com/jatinkhandelwal112" target="_blank" class="btn-kaggle-main">Visit Kaggle Profile</a>
+                </div>
+            </div>
+
+            <!-- TAB 5: CLEAN TOOL -->
+            <div id="tab-tool" class="tab-content">
+                <h2>🧹 Clean & Visualize Your Data <span class="info-badge" title="Maximum 150,000 rows limit. Zero data stored after reload.">ℹ️</span></h2>
+                <div class="tool-banner">
+                    <p>🔒 <b>Your data is NOT stored anywhere.</b> Maximum allowed limit is <b>150,000 rows</b>.</p>
+                </div>
+                <!-- Embedded Streamlit Workspace -->
+                <iframe src="https://jatinanalytics.streamlit.app/?embed=true" class="tool-frame" frameborder="0"></iframe>
+            </div>
+
+            <!-- TAB 6: RESUME & PROFESSIONAL PROFILE -->
+<div id="tab-resume" class="tab-content">
+    <h2>📄 Resume & Professional Profile</h2>
+    
+    <div class="resume-wrapper">
+        <!-- Left Side: Main Resume Content -->
+        <div class="resume-main">
+            <h1 class="candidate-name">Jatin Kumar</h1>
+            <p class="candidate-role">Aspiring Data Analyst</p>
+
+            <!-- Education Section -->
+            <div class="resume-section">
+                <h3>🎓 Education</h3>
+                
+                <p class="degree-title"><b>Master's Degree</b></p>
+                <ul>
+                    <li><b>Program:</b> MBA in Operation Management</li>
+                    <li><b>University:</b> Vivekananda Global University</li>
+                    <li><b>Status:</b> Pursuing</li>
+                </ul>
+
+                <p class="degree-title"><b>Bachelor's Degree</b></p>
+                <ul>
+                    <li><b>Program:</b> Bachelor of Computer Application</li>
+                    <li><b>University:</b> Sikkim Alpine University</li>
+                    <li><b>Year:</b> 2022-2025</li>
+                </ul>
+
+                <p class="degree-title"><b>Diploma</b></p>
+                <ul>
+                    <li><b>Program:</b> Diploma in Pharmacy</li>
+                    <li><b>University:</b> Apeejay Stya University</li>
+                    <li><b>Year:</b> 2020-2022</li>
+                </ul>
+            </div>
+
+            <!-- Technical Expertise Section -->
+            <div class="resume-section">
+                <h3>💼 Technical Expertise</h3>
+                <ul>
+                    <li><b>Languages:</b> Python, SQL</li>
+                    <li><b>Tools:</b> Power BI,Dax, Excel, Pandas, NumPy</li>
+                    <li><b>Databases:</b> MySQL</li>
+                    <li><b>Visualization:</b> Matplotlib, Seaborn, Plotly</li>
+                </ul>
+            </div>
+
+            <!-- Key Achievements Section -->
+            <div class="resume-section">
+                <h3>🏆 Key Achievements</h3>
+                <ul class="achievements-list">
+                    <li>✅ Completed 4+ end-to-end data analysis projects</li>
+                    <li>✅ Built interactive dashboards viewed by 100+ users</li>
+                    <li>✅ Self-taught Python and SQL through practical projects</li>
+                    <li>✅ Active contributor on GitHub and Kaggle</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Right Side: Download Options & Portfolio Stats -->
+        <div class="resume-sidebar">
+            <!-- Download Options Card -->
+            <div class="side-card">
+                <h3>🕹️ Download Options</h3>
+                <a href="resume.pdf" download class="btn-download-pdf">
+                    📄 Download Resume (PDF)
+                </a>
+                <div class="status-download">
+                    ✅ Resume available for download
+                </div>
+            </div>
+
+            <!-- Portfolio Stats Card -->
+            <div class="side-card">
+                <h3>📊 Portfolio Stats</h3>
+                
+                <div class="stat-block">
+                    <p class="stat-label">Projects</p>
+                    <p class="stat-number">4+</p>
+                </div>
+
+                <div class="stat-block">
+                    <p class="stat-label">Code Files</p>
+                    <p class="stat-number">15+</p>
+                </div>
+
+                <div class="stat-block">
+                    <p class="stat-label">Visualizations</p>
+                    <p class="stat-number">20+</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            <!-- TAB 7: CONTACT -->
+            <div id="tab-contact" class="tab-content">
+                <h2>📬 Let's Connect!</h2>
+                <div class="grid-4col">
+                    <div class="card-social">
+                        <h2>📧</h2>
+                        <h4>Email</h4>
+                        <a href="mailto:Jating1416@gmail.com">Send Message</a>
+                    </div>
+                    <div class="card-social">
+                        <h2>💼</h2>
+                        <h4>LinkedIn</h4>
+                        <a href="https://www.linkedin.com/in/jatin-kumar-5a46a720a" target="_blank">Connect</a>
+                    </div>
+                    <div class="card-social">
+                        <h2>🐙</h2>
+                        <h4>GitHub</h4>
+                        <a href="https://github.com/jating1416-debug" target="_blank">View Code</a>
+                    </div>
+                    <div class="card-social">
+                        <h2>🏆</h2>
+                        <h4>Kaggle</h4>
+                        <a href="https://www.kaggle.com/jatinkhandelwal112" target="_blank">Explore</a>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- Google AdSense Bottom Slot -->
+    <div class="ad-banner">
+        <p>Advertisement Space</p>
+    </div>
+
+    <footer>
+        <p>Jatin Kumar - Data Analyst Portfolio | © 2026 All Rights Reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
