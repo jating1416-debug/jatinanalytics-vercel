@@ -1,0 +1,9 @@
+[
+  {
+    "category": "💰 Financial Fraud",
+    "name": "Indian Financial Fraud Dataset",
+    "description": "Comprehensive dataset of financial fraud cases in India. Contains transaction patterns, fraud indicators, and customer data for fraud detection analysis.",
+    "link": "https://www.kaggle.com/datasets/jatinkhandelwal112/indian-financial-fraud-dataset",
+    "tags": ["Finance", "Fraud Detection", "Python", "ML"]
+  }
+]
