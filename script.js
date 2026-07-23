@@ -431,7 +431,7 @@ function buildProjectHTML(proj, data) {
     }
   });
 
-  // PBIX Section — VIEW ONLY, NO DOWNLOAD
+    // PBIX Section — VIEW ONLY, NO DOWNLOAD
   let pbixHTML = '';
   if (proj.pbixFiles.length > 0) {
     if (powerbiEmbed) {
@@ -441,6 +441,9 @@ function buildProjectHTML(proj, data) {
           <div class="pbi-embed-wrapper">
             <iframe src="${powerbiEmbed}" title="Power BI Dashboard" allowFullScreen></iframe>
           </div>
+          <a href="${powerbiEmbed}" target="_blank" rel="noopener" class="pbi-fullscreen-link">
+            🔗 Open Full Dashboard in New Tab (View Only)
+          </a>
         </div>`;
     } else {
       pbixHTML = `
@@ -812,4 +815,34 @@ document.addEventListener('DOMContentLoaded', () => {
   initProjectFilters();
   initContactForm();
   loadVisitorCount();
+});
+const form = document.getElementById('contact-form');
+
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const formData = new FormData(form);
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    fetch('https://web3forms.com', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: json
+        })
+        .then(async (response) => {
+            let json = await response.json();
+            if (response.status == 200) {
+                alert("Message Sent Successfully! Jatin will reply soon.");
+                form.reset();
+            } else {
+                alert(json.message);
+            }
+        })
+        .catch(error => {
+            console.log(error);
+            alert("Something went wrong!");
+        });
 });

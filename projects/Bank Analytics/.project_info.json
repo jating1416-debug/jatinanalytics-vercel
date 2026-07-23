@@ -1,0 +1,21 @@
+{
+  "title": "Bank Analytics Dashboard",
+  "tagline": "End-to-end banking data analysis with fraud detection",
+  "overview": "Analyzed 1M+ bank transactions to identify fraud patterns, customer behavior, and branch performance. Built interactive Power BI dashboard for executive reporting.",
+  "objectives": [
+    "Identify high-risk transaction patterns",
+    "Analyze customer segmentation by account type",
+    "Track branch-wise performance metrics",
+    "Build automated fraud detection pipeline"
+  ],
+  "key_insights": [
+    "78% of fraud transactions occurred in amounts between ₹45,000-₹1,25,000",
+    "New accounts (< 6 months) show 3x higher fraud probability",
+    "Metro branches handle 65% of total transaction volume",
+    "Loan default rate highest in Q3 (monsoon season)"
+  ],
+  "tech": ["Python", "Pandas", "NumPy", "Power BI", "DAX", "MySQL", "Excel", "Matplotlib", "Seaborn"],
+  "tags": ["Banking", "Fraud Detection", "Power BI", "Python", "SQL"],
+  "powerbi_embed_url": "https://app.powerbi.com/view?r=eyJrIjoibGRjZGM2OGYtMzNjOS00OWI3LWEzOTctMzQyYmY4ZTA3Y2U2IiwidCI6IjUzMTVhNjkzLTM3MjktNDY0NS1hOTIyLWMxY2EwMTVjNWY1MiJ9",
+  "github_description": "Banking analytics project with fraud detection"
+}

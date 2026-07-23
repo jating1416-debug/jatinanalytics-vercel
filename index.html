@@ -419,30 +419,40 @@
       </div>
 
       <hr>
-      <h3>✉️ Send Me a Direct Message</h3>
+<h3>✉️ Send Me a Direct Message</h3>
 
-      <form id="contact-form" class="contact-form" novalidate>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="form-name">Your Name *</label>
-            <input type="text" id="form-name" placeholder="John Doe" required>
-          </div>
-          <div class="form-group">
-            <label for="form-email">Your Email *</label>
-            <input type="email" id="form-email" placeholder="john@example.com" required>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="form-subject">Subject</label>
-          <input type="text" id="form-subject" placeholder="Job Opportunity / Collaboration / Query">
-        </div>
-        <div class="form-group">
-          <label for="form-message">Message *</label>
-          <textarea id="form-message" rows="5" placeholder="Hi Jatin, I came across your portfolio..." required></textarea>
-        </div>
-        <button type="submit" class="form-submit-btn">📤 Send Message</button>
-        <div id="form-status"></div>
-      </form>
+<!-- Action ko Web3Forms ke secure API link par mod diya hai -->
+<form action="https://web3forms.com" method="POST" id="contact-form" class="contact-form" novalidate>
+  
+  <!-- Bhai, yahan maine aapki asli Access Key bilkul sahi jagah set kar di hai -->
+  <input type="hidden" name="access_key" value="224be4-96c2-4ed7-8ba5-675213ca5199">
+
+  <div class="form-row">
+    <div class="form-group">
+      <label for="form-name">Your Name *</label>
+      <!-- Web3Forms ke liye name="name" add kar diya hai -->
+      <input type="text" id="form-name" name="name" placeholder="John Doe" required>
+    </div>
+    <div class="form-group">
+      <label for="form-email">Your Email *</label>
+      <!-- Web3Forms ke liye name="email" add kar diya hai -->
+      <input type="email" id="form-email" name="email" placeholder="john@example.com" required>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="form-subject">Subject</label>
+    <!-- Web3Forms ke liye name="subject" add kar diya hai -->
+    <input type="text" id="form-subject" name="subject" placeholder="Job Opportunity / Collaboration / Query">
+  </div>
+  <div class="form-group">
+    <label for="form-message">Message *</label>
+    <!-- Web3Forms ke liye name="message" add kar diya hai -->
+    <textarea id="form-message" name="message" rows="5" placeholder="Hi Jatin, I came across your portfolio..." required></textarea>
+  </div>
+  <button type="submit" class="form-submit-btn">📤 Send Message</button>
+  <div id="form-status"></div>
+</form>
+
 
       <hr>
       <div class="grid-2col" style="margin-top:20px;">

@@ -691,6 +691,25 @@ hr {
   color: #c05621;
 }
 
+.pbi-fullscreen-link {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background: #f7fafc;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 0.85rem;
+  color: var(--primary);
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.pbi-fullscreen-link:hover {
+  background: #edf2f7;
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
 /* ============================================
    PROJECT - IMAGES GRID
    ============================================ */
@@ -706,18 +725,24 @@ hr {
   border: 1px solid var(--border-color);
   cursor: zoom-in;
   transition: var(--transition);
+  aspect-ratio: 16 / 9;
+  background: #f8fafc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .dash-img-item:hover { box-shadow: var(--shadow-hover); transform: translateY(-2px); }
 
 .dash-img-item img {
   width: 100%;
+  height: 100%;
+  object-fit: contain;
   display: block;
   transition: transform 0.3s;
 }
 
-.dash-img-item:hover img { transform: scale(1.02); }
-
+.dash-img-item:hover img { transform: scale(1.03); }
 /* ============================================
    GALLERY
    ============================================ */
