@@ -198,11 +198,15 @@ function computeStats(headers, dataRows) {
   });
 
   return { headers: ['Metric', ...numericCols.map(c => c.name)], data: statsData };
+  
 }
+
 
 /* ============================================================
    4. GITHUB LIVE STATS (Home Tab)
    ============================================================ */
+   
+
 async function loadGitHubStats() {
   const container = document.getElementById('github-stats-container');
   if (!container) return;
@@ -892,13 +896,47 @@ async function loadVisitorCount() {
 /* ============================================================
    14. INIT
    ============================================================ */
-document.addEventListener('DOMContentLoaded', () => {
+ document.addEventListener('DOMContentLoaded', () => {
+
+  // Page Loader Hide karo
+  const loader = document.getElementById('page-loader');
+  if (loader) {
+    setTimeout(() => {
+      loader.classList.add('hidden');
+      setTimeout(() => loader.remove(), 400);
+    }, 1300);
+  }
+
   loadGitHubStats();
   loadProjects();
   loadKaggleDatasets();
   initProjectFilters();
   initContactForm();
   loadVisitorCount();
+
+    // Scroll Animations
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  function initReveal() {
+    document.querySelectorAll('.reveal, .reveal-left, .reveal-right')
+      .forEach(el => revealObserver.observe(el));
+  }
+
+  initReveal();
+
+  // Tab change hone par bhi animations re-init karo
+  const originalOpenTab = window.openTab;
+  window.openTab = function(evt, tabId) {
+    originalOpenTab(evt, tabId);
+    setTimeout(initReveal, 100);
+  };
 });
 const form = document.getElementById('contact-form');
 
@@ -951,4 +989,184 @@ document.addEventListener('DOMContentLoaded', () => {
       window.location.reload();
     }
   });
+    // Cache Clear Button
+  window.clearCacheManually = function() {
+    const btn = document.getElementById('cache-clear-btn');
+    btn.textContent = '⏳ Clearing...';
+    btn.classList.add('clearing');
+    btn.disabled = true;
+
+    localStorage.removeItem('gh_tree_cache');
+    localStorage.removeItem('gh_tree_cache_time');
+    sessionStorage.clear();
+
+    setTimeout(() => {
+      btn.textContent = '✅ Done! Reloading...';
+      setTimeout(() => window.location.reload(), 800);
+    }, 500);
+  };
+    // ============================================================
+  // AI CHATBOT
+  // ============================================================
+  const CHATBOT_KNOWLEDGE = {
+    greetings: ['hi', 'hello', 'hey', 'namaste', 'hii'],
+    
+    answers: {
+      projects: {
+        keywords: ['project', 'built', 'made', 'work', 'portfolio', 'kaam'],
+        response: `📊 <b>Jatin has built 4+ projects:</b><br><br>
+          🏦 <b>Bank Analytics</b> - Banking intelligence dashboard with fraud detection using Power BI & SQL<br><br>
+          🛒 <b>Ecommerce Sales Analysis</b> - Sales trends and customer behavior analysis<br><br>
+          👥 <b>HR Analytics</b> - Employee performance and attrition analysis<br><br>
+          🍕 <b>Zomato Analytics</b> - Food delivery data analysis and insights<br><br>
+          Click the <b>Projects tab</b> to explore each one in detail!`
+      },
+      skills: {
+        keywords: ['skill', 'know', 'technology', 'tech', 'expertise', 'languages'],
+        response: `🛠️ <b>Jatin's Technical Skills:</b><br><br>
+          🐍 <b>Python</b> - Pandas, NumPy, Matplotlib, Seaborn, Plotly<br>
+          🗄️ <b>SQL</b> - MySQL, Data Querying, Joins<br>
+          📊 <b>Power BI</b> - DAX, Data Modeling, Interactive Dashboards<br>
+          📋 <b>Excel</b> - Advanced formulas, Pivot Tables<br>
+          🤖 <b>Machine Learning</b> - Basics, Fraud Detection<br>
+          ☁️ <b>Tools</b> - GitHub, Streamlit, Vercel`
+      },
+      contact: {
+        keywords: ['contact', 'reach', 'email', 'connect', 'hire', 'touch'],
+        response: `📬 <b>Contact Jatin:</b><br><br>
+          📧 <b>Email:</b> jatin@jatinanalytics.co.in<br>
+          💼 <b>LinkedIn:</b> linkedin.com/in/jatin-kumar-5a46a720a<br>
+          🐙 <b>GitHub:</b> github.com/jating1416-debug<br>
+          🏆 <b>Kaggle:</b> kaggle.com/jatinkhandelwal112<br><br>
+          Or use the <b>Contact tab</b> to send a direct message!`
+      },
+      bank: {
+        keywords: ['bank', 'banking', 'financial', 'loan', 'transaction'],
+        response: `🏦 <b>Bank Analytics Project:</b><br><br>
+          Built an interactive <b>Digital Banking Intelligence Dashboard</b> using Power BI.<br><br>
+          📌 <b>Key Features:</b><br>
+          • 75K+ customers analyzed<br>
+          • $3bn loan portfolio tracked<br>
+          • Transaction fraud patterns detected<br>
+          • City-wise customer distribution<br><br>
+          🛠️ <b>Tools:</b> Power BI, DAX, SQL, Excel<br><br>
+          Open the Projects tab to see the live dashboard!`
+      },
+      tools: {
+        keywords: ['tool', 'software', 'use', 'powerbi', 'python', 'sql'],
+        response: `⚙️ <b>Tools Jatin Uses:</b><br><br>
+          📊 Power BI + DAX<br>
+          🐍 Python (Pandas, NumPy, Plotly)<br>
+          🗄️ MySQL<br>
+          📋 Excel (Advanced)<br>
+          📓 Jupyter Notebook<br>
+          🐙 GitHub<br>
+          🌐 Streamlit + Vercel<br><br>
+          Total: <b>6+ tools mastered</b> with 500+ hours of practice!`
+      },
+      availability: {
+        keywords: ['available', 'job', 'hire', 'work', 'opportunity', 'fresher', 'open'],
+        response: `💼 <b>Availability:</b><br><br>
+          ✅ <b>Currently Open to Opportunities!</b><br><br>
+          🎯 Looking for:<br>
+          • Data Analyst roles<br>
+          • Business Intelligence Analyst<br>
+          • Power BI Developer<br><br>
+          📍 Open to: Full-time, Internship, Remote/WFH<br>
+          ⏰ Response time: Within 24 hours<br><br>
+          📧 Reach out: jatin@jatinanalytics.co.in`
+      },
+      education: {
+        keywords: ['education', 'degree', 'study', 'college', 'university', 'mba', 'bca'],
+        response: `🎓 <b>Jatin's Education:</b><br><br>
+          📚 <b>MBA</b> - Operation Management<br>
+          Vivekananda Global University (Pursuing)<br><br>
+          💻 <b>BCA</b> - Bachelor of Computer Application<br>
+          Sikkim Alpine University (2022-2025)<br><br>
+          💊 <b>D.Pharm</b> - Diploma in Pharmacy<br>
+          Apeejay Stya University (2020-2022)<br><br>
+          Self-taught in Data Analytics through 500+ hours of practical projects!`
+      },
+      kaggle: {
+        keywords: ['kaggle', 'dataset', 'data', 'published'],
+        response: `🏆 <b>Kaggle Contributions:</b><br><br>
+          📦 <b>Indian Financial Fraud Dataset</b><br>
+          Comprehensive dataset with 50,000+ fraud cases from Indian banking sector.<br><br>
+          🏷️ Tags: Finance, Fraud Detection, Python, ML<br><br>
+          Visit the <b>Kaggle tab</b> for direct links, or go to:<br>
+          kaggle.com/jatinkhandelwal112`
+      }
+    },
+    
+    fallback: `🤔 I didn't quite understand that. Here's what I can help with:<br><br>
+      • 📊 <b>Projects</b> - Ask about any specific project<br>
+      • 🛠️ <b>Skills</b> - Python, SQL, Power BI expertise<br>
+      • 📬 <b>Contact</b> - How to reach Jatin<br>
+      • 🎓 <b>Education</b> - Academic background<br>
+      • 💼 <b>Availability</b> - Job opportunities<br>
+      • 🏆 <b>Kaggle</b> - Published datasets<br><br>
+      Try asking: "<i>What projects has Jatin built?</i>"`
+  };
+
+  window.toggleChatbot = function() {
+    const box = document.getElementById('chatbot-box');
+    box.classList.toggle('chatbot-hidden');
+    if (!box.classList.contains('chatbot-hidden')) {
+      document.getElementById('chatbot-input')?.focus();
+    }
+  };
+
+  window.askQuestion = function(question) {
+    document.getElementById('chatbot-input').value = question;
+    sendChatMessage();
+  };
+
+  window.sendChatMessage = function() {
+    const input = document.getElementById('chatbot-input');
+    const messages = document.getElementById('chatbot-messages');
+    const text = input.value.trim();
+    if (!text) return;
+
+    // User message
+    const userDiv = document.createElement('div');
+    userDiv.className = 'user-msg';
+    userDiv.textContent = text;
+    messages.appendChild(userDiv);
+    input.value = '';
+
+    // Typing indicator
+    const typing = document.createElement('div');
+    typing.className = 'typing-indicator';
+    typing.innerHTML = '<div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div>';
+    messages.appendChild(typing);
+    messages.scrollTop = messages.scrollHeight;
+
+    // Response generate karo
+    setTimeout(() => {
+      typing.remove();
+      const response = generateChatResponse(text.toLowerCase());
+      const botDiv = document.createElement('div');
+      botDiv.className = 'bot-msg';
+      botDiv.innerHTML = response;
+      messages.appendChild(botDiv);
+      messages.scrollTop = messages.scrollHeight;
+    }, 900);
+  };
+
+  function generateChatResponse(text) {
+    // Greetings check
+    if (CHATBOT_KNOWLEDGE.greetings.some(g => text.includes(g))) {
+      return `👋 Hello! Great to meet you!<br><br>I'm Jatin's Portfolio AI. I can tell you about his <b>projects, skills, experience, and how to contact him</b>.<br><br>What would you like to know?`;
+    }
+
+    // Knowledge base check
+    for (const [key, data] of Object.entries(CHATBOT_KNOWLEDGE.answers)) {
+      if (data.keywords.some(kw => text.includes(kw))) {
+        return data.response;
+      }
+    }
+
+    // Fallback
+    return CHATBOT_KNOWLEDGE.fallback;
+  }
 });

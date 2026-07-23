@@ -16,8 +16,11 @@
   <meta property="og:title" content="Jatin Kumar | Data Analyst Portfolio">
   <meta property="og:description" content="Turning Data into Decisions - Python, SQL, Power BI, Excel. View live projects and dashboards.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://jatinanalytics.co.in/">
   <meta property="og:image" content="https://jatinanalytics.co.in/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Jatin Kumar - Data Analyst Portfolio">
+  <meta property="og:image:type" content="image/png"> 
   <meta property="og:site_name" content="Jatin Kumar Portfolio">
 
   <!-- Twitter Card -->
@@ -49,6 +52,37 @@
   }
   </script>
 
+    <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+
+    // Custom Events Track karo
+    function trackTabClick(tabName) {
+      gtag('event', 'tab_click', {
+        'event_category': 'Navigation',
+        'event_label': tabName
+      });
+    }
+
+    function trackProjectOpen(projectName) {
+      gtag('event', 'project_view', {
+        'event_category': 'Projects',
+        'event_label': projectName
+      });
+    }
+
+    function trackDownload(fileName) {
+      gtag('event', 'file_download', {
+        'event_category': 'Downloads',
+        'event_label': fileName
+      });
+    }
+  </script>
+
   <!-- Styles -->
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -57,6 +91,21 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
 </head>
 <body>
+
+
+<!-- PAGE LOADER -->
+<div id="page-loader">
+  <div class="loader-content">
+    <div class="loader-logo">📊</div>
+    <div class="loader-bar-wrapper">
+      <div class="loader-bar"></div>
+    </div>
+    <p class="loader-text">Loading Portfolio...</p>
+  </div>
+</div>
+
+<!-- ==================== NAVBAR ==================== -->
+<header class="navbar">
 
 <!-- ==================== NAVBAR ==================== -->
 <header class="navbar">
@@ -70,12 +119,6 @@
     </a>
   </div>
 </header>
-
-<!-- ==================== TOP AD ==================== -->
-<div class="ad-banner" aria-label="Advertisement">
-  <!-- Google AdSense code here -->
-  <p>Advertisement</p>
-</div>
 
 <!-- ==================== MAIN LAYOUT ==================== -->
 <div class="layout-wrapper">
@@ -138,23 +181,21 @@
   <main class="main-content">
 
     <!-- TAB NAVIGATION -->
-    <ul class="tab-menu" role="tablist">
-      <li class="tab-item active" role="tab" onclick="openTab(event,'tab-home')" aria-selected="true">🏠 Home & About Me</li>
-      <li class="tab-item" role="tab" onclick="openTab(event,'tab-projects')" aria-selected="false">🎯 Projects Showcase</li>
-      <li class="tab-item" role="tab" onclick="openTab(event,'tab-gallery')" aria-selected="false">🖼️ All Images Gallery</li>
-      <li class="tab-item" role="tab" onclick="openTab(event,'tab-kaggle')" aria-selected="false">📊 Kaggle Datasets</li>
-      <li class="tab-item" role="tab" onclick="openTab(event,'tab-tool')" aria-selected="false">
-        🧹 Clean & Visualize Tool 
-        <span class="info-badge" title="Max 150,000 rows. No data stored after session.">ℹ️</span>
-      </li>
-      <li class="tab-item" role="tab" onclick="openTab(event,'tab-resume')" aria-selected="false">📄 Resume & Profile</li>
-      <li class="tab-item" role="tab" onclick="openTab(event,'tab-contact')" aria-selected="false">📬 Contact Me</li>
-    </ul>
+<li class="tab-item active" role="tab" onclick="openTab(event,'tab-home'); trackTabClick('Home')" aria-selected="true">🏠 Home & About Me</li>
+<li class="tab-item" role="tab" onclick="openTab(event,'tab-projects'); trackTabClick('Projects')" aria-selected="false">🎯 Projects Showcase</li>
+<li class="tab-item" role="tab" onclick="openTab(event,'tab-gallery'); trackTabClick('Gallery')" aria-selected="false">🖼️ All Images Gallery</li>
+<li class="tab-item" role="tab" onclick="openTab(event,'tab-kaggle'); trackTabClick('Kaggle')" aria-selected="false">📊 Kaggle Datasets</li>
+<li class="tab-item" role="tab" onclick="openTab(event,'tab-tool'); trackTabClick('CleanTool')" aria-selected="false">
+  🧹 Clean & Visualize Tool
+  <span class="info-badge" title="Max 150,000 rows. No data stored after session.">ℹ️</span>
+</li>
+<li class="tab-item" role="tab" onclick="openTab(event,'tab-resume'); trackTabClick('Resume')" aria-selected="false">📄 Resume & Profile</li>
+<li class="tab-item" role="tab" onclick="openTab(event,'tab-contact'); trackTabClick('Contact')" aria-selected="false">📬 Contact Me</li>
 
     <!-- ==================== TAB 1: HOME ==================== -->
     <div id="tab-home" class="tab-content active" role="tabpanel">
       
-      <div class="hero-banner">
+      <div class="hero-banner reveal">
         <h1>👋 Hi, I'm Jatin Kumar</h1>
         <h2>Aspiring Data Analyst | Turning Data into Insights</h2>
         <p>Passionate about transforming raw data into actionable business intelligence using <strong>Python, SQL, Power BI, and Excel</strong>.</p>
@@ -174,7 +215,7 @@
           🔍 <b>Currently:</b> Actively seeking entry-level Data Analyst opportunities<br>
           💪 <b>Strength:</b> Quick learner with strong problem-solving skills</p>
         </div>
-        <div class="metrics-card">
+        <div class="metrics-card reveal-right">
           <h3>📊 Quick Stats</h3>
           <div class="metric-row"><span>Projects Completed</span><strong>4+ Live</strong></div>
           <div class="metric-row"><span>Tools Mastered</span><strong>6 Tools</strong></div>
@@ -200,21 +241,23 @@
 
       <h2>🛠️ Technical Skills & Toolkit</h2>
       <div class="grid-3col">
-        <div class="skill-box">
+         <div class="skill-box reveal delay-1">
           <h3>📊 Data Analysis</h3>
           <span class="badge">Python (Pandas, NumPy)</span>
           <span class="badge">SQL (MySQL)</span>
           <span class="badge">Excel (Advanced)</span>
           <span class="badge">Statistics</span>
         </div>
-        <div class="skill-box">
+          <div class="skill-box reveal delay-2">
+    <h3>📈 Visualization</h3>
           <h3>📈 Visualization</h3>
           <span class="badge">Power BI</span>
           <span class="badge">DAX Queries</span>
           <span class="badge">Matplotlib</span>
           <span class="badge">Seaborn</span>
         </div>
-        <div class="skill-box">
+          <div class="skill-box reveal delay-3">
+    <h3>💼 Business Skills</h3>
           <h3>💼 Business Skills</h3>
           <span class="badge">Data Storytelling</span>
           <span class="badge">KPI Tracking</span>
@@ -474,17 +517,15 @@
   </main>
 </div>
 
-<!-- ==================== BOTTOM AD ==================== -->
-<div class="ad-banner" aria-label="Advertisement">
-  <p>Advertisement</p>
-</div>
-
 <!-- ==================== FOOTER ==================== -->
 <footer>
   <p><strong>Jatin Kumar</strong> - Data Analyst Portfolio | © 2026 All Rights Reserved</p>
   <p class="visitor-line">
     👁️ Total Visitors: <strong id="visitor-count">...</strong>
   </p>
+  <button id="cache-clear-btn" onclick="clearCacheManually()" title="Clear cache to see latest updates">
+    🔄 Refresh Data
+  </button>
   <p class="footer-links">
     <a href="/sitemap.xml">Sitemap</a> | 
     <a href="mailto:jatin@jatinanalytics.co.in">Contact</a>
@@ -500,13 +541,40 @@
     <p id="lightbox-caption"></p>
   </div>
 </div>
-
-<!-- EmailJS -->
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script>
-  // EmailJS init - apni keys daalo
-  // emailjs.init('YOUR_PUBLIC_KEY');
-</script>
+<!-- AI Chatbot Widget -->
+<div id="chatbot-widget">
+  <button id="chatbot-toggle" onclick="toggleChatbot()" title="Ask me about my projects!">
+    💬
+  </button>
+  <div id="chatbot-box" class="chatbot-hidden">
+    <div class="chatbot-header">
+      <span>🤖 Ask Jatin's Portfolio AI</span>
+      <button onclick="toggleChatbot()" class="chatbot-close-btn">✕</button>
+    </div>
+    <div id="chatbot-messages" class="chatbot-messages">
+      <div class="bot-msg">
+        👋 Hi! I'm Jatin's Portfolio Assistant.<br><br>
+        Ask me anything about his projects, skills, or experience!<br><br>
+        <b>Quick Questions:</b>
+      </div>
+      <div class="quick-questions">
+        <button onclick="askQuestion('What projects has Jatin built?')">📊 Projects</button>
+        <button onclick="askQuestion('What are Jatin skills?')">🛠️ Skills</button>
+        <button onclick="askQuestion('How to contact Jatin?')">📬 Contact</button>
+        <button onclick="askQuestion('Tell me about Bank Analytics project')">🏦 Bank Project</button>
+        <button onclick="askQuestion('What tools does Jatin use?')">⚙️ Tools</button>
+        <button onclick="askQuestion('Is Jatin available for work?')">💼 Availability</button>
+      </div>
+    </div>
+    <div class="chatbot-input-row">
+      <input type="text" 
+             id="chatbot-input" 
+             placeholder="Type your question..." 
+             onkeydown="if(event.key==='Enter') sendChatMessage()">
+      <button onclick="sendChatMessage()">➤</button>
+    </div>
+  </div>
+</div>
 
 <!-- PapaParse (CSV parsing ke liye) -->
 <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
