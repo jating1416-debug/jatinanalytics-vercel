@@ -14,30 +14,68 @@ let GITHUB_TREE_CACHE = null; // Pura repo file list yahan cache hoga
 /* ============================================================
    1. GITHUB API — PURA REPO EK BAAR MEIN SCAN (Recursive)
    ============================================================ */
+// ============================================================
+// GITHUB API — SMART CACHE (Stale While Revalidate)
+// ============================================================
 async function getGitHubTree() {
-  // Session cache check (10 min tak reuse karo - rate limit bachane ke liye)
-  const cached = sessionStorage.getItem('gh_tree_cache');
-  const cachedTime = sessionStorage.getItem('gh_tree_cache_time');
+  const CACHE_KEY = 'gh_tree_cache';
+  const CACHE_TIME_KEY = 'gh_tree_cache_time';
+  const CACHE_DURATION = 30 * 60 * 1000; // 30 minutes
 
-  if (cached && cachedTime && (Date.now() - parseInt(cachedTime) < 10 * 60 * 1000)) {
-    GITHUB_TREE_CACHE = JSON.parse(cached);
-    return GITHUB_TREE_CACHE;
+  const cached = localStorage.getItem(CACHE_KEY);
+  const cachedTime = localStorage.getItem(CACHE_TIME_KEY);
+  const cacheAge = Date.now() - parseInt(cachedTime || '0');
+  const isCacheValid = cached && cacheAge < CACHE_DURATION;
+
+  const headers = {};
+  if (typeof GITHUB_TOKEN !== 'undefined' && GITHUB_TOKEN) {
+    headers['Authorization'] = `token ${GITHUB_TOKEN}`;
   }
 
   const url = `https://api.github.com/repos/${CONFIG.github_user}/${CONFIG.github_repo}/git/trees/${CONFIG.github_branch}?recursive=1`;
 
-  try {
-    const res = await fetch(url);
+  // Fetch function (reuse hoga)
+  async function fetchFreshData() {
+    const res = await fetch(url, { headers });
     if (!res.ok) throw new Error(`GitHub API error: ${res.status}`);
     const data = await res.json();
+    const tree = data.tree || [];
+    localStorage.setItem(CACHE_KEY, JSON.stringify(tree));
+    localStorage.setItem(CACHE_TIME_KEY, Date.now().toString());
+    return tree;
+  }
 
-    GITHUB_TREE_CACHE = data.tree || [];
-    sessionStorage.setItem('gh_tree_cache', JSON.stringify(GITHUB_TREE_CACHE));
-    sessionStorage.setItem('gh_tree_cache_time', Date.now().toString());
+  // Case 1: Cache valid hai → turant dikhao + background refresh
+  if (isCacheValid) {
+    GITHUB_TREE_CACHE = JSON.parse(cached);
+
+    // Background mein silently refresh (user ko pata nahi chalega)
+    fetchFreshData()
+      .then(tree => {
+        GITHUB_TREE_CACHE = tree;
+        console.log('✅ GitHub tree refreshed in background');
+      })
+      .catch(err => {
+        console.warn('⚠️ Background refresh failed (using cache):', err.message);
+      });
 
     return GITHUB_TREE_CACHE;
+  }
+
+  // Case 2: Cache expired ya nahi hai → fresh fetch karo
+  try {
+    const tree = await fetchFreshData();
+    GITHUB_TREE_CACHE = tree;
+    return tree;
   } catch (err) {
     console.error('GitHub tree fetch failed:', err);
+
+    // Purana cache use karo (better than nothing)
+    if (cached) {
+      console.warn('⚠️ Using expired cache (fetch failed)');
+      GITHUB_TREE_CACHE = JSON.parse(cached);
+      return GITHUB_TREE_CACHE;
+    }
     return [];
   }
 }
@@ -353,50 +391,96 @@ async function loadProjectDetails(proj, contentEl) {
     <div class="skeleton-line wide"></div>
   </div>`;
 
-  // ---- Overview load karo (project_info.json ya README.md) ----
   let overview = '', objectives = [], keyInsights = [], tech = [], tags = [], powerbiEmbed = '';
+  let debugInfo = [];
 
-  if (proj.infoFile) {
-    try {
-      const res = await fetch(getRawUrl(proj.infoFile.fullPath));
-      const info = await res.json();
+  // ---- STEP 1: Overview load karo ----
+  try {
+    if (proj.infoFile) {
+      const infoUrl = getRawUrl(proj.infoFile.fullPath);
+      debugInfo.push(`Fetching: ${infoUrl}`);
+      const res = await fetch(infoUrl);
+      
+      if (!res.ok) {
+        throw new Error(`HTTP ${res.status} - File not found at this URL`);
+      }
+      
+      const rawText = await res.text();
+      
+      let info;
+      try {
+        info = JSON.parse(rawText);
+      } catch (jsonErr) {
+        throw new Error(`Invalid JSON syntax: ${jsonErr.message}`);
+      }
+
       overview = info.overview || '';
       objectives = info.objectives || [];
       keyInsights = info.key_insights || [];
       tech = info.tech || [];
       tags = info.tags || [];
       powerbiEmbed = info.powerbi_embed_url || '';
-      proj.tags = tags; // filter ke liye save karo
-    } catch (e) { console.warn('project_info.json parse error', e); }
-  } else if (proj.readmeFile) {
-    try {
+      proj.tags = tags;
+      debugInfo.push('✅ project_info.json loaded successfully');
+
+    } else if (proj.readmeFile) {
       const res = await fetch(getRawUrl(proj.readmeFile.fullPath));
       overview = await res.text();
-    } catch (e) { console.warn('README fetch error', e); }
+      debugInfo.push('✅ README.md loaded (no project_info.json found)');
+    } else {
+      debugInfo.push('⚠️ Neither project_info.json nor README.md found');
+    }
+  } catch (err) {
+    console.error(`[${proj.folder}] Overview load failed:`, err);
+    debugInfo.push(`❌ ERROR: ${err.message}`);
+    overview = `⚠️ Could not load project details: ${err.message}`;
   }
 
   if (tech.length === 0) tech = proj.techUsed;
 
-  // ---- CSV Files preview data load karo ----
-  const csvPreviewData = [];
-  for (const csvFile of proj.csvFiles) {
-    const parsed = await fetchAndParseCSV(getRawUrl(csvFile.fullPath));
-    if (parsed) {
-      csvPreviewData.push({
-        name: csvFile.name,
-        headers: parsed.headers,
-        preview: parsed.dataRows.slice(0, 10),
-        totalRows: parsed.totalRows,
-        totalCols: parsed.totalCols,
-        stats: computeStats(parsed.headers, parsed.dataRows)
-      });
-    }
+  // ---- STEP 2: CSV Files (parallel) ----
+  let csvPreviewData = [];
+  try {
+    const csvPromises = proj.csvFiles.map(csvFile =>
+      fetchAndParseCSV(getRawUrl(csvFile.fullPath)).then(parsed => {
+        if (!parsed) return null;
+        return {
+          name: csvFile.name,
+          headers: parsed.headers,
+          preview: parsed.dataRows.slice(0, 10),
+          totalRows: parsed.totalRows,
+          totalCols: parsed.totalCols,
+          stats: computeStats(parsed.headers, parsed.dataRows)
+        };
+      }).catch(err => {
+        console.error(`CSV load failed: ${csvFile.name}`, err);
+        return null;
+      })
+    );
+
+    const csvResults = await Promise.all(csvPromises);
+    csvPreviewData = csvResults.filter(r => r !== null);
+  } catch (err) {
+    console.error(`[${proj.folder}] CSV loading failed:`, err);
   }
 
-  // ---- HTML Build ----
-  body.innerHTML = buildProjectHTML(proj, {
-    overview, objectives, keyInsights, tech, powerbiEmbed, csvPreviewData
-  });
+  // ---- STEP 3: Render HTML (with try-catch so it NEVER stays blank) ----
+  try {
+    body.innerHTML = buildProjectHTML(proj, {
+      overview, objectives, keyInsights, tech, powerbiEmbed, csvPreviewData
+    });
+  } catch (err) {
+    console.error(`[${proj.folder}] Render failed:`, err);
+    body.innerHTML = `
+      <div class="error-state">
+        <h3>⚠️ Error Loading This Project</h3>
+        <p><strong>Error:</strong> ${err.message}</p>
+        <details style="margin-top:10px; text-align:left; font-size:0.8rem;">
+          <summary>Debug Info (click to expand)</summary>
+          <pre>${debugInfo.join('\n')}</pre>
+        </details>
+      </div>`;
+  }
 }
 
 function buildProjectHTML(proj, data) {
@@ -845,4 +929,26 @@ form.addEventListener('submit', function(e) {
             console.log(error);
             alert("Something went wrong!");
         });
+});
+document.addEventListener('DOMContentLoaded', () => {
+  loadGitHubStats();
+  loadProjects();
+  loadKaggleDatasets();
+  initProjectFilters();
+  initContactForm();
+  loadVisitorCount();
+
+  // ⌨️ SECRET DEVELOPER SHORTCUT
+  // Ctrl + Shift + R dabao = Cache clear + Fresh reload
+  // (Normal users ko pata nahi chalega)
+  document.addEventListener('keydown', (e) => {
+    if (e.ctrlKey && e.shiftKey && e.key === 'R') {
+      e.preventDefault();
+      localStorage.removeItem('gh_tree_cache');
+      localStorage.removeItem('gh_tree_cache_time');
+      sessionStorage.clear();
+      console.log('🔄 Cache cleared! Reloading...');
+      window.location.reload();
+    }
+  });
 });

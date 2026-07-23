@@ -16,6 +16,6 @@
   ],
   "tech": ["Python", "Pandas", "NumPy", "Power BI", "DAX", "MySQL", "Excel", "Matplotlib", "Seaborn"],
   "tags": ["Banking", "Fraud Detection", "Power BI", "Python", "SQL"],
-  "powerbi_embed_url": "https://app.powerbi.com/view?r=eyJrIjoibGRjZGM2OGYtMzNjOS00OWI3LWEzOTctMzQyYmY4ZTA3Y2U2IiwidCI6IjUzMTVhNjkzLTM3MjktNDY0NS1hOTIyLWMxY2EwMTVjNWY1MiJ9",
+  "powerbi_embed_url": "https://app.powerbi.com/view?r=eyJrIjoiMDdjZGM2OGYtMzNjOS00OWI3LWEzOTctMzQyYmY4ZTA3Y2U2IiwidCI6IjUzMTVhNjkzLTM3MjktNDY0NS1hOTIyLWMxY2EwMTVjNWY1MiJ9",
   "github_description": "Banking analytics project with fraud detection"
 }
