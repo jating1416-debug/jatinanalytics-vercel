@@ -2,6 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  
+  <!-- Dark mode flash-fix: theme lagana sabse pehle -->
+  <script>
+    (function() {
+      var theme = localStorage.getItem('theme') || 'light';
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <!-- Primary SEO -->
@@ -52,7 +61,7 @@
   }
   </script>
 
-    <!-- Google Analytics 4 -->
+  <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -60,28 +69,20 @@
     gtag('js', new Date());
     gtag('config', 'G-XXXXXXXXXX');
 
-    // Custom Events Track karo
     function trackTabClick(tabName) {
-      gtag('event', 'tab_click', {
-        'event_category': 'Navigation',
-        'event_label': tabName
-      });
+      gtag('event', 'tab_click', { 'event_category': 'Navigation', 'event_label': tabName });
     }
-
     function trackProjectOpen(projectName) {
-      gtag('event', 'project_view', {
-        'event_category': 'Projects',
-        'event_label': projectName
-      });
+      gtag('event', 'project_view', { 'event_category': 'Projects', 'event_label': projectName });
     }
-
     function trackDownload(fileName) {
-      gtag('event', 'file_download', {
-        'event_category': 'Downloads',
-        'event_label': fileName
-      });
+      gtag('event', 'file_download', { 'event_category': 'Downloads', 'event_label': fileName });
     }
   </script>
+
+  <!-- Google Font for Developer Look -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
 
   <!-- Styles -->
   <link rel="stylesheet" href="style.css">
@@ -89,9 +90,15 @@
   
   <!-- Favicon -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
-</head>
+
+</head> 
 <body>
 
+<!-- ♿ Skip to content (Accessibility) -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- 📊 Scroll Progress Bar -->
+<div id="scroll-progress"></div>
 
 <!-- PAGE LOADER -->
 <div id="page-loader">
@@ -106,11 +113,9 @@
 
 <!-- ==================== NAVBAR ==================== -->
 <header class="navbar">
-
-<!-- ==================== NAVBAR ==================== -->
-<header class="navbar">
   <div class="logo">📊 Jatin Kumar <span class="sub-logo">Data Analyst</span></div>
   <div class="social-header">
+    <button id="dark-mode-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode" title="Toggle dark mode">🌙</button>
     <a href="https://www.linkedin.com/in/jatin-kumar-5a46a720a" target="_blank" rel="noopener" aria-label="LinkedIn">
       <i class="fab fa-linkedin"></i>
     </a>
@@ -123,7 +128,7 @@
 <!-- ==================== MAIN LAYOUT ==================== -->
 <div class="layout-wrapper">
 
-  <!-- ===== SIDEBAR ===== -->
+  <!-- ===== SIDEBAR (Desktop pe ye top bar ban jayega — CSS media query dekho) ===== -->
   <aside class="sidebar">
     <div class="profile-card">
       <div class="avatar">👤</div>
@@ -171,33 +176,32 @@
       📥 Download Resume
     </a>
 
-    <!-- Sidebar Ad -->
     <div class="ad-sidebar" aria-label="Advertisement">
       <p>Ad Space</p>
     </div>
   </aside>
 
   <!-- ===== MAIN CONTENT ===== -->
-  <main class="main-content">
+  <main class="main-content" id="main-content">
 
-    <!-- TAB NAVIGATION -->
-<li class="tab-item active" role="tab" onclick="openTab(event,'tab-home'); trackTabClick('Home')" aria-selected="true">🏠 Home & About Me</li>
-<li class="tab-item" role="tab" onclick="openTab(event,'tab-projects'); trackTabClick('Projects')" aria-selected="false">🎯 Projects Showcase</li>
-<li class="tab-item" role="tab" onclick="openTab(event,'tab-gallery'); trackTabClick('Gallery')" aria-selected="false">🖼️ All Images Gallery</li>
-<li class="tab-item" role="tab" onclick="openTab(event,'tab-kaggle'); trackTabClick('Kaggle')" aria-selected="false">📊 Kaggle Datasets</li>
-<li class="tab-item" role="tab" onclick="openTab(event,'tab-tool'); trackTabClick('CleanTool')" aria-selected="false">
-  🧹 Clean & Visualize Tool
-  <span class="info-badge" title="Max 150,000 rows. No data stored after session.">ℹ️</span>
-</li>
-<li class="tab-item" role="tab" onclick="openTab(event,'tab-resume'); trackTabClick('Resume')" aria-selected="false">📄 Resume & Profile</li>
-<li class="tab-item" role="tab" onclick="openTab(event,'tab-contact'); trackTabClick('Contact')" aria-selected="false">📬 Contact Me</li>
+    <div class="tabs-container">
+        <ul class="tab-menu" role="tablist">
+            <li class="tab-item active" role="tab" tabindex="0" aria-selected="true" aria-controls="tab-home" onclick="openTab(event, 'tab-home')" onkeydown="handleTabKeydown(event, this)">🏠 Home & About Me</li>
+            <li class="tab-item" role="tab" tabindex="0" aria-selected="false" aria-controls="tab-projects" onclick="openTab(event, 'tab-projects')" onkeydown="handleTabKeydown(event, this)">🎯 Projects Showcase</li>
+            <li class="tab-item" role="tab" tabindex="0" aria-selected="false" aria-controls="tab-gallery" onclick="openTab(event, 'tab-gallery')" onkeydown="handleTabKeydown(event, this)">🖼️ All Images Gallery</li>
+            <li class="tab-item" role="tab" tabindex="0" aria-selected="false" aria-controls="tab-kaggle" onclick="openTab(event, 'tab-kaggle')" onkeydown="handleTabKeydown(event, this)">📊 Kaggle Datasets</li>
+            <li class="tab-item" role="tab" tabindex="0" aria-selected="false" aria-controls="tab-tool" onclick="openTab(event, 'tab-tool')" onkeydown="handleTabKeydown(event, this)">🧹 Clean & Visualize Tool ℹ️</li>
+            <li class="tab-item" role="tab" tabindex="0" aria-selected="false" aria-controls="tab-resume" onclick="openTab(event, 'tab-resume')" onkeydown="handleTabKeydown(event, this)">📄 Resume & Profile</li>
+            <li class="tab-item" role="tab" tabindex="0" aria-selected="false" aria-controls="tab-contact" onclick="openTab(event, 'tab-contact')" onkeydown="handleTabKeydown(event, this)">📬 Contact Me</li>
+        </ul>
+    </div>
 
     <!-- ==================== TAB 1: HOME ==================== -->
     <div id="tab-home" class="tab-content active" role="tabpanel">
       
       <div class="hero-banner reveal">
         <h1>👋 Hi, I'm Jatin Kumar</h1>
-        <h2>Aspiring Data Analyst | Turning Data into Insights</h2>
+        <h2>Aspiring <span id="typed-text" class="typed-cursor"></span></h2>
         <p>Passionate about transforming raw data into actionable business intelligence using <strong>Python, SQL, Power BI, and Excel</strong>.</p>
       </div>
 
@@ -217,27 +221,143 @@
         </div>
         <div class="metrics-card reveal-right">
           <h3>📊 Quick Stats</h3>
-          <div class="metric-row"><span>Projects Completed</span><strong>4+ Live</strong></div>
-          <div class="metric-row"><span>Tools Mastered</span><strong>6 Tools</strong></div>
-          <div class="metric-row"><span>Learning Hours</span><strong>500+ Hours</strong></div>
-          <div class="metric-row"><span>GitHub Repos</span><strong>4+ Public</strong></div>
+          <div class="metric-row"><span>Projects Completed</span><strong><span class="counter" data-target="4" data-suffix="+ Live">0</span></strong></div>
+          <div class="metric-row"><span>Tools Mastered</span><strong><span class="counter" data-target="6" data-suffix=" Tools">0</span></strong></div>
+          <div class="metric-row"><span>Learning Hours</span><strong><span class="counter" data-target="500" data-suffix="+ Hours">0</span></strong></div>
+          <div class="metric-row"><span>GitHub Repos</span><strong><span class="counter" data-target="4" data-suffix="+ Public">0</span></strong></div>
         </div>
       </div>
 
-      <hr>
+      <!-- ===== ANALYTICS PROCESS ===== -->
+<h2>⚙️ My Analytics Process</h2>
+<p style="color:#718096; margin-bottom: 20px;">Every project I work on follows this structured approach — from raw data to actionable insights.</p>
 
-      <!-- GitHub Live Stats -->
-      <h2>📊 Live GitHub Stats</h2>
-      <div id="github-stats-container">
-        <div class="skeleton-grid">
-          <div class="skeleton-box"></div>
-          <div class="skeleton-box"></div>
-          <div class="skeleton-box"></div>
-          <div class="skeleton-box"></div>
-        </div>
+<div class="process-timeline">
+
+  <div class="process-step reveal delay-1">
+    <div class="process-icon">🔍</div>
+    <div class="process-connector"></div>
+    <div class="process-body">
+      <h4>Step 1 — Understand the Data</h4>
+      <p>Before touching any tool, I first understand the <strong>business problem</strong>. What question needs to be answered? What does each column mean? What is the expected outcome? This defines the entire direction of analysis.</p>
+      <div class="process-tags">
+        <span>Problem Definition</span>
+        <span>Domain Understanding</span>
+        <span>Stakeholder Goals</span>
       </div>
+    </div>
+  </div>
 
-      <hr>
+  <div class="process-step reveal delay-2">
+    <div class="process-icon">🧹</div>
+    <div class="process-connector"></div>
+    <div class="process-body">
+      <h4>Step 2 — Data Cleaning</h4>
+      <p>Raw data is always messy. I handle <strong>missing values, duplicates, inconsistent formats, outliers</strong>, and wrong data types using Python (Pandas) or Excel — so the analysis is built on a solid, reliable foundation.</p>
+      <div class="process-tags">
+        <span>Python / Pandas</span>
+        <span>Excel</span>
+        <span>Data Quality</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="process-step reveal delay-3">
+    <div class="process-icon">📐</div>
+    <div class="process-connector"></div>
+    <div class="process-body">
+      <h4>Step 3 — Exploratory Data Analysis (EDA)</h4>
+      <p>I dig deep into the data — checking <strong>distributions, correlations, trends, and anomalies</strong>. This is where patterns start to emerge and hypotheses are formed before any formal analysis begins.</p>
+      <div class="process-tags">
+        <span>NumPy</span>
+        <span>Statistical Analysis</span>
+        <span>Pattern Recognition</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="process-step reveal delay-4">
+    <div class="process-icon">📊</div>
+    <div class="process-connector"></div>
+    <div class="process-body">
+      <h4>Step 4 — Analyze</h4>
+      <p>With clean data and EDA done, I perform focused analysis — <strong>segmentation, aggregations, KPI calculations, trend analysis</strong> — to extract specific answers to the business questions identified in Step 1.</p>
+      <div class="process-tags">
+        <span>SQL / MySQL</span>
+        <span>DAX</span>
+        <span>KPI Analysis</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="process-step reveal delay-5">
+    <div class="process-icon">📈</div>
+    <div class="process-connector"></div>
+    <div class="process-body">
+      <h4>Step 5 — Visualization & Dashboard</h4>
+      <p>Numbers alone don't convince. I build <strong>interactive dashboards in Power BI</strong> and create charts using Matplotlib/Seaborn that tell a clear, compelling story — designed for both technical and non-technical audiences.</p>
+      <div class="process-tags">
+        <span>Power BI</span>
+        <span>Matplotlib</span>
+        <span>Seaborn</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="process-step reveal delay-6">
+    <div class="process-icon">💡</div>
+    <div class="process-body">
+      <h4>Step 6 — Insights & Recommendations</h4>
+      <p>The final and most important step. I translate findings into <strong>clear business recommendations</strong> — what action should be taken, what risk exists, and what opportunity the data reveals. Data is only valuable when it drives decisions.</p>
+      <div class="process-tags">
+        <span>Business Intelligence</span>
+        <span>Storytelling</span>
+        <span>Decision Support</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<hr>
+
+<!-- ===== CERTIFICATION ===== -->
+<h2>🏆 Certification</h2>
+<p style="color:#718096; margin-bottom: 20px;">Verified completion of structured learning — 89 hours of hands-on Data Analytics training.</p>
+
+<div class="cert-card reveal">
+  <div class="cert-left">
+    <div class="cert-platform">
+      <span class="cert-platform-logo">u</span>
+      <span class="cert-platform-name">Udemy</span>
+    </div>
+    <div class="cert-badge">✅ Verified Certificate</div>
+  </div>
+  <div class="cert-middle">
+    <h3 class="cert-title">Complete Data Analyst Bootcamp<br>From Basics To Advanced</h3>
+    <p class="cert-instructors">👨‍🏫 Krish Naik · Jayant Topnani · KRISHAI Technologies</p>
+    <div class="cert-meta">
+      <span>📅 Completed: July 11, 2026</span>
+      <span>⏱️ 89 Total Hours</span>
+      <span>🔖 Ref: UC-0424329d</span>
+    </div>
+  </div>
+  <div class="cert-right">
+    <a href="https://ude.my/UC-0424329d-4d67-4fb8-b596-33cc47844312" 
+       target="_blank" 
+       rel="noopener"
+       class="cert-verify-btn">
+      🔗 Verify Certificate
+    </a>
+    <a href="certificate.pdf" 
+       download 
+       class="cert-download-btn">
+      📥 Download PDF
+    </a>
+  </div>
+</div>
+
+<hr>
 
       <h2>🛠️ Technical Skills & Toolkit</h2>
       <div class="grid-3col">
@@ -248,16 +368,14 @@
           <span class="badge">Excel (Advanced)</span>
           <span class="badge">Statistics</span>
         </div>
-          <div class="skill-box reveal delay-2">
-    <h3>📈 Visualization</h3>
+        <div class="skill-box reveal delay-2">
           <h3>📈 Visualization</h3>
           <span class="badge">Power BI</span>
           <span class="badge">DAX Queries</span>
           <span class="badge">Matplotlib</span>
           <span class="badge">Seaborn</span>
         </div>
-          <div class="skill-box reveal delay-3">
-    <h3>💼 Business Skills</h3>
+        <div class="skill-box reveal delay-3">
           <h3>💼 Business Skills</h3>
           <span class="badge">Data Storytelling</span>
           <span class="badge">KPI Tracking</span>
@@ -271,20 +389,16 @@
       <h2>🎯 Featured Projects Portfolio</h2>
       <p>Click on any project to view detailed analysis, code files, and visualizations.</p>
       
-      <!-- Search + Filter -->
       <div class="projects-filter-bar">
         <input type="text" 
                id="project-search" 
                class="project-search-input" 
                placeholder="🔍 Search projects by name or technology...">
-        <div id="tag-filter-row" class="tag-filter-row">
-          <!-- Tags load dynamically -->
-        </div>
+        <div id="tag-filter-row" class="tag-filter-row"></div>
         <p id="results-count" class="results-count"></p>
       </div>
 
       <div id="projects-container">
-        <!-- Projects load dynamically via script.js -->
         <div class="skeleton-list">
           <div class="skeleton-project-card"><div class="skeleton-line wide"></div><div class="skeleton-line medium"></div></div>
           <div class="skeleton-project-card"><div class="skeleton-line wide"></div><div class="skeleton-line medium"></div></div>
@@ -321,7 +435,6 @@
         <p class="loading-text">Loading datasets...</p>
       </div>
 
-      <!-- Kaggle Profile Card -->
       <div class="kaggle-profile-card">
         <div class="kaggle-profile-left">
           <div class="kaggle-avatar">K</div>
@@ -425,9 +538,9 @@
           </div>
           <div class="side-card">
             <h3>📊 Portfolio Stats</h3>
-            <div class="stat-block"><p class="stat-label">Projects</p><p class="stat-number">4+</p></div>
-            <div class="stat-block"><p class="stat-label">Code Files</p><p class="stat-number">15+</p></div>
-            <div class="stat-block"><p class="stat-label">Visualizations</p><p class="stat-number">20+</p></div>
+            <div class="stat-block"><p class="stat-label">Projects</p><p class="stat-number"><span class="counter" data-target="4" data-suffix="+">0</span></p></div>
+            <div class="stat-block"><p class="stat-label">Code Files</p><p class="stat-number"><span class="counter" data-target="15" data-suffix="+">0</span></p></div>
+            <div class="stat-block"><p class="stat-label">Visualizations</p><p class="stat-number"><span class="counter" data-target="20" data-suffix="+">0</span></p></div>
           </div>
         </div>
       </div>
@@ -462,40 +575,32 @@
       </div>
 
       <hr>
-<h3>✉️ Send Me a Direct Message</h3>
+      <h3>✉️ Send Me a Direct Message</h3>
 
-<!-- Action ko Web3Forms ke secure API link par mod diya hai -->
-<form action="https://web3forms.com" method="POST" id="contact-form" class="contact-form" novalidate>
-  
-  <!-- Bhai, yahan maine aapki asli Access Key bilkul sahi jagah set kar di hai -->
-  <input type="hidden" name="access_key" value="224be4-96c2-4ed7-8ba5-675213ca5199">
+      <form action="https://api.web3forms.com/submit" method="POST" id="contact-form" class="contact-form" novalidate>
+        <input type="hidden" name="access_key" value="224be4-96c2-4ed7-8ba5-675213ca5199">
 
-  <div class="form-row">
-    <div class="form-group">
-      <label for="form-name">Your Name *</label>
-      <!-- Web3Forms ke liye name="name" add kar diya hai -->
-      <input type="text" id="form-name" name="name" placeholder="John Doe" required>
-    </div>
-    <div class="form-group">
-      <label for="form-email">Your Email *</label>
-      <!-- Web3Forms ke liye name="email" add kar diya hai -->
-      <input type="email" id="form-email" name="email" placeholder="john@example.com" required>
-    </div>
-  </div>
-  <div class="form-group">
-    <label for="form-subject">Subject</label>
-    <!-- Web3Forms ke liye name="subject" add kar diya hai -->
-    <input type="text" id="form-subject" name="subject" placeholder="Job Opportunity / Collaboration / Query">
-  </div>
-  <div class="form-group">
-    <label for="form-message">Message *</label>
-    <!-- Web3Forms ke liye name="message" add kar diya hai -->
-    <textarea id="form-message" name="message" rows="5" placeholder="Hi Jatin, I came across your portfolio..." required></textarea>
-  </div>
-  <button type="submit" class="form-submit-btn">📤 Send Message</button>
-  <div id="form-status"></div>
-</form>
-
+        <div class="form-row">
+          <div class="form-group">
+            <label for="form-name">Your Name *</label>
+            <input type="text" id="form-name" name="name" placeholder="John Doe" required>
+          </div>
+          <div class="form-group">
+            <label for="form-email">Your Email *</label>
+            <input type="email" id="form-email" name="email" placeholder="john@example.com" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="form-subject">Subject</label>
+          <input type="text" id="form-subject" name="subject" placeholder="Job Opportunity / Collaboration / Query">
+        </div>
+        <div class="form-group">
+          <label for="form-message">Message *</label>
+          <textarea id="form-message" name="message" rows="5" placeholder="Hi Jatin, I came across your portfolio..." required></textarea>
+        </div>
+        <button type="submit" class="form-submit-btn">📤 Send Message</button>
+        <div id="form-status"></div>
+      </form>
 
       <hr>
       <div class="grid-2col" style="margin-top:20px;">
@@ -541,10 +646,12 @@
     <p id="lightbox-caption"></p>
   </div>
 </div>
+
 <!-- AI Chatbot Widget -->
 <div id="chatbot-widget">
-  <button id="chatbot-toggle" onclick="toggleChatbot()" title="Ask me about my projects!">
+  <button id="chatbot-toggle" onclick="toggleChatbot()" title="Ask me about my projects!" aria-label="Open chatbot">
     💬
+    <span id="chatbot-notify" class="chatbot-notify-dot" style="display:none;"></span>
   </button>
   <div id="chatbot-box" class="chatbot-hidden">
     <div class="chatbot-header">

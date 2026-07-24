@@ -1,5 +1,5 @@
 /* ============================================================
-   CONFIG — Ye values projects.json se automatically load hongi
+   CONFIG
    ============================================================ */
 let CONFIG = {
   github_user: '',
@@ -9,18 +9,60 @@ let CONFIG = {
   projects: []
 };
 
-let GITHUB_TREE_CACHE = null; // Pura repo file list yahan cache hoga
+let GITHUB_TREE_CACHE = null;
 
 /* ============================================================
-   1. GITHUB API — PURA REPO EK BAAR MEIN SCAN (Recursive)
+   🔧 GENERIC CACHE HELPER (Naya — Caching Strategy)
    ============================================================ */
-// ============================================================
-// GITHUB API — SMART CACHE (Stale While Revalidate)
-// ============================================================
+async function cachedFetch(cacheKey, url, options = {}, duration = 30 * 60 * 1000) {
+  const dataKey = `cache_${cacheKey}`;
+  const timeKey = `cache_${cacheKey}_time`;
+
+  const cached = localStorage.getItem(dataKey);
+  const cachedTime = localStorage.getItem(timeKey);
+  const age = Date.now() - parseInt(cachedTime || '0', 10);
+  const isValid = cached && age < duration;
+
+  async function fetchFresh() {
+    const res = await fetch(url, options);
+    if (!res.ok) throw new Error(`Fetch failed: ${res.status}`);
+    const data = await res.json();
+    localStorage.setItem(dataKey, JSON.stringify(data));
+    localStorage.setItem(timeKey, Date.now().toString());
+    return data;
+  }
+
+  if (isValid) {
+    fetchFresh().catch(() => {}); // background refresh, silent
+    return JSON.parse(cached);
+  }
+
+  try {
+    return await fetchFresh();
+  } catch (err) {
+    if (cached) {
+      console.warn(`⚠️ Using expired cache for ${cacheKey}`);
+      return JSON.parse(cached);
+    }
+    throw err;
+  }
+}
+
+// Config ek hi baar load ho (race-condition FIX)
+async function ensureConfigLoaded() {
+  if (CONFIG.projects && CONFIG.projects.length > 0) return CONFIG;
+  const configData = await cachedFetch('projects_config', 'projects.json', {}, 60 * 60 * 1000);
+  CONFIG = { ...CONFIG, ...configData };
+  return CONFIG;
+}
+
+/* ============================================================
+   1. GITHUB API — SMART CACHE (Stale While Revalidate)
+   ============================================================ */
 async function getGitHubTree() {
   const CACHE_KEY = 'gh_tree_cache';
   const CACHE_TIME_KEY = 'gh_tree_cache_time';
-  const CACHE_DURATION = 30 * 60 * 1000; // 30 minutes
+  const CACHE_DURATION = 30 * 60 * 1000;
 
   const cached = localStorage.getItem(CACHE_KEY);
   const cachedTime = localStorage.getItem(CACHE_TIME_KEY);
@@ -34,7 +76,6 @@ async function getGitHubTree() {
 
   const url = `https://api.github.com/repos/${CONFIG.github_user}/${CONFIG.github_repo}/git/trees/${CONFIG.github_branch}?recursive=1`;
 
-  // Fetch function (reuse hoga)
   async function fetchFreshData() {
     const res = await fetch(url, { headers });
     if (!res.ok) throw new Error(`GitHub API error: ${res.status}`);
@@ -45,34 +86,21 @@ async function getGitHubTree() {
     return tree;
   }
 
-  // Case 1: Cache valid hai → turant dikhao + background refresh
   if (isCacheValid) {
     GITHUB_TREE_CACHE = JSON.parse(cached);
-
-    // Background mein silently refresh (user ko pata nahi chalega)
     fetchFreshData()
-      .then(tree => {
-        GITHUB_TREE_CACHE = tree;
-        console.log('✅ GitHub tree refreshed in background');
-      })
-      .catch(err => {
-        console.warn('⚠️ Background refresh failed (using cache):', err.message);
-      });
-
+      .then(tree => { GITHUB_TREE_CACHE = tree; console.log('✅ GitHub tree refreshed in background'); })
+      .catch(err => console.warn('⚠️ Background refresh failed (using cache):', err.message));
     return GITHUB_TREE_CACHE;
   }
 
-  // Case 2: Cache expired ya nahi hai → fresh fetch karo
   try {
     const tree = await fetchFreshData();
     GITHUB_TREE_CACHE = tree;
     return tree;
   } catch (err) {
     console.error('GitHub tree fetch failed:', err);
-
-    // Purana cache use karo (better than nothing)
     if (cached) {
-      console.warn('⚠️ Using expired cache (fetch failed)');
       GITHUB_TREE_CACHE = JSON.parse(cached);
       return GITHUB_TREE_CACHE;
     }
@@ -80,7 +108,6 @@ async function getGitHubTree() {
   }
 }
 
-// Ek project folder ki SAARI files (subfolders included) nikalo
 function getFilesForFolder(tree, folderName) {
   const prefix = `${CONFIG.projects_base_path}/${folderName}/`;
   return tree
@@ -138,7 +165,7 @@ function categorizeFiles(files) {
 }
 
 /* ============================================================
-   3. CSV PARSING + STATS (using PapaParse)
+   3. CSV PARSING + STATS
    ============================================================ */
 async function fetchAndParseCSV(fileUrl) {
   try {
@@ -159,13 +186,8 @@ function computeStats(headers, dataRows) {
   const numericCols = [];
 
   headers.forEach((h, colIdx) => {
-    const values = dataRows
-      .map(r => parseFloat(r[colIdx]))
-      .filter(v => !isNaN(v));
-
-    if (values.length > dataRows.length * 0.5) {
-      numericCols.push({ name: h, values });
-    }
+    const values = dataRows.map(r => parseFloat(r[colIdx])).filter(v => !isNaN(v));
+    if (values.length > dataRows.length * 0.5) numericCols.push({ name: h, values });
   });
 
   if (numericCols.length === 0) return null;
@@ -198,69 +220,6 @@ function computeStats(headers, dataRows) {
   });
 
   return { headers: ['Metric', ...numericCols.map(c => c.name)], data: statsData };
-  
-}
-
-
-/* ============================================================
-   4. GITHUB LIVE STATS (Home Tab)
-   ============================================================ */
-   
-
-async function loadGitHubStats() {
-  const container = document.getElementById('github-stats-container');
-  if (!container) return;
-
-  try {
-    const [userRes, reposRes] = await Promise.all([
-      fetch(`https://api.github.com/users/${CONFIG.github_user}`),
-      fetch(`https://api.github.com/users/${CONFIG.github_user}/repos?per_page=100`)
-    ]);
-
-    if (!userRes.ok) throw new Error('API limit reached');
-
-    const user = await userRes.json();
-    const repos = await reposRes.json();
-
-    const totalStars = repos.reduce((s, r) => s + r.stargazers_count, 0);
-    const languages = [...new Set(repos.filter(r => r.language).map(r => r.language))];
-
-    container.innerHTML = `
-      <div class="github-stats-grid">
-        <div class="gh-stat-card">
-          <div class="gh-stat-icon">📦</div>
-          <div class="gh-stat-number">${user.public_repos}</div>
-          <div class="gh-stat-label">Public Repos</div>
-        </div>
-        <div class="gh-stat-card">
-          <div class="gh-stat-icon">⭐</div>
-          <div class="gh-stat-number">${totalStars}</div>
-          <div class="gh-stat-label">Total Stars</div>
-        </div>
-        <div class="gh-stat-card">
-          <div class="gh-stat-icon">👥</div>
-          <div class="gh-stat-number">${user.followers}</div>
-          <div class="gh-stat-label">Followers</div>
-        </div>
-        <div class="gh-stat-card">
-          <div class="gh-stat-icon">📚</div>
-          <div class="gh-stat-number">${languages.length}</div>
-          <div class="gh-stat-label">Languages</div>
-        </div>
-      </div>
-      <div class="gh-bottom">
-        <span class="gh-languages">🔧 ${languages.join(', ')}</span>
-        <a href="https://github.com/${CONFIG.github_user}" target="_blank" rel="noopener" class="gh-profile-link">
-          View Full Profile →
-        </a>
-      </div>`;
-  } catch (err) {
-    container.innerHTML = `
-      <div class="error-state">
-        <p>⭐ 4+ Public Repos | 🐍 Python | 📊 SQL | 💡 Power BI</p>
-        <a href="https://github.com/${CONFIG.github_user}" target="_blank" rel="noopener">View GitHub Profile →</a>
-      </div>`;
-  }
 }
 
 /* ============================================================
@@ -273,17 +232,10 @@ async function loadProjects() {
   if (!container) return;
 
   try {
-    // Step 1: Config load karo
-    const configRes = await fetch('projects.json');
-    const configData = await configRes.json();
-    CONFIG = { ...CONFIG, ...configData };
-
-    // Step 2: Pura GitHub repo tree ek baar fetch karo
+    await ensureConfigLoaded();
     const tree = await getGitHubTree();
 
-    // Step 3: Har project ke liye data build karo
     ALL_PROJECTS_DATA = [];
-
     for (const proj of CONFIG.projects) {
       const files = getFilesForFolder(tree, proj.folder);
       const categorized = categorizeFiles(files);
@@ -292,13 +244,12 @@ async function loadProjects() {
         folder: proj.folder,
         files,
         ...categorized,
-        info: null,   // Lazy load hoga jab accordion open ho
+        info: null,
         loaded: false
       });
     }
 
     renderProjectsList(ALL_PROJECTS_DATA);
-
   } catch (err) {
     console.error(err);
     container.innerHTML = `
@@ -307,6 +258,15 @@ async function loadProjects() {
         <p>${err.message}</p>
       </div>`;
   }
+}
+
+// Naya helper — Search Highlight ke liye
+function highlightMatch(text, query) {
+  const safe = escapeHtml(text);
+  if (!query) return safe;
+  const escapedQuery = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const regex = new RegExp(`(${escapedQuery})`, 'ig');
+  return safe.replace(regex, '<mark class="search-highlight">$1</mark>');
 }
 
 function renderProjectsList(projects, searchQuery = '', activeTag = 'All') {
@@ -337,7 +297,7 @@ function renderProjectsList(projects, searchQuery = '', activeTag = 'All') {
       <button class="accordion-header" onclick="toggleProjectAccordion(this, '${proj.id}', ${idx})">
         <span class="accordion-arrow">▶</span>
         <span class="proj-number">Project ${idx + 1}</span>
-        <span class="proj-title">${proj.folder}</span>
+        <span class="proj-title">${highlightMatch(proj.folder, searchQuery)}</span>
       </button>
       <div class="accordion-content" id="content-${proj.id}">
         <div class="accordion-body">
@@ -355,7 +315,6 @@ async function toggleProjectAccordion(header, projId, idx) {
   const isOpen = header.classList.contains('open');
   const content = header.nextElementSibling;
 
-  // Close other open accordions
   document.querySelectorAll('.accordion-header.open').forEach(h => {
     if (h !== header) {
       h.classList.remove('open');
@@ -367,16 +326,11 @@ async function toggleProjectAccordion(header, projId, idx) {
 
   if (!isOpen) {
     const proj = ALL_PROJECTS_DATA[idx];
-
-    // Pehli baar open ho raha hai to data load karo
     if (!proj.loaded) {
       await loadProjectDetails(proj, content);
       proj.loaded = true;
     }
-
     content.style.maxHeight = content.scrollHeight + 'px';
-
-    // Thoda delay dekar recalculate karo (images load hone ke baad height badalti hai)
     setTimeout(() => {
       if (header.classList.contains('open')) {
         content.style.maxHeight = content.scrollHeight + 'px';
@@ -398,19 +352,14 @@ async function loadProjectDetails(proj, contentEl) {
   let overview = '', objectives = [], keyInsights = [], tech = [], tags = [], powerbiEmbed = '';
   let debugInfo = [];
 
-  // ---- STEP 1: Overview load karo ----
   try {
     if (proj.infoFile) {
       const infoUrl = getRawUrl(proj.infoFile.fullPath);
       debugInfo.push(`Fetching: ${infoUrl}`);
       const res = await fetch(infoUrl);
-      
-      if (!res.ok) {
-        throw new Error(`HTTP ${res.status} - File not found at this URL`);
-      }
-      
+      if (!res.ok) throw new Error(`HTTP ${res.status} - File not found at this URL`);
       const rawText = await res.text();
-      
+
       let info;
       try {
         info = JSON.parse(rawText);
@@ -426,7 +375,6 @@ async function loadProjectDetails(proj, contentEl) {
       powerbiEmbed = info.powerbi_embed_url || '';
       proj.tags = tags;
       debugInfo.push('✅ project_info.json loaded successfully');
-
     } else if (proj.readmeFile) {
       const res = await fetch(getRawUrl(proj.readmeFile.fullPath));
       overview = await res.text();
@@ -442,7 +390,6 @@ async function loadProjectDetails(proj, contentEl) {
 
   if (tech.length === 0) tech = proj.techUsed;
 
-  // ---- STEP 2: CSV Files (parallel) ----
   let csvPreviewData = [];
   try {
     const csvPromises = proj.csvFiles.map(csvFile =>
@@ -461,18 +408,14 @@ async function loadProjectDetails(proj, contentEl) {
         return null;
       })
     );
-
     const csvResults = await Promise.all(csvPromises);
     csvPreviewData = csvResults.filter(r => r !== null);
   } catch (err) {
     console.error(`[${proj.folder}] CSV loading failed:`, err);
   }
 
-  // ---- STEP 3: Render HTML (with try-catch so it NEVER stays blank) ----
   try {
-    body.innerHTML = buildProjectHTML(proj, {
-      overview, objectives, keyInsights, tech, powerbiEmbed, csvPreviewData
-    });
+    body.innerHTML = buildProjectHTML(proj, { overview, objectives, keyInsights, tech, powerbiEmbed, csvPreviewData });
   } catch (err) {
     console.error(`[${proj.folder}] Render failed:`, err);
     body.innerHTML = `
@@ -490,7 +433,6 @@ async function loadProjectDetails(proj, contentEl) {
 function buildProjectHTML(proj, data) {
   const { overview, objectives, keyInsights, tech, powerbiEmbed, csvPreviewData } = data;
 
-  // Overview section
   const overviewHTML = overview
     ? `<p class="overview-text">${escapeHtml(overview).replace(/\n/g, '<br>')}</p>`
     : `<p class="no-content">No overview added yet. Add project_info.json to this folder.</p>`;
@@ -505,10 +447,8 @@ function buildProjectHTML(proj, data) {
       <ul>${keyInsights.map(i => `<li>${escapeHtml(i)}</li>`).join('')}</ul>
     </div>` : '';
 
-  // Tech badges
   const techHTML = tech.map(t => `<span class="badge">${t}</span>`).join('');
 
-  // Files section (Python/SQL/Excel - downloadable)
   let filesHTML = '';
   Object.entries(proj.downloadFiles).forEach(([category, files]) => {
     if (files.length > 0) {
@@ -519,7 +459,6 @@ function buildProjectHTML(proj, data) {
     }
   });
 
-    // PBIX Section — VIEW ONLY, NO DOWNLOAD
   let pbixHTML = '';
   if (proj.pbixFiles.length > 0) {
     if (powerbiEmbed) {
@@ -545,7 +484,6 @@ function buildProjectHTML(proj, data) {
     }
   }
 
-  // Dataset preview tabs
   let dsTabsHTML = '', dsTablesHTML = '';
   if (csvPreviewData.length > 0) {
     dsTabsHTML = csvPreviewData.map((ds, i) =>
@@ -564,13 +502,13 @@ function buildProjectHTML(proj, data) {
       </div>`).join('');
   }
 
-  // Images grid
   const imagesHTML = proj.images.length > 0
     ? proj.images.map((img, i) => `
         <div class="dash-img-item" onclick="openLightbox('${getRawUrl(img.fullPath)}', '${proj.folder} - ${img.name}')">
           <img src="${getRawUrl(img.fullPath)}" 
                alt="${proj.folder} Dashboard Screenshot ${i + 1}" 
                loading="lazy"
+               onload="this.classList.add('img-loaded')"
                onerror="this.parentElement.style.display='none'">
         </div>`).join('')
     : '<p class="no-content">No screenshots added yet</p>';
@@ -617,7 +555,6 @@ function switchDatasetTab(evt, projId, fileIndex) {
   const table = document.getElementById(`table-${projId}-${fileIndex}`);
   if (table) table.style.display = 'block';
 
-  // Accordion height recalculate
   const accContent = parent.closest('.accordion-content');
   if (accContent) accContent.style.maxHeight = accContent.scrollHeight + 'px';
 }
@@ -638,7 +575,7 @@ function generateHTMLTable(headers, rows) {
 }
 
 /* ============================================================
-   7. SEARCH + TAG FILTER
+   7. SEARCH + TAG FILTER (Debounced — already tha)
    ============================================================ */
 function initProjectFilters() {
   const searchInput = document.getElementById('project-search');
@@ -662,7 +599,7 @@ window.filterByTag = function (tag) {
 };
 
 /* ============================================================
-   8. GALLERY
+   8. GALLERY (Lazy Load Fade-in Added)
    ============================================================ */
 async function initGallery() {
   const grid = document.getElementById('gallery-grid');
@@ -709,6 +646,7 @@ function renderGallery(images) {
   grid.innerHTML = images.map(img => `
     <div class="gallery-item" onclick="openLightbox('${img.src}', '${img.project}')">
       <img src="${img.src}" alt="${img.project} - ${img.name}" loading="lazy"
+           onload="this.classList.add('img-loaded')"
            onerror="this.parentElement.style.display='none'">
       <div class="gallery-overlay">${img.project}</div>
     </div>`).join('');
@@ -721,15 +659,14 @@ window.filterGalleryImages = function () {
 };
 
 /* ============================================================
-   9. KAGGLE TAB
+   9. KAGGLE TAB (Cached)
    ============================================================ */
 async function loadKaggleDatasets() {
   const container = document.getElementById('kaggle-datasets-container');
   if (!container) return;
 
   try {
-    const res = await fetch('kaggle_datasets.json');
-    const datasets = await res.json();
+    const datasets = await cachedFetch('kaggle_datasets', 'kaggle_datasets.json', {}, 60 * 60 * 1000);
 
     if (datasets.length === 0) {
       container.innerHTML = '<p class="no-content">No datasets added yet</p>';
@@ -757,7 +694,6 @@ async function loadKaggleDatasets() {
           </div>
         </div>
       </div>`).join('');
-
   } catch (err) {
     container.innerHTML = '<p class="error-state">Could not load datasets</p>';
   }
@@ -799,7 +735,7 @@ document.addEventListener('keydown', e => {
 });
 
 /* ============================================================
-   11. TAB NAVIGATION
+   11. TAB NAVIGATION (+ Keyboard Accessibility)
    ============================================================ */
 function openTab(evt, tabId) {
   document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
@@ -815,9 +751,17 @@ function openTab(evt, tabId) {
   history.replaceState(null, null, `#${tabId}`);
 
   if (tabId === 'tab-gallery') initGallery();
+  setTimeout(initReveal, 100);
 }
 
-// Direct URL hash support
+// Naya — keyboard se tabs use karne ke liye
+function handleTabKeydown(e, el) {
+  if (e.key === 'Enter' || e.key === ' ') {
+    e.preventDefault();
+    el.click();
+  }
+}
+
 window.addEventListener('load', () => {
   const hash = window.location.hash.replace('#', '');
   const validTabs = ['tab-home','tab-projects','tab-gallery','tab-kaggle','tab-tool','tab-resume','tab-contact'];
@@ -832,7 +776,7 @@ window.addEventListener('load', () => {
 });
 
 /* ============================================================
-   12. CONTACT FORM (EmailJS)
+   12. CONTACT FORM (Web3Forms — SIRF EK HANDLER, FIXED)
    ============================================================ */
 function initContactForm() {
   const form = document.getElementById('contact-form');
@@ -844,7 +788,6 @@ function initContactForm() {
     const btn = form.querySelector('.form-submit-btn');
     const name = document.getElementById('form-name').value.trim();
     const email = document.getElementById('form-email').value.trim();
-    const subject = document.getElementById('form-subject').value.trim();
     const message = document.getElementById('form-message').value.trim();
     const statusEl = document.getElementById('form-status');
 
@@ -859,16 +802,25 @@ function initContactForm() {
 
     btn.disabled = true;
     btn.textContent = '📤 Sending...';
+    statusEl.innerHTML = '';
+
+    const formData = new FormData(form);
+    const payload = Object.fromEntries(formData);
 
     try {
-      // NOTE: Apni EmailJS keys yahan daalo (emailjs.com se free milengi)
-      await emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
-        from_name: name, from_email: email, subject, message,
-        to_email: 'jatin@jatinanalytics.co.in'
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(payload)
       });
+      const result = await res.json();
 
-      statusEl.innerHTML = `<div class="form-msg-success">✅ Message sent! I'll reply within 24 hours.</div>`;
-      form.reset();
+      if (result.success) {
+        statusEl.innerHTML = `<div class="form-msg-success">✅ Message sent! I'll reply within 24 hours.</div>`;
+        form.reset();
+      } else {
+        statusEl.innerHTML = `<div class="form-msg-error">❌ ${result.message || 'Something went wrong'}</div>`;
+      }
     } catch (err) {
       statusEl.innerHTML = `<div class="form-msg-error">❌ Failed. Email directly: jatin@jatinanalytics.co.in</div>`;
     } finally {
@@ -894,11 +846,394 @@ async function loadVisitorCount() {
 }
 
 /* ============================================================
-   14. INIT
+   14. DARK MODE TOGGLE (Naya)
    ============================================================ */
- document.addEventListener('DOMContentLoaded', () => {
+function toggleDarkMode() {
+  const html = document.documentElement;
+  const current = html.getAttribute('data-theme');
+  const next = current === 'dark' ? 'light' : 'dark';
+  html.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+  const btn = document.getElementById('dark-mode-toggle');
+  if (btn) btn.textContent = next === 'dark' ? '☀️' : '🌙';
+}
 
-  // Page Loader Hide karo
+/* ============================================================
+   15. TYPING ANIMATION (Naya)
+   ============================================================ */
+function initTypingAnimation() {
+  const el = document.getElementById('typed-text');
+  if (!el) return;
+  const phrases = ['Data Analyst', 'Problem Solver', 'Insight Generator', 'Power BI Developer', 'Turning Data into Insights'];
+  let phraseIndex = 0, charIndex = 0, deleting = false;
+
+  function tick() {
+    const current = phrases[phraseIndex];
+    if (!deleting) {
+      charIndex++;
+      el.textContent = current.slice(0, charIndex);
+      if (charIndex === current.length) {
+        deleting = true;
+        setTimeout(tick, 1400);
+        return;
+      }
+    } else {
+      charIndex--;
+      el.textContent = current.slice(0, charIndex);
+      if (charIndex === 0) {
+        deleting = false;
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+      }
+    }
+    setTimeout(tick, deleting ? 40 : 80);
+  }
+  tick();
+}
+
+/* ============================================================
+   16. ANIMATED COUNTERS (Naya)
+   ============================================================ */
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      animateCounter(entry.target);
+      counterObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.3 });
+
+function animateCounter(el) {
+  const target = parseInt(el.dataset.target, 10) || 0;
+  const suffix = el.dataset.suffix || '';
+  const duration = 1200;
+  const startTime = performance.now();
+
+  function step(now) {
+    const progress = Math.min((now - startTime) / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    const current = Math.floor(eased * target);
+    el.textContent = current + suffix;
+    if (progress < 1) requestAnimationFrame(step);
+    else el.textContent = target + suffix;
+  }
+  requestAnimationFrame(step);
+}
+
+function initCounters() {
+  document.querySelectorAll('.counter:not([data-counter-bound])').forEach(el => {
+    el.setAttribute('data-counter-bound', 'true');
+    counterObserver.observe(el);
+  });
+}
+
+/* ============================================================
+   17. SCROLL PROGRESS BAR (Naya)
+   ============================================================ */
+function initScrollProgress() {
+  const bar = document.getElementById('scroll-progress');
+  if (!bar) return;
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = progress + '%';
+  });
+}
+
+/* ============================================================
+   18. SCROLL REVEAL ANIMATIONS
+   ============================================================ */
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+
+function initReveal() {
+  document.querySelectorAll('.reveal, .reveal-left, .reveal-right')
+    .forEach(el => revealObserver.observe(el));
+}
+
+/* ============================================================
+   19. CACHE CLEAR + SECRET SHORTCUT
+   ============================================================ */
+window.clearCacheManually = function () {
+  const btn = document.getElementById('cache-clear-btn');
+  btn.textContent = '⏳ Clearing...';
+  btn.classList.add('clearing');
+  btn.disabled = true;
+
+  Object.keys(localStorage).forEach(key => {
+    if (key.startsWith('cache_') || key.startsWith('gh_tree_cache')) {
+      localStorage.removeItem(key);
+    }
+  });
+  sessionStorage.clear();
+
+  setTimeout(() => {
+    btn.textContent = '✅ Done! Reloading...';
+    setTimeout(() => window.location.reload(), 800);
+  }, 500);
+};
+
+/* ============================================================
+   20. AI CHATBOT — ADVANCED (Best-match + Memory + Follow-ups)
+   ============================================================ */
+const CHATBOT_KNOWLEDGE = {
+  greetings: ['hi', 'hello', 'hey', 'namaste', 'hii'],
+
+  answers: {
+    projects: {
+      keywords: ['project', 'built', 'made', 'work', 'portfolio', 'kaam'],
+      response: `📊 <b>Jatin has built 4+ projects:</b><br><br>
+        🏦 <b>Bank Analytics</b> - Banking intelligence dashboard with fraud detection using Power BI & SQL<br><br>
+        🛒 <b>Ecommerce Sales Analysis</b> - Sales trends and customer behavior analysis<br><br>
+        👥 <b>HR Analytics</b> - Employee performance and attrition analysis<br><br>
+        🍕 <b>Zomato Analytics</b> - Food delivery data analysis and insights<br><br>
+        Click the <b>Projects tab</b> to explore each one in detail!`,
+      followUps: [
+        { label: '🏦 Bank Project', query: 'Tell me about Bank Analytics project' },
+        { label: '🛠️ Skills', query: 'What are Jatin skills?' },
+        { label: '📬 Contact', query: 'How to contact Jatin?' }
+      ]
+    },
+    skills: {
+      keywords: ['skill', 'know', 'technology', 'tech', 'expertise', 'languages'],
+      response: `🛠️ <b>Jatin's Technical Skills:</b><br><br>
+        🐍 <b>Python</b> - Pandas, NumPy, Matplotlib, Seaborn, Plotly<br>
+        🗄️ <b>SQL</b> - MySQL, Data Querying, Joins<br>
+        📊 <b>Power BI</b> - DAX, Data Modeling, Interactive Dashboards<br>
+        📋 <b>Excel</b> - Advanced formulas, Pivot Tables<br>
+        🤖 <b>Machine Learning</b> - Basics, Fraud Detection<br>
+        ☁️ <b>Tools</b> - GitHub, Streamlit, Vercel`,
+      followUps: [
+        { label: '⚙️ Tools', query: 'What tools does Jatin use?' },
+        { label: '🎓 Education', query: 'Tell me about Jatin education' },
+        { label: '📊 Projects', query: 'What projects has Jatin built?' }
+      ]
+    },
+    contact: {
+      keywords: ['contact', 'reach', 'email', 'connect', 'hire', 'touch'],
+      response: `📬 <b>Contact Jatin:</b><br><br>
+        📧 <b>Email:</b> jatin@jatinanalytics.co.in<br>
+        💼 <b>LinkedIn:</b> linkedin.com/in/jatin-kumar-5a46a720a<br>
+        🐙 <b>GitHub:</b> github.com/jating1416-debug<br>
+        🏆 <b>Kaggle:</b> kaggle.com/jatinkhandelwal112<br><br>
+        Or use the <b>Contact tab</b> to send a direct message!`,
+      followUps: [
+        { label: '💼 Availability', query: 'Is Jatin available for work?' },
+        { label: '📊 Projects', query: 'What projects has Jatin built?' }
+      ]
+    },
+    bank: {
+      keywords: ['bank', 'banking', 'financial', 'loan', 'transaction'],
+      response: `🏦 <b>Bank Analytics Project:</b><br><br>
+        Built an interactive <b>Digital Banking Intelligence Dashboard</b> using Power BI.<br><br>
+        📌 <b>Key Features:</b><br>
+        • 75K+ customers analyzed<br>
+        • $3bn loan portfolio tracked<br>
+        • Transaction fraud patterns detected<br>
+        • City-wise customer distribution<br><br>
+        🛠️ <b>Tools:</b> Power BI, DAX, SQL, Excel<br><br>
+        Open the Projects tab to see the live dashboard!`,
+      followUps: [
+        { label: '📊 All Projects', query: 'What projects has Jatin built?' },
+        { label: '⚙️ Tools Used', query: 'What tools does Jatin use?' }
+      ]
+    },
+    tools: {
+      keywords: ['tool', 'software', 'use', 'powerbi', 'python', 'sql'],
+      response: `⚙️ <b>Tools Jatin Uses:</b><br><br>
+        📊 Power BI + DAX<br>
+        🐍 Python (Pandas, NumPy, Plotly)<br>
+        🗄️ MySQL<br>
+        📋 Excel (Advanced)<br>
+        📓 Jupyter Notebook<br>
+        🐙 GitHub<br>
+        🌐 Streamlit + Vercel<br><br>
+        Total: <b>6+ tools mastered</b> with 500+ hours of practice!`,
+      followUps: [
+        { label: '🛠️ Skills', query: 'What are Jatin skills?' },
+        { label: '📊 Projects', query: 'What projects has Jatin built?' }
+      ]
+    },
+    availability: {
+      keywords: ['available', 'job', 'hire', 'work', 'opportunity', 'fresher', 'open'],
+      response: `💼 <b>Availability:</b><br><br>
+        ✅ <b>Currently Open to Opportunities!</b><br><br>
+        🎯 Looking for:<br>
+        • Data Analyst roles<br>
+        • Business Intelligence Analyst<br>
+        • Power BI Developer<br><br>
+        📍 Open to: Full-time, Internship, Remote/WFH<br>
+        ⏰ Response time: Within 24 hours<br><br>
+        📧 Reach out: jatin@jatinanalytics.co.in`,
+      followUps: [
+        { label: '📬 Contact', query: 'How to contact Jatin?' },
+        { label: '🎓 Education', query: 'Tell me about Jatin education' }
+      ]
+    },
+    education: {
+      keywords: ['education', 'degree', 'study', 'college', 'university', 'mba', 'bca'],
+      response: `🎓 <b>Jatin's Education:</b><br><br>
+        📚 <b>MBA</b> - Operation Management<br>
+        Vivekananda Global University (Pursuing)<br><br>
+        💻 <b>BCA</b> - Bachelor of Computer Application<br>
+        Sikkim Alpine University (2022-2025)<br><br>
+        💊 <b>D.Pharm</b> - Diploma in Pharmacy<br>
+        Apeejay Stya University (2020-2022)<br><br>
+        Self-taught in Data Analytics through 500+ hours of practical projects!`,
+      followUps: [
+        { label: '🛠️ Skills', query: 'What are Jatin skills?' },
+        { label: '📊 Projects', query: 'What projects has Jatin built?' }
+      ]
+    },
+    kaggle: {
+      keywords: ['kaggle', 'dataset', 'data', 'published'],
+      response: `🏆 <b>Kaggle Contributions:</b><br><br>
+        📦 <b>Indian Financial Fraud Dataset</b><br>
+        Comprehensive dataset with 50,000+ fraud cases from Indian banking sector.<br><br>
+        🏷️ Tags: Finance, Fraud Detection, Python, ML<br><br>
+        Visit the <b>Kaggle tab</b> for direct links, or go to:<br>
+        kaggle.com/jatinkhandelwal112`,
+      followUps: [
+        { label: '📊 Projects', query: 'What projects has Jatin built?' },
+        { label: '⚙️ Tools', query: 'What tools does Jatin use?' }
+      ]
+    }
+  },
+
+  fallback: `🤔 I didn't quite understand that. Here's what I can help with:<br><br>
+    • 📊 <b>Projects</b> - Ask about any specific project<br>
+    • 🛠️ <b>Skills</b> - Python, SQL, Power BI expertise<br>
+    • 📬 <b>Contact</b> - How to reach Jatin<br>
+    • 🎓 <b>Education</b> - Academic background<br>
+    • 💼 <b>Availability</b> - Job opportunities<br>
+    • 🏆 <b>Kaggle</b> - Published datasets<br><br>
+    Try asking: "<i>What projects has Jatin built?</i>"`
+};
+
+function generateChatResponse(text) {
+  if (CHATBOT_KNOWLEDGE.greetings.some(g => text.includes(g))) {
+    return {
+      html: `👋 Hello! Great to meet you!<br><br>I'm Jatin's Portfolio AI. I can tell you about his <b>projects, skills, experience, and how to contact him</b>.<br><br>What would you like to know?`,
+      followUps: [
+        { label: '📊 Projects', query: 'What projects has Jatin built?' },
+        { label: '🛠️ Skills', query: 'What are Jatin skills?' },
+        { label: '📬 Contact', query: 'How to contact Jatin?' }
+      ]
+    };
+  }
+
+  // Best-match scoring (naya — ab sabse relevant answer milega)
+  let bestKey = null, bestScore = 0;
+  for (const [key, data] of Object.entries(CHATBOT_KNOWLEDGE.answers)) {
+    const score = data.keywords.filter(kw => text.includes(kw)).length;
+    if (score > bestScore) { bestScore = score; bestKey = key; }
+  }
+
+  if (bestKey) {
+    const match = CHATBOT_KNOWLEDGE.answers[bestKey];
+    return { html: match.response, followUps: match.followUps || [] };
+  }
+
+  return {
+    html: CHATBOT_KNOWLEDGE.fallback,
+    followUps: [
+      { label: '📊 Projects', query: 'What projects has Jatin built?' },
+      { label: '🛠️ Skills', query: 'What are Jatin skills?' },
+      { label: '🎓 Education', query: 'Tell me about Jatin education' }
+    ]
+  };
+}
+
+function saveChatHistory() {
+  const messages = document.getElementById('chatbot-messages');
+  if (messages) localStorage.setItem('chatbot_history', messages.innerHTML);
+}
+
+function loadChatHistory() {
+  const saved = localStorage.getItem('chatbot_history');
+  const messages = document.getElementById('chatbot-messages');
+  if (saved && messages) messages.innerHTML = saved;
+}
+
+let chatHistoryLoaded = false;
+
+window.toggleChatbot = function () {
+  const box = document.getElementById('chatbot-box');
+  box.classList.toggle('chatbot-hidden');
+
+  if (!box.classList.contains('chatbot-hidden')) {
+    if (!chatHistoryLoaded) {
+      loadChatHistory();
+      chatHistoryLoaded = true;
+    }
+    localStorage.setItem('chatbot_opened_once', 'true');
+    const notify = document.getElementById('chatbot-notify');
+    if (notify) notify.style.display = 'none';
+    document.getElementById('chatbot-input')?.focus();
+  }
+};
+
+window.askQuestion = function (question) {
+  document.getElementById('chatbot-input').value = question;
+  sendChatMessage();
+};
+
+window.sendChatMessage = function () {
+  const input = document.getElementById('chatbot-input');
+  const messages = document.getElementById('chatbot-messages');
+  const text = input.value.trim();
+  if (!text) return;
+
+  const userDiv = document.createElement('div');
+  userDiv.className = 'user-msg';
+  userDiv.textContent = text;
+  messages.appendChild(userDiv);
+  input.value = '';
+  messages.scrollTop = messages.scrollHeight;
+
+  const typing = document.createElement('div');
+  typing.className = 'typing-indicator';
+  typing.innerHTML = '<div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div>';
+  messages.appendChild(typing);
+  messages.scrollTop = messages.scrollHeight;
+
+  setTimeout(() => {
+    typing.remove();
+    const result = generateChatResponse(text.toLowerCase());
+
+    const botDiv = document.createElement('div');
+    botDiv.className = 'bot-msg';
+    botDiv.innerHTML = result.html;
+    messages.appendChild(botDiv);
+
+    if (result.followUps && result.followUps.length) {
+      const followDiv = document.createElement('div');
+      followDiv.className = 'followup-questions';
+      followDiv.innerHTML = result.followUps.map(f =>
+        `<button onclick="askQuestion('${f.query.replace(/'/g, "\\'")}')">${f.label}</button>`
+      ).join('');
+      messages.appendChild(followDiv);
+    }
+
+    messages.scrollTop = messages.scrollHeight;
+    saveChatHistory();
+  }, 900);
+
+  saveChatHistory();
+};
+
+/* ============================================================
+   21. MASTER INIT — SIRF EK DOMContentLoaded (Duplicates hataye)
+   ============================================================ */
+document.addEventListener('DOMContentLoaded', () => {
+
+  // Page Loader hide
   const loader = document.getElementById('page-loader');
   if (loader) {
     setTimeout(() => {
@@ -907,266 +1242,44 @@ async function loadVisitorCount() {
     }, 1300);
   }
 
-  loadGitHubStats();
+  // Dark mode icon set (page load pe already saved theme dikhana)
+  const savedTheme = localStorage.getItem('theme') || 'light';
+  const darkBtn = document.getElementById('dark-mode-toggle');
+  if (darkBtn) darkBtn.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+
+  // Core data loads
   loadProjects();
   loadKaggleDatasets();
   initProjectFilters();
   initContactForm();
   loadVisitorCount();
 
-    // Scroll Animations
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.12 });
-
-  function initReveal() {
-    document.querySelectorAll('.reveal, .reveal-left, .reveal-right')
-      .forEach(el => revealObserver.observe(el));
-  }
-
+  // New features
+  initTypingAnimation();
+  initScrollProgress();
+  initCounters();
   initReveal();
 
-  // Tab change hone par bhi animations re-init karo
-  const originalOpenTab = window.openTab;
-  window.openTab = function(evt, tabId) {
-    originalOpenTab(evt, tabId);
-    setTimeout(initReveal, 100);
-  };
-});
-const form = document.getElementById('contact-form');
+  // Chatbot notify dot (8 sec baad, agar kabhi khola nahi)
+  setTimeout(() => {
+    if (!localStorage.getItem('chatbot_opened_once')) {
+      const notify = document.getElementById('chatbot-notify');
+      if (notify) notify.style.display = 'block';
+    }
+  }, 8000);
 
-form.addEventListener('submit', function(e) {
-    e.preventDefault();
-    const formData = new FormData(form);
-    const object = Object.fromEntries(formData);
-    const json = JSON.stringify(object);
-
-    fetch('https://web3forms.com', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            },
-            body: json
-        })
-        .then(async (response) => {
-            let json = await response.json();
-            if (response.status == 200) {
-                alert("Message Sent Successfully! Jatin will reply soon.");
-                form.reset();
-            } else {
-                alert(json.message);
-            }
-        })
-        .catch(error => {
-            console.log(error);
-            alert("Something went wrong!");
-        });
-});
-document.addEventListener('DOMContentLoaded', () => {
-  loadGitHubStats();
-  loadProjects();
-  loadKaggleDatasets();
-  initProjectFilters();
-  initContactForm();
-  loadVisitorCount();
-
-  // ⌨️ SECRET DEVELOPER SHORTCUT
-  // Ctrl + Shift + R dabao = Cache clear + Fresh reload
-  // (Normal users ko pata nahi chalega)
+  // Secret Developer Shortcut: Ctrl + Shift + R
   document.addEventListener('keydown', (e) => {
     if (e.ctrlKey && e.shiftKey && e.key === 'R') {
       e.preventDefault();
-      localStorage.removeItem('gh_tree_cache');
-      localStorage.removeItem('gh_tree_cache_time');
+      Object.keys(localStorage).forEach(key => {
+        if (key.startsWith('cache_') || key.startsWith('gh_tree_cache')) {
+          localStorage.removeItem(key);
+        }
+      });
       sessionStorage.clear();
       console.log('🔄 Cache cleared! Reloading...');
       window.location.reload();
     }
   });
-    // Cache Clear Button
-  window.clearCacheManually = function() {
-    const btn = document.getElementById('cache-clear-btn');
-    btn.textContent = '⏳ Clearing...';
-    btn.classList.add('clearing');
-    btn.disabled = true;
-
-    localStorage.removeItem('gh_tree_cache');
-    localStorage.removeItem('gh_tree_cache_time');
-    sessionStorage.clear();
-
-    setTimeout(() => {
-      btn.textContent = '✅ Done! Reloading...';
-      setTimeout(() => window.location.reload(), 800);
-    }, 500);
-  };
-    // ============================================================
-  // AI CHATBOT
-  // ============================================================
-  const CHATBOT_KNOWLEDGE = {
-    greetings: ['hi', 'hello', 'hey', 'namaste', 'hii'],
-    
-    answers: {
-      projects: {
-        keywords: ['project', 'built', 'made', 'work', 'portfolio', 'kaam'],
-        response: `📊 <b>Jatin has built 4+ projects:</b><br><br>
-          🏦 <b>Bank Analytics</b> - Banking intelligence dashboard with fraud detection using Power BI & SQL<br><br>
-          🛒 <b>Ecommerce Sales Analysis</b> - Sales trends and customer behavior analysis<br><br>
-          👥 <b>HR Analytics</b> - Employee performance and attrition analysis<br><br>
-          🍕 <b>Zomato Analytics</b> - Food delivery data analysis and insights<br><br>
-          Click the <b>Projects tab</b> to explore each one in detail!`
-      },
-      skills: {
-        keywords: ['skill', 'know', 'technology', 'tech', 'expertise', 'languages'],
-        response: `🛠️ <b>Jatin's Technical Skills:</b><br><br>
-          🐍 <b>Python</b> - Pandas, NumPy, Matplotlib, Seaborn, Plotly<br>
-          🗄️ <b>SQL</b> - MySQL, Data Querying, Joins<br>
-          📊 <b>Power BI</b> - DAX, Data Modeling, Interactive Dashboards<br>
-          📋 <b>Excel</b> - Advanced formulas, Pivot Tables<br>
-          🤖 <b>Machine Learning</b> - Basics, Fraud Detection<br>
-          ☁️ <b>Tools</b> - GitHub, Streamlit, Vercel`
-      },
-      contact: {
-        keywords: ['contact', 'reach', 'email', 'connect', 'hire', 'touch'],
-        response: `📬 <b>Contact Jatin:</b><br><br>
-          📧 <b>Email:</b> jatin@jatinanalytics.co.in<br>
-          💼 <b>LinkedIn:</b> linkedin.com/in/jatin-kumar-5a46a720a<br>
-          🐙 <b>GitHub:</b> github.com/jating1416-debug<br>
-          🏆 <b>Kaggle:</b> kaggle.com/jatinkhandelwal112<br><br>
-          Or use the <b>Contact tab</b> to send a direct message!`
-      },
-      bank: {
-        keywords: ['bank', 'banking', 'financial', 'loan', 'transaction'],
-        response: `🏦 <b>Bank Analytics Project:</b><br><br>
-          Built an interactive <b>Digital Banking Intelligence Dashboard</b> using Power BI.<br><br>
-          📌 <b>Key Features:</b><br>
-          • 75K+ customers analyzed<br>
-          • $3bn loan portfolio tracked<br>
-          • Transaction fraud patterns detected<br>
-          • City-wise customer distribution<br><br>
-          🛠️ <b>Tools:</b> Power BI, DAX, SQL, Excel<br><br>
-          Open the Projects tab to see the live dashboard!`
-      },
-      tools: {
-        keywords: ['tool', 'software', 'use', 'powerbi', 'python', 'sql'],
-        response: `⚙️ <b>Tools Jatin Uses:</b><br><br>
-          📊 Power BI + DAX<br>
-          🐍 Python (Pandas, NumPy, Plotly)<br>
-          🗄️ MySQL<br>
-          📋 Excel (Advanced)<br>
-          📓 Jupyter Notebook<br>
-          🐙 GitHub<br>
-          🌐 Streamlit + Vercel<br><br>
-          Total: <b>6+ tools mastered</b> with 500+ hours of practice!`
-      },
-      availability: {
-        keywords: ['available', 'job', 'hire', 'work', 'opportunity', 'fresher', 'open'],
-        response: `💼 <b>Availability:</b><br><br>
-          ✅ <b>Currently Open to Opportunities!</b><br><br>
-          🎯 Looking for:<br>
-          • Data Analyst roles<br>
-          • Business Intelligence Analyst<br>
-          • Power BI Developer<br><br>
-          📍 Open to: Full-time, Internship, Remote/WFH<br>
-          ⏰ Response time: Within 24 hours<br><br>
-          📧 Reach out: jatin@jatinanalytics.co.in`
-      },
-      education: {
-        keywords: ['education', 'degree', 'study', 'college', 'university', 'mba', 'bca'],
-        response: `🎓 <b>Jatin's Education:</b><br><br>
-          📚 <b>MBA</b> - Operation Management<br>
-          Vivekananda Global University (Pursuing)<br><br>
-          💻 <b>BCA</b> - Bachelor of Computer Application<br>
-          Sikkim Alpine University (2022-2025)<br><br>
-          💊 <b>D.Pharm</b> - Diploma in Pharmacy<br>
-          Apeejay Stya University (2020-2022)<br><br>
-          Self-taught in Data Analytics through 500+ hours of practical projects!`
-      },
-      kaggle: {
-        keywords: ['kaggle', 'dataset', 'data', 'published'],
-        response: `🏆 <b>Kaggle Contributions:</b><br><br>
-          📦 <b>Indian Financial Fraud Dataset</b><br>
-          Comprehensive dataset with 50,000+ fraud cases from Indian banking sector.<br><br>
-          🏷️ Tags: Finance, Fraud Detection, Python, ML<br><br>
-          Visit the <b>Kaggle tab</b> for direct links, or go to:<br>
-          kaggle.com/jatinkhandelwal112`
-      }
-    },
-    
-    fallback: `🤔 I didn't quite understand that. Here's what I can help with:<br><br>
-      • 📊 <b>Projects</b> - Ask about any specific project<br>
-      • 🛠️ <b>Skills</b> - Python, SQL, Power BI expertise<br>
-      • 📬 <b>Contact</b> - How to reach Jatin<br>
-      • 🎓 <b>Education</b> - Academic background<br>
-      • 💼 <b>Availability</b> - Job opportunities<br>
-      • 🏆 <b>Kaggle</b> - Published datasets<br><br>
-      Try asking: "<i>What projects has Jatin built?</i>"`
-  };
-
-  window.toggleChatbot = function() {
-    const box = document.getElementById('chatbot-box');
-    box.classList.toggle('chatbot-hidden');
-    if (!box.classList.contains('chatbot-hidden')) {
-      document.getElementById('chatbot-input')?.focus();
-    }
-  };
-
-  window.askQuestion = function(question) {
-    document.getElementById('chatbot-input').value = question;
-    sendChatMessage();
-  };
-
-  window.sendChatMessage = function() {
-    const input = document.getElementById('chatbot-input');
-    const messages = document.getElementById('chatbot-messages');
-    const text = input.value.trim();
-    if (!text) return;
-
-    // User message
-    const userDiv = document.createElement('div');
-    userDiv.className = 'user-msg';
-    userDiv.textContent = text;
-    messages.appendChild(userDiv);
-    input.value = '';
-
-    // Typing indicator
-    const typing = document.createElement('div');
-    typing.className = 'typing-indicator';
-    typing.innerHTML = '<div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div>';
-    messages.appendChild(typing);
-    messages.scrollTop = messages.scrollHeight;
-
-    // Response generate karo
-    setTimeout(() => {
-      typing.remove();
-      const response = generateChatResponse(text.toLowerCase());
-      const botDiv = document.createElement('div');
-      botDiv.className = 'bot-msg';
-      botDiv.innerHTML = response;
-      messages.appendChild(botDiv);
-      messages.scrollTop = messages.scrollHeight;
-    }, 900);
-  };
-
-  function generateChatResponse(text) {
-    // Greetings check
-    if (CHATBOT_KNOWLEDGE.greetings.some(g => text.includes(g))) {
-      return `👋 Hello! Great to meet you!<br><br>I'm Jatin's Portfolio AI. I can tell you about his <b>projects, skills, experience, and how to contact him</b>.<br><br>What would you like to know?`;
-    }
-
-    // Knowledge base check
-    for (const [key, data] of Object.entries(CHATBOT_KNOWLEDGE.answers)) {
-      if (data.keywords.some(kw => text.includes(kw))) {
-        return data.response;
-      }
-    }
-
-    // Fallback
-    return CHATBOT_KNOWLEDGE.fallback;
-  }
 });
