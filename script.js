@@ -723,12 +723,10 @@ async function loadCaseStudies() {
   const container = document.getElementById('case-studies-container');
   const introEl = document.getElementById('case-study-intro');
   if (!container) return;
-
   if (container.dataset.loaded) return;
 
   try {
-    // Cache bypass trick applied here
-    const data = await cachedFetch('case_studies_final', 'case_studies.json', {}, 60 * 60 * 1000);
+    const data = await cachedFetch('case_studies_v3', 'case_studies.json', {}, 60 * 60 * 1000);
     if (introEl) introEl.textContent = data.intro || '';
 
     ALL_CASE_STUDIES = (data.datasets || []).map((ds, i) => ({
@@ -796,8 +794,8 @@ async function toggleCaseStudyAccordion(header, idx) {
         body.innerHTML = buildCaseStudyHTML(ds);
         ds.loaded = true;
       } catch(e) {
-         console.error("HTML Build Error:", e);
-         body.innerHTML = `<div class="error-state">Error: ${e.message}</div>`;
+        console.error('HTML Build Error:', e);
+        body.innerHTML = `<div class="error-state">⚠️ Error: ${e.message}</div>`;
       }
     }
     content.style.maxHeight = content.scrollHeight + 'px';
@@ -821,24 +819,23 @@ function buildCaseStudyHTML(ds) {
     : '';
 
   const tagsHTML = (ds.tags && ds.tags.length)
-    ? `<div class="tech-tags" style="margin-bottom:18px;">${ds.tags.map(t => `<span class="badge">${escapeHtml(t)}</span>`).join('')}</div>`
+    ? `<div class="tech-tags" style="margin-bottom:18px;">
+        ${ds.tags.map(t => `<span class="badge">${escapeHtml(t)}</span>`).join('')}
+       </div>`
     : '';
 
   const problemHTML = ds.problem_statement
     ? `<p class="overview-text">${escapeHtml(ds.problem_statement).replace(/\n/g, '<br>')}</p>`
     : '<p class="no-content">No problem statement added</p>';
 
-  // NEW: Dataset Architecture Logic
   const archHTML = (ds.architecture_logic && ds.architecture_logic.length)
     ? `<ul>${ds.architecture_logic.map(i => `<li>${escapeHtml(i)}</li>`).join('')}</ul>`
     : '';
 
-  // NEW: Data Generation Rules
   const rulesHTML = (ds.generation_rules && ds.generation_rules.length)
     ? `<ul>${ds.generation_rules.map(i => `<li>${escapeHtml(i)}</li>`).join('')}</ul>`
     : '';
 
-  // NEW: Realistic Constraints Applied
   const constraintsHTML = (ds.realistic_constraints && ds.realistic_constraints.length)
     ? `<ul>${ds.realistic_constraints.map(i => `<li>${escapeHtml(i)}</li>`).join('')}</ul>`
     : '';
@@ -859,23 +856,34 @@ function buildCaseStudyHTML(ds) {
     : '<p class="no-content">No challenges listed</p>';
 
   const insightsHTML = (ds.insights && ds.insights.length)
-    ? `<div class="key-insights-box"><ul>${ds.insights.map(i => `<li>${escapeHtml(i)}</li>`).join('')}</ul></div>`
+    ? `<div class="key-insights-box">
+        <ul>${ds.insights.map(i => `<li>${escapeHtml(i)}</li>`).join('')}</ul>
+       </div>`
     : '<p class="no-content">No insights added</p>';
 
   const btnsHTML = `
     <div class="cs-btn-row">
-      ${ds.kaggle_link ? `<a href="${ds.kaggle_link}" target="_blank" rel="noopener" class="btn-kaggle"><i class="fab fa-kaggle"></i> View on Kaggle</a>` : ''}
-      ${ds.github_link ? `<a href="${ds.github_link}" target="_blank" rel="noopener" class="s-btn github"><i class="fab fa-github"></i> View on GitHub</a>` : ''}
+      ${ds.kaggle_link
+        ? `<a href="${ds.kaggle_link}" target="_blank" rel="noopener" class="btn-kaggle">
+             <i class="fab fa-kaggle"></i> View on Kaggle
+           </a>`
+        : ''}
+      ${ds.github_link
+        ? `<a href="${ds.github_link}" target="_blank" rel="noopener" class="s-btn github">
+             <i class="fab fa-github"></i> View on GitHub
+           </a>`
+        : ''}
     </div>`;
 
   return `
     ${coverHTML}
     ${tagsHTML}
+
     <div class="section-block">
       <h3>🎯 Problem Statement</h3>
       ${problemHTML}
     </div>
-    
+
     ${archHTML ? `
     <div class="section-block">
       <h3>🏗️ Dataset Architecture Logic</h3>
@@ -898,22 +906,28 @@ function buildCaseStudyHTML(ds) {
       <h3>📊 Dataset Structure</h3>
       ${structureHTML}
     </div>
+
     <div class="section-block">
       <h3>🐍 Python Code Snippet</h3>
       ${codeHTML}
     </div>
+
     <div class="section-block">
       <h3>⚠️ Execution Challenges</h3>
       ${challengesHTML}
     </div>
+
     <div class="section-block">
       <h3>💡 Business Insights Generated</h3>
       ${insightsHTML}
     </div>
+
     <div class="section-block">
       ${btnsHTML}
     </div>`;
 }
+
+
 /* ============================================================
    10. LIGHTBOX
    ============================================================ */
