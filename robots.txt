@@ -12,4 +12,8 @@ User-agent: Google-Extended
 Allow: /
 
 Sitemap: Sitemap: https://jatinanalytics.co.in/sitemap.xml
+
 Sitemap: https://jatinanalytics.co.in/sitemap-images.xml
+
+
+
