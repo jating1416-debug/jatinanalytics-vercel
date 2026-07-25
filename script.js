@@ -828,6 +828,21 @@ function buildCaseStudyHTML(ds) {
     ? `<p class="overview-text">${escapeHtml(ds.problem_statement).replace(/\n/g, '<br>')}</p>`
     : '<p class="no-content">No problem statement added</p>';
 
+  // NEW: Dataset Architecture Logic
+  const archHTML = (ds.architecture_logic && ds.architecture_logic.length)
+    ? `<ul>${ds.architecture_logic.map(i => `<li>${escapeHtml(i)}</li>`).join('')}</ul>`
+    : '';
+
+  // NEW: Data Generation Rules
+  const rulesHTML = (ds.generation_rules && ds.generation_rules.length)
+    ? `<ul>${ds.generation_rules.map(i => `<li>${escapeHtml(i)}</li>`).join('')}</ul>`
+    : '';
+
+  // NEW: Realistic Constraints Applied
+  const constraintsHTML = (ds.realistic_constraints && ds.realistic_constraints.length)
+    ? `<ul>${ds.realistic_constraints.map(i => `<li>${escapeHtml(i)}</li>`).join('')}</ul>`
+    : '';
+
   let structureHTML = '<p class="no-content">No dataset structure added</p>';
   if (ds.dataset_structure && ds.dataset_structure.length) {
     const headers = ['Table / File', 'Rows', 'Description'];
@@ -860,6 +875,25 @@ function buildCaseStudyHTML(ds) {
       <h3>🎯 Problem Statement</h3>
       ${problemHTML}
     </div>
+    
+    ${archHTML ? `
+    <div class="section-block">
+      <h3>🏗️ Dataset Architecture Logic</h3>
+      ${archHTML}
+    </div>` : ''}
+
+    ${rulesHTML ? `
+    <div class="section-block">
+      <h3>⚙️ Data Generation Rules</h3>
+      ${rulesHTML}
+    </div>` : ''}
+
+    ${constraintsHTML ? `
+    <div class="section-block">
+      <h3>🔒 Realistic Constraints Applied</h3>
+      ${constraintsHTML}
+    </div>` : ''}
+
     <div class="section-block">
       <h3>📊 Dataset Structure</h3>
       ${structureHTML}
@@ -869,18 +903,17 @@ function buildCaseStudyHTML(ds) {
       ${codeHTML}
     </div>
     <div class="section-block">
-      <h3>⚠️ Challenges Faced</h3>
+      <h3>⚠️ Execution Challenges</h3>
       ${challengesHTML}
     </div>
     <div class="section-block">
-      <h3>💡 Business Insights</h3>
+      <h3>💡 Business Insights Generated</h3>
       ${insightsHTML}
     </div>
     <div class="section-block">
       ${btnsHTML}
     </div>`;
 }
-
 /* ============================================================
    10. LIGHTBOX
    ============================================================ */
