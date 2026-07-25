@@ -190,6 +190,7 @@
             <li class="tab-item" role="tab" tabindex="0" aria-selected="false" aria-controls="tab-projects" onclick="openTab(event, 'tab-projects')" onkeydown="handleTabKeydown(event, this)">🎯 Projects Showcase</li>
             <li class="tab-item" role="tab" tabindex="0" aria-selected="false" aria-controls="tab-gallery" onclick="openTab(event, 'tab-gallery')" onkeydown="handleTabKeydown(event, this)">🖼️ All Images Gallery</li>
             <li class="tab-item" role="tab" tabindex="0" aria-selected="false" aria-controls="tab-kaggle" onclick="openTab(event, 'tab-kaggle')" onkeydown="handleTabKeydown(event, this)">📊 Kaggle Datasets</li>
+            <li class="tab-item" role="tab" tabindex="0" aria-selected="false" aria-controls="tab-casestudy" onclick="openTab(event, 'tab-casestudy')" onkeydown="handleTabKeydown(event, this)">📁 Dataset Overview</li>
             <li class="tab-item" role="tab" tabindex="0" aria-selected="false" aria-controls="tab-tool" onclick="openTab(event, 'tab-tool')" onkeydown="handleTabKeydown(event, this)">🧹 Clean & Visualize Tool ℹ️</li>
             <li class="tab-item" role="tab" tabindex="0" aria-selected="false" aria-controls="tab-resume" onclick="openTab(event, 'tab-resume')" onkeydown="handleTabKeydown(event, this)">📄 Resume & Profile</li>
             <li class="tab-item" role="tab" tabindex="0" aria-selected="false" aria-controls="tab-contact" onclick="openTab(event, 'tab-contact')" onkeydown="handleTabKeydown(event, this)">📬 Contact Me</li>
@@ -455,6 +456,19 @@
         </div>
       </div>
     </div>
+    <!-- ==================== TAB: DATASET OVERVIEW (CASE STUDY) ==================== -->
+<div id="tab-casestudy" class="tab-content" role="tabpanel">
+  <h2>📁 Dataset Overview (Case Study)</h2>
+  <p id="case-study-intro" class="case-study-intro">Loading...</p>
+  <hr>
+
+  <div id="case-studies-container">
+    <div class="skeleton-list">
+      <div class="skeleton-project-card"><div class="skeleton-line wide"></div><div class="skeleton-line medium"></div></div>
+      <div class="skeleton-project-card"><div class="skeleton-line wide"></div><div class="skeleton-line medium"></div></div>
+    </div>
+  </div>
+</div>
 
     <!-- ==================== TAB 5: CLEAN TOOL ==================== -->
     <div id="tab-tool" class="tab-content" role="tabpanel">

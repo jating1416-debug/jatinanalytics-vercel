@@ -1,0 +1,22 @@
+{
+  "title": "Zomato Analytics Dashboard",
+  "tagline": "Transforming raw restaurant data into meaningful business insights",
+  "overview": "Built this Zomato Analytics Dashboard using SQL, Python, MySQL, and Power BI to transform raw restaurant data into meaningful business insights. This project helped strengthen skills in data cleaning, SQL querying, data modeling, dashboard design, and business storytelling.",
+  "objectives": [
+    "Clean and preprocess raw restaurant order data using Python",
+    "Perform in-depth analysis using MySQL queries",
+    "Build an interactive Power BI dashboard with DAX measures",
+    "Identify key business patterns in cuisine preference, payments, and delivery performance"
+  ],
+  "key_insights": [
+    "North Indian cuisine generated the highest number of orders",
+    "Around 75% of orders were successfully delivered",
+    "Cash & Card remained the most preferred payment method",
+    "Bangalore generated the highest revenue among all cities",
+    "Highly popular restaurants contributed the maximum orders"
+  ],
+  "tech": ["Python", "MySQL", "Power BI", "DAX", "SQL"],
+  "tags": ["Food Delivery", "Restaurant Analytics", "Power BI", "Python"],
+  "powerbi_embed_url": "https://app.powerbi.com/view?r=eyJrIjoiNmFiYjQ3MzMtMzU3Ny00OTNlLTg0ZjEtMTBjNzBkOTczNzlhIiwidCI6IjUzMTVhNjkzLTM3MjktNDY0NS1hOTIyLWMxY2EwMTVjNWY1MiJ9",
+  "github_description": "Zomato food delivery analytics project with interactive dashboard"
+}

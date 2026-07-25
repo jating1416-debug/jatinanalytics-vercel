@@ -2129,3 +2129,85 @@ select:focus-visible,
   .cert-verify-btn, .cert-download-btn { width: 100%; }
   .process-body:hover { transform: none; }
 }
+/* ============================================================
+   DATASET OVERVIEW (CASE STUDY) TAB — NAYA
+   ============================================================ */
+.case-study-intro {
+  font-size: 0.95rem;
+  color: #4a5568;
+  font-style: italic;
+  margin-bottom: 18px;
+}
+
+.case-study-cover {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  margin-bottom: 20px;
+  background: #f8fafc;
+  max-height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.case-study-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 0;
+  transition: opacity 0.45s ease;
+}
+
+.case-study-cover img.img-loaded { opacity: 1; }
+
+.code-snippet-block {
+  background: #1e293b;
+  color: #e2e8f0;
+  padding: 18px;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  font-family: 'Fira Code', monospace;
+  white-space: pre;
+}
+
+.cs-btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.cs-btn-row .s-btn {
+  display: inline-flex;
+  width: auto;
+  margin: 0;
+}
+
+.key-insights-box {
+  background: #f0fff4;
+  border: 1px solid #9ae6b4;
+  border-radius: 8px;
+  padding: 14px 18px;
+}
+
+.key-insights-box h4 { margin-top: 0; }
+.key-insights-box ul { margin: 0; padding-left: 20px; }
+.key-insights-box li { margin-bottom: 6px; color: #276749; }
+
+/* Dark mode support */
+[data-theme="dark"] .case-study-intro { color: #a0aec0; }
+[data-theme="dark"] .case-study-cover { background: #1a202c; }
+[data-theme="dark"] .code-snippet-block { background: #0f172a; border: 1px solid #2d3748; }
+[data-theme="dark"] .key-insights-box {
+  background: rgba(154,230,180,0.08);
+  border-color: rgba(154,230,180,0.25);
+}
+[data-theme="dark"] .key-insights-box li { color: #9ae6b4; }
+
+@media (max-width: 480px) {
+  .cs-btn-row .s-btn { width: 100%; }
+}

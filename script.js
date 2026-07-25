@@ -713,6 +713,212 @@ function toggleKaggleCard(header) {
   header.classList.toggle('open', !isOpen);
   body.style.maxHeight = !isOpen ? body.scrollHeight + 'px' : null;
 }
+/* ============================================================
+   9.5. DATASET OVERVIEW (CASE STUDY) TAB — NAYA
+   ============================================================ */
+let ALL_CASE_STUDIES = [];
+
+async function loadCaseStudies() {
+  const container = document.getElementById('case-studies-container');
+  const introEl = document.getElementById('case-study-intro');
+  if (!container) return;
+
+  // Ek baar load hone ke baad dubara fetch/render na ho
+  if (container.dataset.loaded) return;
+
+  try {
+    const data = await cachedFetch('case_studies', 'case_studies.json', {}, 60 * 60 * 1000);
+    if (introEl) introEl.textContent = data.intro || '';
+
+    ALL_CASE_STUDIES = (data.datasets || []).map((ds, i) => ({
+      ...ds,
+      uid: ds.id || `cs-${i}`,
+      loaded: false
+    }));
+
+    renderCaseStudiesList();
+    container.dataset.loaded = 'true';
+  } catch (err) {
+    console.error('Case studies load failed:', err);
+    container.innerHTML = `
+      <div class="error-state">
+        <h3>⚠️ Could not load case studies</h3>
+        <p>${err.message}</p>
+      </div>`;
+  }
+}
+
+function buildCaseStudyHTML(ds) {
+  const coverHTML = ds.cover_image
+    ? `<div class="case-study-cover">
+         <img src="${ds.cover_image}" alt="${escapeHtml(ds.name)} cover" loading="lazy"
+              onload="this.classList.add('img-loaded')"
+              onerror="this.parentElement.style.display='none'">
+       </div>`
+    : '';
+
+  const tagsHTML = (ds.tags && ds.tags.length)
+    ? `<div class="tech-tags" style="margin-bottom:18px;">${ds.tags.map(t => `<span class="badge">${escapeHtml(t)}</span>`).join('')}</div>`
+    : '';
+
+  const problemHTML = ds.problem_statement
+    ? `<p class="overview-text">${escapeHtml(ds.problem_statement).replace(/\n/g, '<br>')}</p>`
+    : '<p class="no-content">No problem statement added</p>';
+
+  let structureHTML = '<p class="no-content">No dataset structure added</p>';
+  if (ds.dataset_structure && ds.dataset_structure.length) {
+    const headers = ['Table / File', 'Rows', 'Description'];
+    const rows = ds.dataset_structure.map(t => [t.table, t.rows, t.desc]);
+    structureHTML = `<div class="table-scroll">${generateHTMLTable(headers, rows)}</div>`;
+  }
+
+  const codeHTML = ds.python_snippet
+    ? `<pre class="code-snippet-block"><code>${escapeHtml(ds.python_snippet)}</code></pre>`
+    : '<p class="no-content">No code snippet added</p>';
+
+  const challengesHTML = (ds.challenges && ds.challenges.length)
+    ? `<ul>${ds.challenges.map(c => `<li>${escapeHtml(c)}</li>`).join('')}</ul>`
+    : '<p class="no-content">No challenges listed</p>';
+
+  const insightsHTML = (ds.insights && ds.insights.length)
+    ? `<div class="key-insights-box"><ul>${ds.insights.map(i => `<li>${escapeHtml(i)}</li>`).join('')}</ul></div>`
+    : '<p class="no-content">No insights added</p>';
+
+  const btnsHTML = `
+    <div class="cs-btn-row">
+      ${ds.kaggle_link ? `<a href="${ds.kaggle_link}" target="_blank" rel="noopener" class="btn-kaggle"><i class="fab fa-kaggle"></i> View on Kaggle</a>` : ''}
+      ${ds.github_link ? `<a href="${ds.github_link}" target="_blank" rel="noopener" class="s-btn github"><i class="fab fa-github"></i> View on GitHub</a>` : ''}
+    </div>`;
+
+  return `
+    ${coverHTML}
+    ${tagsHTML}
+    <div class="section-block">
+      <h3>🎯 Problem Statement</h3>
+      ${problemHTML}
+    </div>
+    <div class="section-block">
+      <h3>📊 Dataset Structure</h3>
+      ${structureHTML}
+    </div>
+    <div class="section-block">
+      <h3>🐍 Python Code Snippet</h3>
+      ${codeHTML}
+    </div>
+    <div class="section-block">
+      <h3>⚠️ Challenges Faced</h3>
+      ${challengesHTML}
+    </div>
+    <div class="section-block">
+      <h3>💡 Business Insights</h3>
+      ${insightsHTML}
+    </div>
+    <div class="section-block">
+      ${btnsHTML}
+    </div>`;
+}
+
+async function toggleCaseStudyAccordion(header, idx) {
+  const isOpen = header.classList.contains('open');
+  const content = header.nextElementSibling;
+
+  document.querySelectorAll('#case-studies-container .accordion-header.open').forEach(h => {
+    if (h !== header) {
+      h.classList.remove('open');
+      h.nextElementSibling.style.maxHeight = null;
+    }
+  });
+
+  header.classList.toggle('open', !isOpen);
+
+  if (!isOpen) {
+    const ds = ALL_CASE_STUDIES[idx];
+    if (!ds.loaded) {
+      const body = content.querySelector('.accordion-body');
+      body.innerHTML = buildCaseStudyHTML(ds);
+      ds.loaded = true;
+    }
+    content.style.maxHeight = content.scrollHeight + 'px';
+    setTimeout(() => {
+      if (header.classList.contains('open')) {
+        content.style.maxHeight = content.scrollHeight + 'px';
+      }
+    }, 300);
+  } else {
+    content.style.maxHeight = null;
+  }
+}
+
+function buildCaseStudyHTML(ds) {
+  const coverHTML = ds.cover_image
+    ? `<div class="case-study-cover">
+         <img src="${ds.cover_image}" alt="${escapeHtml(ds.title)} cover" loading="lazy"
+              onload="this.classList.add('img-loaded')"
+              onerror="this.parentElement.style.display='none'">
+       </div>`
+    : '';
+
+  const problemHTML = ds.problem_statement
+    ? `<p class="overview-text">${escapeHtml(ds.problem_statement).replace(/\n/g, '<br>')}</p>`
+    : '<p class="no-content">No problem statement added</p>';
+
+  let structureHTML = '<p class="no-content">No dataset structure added</p>';
+  if (ds.dataset_structure) {
+    const { rows, columns, tables } = ds.dataset_structure;
+    const shapeLine = (rows || columns)
+      ? `<p class="shape-info">Shape: <code>${(rows || 0).toLocaleString()} rows × ${columns || 0} columns</code></p>`
+      : '';
+    const tablesHTML = (tables || []).map(t => `
+      <h4 style="margin-top:15px;">${escapeHtml(t.table_name || 'Sample Data')}</h4>
+      <div class="table-scroll">${generateHTMLTable(t.headers, t.rows)}</div>
+    `).join('');
+    structureHTML = shapeLine + tablesHTML;
+  }
+
+  const codeHTML = ds.python_code
+    ? `<pre class="code-snippet-block"><code>${escapeHtml(ds.python_code)}</code></pre>`
+    : '<p class="no-content">No code snippet added</p>';
+
+  const challengesHTML = (ds.challenges && ds.challenges.length)
+    ? `<ul>${ds.challenges.map(c => `<li>${escapeHtml(c)}</li>`).join('')}</ul>`
+    : '<p class="no-content">No challenges listed</p>';
+
+  const insightsHTML = (ds.business_insights && ds.business_insights.length)
+    ? `<div class="key-insights-box"><ul>${ds.business_insights.map(i => `<li>${escapeHtml(i)}</li>`).join('')}</ul></div>`
+    : '<p class="no-content">No insights added</p>';
+
+  const btnsHTML = `
+    <div class="cs-btn-row">
+      ${ds.kaggle_link ? `<a href="${ds.kaggle_link}" target="_blank" rel="noopener" class="btn-kaggle"><i class="fab fa-kaggle"></i> View on Kaggle</a>` : ''}
+      ${ds.github_link ? `<a href="${ds.github_link}" target="_blank" rel="noopener" class="s-btn github"><i class="fab fa-github"></i> View on GitHub</a>` : ''}
+    </div>`;
+
+  return `
+    ${coverHTML}
+    <div class="section-block">
+      <h3>🎯 Problem Statement</h3>
+      ${problemHTML}
+    </div>
+    <div class="section-block">
+      <h3>📊 Dataset Structure</h3>
+      ${structureHTML}
+    </div>
+    <div class="section-block">
+      <h3>🐍 Python Code Snippet</h3>
+      ${codeHTML}
+    </div>
+    <div class="section-block">
+      <h3>⚠️ Challenges Faced</h3>
+      ${challengesHTML}
+    </div>
+    <div class="section-block">
+      <h3>💡 Business Insights</h3>
+      ${insightsHTML}
+    </div>
+    <div class="section-block">
+      ${btnsHTML}
+    </div>`;
+}
 
 /* ============================================================
    10. LIGHTBOX
@@ -750,7 +956,8 @@ function openTab(evt, tabId) {
 
   history.replaceState(null, null, `#${tabId}`);
 
-  if (tabId === 'tab-gallery') initGallery();
+    if (tabId === 'tab-gallery') initGallery();
+  if (tabId === 'tab-casestudy') loadCaseStudies();
   setTimeout(initReveal, 100);
 }
 
@@ -764,7 +971,7 @@ function handleTabKeydown(e, el) {
 
 window.addEventListener('load', () => {
   const hash = window.location.hash.replace('#', '');
-  const validTabs = ['tab-home','tab-projects','tab-gallery','tab-kaggle','tab-tool','tab-resume','tab-contact'];
+  const validTabs = ['tab-home','tab-projects','tab-gallery','tab-kaggle','tab-casestudy','tab-tool','tab-resume','tab-contact'];
   if (hash && validTabs.includes(hash)) {
     document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
     document.querySelectorAll('.tab-item').forEach(t => t.classList.remove('active'));

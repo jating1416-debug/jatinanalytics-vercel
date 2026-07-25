@@ -1,0 +1,22 @@
+{
+  "title": "Ecommerce Sales Dashboard",
+  "tagline": "Sales trends and category performance analysis using Power BI",
+  "overview": "Analyzed ecommerce sales data to uncover revenue trends, category performance, regional sales patterns, and payment preferences. Built an interactive Power BI dashboard to help business teams identify growth opportunities and optimize marketing strategy.",
+  "objectives": [
+    "Track sales and profit performance across product categories",
+    "Analyze regional sales distribution across India",
+    "Identify top-selling products driving customer demand",
+    "Monitor payment method preferences and seasonal demand patterns"
+  ],
+  "key_insights": [
+    "Strong seasonal demand observed across festive and peak shopping months",
+    "Home Decor generated the highest sales and profit, making it the best-performing category",
+    "South region recorded the lowest sales and requires targeted marketing campaigns",
+    "Headphones emerged as the top-selling product, suggesting consistently high customer demand",
+    "Digital payment methods accounted for the majority of transactions, indicating strong customer preference for cashless payments"
+  ],
+  "tech": ["Python", "Pandas", "Power BI", "DAX", "Excel", "SQL"],
+  "tags": ["Ecommerce", "Sales Analysis", "Power BI", "Python"],
+  "powerbi_embed_url": "https://app.powerbi.com/view?r=eyJrIjoiNjdkNDFkMjEtN2VlYS00M2JiLTg2YjgtNTA4NWEwMmM1YzBkIiwidCI6IjUzMTVhNjkzLTM3MjktNDY0NS1hOTIyLWMxY2EwMTVjNWY1MiJ9",
+  "github_description": "Ecommerce sales analysis project with interactive dashboard"
+}

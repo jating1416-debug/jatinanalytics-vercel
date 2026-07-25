@@ -1,0 +1,21 @@
+{
+  "title": "HR Analytics Dashboard",
+  "tagline": "Workforce trends and employee attrition analysis",
+  "overview": "Analyzed HR employee data to identify workforce trends, employee attrition, salary distribution, and performance insights using SQL, Python, and Power BI. Built a comprehensive dashboard featuring department-wise distribution, job satisfaction matrix, and performance rating analysis.",
+  "objectives": [
+    "Track core HR KPIs: Total/Active Employees, Attrition Rate, and Average Age",
+    "Analyze attrition and workforce distribution by department",
+    "Monitor salary distribution across different departments and roles",
+    "Evaluate age group distribution and job satisfaction levels"
+  ],
+  "key_insights": [
+    "Overall Attrition Rate stands at 16.12% out of 4,410 total employees (3,699 active)",
+    "Research & Development (R&D) department has the largest workforce",
+    "Average Salary is also highest in the R&D department compared to others",
+    "The majority of employees belong to the 26–35 age group demographic"
+  ],
+  "tech": ["Python", "Pandas", "SQL", "MySQL", "Power BI", "DAX"],
+  "tags": ["HR Analytics", "Attrition", "Power BI", "SQL"],
+  "powerbi_embed_url": "https://app.powerbi.com/view?r=eyJrIjoiYTY1YmQxMGMtY2M5NC00YTQ5LTk4YjItY2QyOTgxZGZkZjZjIiwidCI6IjUzMTVhNjkzLTM3MjktNDY0NS1hOTIyLWMxY2EwMTVjNWY1MiJ9",
+  "github_description": "HR analytics project analyzing attrition and salary distribution"
+}

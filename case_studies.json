@@ -1,0 +1,72 @@
+{
+  "intro": "I create these synthetic datasets because real hospital, finance, and business data is private and hard to access for practice. Each dataset is designed with realistic logic — not just random numbers — so learners can practice SQL, Python, and BI tools on data that actually behaves like the real world.",
+
+  "datasets": [
+    {
+      "id": "hospital-analytics",
+      "category": "🏥 Healthcare Analytics",
+      "name": "Gurugram Hospital Analytics Dataset",
+      "cover_image": "images/hospital-dataset-cover.png",
+      "kaggle_link": "https://www.kaggle.com/datasets/jatinkhandelwal112/gurugram-hospital-analytics-dataset",
+      "github_link": "https://github.com/your-username/hospital-dataset-generator",
+      "tags": ["Healthcare", "Python", "SQL", "Power BI"],
+
+      "problem_statement": "Real hospital data is private and rarely available for public learning due to patient confidentiality. I wanted to build a realistic, logically accurate hospital dataset so learners can practice healthcare analytics.",
+
+      "dataset_structure": [
+        { "table": "doctors.csv", "rows": "80", "desc": "Doctor profiles across 15 specializations" },
+        { "table": "patients.csv", "rows": "40,600+", "desc": "OPD/IPD patient records with disease & billing info" },
+        { "table": "transactions.csv", "rows": "4,10,000+", "desc": "Detailed billing transactions" }
+      ],
+
+      "python_snippet": "DISEASE_TO_SPEC = {\n    \"Heart Attack\": \"Cardiologist\",\n    \"Migraine\": \"Neurologist\",\n    \"Pregnancy\": \"Gynecologist\"\n}",
+
+      "challenges": [
+        "Ensuring disease-age-gender medical accuracy",
+        "Realistic OPD/IPD patient flow logic",
+        "Injecting controlled raw data issues (3-6%) for cleaning practice"
+      ],
+
+      "insights": [
+        "Which department generates highest revenue",
+        "Average patient waiting time by category (Appointment vs Walk-in)",
+        "Disease patterns by season (monsoon diseases in June)"
+      ]
+    },
+
+    {
+      "id": "financial-fraud-dataset",
+      "category": "💰 Financial Fraud",
+      "name": "Indian Financial Fraud Dataset",
+      "cover_image": "images/fraud-dataset-cover.png",
+      "kaggle_link": "https://www.kaggle.com/datasets/jatinkhandelwal112/indian-financial-fraud-dataset",
+      "github_link": "https://github.com/your-username/fraud-dataset-generator",
+      "tags": ["Finance", "Fraud Detection", "Python", "ML"],
+
+      "problem_statement": "Real banking transaction data with fraud labels is extremely hard to access publicly due to strict data privacy and RBI compliance regulations. I built a 250,000-row realistic synthetic dataset mimicking real-world Indian banking patterns — card usage, geographical anomalies, and multi-entity relational schemas — so learners can practice fraud analytics without any data privacy concerns.",
+
+      "dataset_structure": [
+        { "table": "Cusmtomer_data.csv", "rows": "~15,000+", "desc": "Customer demographics, occupation, segment, and state/city info" },
+        { "table": "Cards_Data.csv", "rows": "~20,000+", "desc": "Credit limits, card status (Active/Blocked/Expired/Lost), card type & mode" },
+        { "table": "merchant_table.csv", "rows": "~2,000+", "desc": "Merchant category, risk level, ratings, and location" },
+        { "table": "Transaction_Data_250k.csv", "rows": "250,000", "desc": "Primary transaction table linked via Customer_ID, Card_ID & Merchant_ID (~5% fraud target)" }
+      ],
+
+      "python_snippet": "# Detecting card status violations - common fraud signal\nimport pandas as pd\n\ndf = pd.read_csv('Transaction_Data_250k.csv')\ncards = pd.read_csv('Cards_Data.csv')\n\nmerged = df.merge(cards, on='Card_ID', how='left')\n\n# Flag transactions attempted on blocked/expired/lost cards\nrisky_status = ['Blocked', 'Expired', 'Lost']\nmerged['Status_Violation'] = merged['Card_Status'].isin(risky_status).astype(int)\n\nfraud_rate = merged.groupby('Status_Violation')['Is_Fraud'].mean()\nprint(fraud_rate)",
+
+      "challenges": [
+        "Designing a realistic 4-table relational schema (Customer, Card, Merchant, Transaction) with consistent foreign key logic",
+        "Injecting fraud signals that mimic real patterns — card status violations, credit limit breaches, geo/time anomalies, merchant risk spikes, and transaction velocity issues",
+        "Keeping fraud class imbalance realistic (~5%) to allow practice with SMOTE, ADASYN, and cost-sensitive learning techniques",
+        "Simulating late-night transactions with location mismatches without making the pattern too obvious for ML models"
+      ],
+
+      "insights": [
+        "Fraud patterns vary significantly across channels — POS, UPI, and Online Web transactions each show different risk signatures",
+        "High-risk merchant categories (Airlines, Hotels, Electronics) show sudden spending spikes correlated with fraud",
+        "Rapid successive transactions (velocity fraud) combined with authentication failures are strong fraud predictors",
+        "Dataset enables building Power BI/Tableau risk-monitoring dashboards alongside ML classification models"
+      ]
+    }
+  ]
+}

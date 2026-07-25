@@ -5,5 +5,12 @@
     "description": "Comprehensive dataset of financial fraud cases in India. Contains transaction patterns, fraud indicators, and customer data for fraud detection analysis.",
     "link": "https://www.kaggle.com/datasets/jatinkhandelwal112/indian-financial-fraud-dataset",
     "tags": ["Finance", "Fraud Detection", "Python", "ML"]
+  },
+  {
+    "category": "🏥 Healthcare Analytics",
+    "name": "Gurugram Hospital Analytics Dataset",
+    "description": "Comprehensive synthetic hospital dataset with 40,000+ patients, 80 doctors, and 4,00,000+ billing transactions. Contains OPD/IPD patient records, disease-doctor mapping, treatment costs, and detailed transaction data for healthcare analytics and dashboard building.",
+    "link": "https://www.kaggle.com/datasets/jatinkhandelwal112/gurugram-hospital-analytics-dataset",
+    "tags": ["Healthcare", "Hospital Analytics", "Python", "SQL", "Power BI"]
   }
 ]
