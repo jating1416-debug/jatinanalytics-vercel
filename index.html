@@ -470,27 +470,67 @@
   </div>
 </div>
 
-    <!-- ==================== TAB 5: CLEAN TOOL ==================== -->
-    <div id="tab-tool" class="tab-content" role="tabpanel">
-      <h2>🧹 Clean & Visualize Your Data 
-        <span class="info-badge" title="Maximum 150,000 rows. Zero data stored after session ends.">ℹ️</span>
-      </h2>
-      
-      <div class="tool-info-banner">
-        <div class="tool-info-item">🔒 <strong>Privacy First</strong> - Your data is never stored</div>
-        <div class="tool-info-item">📊 <strong>Max 150,000 rows</strong> per file</div>
-        <div class="tool-info-item">⚡ <strong>Session Only</strong> - Data clears on reload</div>
-        <div class="tool-info-item">📁 <strong>Formats</strong> - CSV, Excel, JSON</div>
-      </div>
+   <!-- ==================== TAB 5: CLEAN TOOL ==================== -->
+<div id="tab-tool" class="tab-content" role="tabpanel">
+  <h2>🧹 Clean & Visualize Your Data
+    <span class="info-badge" 
+          title="Maximum 150,000 rows. Zero data stored after session ends.">
+      ℹ️
+    </span>
+  </h2>
 
-      <iframe 
-        src="https://jatinanalytics.streamlit.app/?embed=true" 
-        class="tool-frame" 
-        frameborder="0"
-        title="Data Cleaning and Visualization Tool"
-        loading="lazy">
-      </iframe>
+  <div class="tool-info-banner">
+    <div class="tool-info-item">
+      🔒 <strong>Privacy First</strong> - Your data is never stored
     </div>
+    <div class="tool-info-item">
+      📊 <strong>Max 150,000 rows</strong> per file
+    </div>
+    <div class="tool-info-item">
+      ⚡ <strong>Session Only</strong> - Data clears on reload
+    </div>
+    <div class="tool-info-item">
+      📁 <strong>Formats</strong> - CSV, Excel, JSON
+    </div>
+  </div>
+
+  <!-- Wake Up Wrapper -->
+  <div id="streamlit-wake-wrapper">
+
+    <!-- Placeholder (pehle yeh dikhega) -->
+    <div id="streamlit-placeholder" class="streamlit-placeholder">
+      <div class="streamlit-placeholder-inner">
+        <div class="st-wake-icon">🧹</div>
+        <h3>Data Cleaning & Visualization Tool</h3>
+        <p style="color:#718096; margin-bottom: 6px;">
+          Upload CSV/Excel/JSON → Clean → Visualize
+        </p>
+        <small style="color:#a0aec0;">
+          ⚠️ Hosted on free server — first load takes 15-20 seconds
+        </small>
+        <br>
+        <button id="load-streamlit-btn" 
+                onclick="loadStreamlitNow()" 
+                class="st-load-btn">
+          ▶ Launch Tool
+        </button>
+      </div>
+    </div>
+
+    <!-- Iframe (baad mein load hoga) -->
+    <iframe
+      id="streamlit-iframe"
+      src=""
+      data-src="https://jatinanalytics.streamlit.app/?embed=true"
+      class="tool-frame"
+      frameborder="0"
+      title="Data Cleaning and Visualization Tool"
+      loading="lazy"
+      style="display:none;">
+    </iframe>
+
+  </div>
+</div>
 
     <!-- ==================== TAB 6: RESUME ==================== -->
     <div id="tab-resume" class="tab-content" role="tabpanel">

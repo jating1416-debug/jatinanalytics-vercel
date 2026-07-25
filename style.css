@@ -2211,3 +2211,92 @@ select:focus-visible,
 @media (max-width: 480px) {
   .cs-btn-row .s-btn { width: 100%; }
 }
+/* ============================================================
+   PERFORMANCE FIXES
+   ============================================================ */
+
+/* CSV Preview Badge */
+.preview-badge {
+  background: #fef3c7;
+  color: #92400e;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid #fcd34d;
+}
+
+[data-theme="dark"] .preview-badge {
+  background: #44337a;
+  color: #e9d8fd;
+  border-color: #6b46c1;
+}
+
+/* Streamlit Placeholder */
+.streamlit-placeholder {
+  width: 100%;
+  height: 380px;
+  border: 2px dashed var(--border-color);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8fafc;
+}
+
+[data-theme="dark"] .streamlit-placeholder {
+  background: #1a202c;
+}
+
+.streamlit-placeholder-inner {
+  text-align: center;
+  padding: 30px;
+}
+
+.st-wake-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  animation: pulse 2s infinite;
+}
+
+.st-load-btn {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  border: none;
+  padding: 14px 40px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 18px;
+  font-family: inherit;
+  transition: var(--transition);
+  box-shadow: 0 4px 15px rgba(102,126,234,0.3);
+  display: inline-block;
+}
+
+.st-load-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.st-load-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.st-loading-text {
+  color: #718096;
+  font-size: 0.85rem;
+  margin-top: 14px;
+  animation: pulse 1.5s infinite;
+}
+
+/* Tool Frame */
+#streamlit-iframe {
+  width: 100%;
+  height: 820px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+}

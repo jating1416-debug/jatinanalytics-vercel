@@ -169,13 +169,34 @@ function categorizeFiles(files) {
    ============================================================ */
 async function fetchAndParseCSV(fileUrl) {
   try {
-    const res = await fetch(fileUrl);
+    // Sirf pehle 18KB fetch karo — poori file nahi
+    const res = await fetch(fileUrl, {
+      headers: { 'Range': 'bytes=0-18000' }
+    });
+
+    // Range request supported na ho toh bhi kaam kare
     const text = await res.text();
-    const parsed = Papa.parse(text, { header: false, skipEmptyLines: true });
+
+    // Sirf pehli 16 lines lo (1 header + 15 data rows)
+    const lines = text.split('\n').filter(l => l.trim() !== '');
+    const limitedLines = lines.slice(0, 16).join('\n');
+
+    const parsed = Papa.parse(limitedLines, {
+      header: false,
+      skipEmptyLines: true
+    });
+
     const rows = parsed.data;
     const headers = rows[0] || [];
     const dataRows = rows.slice(1);
-    return { headers, dataRows, totalRows: dataRows.length, totalCols: headers.length };
+
+    return {
+      headers,
+      dataRows,
+      totalRows: dataRows.length,
+      totalCols: headers.length,
+      isPreviewOnly: true  // Flag: yeh poora data nahi hai
+    };
   } catch (err) {
     console.error('CSV parse failed:', err);
     return null;
@@ -492,7 +513,13 @@ function buildProjectHTML(proj, data) {
 
     dsTablesHTML = csvPreviewData.map((ds, i) => `
       <div id="table-${proj.id}-${i}" class="dataset-table-view" style="display:${i === 0 ? 'block' : 'none'};">
-        <p class="shape-info"><b>${ds.name}</b> — Shape: <code>${ds.totalRows.toLocaleString()} rows × ${ds.totalCols} columns</code></p>
+        <p class="shape-info">
+  <b>${ds.name}</b>
+  ${ds.isPreviewOnly
+    ? `— <span class="preview-badge">👁️ Preview: First 15 rows shown</span>`
+    : `— Shape: <code>${ds.totalRows.toLocaleString()} rows × ${ds.totalCols} columns</code>`
+  }
+</p>
         <div class="table-scroll">${generateHTMLTable(ds.headers, ds.preview)}</div>
         ${ds.stats ? `
           <details class="stats-dropdown">
@@ -1457,7 +1484,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 1300);
   }
 
-  // Dark mode icon set (page load pe already saved theme dikhana)
+  // Dark mode icon set
   const savedTheme = localStorage.getItem('theme') || 'light';
   const darkBtn = document.getElementById('dark-mode-toggle');
   if (darkBtn) darkBtn.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
@@ -1475,7 +1502,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCounters();
   initReveal();
 
-  // Chatbot notify dot (8 sec baad, agar kabhi khola nahi)
+  // Chatbot notify dot (8 sec baad)
   setTimeout(() => {
     if (!localStorage.getItem('chatbot_opened_once')) {
       const notify = document.getElementById('chatbot-notify');
@@ -1497,4 +1524,36 @@ document.addEventListener('DOMContentLoaded', () => {
       window.location.reload();
     }
   });
+
 });
+
+// ============================================================
+// Streamlit Lazy Load (DOMContentLoaded ke BAHAR — sahi jagah)
+// ============================================================
+window.loadStreamlitNow = function() {
+  const btn = document.getElementById('load-streamlit-btn');
+  const placeholder = document.getElementById('streamlit-placeholder');
+  const iframe = document.getElementById('streamlit-iframe');
+  if (!btn || !placeholder || !iframe) return;
+
+  btn.textContent = '⏳ Waking up server...';
+  btn.disabled = true;
+
+  const tip = document.createElement('p');
+  tip.className = 'st-loading-text';
+  tip.textContent = '🔄 Free server wake-up: 15-20 seconds lag sakte hain';
+  placeholder.querySelector('.streamlit-placeholder-inner').appendChild(tip);
+
+  iframe.src = iframe.dataset.src;
+
+  iframe.onload = function() {
+    placeholder.style.display = 'none';
+    iframe.style.display = 'block';
+  };
+
+  // 25 sec baad force show
+  setTimeout(() => {
+    placeholder.style.display = 'none';
+    iframe.style.display = 'block';
+  }, 25000);
+};
