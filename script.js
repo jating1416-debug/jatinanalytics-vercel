@@ -62,7 +62,7 @@ async function ensureConfigLoaded() {
 async function getGitHubTree() {
   const CACHE_KEY = 'gh_tree_cache';
   const CACHE_TIME_KEY = 'gh_tree_cache_time';
-  const CACHE_DURATION = 30 * 60 * 1000;
+ const CACHE_DURATION = 2 * 60 * 60 * 1000; // 2 ghante
 
   const cached = localStorage.getItem(CACHE_KEY);
   const cachedTime = localStorage.getItem(CACHE_TIME_KEY);
