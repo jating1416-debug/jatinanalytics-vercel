@@ -1,0 +1,38 @@
+{
+  "title": "Supply Chain & Logistics Delivery Performance Dashboard",
+  "tagline": "Order fulfillment efficiency, carrier analytics, warehousing bottlenecks, and logistics profitability",
+  "overview": "Analyzed 200,000 supply chain order transactions along with customer, product, warehouse, and carrier data to optimize logistics costs, evaluate courier SLAs, track fulfillment bottlenecks, and analyze net profit margins using Python, DAX, and Power BI. Built a high-impact single-page executive control tower dashboard focused on fulfillment KPIs, shipping cost distribution, warehouse return rates, and financial performance.",
+  "objectives": [
+    "Track core logistics KPIs including Total Revenue (₹3.95Bn), Net Profit (₹518.09M), Net Margin % (13.13%), On-Time Delivery % (86.19%), and Average Delivery Days (4 Days)",
+    "Evaluate courier partner performance and shipping mode cost efficiency across 200,000 order shipments",
+    "Identify warehouse fulfillment bottlenecks, dispatch delays, and regional late order distributions",
+    "Analyze product category profit margins, COGS impact, warehouse return rates (RTO), and customer segment profitability"
+  ],
+  "key_insights": [
+    "Achieved an overall On-Time Delivery rate of 86.19% with an average fulfillment cycle time of 4 days across 200K orders",
+    "Air Freight emerged as the most expensive shipping mode at ₹266.99 avg cost per order, nearly 80% higher than Road Freight (₹148.41)",
+    "Delhivery led overall logistics execution by handling 49.9K orders (~25% of total volume), outperforming other major carriers",
+    "Clothing generated the highest profit margin at 15.0%, whereas Grocery recorded the lowest net margin at 4.4%",
+    "WH-Chennai recorded the highest warehouse return rate at 6.24%, while the West Region accounted for the highest volume of late orders (5.1K)",
+    "Regular (43.58%) and Premium (37.24%) customer segments generated over 80% of total net profits"
+  ],
+  "tech": [
+    "Python",
+    "Pandas",
+    "NumPy",
+    "Power BI",
+    "DAX",
+    "Data Modeling",
+    "Star Schema"
+  ],
+  "tags": [
+    "Supply Chain Analytics",
+    "Logistics & Operations",
+    "Power BI",
+    "DAX",
+    "Fulfillment Analytics",
+    "Profitability Analysis"
+  ],
+  "powerbi_embed_url": "https://app.powerbi.com/view?r=eyJrIjoiMzAzMGViOTMtYjliNy00NjlhLWIxMzktMTFjYzVjZTYwOGVkIiwidCI6IjUzMTVhNjkzLTM3MjktNDY0NS1hOTIyLWMxY2EwMTVjNWY1MiJ9" ,
+  "github_description": "Supply chain and logistics analytics project analyzing 200K orders, carrier performance, warehouse return rates, shipping costs, and profitability margins using Power BI and DAX."
+}

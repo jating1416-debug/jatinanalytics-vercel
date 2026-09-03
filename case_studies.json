@@ -101,6 +101,81 @@
         "Over 80% of successful fraud amounts were processed through Virtual/Online payment modes rather than physical POS.",
         "Customers with account age < 6 months are disproportionately targeted for velocity fraud attacks."
       ]
+    },
+   
+{
+  "id": "indian-ecommerce-sales-analytics",
+  "category": "🛒 E-Commerce Analytics",
+  "name": "Indian E-Commerce Sales Analytics Dataset",
+  "cover_image": "images/ecommerce-dataset-cover.png",
+  "kaggle_link": "https://www.kaggle.com/datasets/jatinkhandelwal112/indian-e-commerce-sales-analytics-dataset",
+  "github_link": "https://github.com/your-username/indian-ecommerce-sales-dataset-generator",
+  "tags": [
+    "E-Commerce Analytics",
+    "Retail Analytics",
+    "Python",
+    "SQL",
+    "Power BI",
+    "Data Engineering"
+  ],
+
+  "problem_statement": "Real e-commerce marketplace data contains confidential customer details, commercial pricing strategies, product performance, and transaction-level business information. Most public datasets are simple flat files that do not reflect a production e-commerce ecosystem. I engineered a realistic Indian e-commerce dataset with 250,000 sales records across Customers, Products, and Sales tables, making it suitable for SQL joins, Power BI dashboards, Python EDA, customer segmentation, and retail business analysis.",
+
+  "architecture_logic": [
+    "Designed a 3-table star-like relational model with Customers and Products as master tables and Sales as the central transaction fact table.",
+    "Mapped every sales record to a valid Customer_ID and Product_ID, ensuring complete referential integrity with no orphan transactions.",
+    "Created 40,000 customer profiles, 2,000 product catalog records, and 250,000 detailed sales transactions for realistic large-scale analytics practice.",
+    "Included customer location, age group, product category, brand, payment mode, order status, coupon, review, and delivery fields to support multi-dimensional business analysis."
+  ],
+
+  "generation_rules": [
+    "Programmed product pricing logic where Selling_Price is calculated after applying Discount_Percent and Discount_Amount to the Original_Price.",
+    "Calculated Order_Value using Quantity multiplied by Unit_Price, then generated Total_Amount using Order_Value, Shipping_Cost, and Coupon_Discount.",
+    "Enforced chronological delivery logic by ensuring Delivery_Date is always later than Order_Date, with delivery windows ranging from 2 to 7 days.",
+    "Generated realistic transactional behavior through multiple payment modes, order statuses, coupon usage, ratings, customer tiers, and product review fields."
+  ],
+
+  "realistic_constraints": [
+    "Maintained 100% valid Customer_ID and Product_ID mappings between master tables and the 250,000-row sales fact table.",
+    "Used conditional coupon logic: orders without a coupon have blank Coupon_Code values and zero Coupon_Discount, while coupon-based orders receive calculated discounts.",
+    "Kept rating and review fields partially populated to simulate real e-commerce feedback behavior, where not every customer submits a product review.",
+    "Created diverse Indian state and city coverage to support state-wise sales, city-level performance, customer geography, and regional demand analysis."
+  ],
+
+  "dataset_structure": [
+    {
+      "table": "customers.csv",
+      "rows": "40,000",
+      "desc": "Customer profiles, demographics, registration details, city/state, customer tier, total orders, and total spending"
+    },
+    {
+      "table": "products.csv",
+      "rows": "2,000",
+      "desc": "Product catalog with category, brand, original price, discount, selling price, stock, rating, and review information"
+    },
+    {
+      "table": "sales.csv",
+      "rows": "250,000",
+      "desc": "Transaction fact table containing order dates, delivery dates, quantity, payment mode, coupon discount, order status, ratings, and total amount"
     }
+  ],
+
+  "python_snippet": "# Logic: Calculating Order Amounts and Enforcing Delivery Chronology\ndef generate_sales_record(order_id, customer, product):\n    order_date = fake.date_between(start_date='-2y', end_date='today')\n    quantity = random.randint(1, 3)\n    unit_price = product['Selling_Price']\n\n    # Transaction value calculation\n    order_value = round(quantity * unit_price, 2)\n    shipping_cost = calculate_shipping_cost(order_value)\n    coupon_discount = apply_coupon_discount(order_value)\n    total_amount = round(order_value + shipping_cost - coupon_discount, 2)\n\n    # Enforcing chronological logistics logic\n    delivery_date = order_date + timedelta(days=random.randint(2, 7))\n\n    return order_id, customer['Customer_ID'], product['Product_ID'], order_date, delivery_date, total_amount",
+
+  "challenges": [
+    "Generating 250,000 transaction records efficiently while preserving correct Customer_ID and Product_ID relationships.",
+    "Maintaining accurate pricing arithmetic across original price, discounts, quantity, shipping cost, coupon discounts, and final transaction amount.",
+    "Creating realistic category, brand, payment, city, state, customer-tier, and order-status distributions so that the data is useful for BI dashboards and SQL analysis.",
+    "Balancing detailed transactional fields such as delivery dates, ratings, reviews, coupons, and customer demographics without making the dataset look artificially uniform."
+  ],
+
+  "insights": [
+    "The dataset contains approximately ₹593.07 crore in recorded Total_Amount across 250,000 e-commerce transactions.",
+    "Electronics is the highest-value category, contributing approximately 72.6% of the recorded transaction amount.",
+    "UPI is the most frequently used payment mode at approximately 51.4% of transactions, followed by Cash on Delivery at approximately 32.8%.",
+    "Around 80.1% of orders are marked Delivered, while delivery durations range from 2 to 7 days with an average of approximately 4.5 days.",
+    "Uttar Pradesh records the highest state-level transaction amount at approximately ₹76.84 crore, making it a key region for geographic sales analysis."
   ]
+}
+ ]
 }

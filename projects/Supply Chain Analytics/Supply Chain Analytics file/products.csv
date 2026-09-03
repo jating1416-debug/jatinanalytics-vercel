@@ -1,0 +1,501 @@
+product_id,product_name,category,sub_category,brand,supplier_name,unit_cost,selling_price,weight_kg,fragile,perishable,reorder_level,lead_time_days,product_rating
+PROD501,Smartphone 5G,Electronics,Mobile Phones,Realme,Agarwal Traders,15670,19180,0.19,Yes,No,50,5,4.4
+PROD502,Feature Phone,Electronics,Mobile Phones,Vivo,Naveen Enterprises,900,1040,0.11,No,No,200,4,4.3
+PROD503,Foldable Phone,Electronics,Mobile Phones,Vivo,Prime Wholesale,73950,91290,0.24,Yes,No,200,8,3.7
+PROD504,Budget Smartphone,Electronics,Mobile Phones,Samsung,National Distributors,8790,9990,0.18,Yes,No,75,7,4.9
+PROD505,Gaming Phone,Electronics,Mobile Phones,OnePlus,Jayshree Enterprises,28070,33350,0.23,Yes,No,100,6,4.7
+PROD506,Gaming Laptop,Electronics,Laptops,Apple,Naveen Enterprises,77570,87850,2.92,Yes,No,300,7,4.3
+PROD507,Business Laptop,Electronics,Laptops,Lenovo,Desi Distributors,58090,69150,1.46,Yes,No,100,4,5.0
+PROD508,Student Laptop,Electronics,Laptops,HP,Bharat Supply Co,35600,40510,2.08,Yes,No,75,7,3.9
+PROD509,Ultrabook,Electronics,Laptops,HP,Bharat Supply Co,98560,120260,1.14,Yes,No,250,9,3.5
+PROD510,Chromebook,Electronics,Laptops,Apple,Lakshmi Supply Co,18180,20840,1.58,Yes,No,200,6,3.6
+PROD511,2-in-1 Laptop,Electronics,Laptops,Lenovo,Imperial Distributors,77930,93330,1.22,Yes,No,100,5,3.9
+PROD512,Wireless Mouse,Electronics,Computer Accessories,Logitech,National Distributors,620,850,0.11,Yes,No,150,9,3.9
+PROD513,Mechanical Keyboard,Electronics,Computer Accessories,Zebronics,Star Enterprises,2140,2620,1.08,Yes,No,250,9,4.3
+PROD514,USB Hub,Electronics,Computer Accessories,Portronics,Excel Distributors,630,790,0.11,No,No,300,5,3.3
+PROD515,Webcam HD,Electronics,Computer Accessories,Logitech,Prime Wholesale,1210,1480,0.26,Yes,No,150,9,3.9
+PROD516,Mouse Pad XL,Electronics,Computer Accessories,Zebronics,ABC Supplies,390,540,0.4,No,No,50,10,4.4
+PROD517,Laptop Stand,Electronics,Computer Accessories,Portronics,Patel Trading Co,1450,1950,0.73,No,No,75,6,4.0
+PROD518,Monitor Arm,Electronics,Computer Accessories,HyperX,Lakshmi Supply Co,4410,5800,2.27,No,No,250,8,3.7
+PROD519,TWS Earbuds,Electronics,Audio Devices,Skullcandy,Golden Supply,4360,5390,0.05,Yes,No,300,6,4.9
+PROD520,Over-Ear Headphones,Electronics,Audio Devices,Sony,Lakshmi Supply Co,11260,14220,0.3,Yes,No,300,4,4.7
+PROD521,Bluetooth Speaker,Electronics,Audio Devices,JBL,Naveen Enterprises,1350,1800,1.69,Yes,No,300,4,3.3
+PROD522,Soundbar,Electronics,Audio Devices,Noise,Star Enterprises,17670,21170,3.33,Yes,No,200,7,4.8
+PROD523,Neckband Earphones,Electronics,Audio Devices,Bose,Fortune Traders,2430,3330,0.06,No,No,250,10,3.8
+PROD524,Smartwatch,Electronics,Wearable Tech,Noise,Agarwal Traders,11630,14750,0.06,Yes,No,100,4,3.2
+PROD525,Fitness Band,Electronics,Wearable Tech,Amazfit,Eagle Enterprises,1420,1750,0.05,Yes,No,75,4,3.3
+PROD526,Smart Ring,Electronics,Wearable Tech,Apple,Kumar Industries,20030,23830,0.02,Yes,No,75,5,4.2
+PROD527,Smart Glasses,Electronics,Wearable Tech,Amazfit,Heritage Trading,20370,24730,0.07,Yes,No,50,7,3.4
+PROD528,Formal Shirt,Clothing,Men's Wear,Zara,Fortune Traders,900,1180,0.26,No,No,250,10,5.0
+PROD529,Casual T-Shirt,Clothing,Men's Wear,Allen Solly,Jayshree Enterprises,220,300,0.16,No,No,75,10,3.5
+PROD530,Denim Jeans,Clothing,Men's Wear,Zara,Agarwal Traders,910,1160,0.81,No,No,50,7,4.0
+PROD531,Chino Pants,Clothing,Men's Wear,Levi's,Imperial Distributors,670,900,0.4,No,No,50,8,4.9
+PROD532,Polo Shirt,Clothing,Men's Wear,Peter England,Jayshree Enterprises,480,630,0.26,No,No,50,5,3.5
+PROD533,Hoodie,Clothing,Men's Wear,Allen Solly,Heritage Trading,2180,2810,0.68,No,No,150,10,4.5
+PROD534,Blazer,Clothing,Men's Wear,US Polo,Indian Traders Co,6480,8640,0.89,No,No,100,9,3.6
+PROD535,Track Pants,Clothing,Men's Wear,Allen Solly,National Distributors,820,1090,0.31,No,No,200,9,4.1
+PROD536,Kurti,Clothing,Women's Wear,Zara,Naveen Enterprises,940,1180,0.37,No,No,50,8,4.3
+PROD537,Saree,Clothing,Women's Wear,Aurelia,Agarwal Traders,4390,5750,0.69,No,No,50,8,4.3
+PROD538,Dress,Clothing,Women's Wear,Global Desi,Lakshmi Supply Co,2010,2680,0.33,No,No,250,6,4.5
+PROD539,Leggings,Clothing,Women's Wear,Biba,Sharma Enterprises,270,340,0.21,No,No,300,9,4.9
+PROD540,Palazzo Pants,Clothing,Women's Wear,W,Naveen Enterprises,590,810,0.31,No,No,200,4,3.7
+PROD541,Crop Top,Clothing,Women's Wear,Fabindia,Sharma Enterprises,730,1010,0.14,No,No,300,6,4.2
+PROD542,Salwar Suit,Clothing,Women's Wear,Fabindia,Excel Distributors,2410,3330,0.5,No,No,300,9,4.2
+PROD543,Running Shoes,Clothing,Footwear,Skechers,Patel Trading Co,1750,2380,1.04,No,No,250,6,4.2
+PROD544,Formal Shoes,Clothing,Footwear,Puma,Singh Supply Chain,1990,2490,1.04,No,No,300,6,3.7
+PROD545,Sandals,Clothing,Footwear,Bata,Naveen Enterprises,600,830,0.49,No,No,300,4,3.7
+PROD546,Sneakers,Clothing,Footwear,Nike,Mehra Logistics,2200,2730,0.9,No,No,200,6,4.5
+PROD547,Loafers,Clothing,Footwear,Woodland,Keshav Traders,620,760,0.56,No,No,50,9,4.7
+PROD548,Heels,Clothing,Footwear,Woodland,Sharma Enterprises,1770,2330,0.55,No,No,300,4,4.9
+PROD549,Jacket,Clothing,Winter Wear,Monte Carlo,Desi Distributors,4150,5200,0.79,No,No,300,5,4.2
+PROD550,Sweater,Clothing,Winter Wear,Decathlon,Jayshree Enterprises,1960,2670,0.47,No,No,300,5,4.7
+PROD551,Thermal Set,Clothing,Winter Wear,Decathlon,Heritage Trading,370,500,0.58,No,No,300,6,4.4
+PROD552,Wool Cap,Clothing,Winter Wear,Woodland,Allied Trading,180,250,0.18,No,No,300,4,4.0
+PROD553,Gloves,Clothing,Winter Wear,Woodland,Imperial Distributors,430,570,0.18,No,No,75,6,3.6
+PROD554,Muffler,Clothing,Winter Wear,Woodland,Golden Supply,330,430,0.17,No,No,250,4,4.1
+PROD555,Basmati Rice 5kg,Grocery,Staples,India Gate,Patel Trading Co,740,870,5.0,No,No,100,4,3.5
+PROD556,Wheat Flour 10kg,Grocery,Staples,Tata,Fortune Traders,290,340,10.0,No,No,150,6,4.3
+PROD557,Toor Dal 1kg,Grocery,Staples,Daawat,Kumar Industries,100,120,1.0,No,No,150,5,3.2
+PROD558,Sugar 5kg,Grocery,Staples,Daawat,Desi Distributors,230,270,5.0,No,No,150,9,3.3
+PROD559,Refined Oil 5L,Grocery,Staples,India Gate,Jayshree Enterprises,830,960,4.62,No,No,100,9,4.1
+PROD560,Mustard Oil 1L,Grocery,Staples,India Gate,Star Enterprises,140,160,0.91,No,No,150,6,4.4
+PROD561,Salt 1kg,Grocery,Staples,Patanjali,Royal Trading,20,20,1.0,No,No,200,8,4.7
+PROD562,Milk 1L,Grocery,Dairy Products,Verka,Diamond Suppliers,50,60,1.0,No,Yes,150,3,4.0
+PROD563,Paneer 200g,Grocery,Dairy Products,Mother Dairy,Mehra Logistics,90,110,0.2,No,Yes,100,3,4.1
+PROD564,Curd 400g,Grocery,Dairy Products,Parag,Desi Distributors,40,50,0.4,No,Yes,300,1,3.6
+PROD565,Butter 500g,Grocery,Dairy Products,Amul,Jayshree Enterprises,180,220,0.5,No,Yes,150,3,3.9
+PROD566,Cheese Slice 200g,Grocery,Dairy Products,Parag,Allied Trading,100,120,0.2,No,Yes,250,2,4.4
+PROD567,Ghee 1L,Grocery,Dairy Products,Amul,Eagle Enterprises,600,690,0.95,No,No,50,10,4.2
+PROD568,Potato Chips 100g,Grocery,Snacks & Beverages,Cadbury,Desi Distributors,20,20,0.1,No,Yes,200,2,4.3
+PROD569,Namkeen Mix 400g,Grocery,Snacks & Beverages,Cadbury,Keshav Traders,110,140,0.4,No,Yes,300,3,4.8
+PROD570,Biscuits Pack,Grocery,Snacks & Beverages,Coca-Cola,Global Supply House,70,90,0.2,No,Yes,75,2,4.7
+PROD571,Cold Drink 2L,Grocery,Snacks & Beverages,Parle,Agarwal Traders,90,110,2.1,No,Yes,50,3,4.5
+PROD572,Juice 1L,Grocery,Snacks & Beverages,Haldiram's,Naveen Enterprises,90,110,1.0,No,Yes,75,3,3.9
+PROD573,Energy Drink 250ml,Grocery,Snacks & Beverages,Haldiram's,National Distributors,120,150,0.28,No,Yes,150,2,3.3
+PROD574,Instant Noodles Pack of 4,Grocery,Snacks & Beverages,Cadbury,Eagle Enterprises,60,80,0.28,No,Yes,300,3,4.2
+PROD575,Turmeric Powder 200g,Grocery,Spices & Masala,Tata Sampann,Allied Trading,30,40,0.2,No,No,300,10,4.0
+PROD576,Red Chilli Powder 200g,Grocery,Spices & Masala,Everest,ABC Supplies,60,70,0.2,No,No,250,7,4.4
+PROD577,Garam Masala 100g,Grocery,Spices & Masala,Tata Sampann,Diamond Suppliers,80,110,0.1,No,No,150,5,4.3
+PROD578,Coriander Powder 200g,Grocery,Spices & Masala,MDH,Global Supply House,30,40,0.2,No,No,100,10,3.9
+PROD579,Cumin Seeds 200g,Grocery,Spices & Masala,Everest,Kumar Industries,90,110,0.2,No,No,300,7,4.0
+PROD580,Kitchen King Masala 100g,Grocery,Spices & Masala,MDH,Metro Suppliers,60,80,0.1,No,No,50,4,4.6
+PROD581,Mixer Grinder 750W,Home & Kitchen,Kitchen Appliances,Kent,Singh Supply Chain,1900,2250,5.13,Yes,No,200,5,3.5
+PROD582,Microwave Oven 20L,Home & Kitchen,Kitchen Appliances,Philips,Global Supply House,6870,8000,12.95,Yes,No,300,5,3.9
+PROD583,Electric Kettle 1.5L,Home & Kitchen,Kitchen Appliances,Butterfly,Golden Supply,1050,1380,1.21,Yes,No,100,4,3.4
+PROD584,Induction Cooktop,Home & Kitchen,Kitchen Appliances,Prestige,Allied Trading,3070,3870,3.13,Yes,No,75,7,3.3
+PROD585,Air Fryer 4.2L,Home & Kitchen,Kitchen Appliances,Kent,Golden Supply,6770,8220,4.66,Yes,No,250,9,4.3
+PROD586,Toaster 2-Slice,Home & Kitchen,Kitchen Appliances,Prestige,Metro Suppliers,1580,2030,1.47,Yes,No,250,4,3.9
+PROD587,Water Purifier RO,Home & Kitchen,Kitchen Appliances,Butterfly,Imperial Distributors,12830,14780,8.96,Yes,No,150,7,4.9
+PROD588,Pressure Cooker 5L,Home & Kitchen,Cookware,Pigeon,Excel Distributors,1820,2300,3.15,No,No,100,9,4.3
+PROD589,Non-Stick Pan 24cm,Home & Kitchen,Cookware,Vinod,Fortune Traders,1030,1330,0.9,No,No,100,10,4.7
+PROD590,Kadhai 3L,Home & Kitchen,Cookware,Prestige,Global Supply House,930,1200,1.77,No,No,250,10,3.9
+PROD591,Tawa Non-Stick,Home & Kitchen,Cookware,Prestige,Singh Supply Chain,650,830,0.64,No,No,100,7,3.8
+PROD592,Casserole Set 3-Piece,Home & Kitchen,Cookware,Vinod,Excel Distributors,1780,2250,2.73,Yes,No,50,4,3.6
+PROD593,Frying Pan Stainless Steel,Home & Kitchen,Cookware,Pigeon,Indian Traders Co,940,1260,1.09,No,No,150,9,4.0
+PROD594,Wall Clock Wooden,Home & Kitchen,Home Decor,Home Centre,Agarwal Traders,450,580,0.84,Yes,No,200,9,3.9
+PROD595,Photo Frame Set of 5,Home & Kitchen,Home Decor,Ikea,Star Enterprises,600,790,1.13,Yes,No,250,9,4.0
+PROD596,Flower Vase Ceramic,Home & Kitchen,Home Decor,Chumbak,National Distributors,360,460,0.58,Yes,No,200,5,4.9
+PROD597,Decorative Lamp,Home & Kitchen,Home Decor,Fabindia,Fortune Traders,830,1130,1.63,Yes,No,300,6,4.1
+PROD598,Wall Mirror Framed,Home & Kitchen,Home Decor,Chumbak,Agarwal Traders,2760,3790,2.58,Yes,No,100,6,3.2
+PROD599,Showpiece Figurine,Home & Kitchen,Home Decor,Ikea,Star Enterprises,250,310,0.48,Yes,No,75,4,4.3
+PROD600,Face Wash 150ml,Health & Beauty,Skincare,Biotique,Sharma Enterprises,180,250,0.2,No,No,150,8,3.8
+PROD601,Moisturizer 200ml,Health & Beauty,Skincare,Lakme,Imperial Distributors,200,280,0.22,No,No,150,4,3.3
+PROD602,Sunscreen SPF50 100g,Health & Beauty,Skincare,The Body Shop,Royal Trading,430,550,0.15,No,No,50,10,5.0
+PROD603,Face Serum 30ml,Health & Beauty,Skincare,Lakme,Heritage Trading,540,710,0.1,Yes,No,300,8,4.1
+PROD604,Night Cream 50g,Health & Beauty,Skincare,Mamaearth,Prime Wholesale,650,840,0.12,Yes,No,200,8,3.3
+PROD605,Lip Balm 10g,Health & Beauty,Skincare,The Body Shop,Singh Supply Chain,60,80,0.02,No,No,50,9,3.5
+PROD606,Body Lotion 400ml,Health & Beauty,Skincare,Nivea,Global Supply House,340,430,0.46,No,No,150,7,3.7
+PROD607,Shampoo 400ml,Health & Beauty,Haircare,Dove,Global Supply House,190,250,0.42,No,No,75,10,4.9
+PROD608,Conditioner 200ml,Health & Beauty,Haircare,Dyson,Prime Wholesale,220,300,0.22,No,No,75,5,4.4
+PROD609,Hair Oil 200ml,Health & Beauty,Haircare,Tresemme,Heritage Trading,200,250,0.21,No,No,250,5,4.7
+PROD610,Hair Serum 100ml,Health & Beauty,Haircare,Tresemme,Eagle Enterprises,300,400,0.14,Yes,No,100,6,4.1
+PROD611,Hair Dryer 1400W,Health & Beauty,Haircare,Parachute,Fortune Traders,1300,1680,0.63,Yes,No,100,7,3.2
+PROD612,Multivitamin Tablets 60s,Health & Beauty,Health Supplements,Himalaya,Royal Trading,540,730,0.15,No,Yes,300,3,4.4
+PROD613,Protein Powder 1kg,Health & Beauty,Health Supplements,HealthKart,Indian Traders Co,2350,3090,1.15,No,Yes,150,1,4.8
+PROD614,Omega-3 Capsules 60s,Health & Beauty,Health Supplements,Himalaya,Naveen Enterprises,750,970,0.15,No,Yes,150,2,3.8
+PROD615,Vitamin C Tablets 60s,Health & Beauty,Health Supplements,MuscleBlaze,Indian Traders Co,290,380,0.09,No,Yes,150,3,4.7
+PROD616,Whey Protein 2kg,Health & Beauty,Health Supplements,Dabur,National Distributors,2520,3000,2.21,No,Yes,300,2,3.9
+PROD617,Dumbbell Set 10kg,Sports & Fitness,Gym Equipment,Cultsport,Star Enterprises,1950,2340,10.0,No,No,50,10,3.5
+PROD618,Yoga Mat 6mm,Sports & Fitness,Gym Equipment,Strauss,Golden Supply,620,820,0.83,No,No,100,7,4.2
+PROD619,Resistance Band Set,Sports & Fitness,Gym Equipment,Strauss,ABC Supplies,400,540,0.59,No,No,200,4,4.6
+PROD620,Skipping Rope,Sports & Fitness,Gym Equipment,Boldfit,Naveen Enterprises,150,190,0.17,No,No,300,7,4.8
+PROD621,Pull-Up Bar,Sports & Fitness,Gym Equipment,Lifelong,Indian Traders Co,1550,2010,2.73,No,No,100,5,4.1
+PROD622,Cricket Bat Kashmir Willow,Sports & Fitness,Sports Gear,Yonex,Agarwal Traders,1630,2070,1.24,No,No,75,7,3.9
+PROD623,Football Size 5,Sports & Fitness,Sports Gear,Adidas,Naveen Enterprises,760,1030,0.41,No,No,300,10,4.7
+PROD624,Badminton Racket,Sports & Fitness,Sports Gear,Yonex,ABC Supplies,2360,3070,0.09,Yes,No,100,10,4.7
+PROD625,Tennis Ball Pack of 6,Sports & Fitness,Sports Gear,Adidas,Global Supply House,450,600,0.38,No,No,100,5,3.8
+PROD626,Table Tennis Set,Sports & Fitness,Sports Gear,Adidas,Singh Supply Chain,630,870,0.6,No,No,75,10,4.2
+PROD627,Basketball Size 7,Sports & Fitness,Sports Gear,Nivia,Fortune Traders,1340,1720,0.62,No,No,300,6,3.9
+PROD628,Novel Bestseller,Books & Stationery,Books,Arihant,Royal Trading,250,300,0.32,No,No,50,8,4.8
+PROD629,Self-Help Book,Books & Stationery,Books,HarperCollins,Fortune Traders,120,160,0.23,No,No,300,4,4.4
+PROD630,UPSC Guide,Books & Stationery,Books,Arihant,National Distributors,340,440,0.97,No,No,150,6,4.4
+PROD631,Children's Story Book,Books & Stationery,Books,S Chand,National Distributors,220,300,0.24,No,No,300,7,4.1
+PROD632,Cookbook Hardcover,Books & Stationery,Books,Pearson,Desi Distributors,260,310,0.87,No,No,75,9,4.5
+PROD633,Biography,Books & Stationery,Books,HarperCollins,Jayshree Enterprises,490,640,0.38,No,No,75,9,4.4
+PROD634,Notebook A4 Pack of 6,Books & Stationery,Office Stationery,Classmate,Metro Suppliers,160,210,1.42,No,No,75,6,3.6
+PROD635,Gel Pen Set of 10,Books & Stationery,Office Stationery,Reynolds,Mehra Logistics,130,180,0.12,No,No,300,5,3.9
+PROD636,Marker Set 4 Colors,Books & Stationery,Office Stationery,Casio,Agarwal Traders,70,100,0.1,No,No,100,5,4.0
+PROD637,Stapler Medium,Books & Stationery,Office Stationery,Casio,Desi Distributors,40,50,0.2,No,No,50,6,4.0
+PROD638,Sticky Notes Pack of 4,Books & Stationery,Office Stationery,Camlin,Eagle Enterprises,130,170,0.11,No,No,300,7,3.7
+PROD639,File Folder Set of 5,Books & Stationery,Office Stationery,Reynolds,Royal Trading,200,250,0.4,No,No,100,7,5.0
+PROD640,Scientific Calculator,Books & Stationery,Office Stationery,Camlin,Kumar Industries,460,590,0.15,Yes,No,300,7,4.4
+PROD641,3-Seater Fabric Sofa,Furniture,Living Room,Wakefit,Indian Traders Co,27580,37620,46.66,No,No,100,9,4.6
+PROD642,Coffee Table Wooden,Furniture,Living Room,Nilkamal,Singh Supply Chain,4050,5170,14.21,Yes,No,250,9,4.6
+PROD643,TV Unit Cabinet,Furniture,Living Room,Wakefit,Keshav Traders,7490,9140,25.67,Yes,No,50,4,3.8
+PROD644,Bookshelf 4-Tier,Furniture,Living Room,Urban Ladder,Naveen Enterprises,1610,2060,20.92,No,No,100,5,4.5
+PROD645,Bean Bag XXXL,Furniture,Living Room,Nilkamal,Excel Distributors,920,1260,3.25,No,No,100,6,4.7
+PROD646,Side Table Wooden,Furniture,Living Room,Godrej Interio,Sharma Enterprises,2350,3220,7.73,No,No,100,10,4.6
+PROD647,Shoe Rack 4-Tier,Furniture,Living Room,Urban Ladder,Jayshree Enterprises,2140,2660,9.73,No,No,250,5,5.0
+PROD648,Queen Bed Frame,Furniture,Bedroom,Ikea,Kumar Industries,13120,17300,51.1,No,No,150,4,3.9
+PROD649,Mattress King Size Orthopedic,Furniture,Bedroom,HomeTown,Bharat Supply Co,14070,18120,31.16,No,No,50,10,4.4
+PROD650,Wardrobe 2-Door,Furniture,Bedroom,Godrej,National Distributors,7280,9490,72.03,No,No,75,8,4.4
+PROD651,Bedside Table,Furniture,Bedroom,HomeTown,Bharat Supply Co,2470,3370,7.04,No,No,75,6,3.3
+PROD652,Dressing Table with Mirror,Furniture,Bedroom,Wakefit,Agarwal Traders,4530,5770,33.08,Yes,No,75,4,3.9
+PROD653,Car Phone Mount,Automotive,Car Accessories,Bosch,Prime Wholesale,500,680,0.2,Yes,No,250,8,3.5
+PROD654,Dash Cam 1080p,Automotive,Car Accessories,Philips,Prime Wholesale,4220,5590,0.44,Yes,No,100,8,3.3
+PROD655,Seat Cover Set Leatherette,Automotive,Car Accessories,Bosch,Jayshree Enterprises,2540,3280,4.41,No,No,250,5,3.9
+PROD656,Car Vacuum Cleaner 12V,Automotive,Car Accessories,Bosch,Jayshree Enterprises,670,850,1.38,Yes,No,50,4,4.4
+PROD657,Air Freshener Pack of 2,Automotive,Car Accessories,Godrej,Agarwal Traders,340,430,0.25,No,No,300,6,4.2
+PROD658,Car Fast Charger 36W,Automotive,Car Accessories,3M,Singh Supply Chain,660,880,0.14,Yes,No,75,8,3.8
+PROD659,Helmet Full Face ISI,Automotive,Bike Accessories,Studds,Jayshree Enterprises,2220,2920,1.59,Yes,No,75,6,4.2
+PROD660,Riding Gloves Leather,Automotive,Bike Accessories,Studds,ABC Supplies,470,650,0.25,No,No,300,5,3.6
+PROD661,Bike Water Resistant Cover,Automotive,Bike Accessories,Rynox,Fortune Traders,230,300,0.58,No,No,50,5,4.5
+PROD662,Mobile Holder for Bike,Automotive,Bike Accessories,BoboGear,Patel Trading Co,520,680,0.23,Yes,No,75,8,4.9
+PROD663,Saddlebag Waterproof 30L,Automotive,Bike Accessories,Steelbird,Excel Distributors,3090,4220,1.5,No,No,250,9,4.9
+PROD664,Tail Light LED,Automotive,Bike Accessories,Steelbird,Desi Distributors,550,760,0.11,Yes,No,250,7,4.8
+PROD665,Diapers Pack L 64s,Baby & Kids,Baby Care,Pampers,Naveen Enterprises,810,970,1.25,No,No,200,5,4.3
+PROD666,Baby Wipes Pack of 3,Baby & Kids,Baby Care,Himalaya Baby,Excel Distributors,230,290,0.66,No,No,200,8,4.3
+PROD667,Baby Lotion 200ml,Baby & Kids,Baby Care,Pampers,Bharat Supply Co,220,270,0.26,No,No,200,9,4.5
+PROD668,Baby Shampoo 200ml,Baby & Kids,Baby Care,Huggies,National Distributors,180,240,0.25,No,No,150,7,3.9
+PROD669,Feeding Bottle Set 2s,Baby & Kids,Baby Care,Pampers,Metro Suppliers,300,380,0.34,Yes,No,250,6,4.9
+PROD670,Baby Blanket Fleece,Baby & Kids,Baby Care,Pampers,Patel Trading Co,300,370,0.54,No,No,100,7,4.7
+PROD671,Building Blocks Set 100pc,Baby & Kids,Toys,Toyshine,National Distributors,410,560,0.97,Yes,No,150,8,3.8
+PROD672,RC Car Rechargeable,Baby & Kids,Toys,Smartivity,Delta Distributors,1720,2210,1.37,Yes,No,200,9,3.8
+PROD673,Board Game Classic,Baby & Kids,Toys,Lego,Indian Traders Co,520,670,0.51,No,No,50,9,3.8
+PROD674,Stuffed Teddy Bear 3ft,Baby & Kids,Toys,Toyshine,Agarwal Traders,590,800,1.61,No,No,300,8,4.2
+PROD675,Jigsaw Puzzle 500pc,Baby & Kids,Toys,Toyshine,Diamond Suppliers,380,510,0.58,No,No,300,4,4.4
+PROD676,Action Figure 12-inch,Baby & Kids,Toys,Lego,Lakshmi Supply Co,380,520,0.27,Yes,No,50,6,3.5
+PROD677,Saree Ultra,Clothing,Women's Wear,Aurelia,Bharat Supply Co,6650,8380,0.86,No,No,50,4,4.5
+PROD678,Wheat Flour 10kg Plus,Grocery,Staples,Tata,Sharma Enterprises,370,420,10.0,No,No,250,6,4.6
+PROD679,Side Table Wooden Ultra,Furniture,Living Room,Nilkamal,Golden Supply,3220,3960,9.66,No,No,200,4,4.4
+PROD680,Biscuits Pack Pro,Grocery,Snacks & Beverages,Coca-Cola,Prime Wholesale,100,120,0.2,No,Yes,100,1,4.6
+PROD681,Denim Jeans XL,Clothing,Men's Wear,US Polo,Royal Trading,1060,1370,1.01,No,No,150,8,4.4
+PROD682,Wireless Mouse Classic,Electronics,Computer Accessories,Logitech,Singh Supply Chain,610,800,0.11,Yes,No,100,5,4.6
+PROD683,Cheese Slice 200g V2,Grocery,Dairy Products,Nandini,Mehra Logistics,110,130,0.2,No,Yes,75,2,4.2
+PROD684,Refined Oil 5L Max,Grocery,Staples,Tata,Naveen Enterprises,1170,1370,5.78,No,No,150,10,4.5
+PROD685,Multivitamin Tablets 60s Lite,Health & Beauty,Health Supplements,HealthKart,Royal Trading,440,540,0.12,No,Yes,150,3,3.9
+PROD686,Tail Light LED Plus,Automotive,Bike Accessories,Rynox,Mehra Logistics,680,890,0.11,Yes,No,300,8,4.0
+PROD687,Frying Pan Stainless Steel Mini,Home & Kitchen,Cookware,Pigeon,Royal Trading,720,890,0.87,No,No,150,8,3.3
+PROD688,Kitchen King Masala 100g Elite,Grocery,Spices & Masala,Everest,Naveen Enterprises,80,100,0.1,No,No,200,9,3.4
+PROD689,Children's Story Book Classic,Books & Stationery,Books,Arihant,Agarwal Traders,230,290,0.24,No,No,50,5,3.7
+PROD690,Sandals Ultra,Clothing,Footwear,Nike,Mehra Logistics,830,1130,0.61,No,No,300,9,4.1
+PROD691,Bean Bag XXXL Gold,Furniture,Living Room,Pepperfry,Bharat Supply Co,1160,1570,3.25,No,No,250,8,3.8
+PROD692,Bike Water Resistant Cover XL,Automotive,Bike Accessories,BoboGear,Bharat Supply Co,260,330,0.72,No,No,100,10,3.7
+PROD693,Webcam HD XL,Electronics,Computer Accessories,Zebronics,Delta Distributors,1420,1770,0.33,Yes,No,50,6,4.7
+PROD694,Over-Ear Headphones Deluxe,Electronics,Audio Devices,Noise,Diamond Suppliers,15460,20490,0.3,Yes,No,200,7,4.0
+PROD695,Coffee Table Wooden Gold,Furniture,Living Room,Pepperfry,Bharat Supply Co,5260,6450,14.21,Yes,No,75,6,4.3
+PROD696,Self-Help Book Basic,Books & Stationery,Books,S Chand,Eagle Enterprises,110,140,0.23,No,No,50,8,4.4
+PROD697,2-in-1 Laptop Classic,Electronics,Laptops,Acer,Excel Distributors,79550,96980,1.22,Yes,No,200,5,3.9
+PROD698,Energy Drink 250ml Plus,Grocery,Snacks & Beverages,Tropicana,Delta Distributors,150,190,0.28,No,Yes,300,3,4.4
+PROD699,Laptop Stand XL,Electronics,Computer Accessories,HyperX,Kumar Industries,1620,2150,0.91,No,No,250,10,4.4
+PROD700,Seat Cover Set Leatherette Basic,Automotive,Car Accessories,Amkette,Lakshmi Supply Co,2120,2780,4.41,No,No,100,6,4.9
+PROD701,Baby Blanket Fleece Plus,Baby & Kids,Baby Care,Pampers,Sharma Enterprises,370,490,0.54,No,No,200,7,4.4
+PROD702,Air Fryer 4.2L Basic,Home & Kitchen,Kitchen Appliances,Kent,Desi Distributors,5870,7610,4.66,Yes,No,200,4,4.4
+PROD703,Hair Oil 200ml Max,Health & Beauty,Haircare,Dove,Singh Supply Chain,270,350,0.26,No,No,100,10,4.1
+PROD704,Sugar 5kg Basic,Grocery,Staples,Fortune,Excel Distributors,190,210,5.0,No,No,300,8,4.7
+PROD705,Gel Pen Set of 10 Lite,Books & Stationery,Office Stationery,Faber-Castell,Gupta & Sons,110,150,0.1,No,No,200,7,3.5
+PROD706,Loafers Elite,Clothing,Footwear,Adidas,Fortune Traders,870,1170,0.56,No,No,150,4,3.9
+PROD707,Stuffed Teddy Bear 3ft Elite,Baby & Kids,Toys,Hot Wheels,Golden Supply,770,1010,1.61,No,No,250,10,4.0
+PROD708,Stapler Medium Classic,Books & Stationery,Office Stationery,Reynolds,Keshav Traders,40,50,0.2,No,No,300,5,3.9
+PROD709,Shoe Rack 4-Tier Pro,Furniture,Living Room,Urban Ladder,Excel Distributors,2870,3630,9.73,No,No,200,7,4.9
+PROD710,Wool Cap Gold,Clothing,Winter Wear,Monte Carlo,Bharat Supply Co,230,320,0.18,No,No,150,10,3.9
+PROD711,Smart Glasses Elite,Electronics,Wearable Tech,Noise,Naveen Enterprises,28910,37560,0.07,Yes,No,300,5,3.7
+PROD712,Cookbook Hardcover Basic,Books & Stationery,Books,Arihant,Imperial Distributors,230,280,0.87,No,No,150,6,4.9
+PROD713,Shampoo 400ml Lite,Health & Beauty,Haircare,Parachute,Naveen Enterprises,150,200,0.34,No,No,100,5,3.3
+PROD714,Smart Ring Elite,Electronics,Wearable Tech,Samsung,Delta Distributors,27640,35680,0.02,Yes,No,100,10,4.1
+PROD715,Kurti Gold,Clothing,Women's Wear,W,Keshav Traders,1210,1590,0.37,No,No,50,4,3.7
+PROD716,Leggings Max,Clothing,Women's Wear,Global Desi,Patel Trading Co,400,540,0.26,No,No,300,6,3.6
+PROD717,Polo Shirt Lite,Clothing,Men's Wear,Levi's,Global Supply House,370,500,0.21,No,No,50,4,4.7
+PROD718,Novel Bestseller Ultra,Books & Stationery,Books,Pearson,Agarwal Traders,370,480,0.4,No,No,250,5,3.7
+PROD719,Smartphone 5G Ultra,Electronics,Mobile Phones,Apple,Desi Distributors,22540,27210,0.24,Yes,No,250,4,4.1
+PROD720,Frying Pan Stainless Steel Mini,Home & Kitchen,Cookware,Vinod,Star Enterprises,790,1030,0.87,No,No,50,7,4.8
+PROD721,Wireless Mouse Deluxe,Electronics,Computer Accessories,Logitech,Metro Suppliers,790,1000,0.11,Yes,No,300,4,3.8
+PROD722,Feeding Bottle Set 2s Deluxe,Baby & Kids,Baby Care,MamyPoko,Gupta & Sons,370,490,0.34,Yes,No,50,6,4.2
+PROD723,Diapers Pack L 64s Basic,Baby & Kids,Baby Care,Chicco,Indian Traders Co,720,900,1.25,No,No,250,5,4.7
+PROD724,Laptop Stand Elite,Electronics,Computer Accessories,HyperX,Singh Supply Chain,2040,2640,0.73,No,No,50,10,3.6
+PROD725,2-in-1 Laptop XL,Electronics,Laptops,Acer,Indian Traders Co,96630,113210,1.52,Yes,No,100,4,4.6
+PROD726,Jacket V2,Clothing,Winter Wear,Wildcraft,Kumar Industries,4510,6070,0.79,No,No,50,10,3.9
+PROD727,Face Serum 30ml Elite,Health & Beauty,Skincare,Neutrogena,Mehra Logistics,720,990,0.1,Yes,No,150,9,4.1
+PROD728,Biography V2,Books & Stationery,Books,Penguin,Prime Wholesale,550,720,0.38,No,No,200,10,3.5
+PROD729,Red Chilli Powder 200g XL,Grocery,Spices & Masala,Catch,Sharma Enterprises,70,90,0.25,No,No,150,8,4.5
+PROD730,Running Shoes Elite,Clothing,Footwear,Skechers,Jayshree Enterprises,2340,3020,1.04,No,No,100,8,5.0
+PROD731,Cold Drink 2L Deluxe,Grocery,Snacks & Beverages,Lay's,Desi Distributors,130,170,2.1,No,Yes,250,2,3.9
+PROD732,Stuffed Teddy Bear 3ft Basic,Baby & Kids,Toys,Toyshine,Desi Distributors,530,670,1.61,No,No,300,7,3.3
+PROD733,Monitor Arm Classic,Electronics,Computer Accessories,Zebronics,Royal Trading,4530,5680,2.27,No,No,50,8,3.5
+PROD734,Whey Protein 2kg XL,Health & Beauty,Health Supplements,Dabur,Gupta & Sons,2910,3740,2.76,No,Yes,200,2,3.9
+PROD735,Baby Lotion 200ml V2,Baby & Kids,Baby Care,Chicco,Mehra Logistics,240,290,0.26,No,No,150,8,3.9
+PROD736,Bookshelf 4-Tier Mini,Furniture,Living Room,Urban Ladder,Singh Supply Chain,1190,1500,16.74,No,No,200,6,4.4
+PROD737,Table Tennis Set Classic,Sports & Fitness,Sports Gear,Cosco,Mehra Logistics,610,840,0.6,No,No,250,7,5.0
+PROD738,Jigsaw Puzzle 500pc XL,Baby & Kids,Toys,Toyshine,Star Enterprises,460,620,0.72,No,No,100,6,4.7
+PROD739,Tail Light LED Basic,Automotive,Bike Accessories,Steelbird,Singh Supply Chain,480,640,0.11,Yes,No,300,5,3.6
+PROD740,Basketball Size 7 Lite,Sports & Fitness,Sports Gear,Cosco,Heritage Trading,1070,1400,0.5,No,No,200,5,4.3
+PROD741,Neckband Earphones Mini,Electronics,Audio Devices,Skullcandy,Indian Traders Co,1810,2500,0.05,No,No,200,7,4.6
+PROD742,Queen Bed Frame Mini,Furniture,Bedroom,Wakefit,Global Supply House,9430,11760,40.88,No,No,150,9,4.1
+PROD743,Hoodie Gold,Clothing,Men's Wear,Peter England,Prime Wholesale,2750,3680,0.68,No,No,200,10,3.3
+PROD744,Polo Shirt Max,Clothing,Men's Wear,H&M,Lakshmi Supply Co,640,820,0.33,No,No,250,5,3.8
+PROD745,Biography V2,Books & Stationery,Books,Pearson,Kumar Industries,560,690,0.38,No,No,75,9,3.7
+PROD746,Stapler Medium Mini,Books & Stationery,Office Stationery,Faber-Castell,Gupta & Sons,30,40,0.16,No,No,75,9,4.3
+PROD747,Seat Cover Set Leatherette XL,Automotive,Car Accessories,3M,Naveen Enterprises,3120,4090,5.51,No,No,50,9,4.6
+PROD748,Potato Chips 100g Deluxe,Grocery,Snacks & Beverages,Tropicana,Bharat Supply Co,20,30,0.1,No,Yes,50,2,4.8
+PROD749,Scientific Calculator V2,Books & Stationery,Office Stationery,Cello,Heritage Trading,510,620,0.15,Yes,No,300,9,3.9
+PROD750,Dumbbell Set 10kg Mini,Sports & Fitness,Gym Equipment,Lifelong,Indian Traders Co,1570,1920,8.0,No,No,150,5,3.8
+PROD751,Saree XL,Clothing,Women's Wear,Zara,Metro Suppliers,5400,7010,0.86,No,No,150,5,4.6
+PROD752,Cookbook Hardcover Max,Books & Stationery,Books,Penguin,Kumar Industries,340,420,1.09,No,No,150,5,3.5
+PROD753,Mechanical Keyboard V2,Electronics,Computer Accessories,Zebronics,Agarwal Traders,2450,3320,1.08,Yes,No,300,5,4.7
+PROD754,Queen Bed Frame Elite,Furniture,Bedroom,Godrej,Excel Distributors,17220,22640,51.1,No,No,150,7,4.8
+PROD755,Novel Bestseller Lite,Books & Stationery,Books,HarperCollins,Agarwal Traders,190,240,0.26,No,No,75,8,3.8
+PROD756,Mechanical Keyboard V2,Electronics,Computer Accessories,Zebronics,Sharma Enterprises,2350,3190,1.08,Yes,No,200,4,4.7
+PROD757,Hair Dryer 1400W Basic,Health & Beauty,Haircare,Parachute,Metro Suppliers,1150,1510,0.63,Yes,No,50,7,3.3
+PROD758,Bookshelf 4-Tier Classic,Furniture,Living Room,Urban Ladder,Excel Distributors,1590,2010,20.92,No,No,150,10,4.2
+PROD759,Riding Gloves Leather Deluxe,Automotive,Bike Accessories,Steelbird,Allied Trading,620,790,0.25,No,No,100,10,5.0
+PROD760,TV Unit Cabinet XL,Furniture,Living Room,Pepperfry,Allied Trading,9090,11180,32.09,Yes,No,200,4,3.3
+PROD761,Kurti Elite,Clothing,Women's Wear,Global Desi,Gupta & Sons,1240,1640,0.37,No,No,200,8,3.5
+PROD762,Air Freshener Pack of 2 XL,Automotive,Car Accessories,Bosch,Royal Trading,380,520,0.31,No,No,100,8,4.7
+PROD763,Stapler Medium Pro,Books & Stationery,Office Stationery,Classmate,Metro Suppliers,60,80,0.2,No,No,100,9,3.4
+PROD764,Shampoo 400ml Ultra,Health & Beauty,Haircare,Dyson,Bharat Supply Co,270,370,0.53,No,No,50,8,4.1
+PROD765,Baby Shampoo 200ml Gold,Baby & Kids,Baby Care,Huggies,Fortune Traders,240,310,0.25,No,No,50,8,4.1
+PROD766,Gel Pen Set of 10 Deluxe,Books & Stationery,Office Stationery,Reynolds,Gupta & Sons,170,230,0.12,No,No,300,9,3.6
+PROD767,Shoe Rack 4-Tier Elite,Furniture,Living Room,Godrej Interio,Prime Wholesale,2720,3330,9.73,No,No,75,7,4.4
+PROD768,Body Lotion 400ml Max,Health & Beauty,Skincare,Biotique,Jayshree Enterprises,490,680,0.58,No,No,250,9,3.3
+PROD769,Kurti Max,Clothing,Women's Wear,Aurelia,Indian Traders Co,1260,1640,0.46,No,No,200,7,3.8
+PROD770,Sandals Pro,Clothing,Footwear,Puma,Desi Distributors,860,1120,0.49,No,No,300,10,4.5
+PROD771,Diapers Pack L 64s Gold,Baby & Kids,Baby Care,Huggies,Agarwal Traders,1040,1290,1.25,No,No,100,8,3.7
+PROD772,Garam Masala 100g Gold,Grocery,Spices & Masala,Tata Sampann,National Distributors,100,120,0.1,No,No,150,6,4.2
+PROD773,Cold Drink 2L V2,Grocery,Snacks & Beverages,Coca-Cola,Keshav Traders,100,130,2.1,No,Yes,150,2,4.9
+PROD774,Dress V2,Clothing,Women's Wear,W,Metro Suppliers,2120,2930,0.33,No,No,150,9,3.7
+PROD775,Football Size 5 Classic,Sports & Fitness,Sports Gear,Adidas,Eagle Enterprises,740,970,0.41,No,No,100,5,3.4
+PROD776,Bedside Table Classic,Furniture,Bedroom,Ikea,Agarwal Traders,2410,3200,7.04,No,No,250,5,3.3
+PROD777,Body Lotion 400ml XL,Health & Beauty,Skincare,Biotique,Gupta & Sons,410,520,0.58,No,No,50,8,5.0
+PROD778,Crop Top Plus,Clothing,Women's Wear,Global Desi,Indian Traders Co,950,1310,0.14,No,No,250,5,4.6
+PROD779,Instant Noodles Pack of 4 XL,Grocery,Snacks & Beverages,Cadbury,Naveen Enterprises,70,80,0.35,No,Yes,250,3,3.6
+PROD780,Chromebook Basic,Electronics,Laptops,Dell,Imperial Distributors,15300,18110,1.58,Yes,No,150,10,4.1
+PROD781,Turmeric Powder 200g Lite,Grocery,Spices & Masala,MDH,Lakshmi Supply Co,20,30,0.16,No,No,100,6,4.0
+PROD782,Diapers Pack L 64s Max,Baby & Kids,Baby Care,Huggies,Jayshree Enterprises,1140,1460,1.56,No,No,200,7,3.7
+PROD783,Casual T-Shirt XL,Clothing,Men's Wear,H&M,Eagle Enterprises,250,330,0.2,No,No,75,4,4.5
+PROD784,Red Chilli Powder 200g Ultra,Grocery,Spices & Masala,Tata Sampann,Imperial Distributors,90,110,0.25,No,No,150,8,3.8
+PROD785,Face Serum 30ml Deluxe,Health & Beauty,Skincare,Mamaearth,National Distributors,660,910,0.1,Yes,No,75,4,3.7
+PROD786,Salt 1kg Pro,Grocery,Staples,Tata,Royal Trading,30,40,1.0,No,No,250,8,3.2
+PROD787,Baby Shampoo 200ml XL,Baby & Kids,Baby Care,Pampers,Global Supply House,220,270,0.31,No,No,100,5,3.9
+PROD788,Self-Help Book Elite,Books & Stationery,Books,S Chand,Metro Suppliers,170,220,0.23,No,No,200,5,3.6
+PROD789,Track Pants Pro,Clothing,Men's Wear,Levi's,Metro Suppliers,1050,1430,0.31,No,No,150,9,4.2
+PROD790,Pull-Up Bar Gold,Sports & Fitness,Gym Equipment,Boldfit,Golden Supply,1950,2530,2.73,No,No,75,9,4.6
+PROD791,Bluetooth Speaker Max,Electronics,Audio Devices,Sony,Lakshmi Supply Co,1880,2450,2.11,Yes,No,200,4,3.3
+PROD792,3-Seater Fabric Sofa Max,Furniture,Living Room,Nilkamal,National Distributors,36970,47940,58.32,No,No,300,8,4.0
+PROD793,Jigsaw Puzzle 500pc Classic,Baby & Kids,Toys,Toyshine,Global Supply House,390,520,0.58,No,No,300,4,4.0
+PROD794,Cookbook Hardcover Plus,Books & Stationery,Books,HarperCollins,Desi Distributors,330,400,0.87,No,No,300,6,4.5
+PROD795,Sunscreen SPF50 100g V2,Health & Beauty,Skincare,Plum,Naveen Enterprises,490,670,0.15,No,No,50,7,3.8
+PROD796,Laptop Stand Max,Electronics,Computer Accessories,Logitech,Lakshmi Supply Co,2170,2970,0.91,No,No,150,4,3.7
+PROD797,Loafers Gold,Clothing,Footwear,Skechers,Bharat Supply Co,730,970,0.56,No,No,150,6,5.0
+PROD798,Wall Mirror Framed Pro,Home & Kitchen,Home Decor,Decornation,Naveen Enterprises,3930,5420,2.58,Yes,No,250,9,4.8
+PROD799,Track Pants Deluxe,Clothing,Men's Wear,Levi's,Allied Trading,1130,1430,0.31,No,No,200,5,4.5
+PROD800,Sugar 5kg Lite,Grocery,Staples,Patanjali,Desi Distributors,200,240,4.0,No,No,250,8,4.0
+PROD801,Wall Mirror Framed Classic,Home & Kitchen,Home Decor,Chumbak,Singh Supply Chain,2690,3500,2.58,Yes,No,250,10,3.4
+PROD802,Baby Blanket Fleece Plus,Baby & Kids,Baby Care,Pampers,Agarwal Traders,390,530,0.54,No,No,75,4,3.4
+PROD803,Ultrabook Pro,Electronics,Laptops,Dell,Agarwal Traders,134980,164720,1.14,Yes,No,250,4,3.9
+PROD804,Mustard Oil 1L Max,Grocery,Staples,Fortune,Gupta & Sons,190,230,1.14,No,No,200,6,3.6
+PROD805,Queen Bed Frame XL,Furniture,Bedroom,Duroflex,Agarwal Traders,15570,20490,63.88,No,No,100,5,5.0
+PROD806,Notebook A4 Pack of 6 Classic,Books & Stationery,Office Stationery,Faber-Castell,Royal Trading,160,200,1.42,No,No,250,5,4.3
+PROD807,Hair Serum 100ml Max,Health & Beauty,Haircare,Dyson,Desi Distributors,420,580,0.18,Yes,No,150,10,4.1
+PROD808,Shampoo 400ml Plus,Health & Beauty,Haircare,Philips,Indian Traders Co,230,300,0.42,No,No,75,10,3.6
+PROD809,Saree Gold,Clothing,Women's Wear,Global Desi,Prime Wholesale,5460,6870,0.69,No,No,200,8,3.4
+PROD810,Paneer 200g V2,Grocery,Dairy Products,Nandini,Jayshree Enterprises,100,120,0.2,No,Yes,100,1,4.2
+PROD811,Jacket Lite,Clothing,Winter Wear,UCB,Delta Distributors,3260,4330,0.63,No,No,300,4,3.5
+PROD812,Bedside Table Elite,Furniture,Bedroom,Sleepwell,Jayshree Enterprises,3420,4290,7.04,No,No,100,6,4.9
+PROD813,Budget Smartphone Classic,Electronics,Mobile Phones,Samsung,Fortune Traders,9170,11150,0.18,Yes,No,300,7,4.8
+PROD814,Seat Cover Set Leatherette Elite,Automotive,Car Accessories,Godrej,National Distributors,3280,4480,4.41,No,No,300,6,3.9
+PROD815,Stapler Medium Deluxe,Books & Stationery,Office Stationery,Faber-Castell,Keshav Traders,50,60,0.2,No,No,150,7,3.4
+PROD816,Pull-Up Bar Gold,Sports & Fitness,Gym Equipment,Strauss,National Distributors,2040,2730,2.73,No,No,150,4,4.2
+PROD817,Toor Dal 1kg Elite,Grocery,Staples,Daawat,Royal Trading,130,150,1.0,No,No,250,7,3.7
+PROD818,Thermal Set XL,Clothing,Winter Wear,Woodland,Indian Traders Co,420,560,0.72,No,No,200,9,4.9
+PROD819,Water Purifier RO V2,Home & Kitchen,Kitchen Appliances,Kent,Bharat Supply Co,14450,17680,8.96,Yes,No,250,7,4.0
+PROD820,Tawa Non-Stick Basic,Home & Kitchen,Cookware,Hawkins,Lakshmi Supply Co,530,690,0.64,No,No,200,9,4.9
+PROD821,Gel Pen Set of 10 Lite,Books & Stationery,Office Stationery,Casio,Delta Distributors,110,140,0.1,No,No,300,4,3.9
+PROD822,Mobile Holder for Bike Classic,Automotive,Bike Accessories,Studds,Excel Distributors,500,640,0.23,Yes,No,150,6,3.3
+PROD823,Tail Light LED Deluxe,Automotive,Bike Accessories,Cramster,Indian Traders Co,760,1050,0.11,Yes,No,50,4,4.2
+PROD824,Body Lotion 400ml Lite,Health & Beauty,Skincare,Plum,Sharma Enterprises,260,350,0.37,No,No,50,8,4.7
+PROD825,Board Game Classic Plus,Baby & Kids,Toys,Lego,Lakshmi Supply Co,690,950,0.51,No,No,50,8,3.5
+PROD826,Sweater Ultra,Clothing,Winter Wear,Wildcraft,Heritage Trading,2900,3980,0.59,No,No,150,4,3.9
+PROD827,Night Cream 50g Pro,Health & Beauty,Skincare,Nivea,Sharma Enterprises,890,1230,0.12,Yes,No,250,10,4.7
+PROD828,Baby Shampoo 200ml Deluxe,Baby & Kids,Baby Care,Johnson's,Allied Trading,240,290,0.25,No,No,200,7,3.3
+PROD829,Foldable Phone Elite,Electronics,Mobile Phones,Xiaomi,Bharat Supply Co,94970,115390,0.24,Yes,No,300,6,4.2
+PROD830,Fitness Band Max,Electronics,Wearable Tech,Amazfit,Indian Traders Co,2110,2600,0.06,Yes,No,100,4,4.9
+PROD831,Action Figure 12-inch V2,Baby & Kids,Toys,Lego,Mehra Logistics,430,570,0.27,Yes,No,300,6,3.2
+PROD832,Muffler Ultra,Clothing,Winter Wear,Decathlon,Lakshmi Supply Co,460,630,0.21,No,No,50,6,3.5
+PROD833,Milk 1L Ultra,Grocery,Dairy Products,Parag,National Distributors,80,90,1.25,No,Yes,150,3,3.5
+PROD834,Bluetooth Speaker Max,Electronics,Audio Devices,Sony,Prime Wholesale,1960,2450,2.11,Yes,No,75,10,3.3
+PROD835,Seat Cover Set Leatherette Gold,Automotive,Car Accessories,Bosch,ABC Supplies,3230,4250,4.41,No,No,250,6,4.6
+PROD836,Whey Protein 2kg Pro,Health & Beauty,Health Supplements,GNC,Prime Wholesale,3260,4100,2.21,No,Yes,75,3,4.3
+PROD837,Wall Mirror Framed Mini,Home & Kitchen,Home Decor,Fabindia,Eagle Enterprises,2250,2910,2.06,Yes,No,50,4,3.7
+PROD838,Wall Mirror Framed Elite,Home & Kitchen,Home Decor,Decornation,National Distributors,3880,4940,2.58,Yes,No,100,4,3.4
+PROD839,Cumin Seeds 200g Pro,Grocery,Spices & Masala,Everest,Naveen Enterprises,120,150,0.2,No,No,75,7,4.0
+PROD840,TV Unit Cabinet Max,Furniture,Living Room,Godrej Interio,Star Enterprises,10350,12460,32.09,Yes,No,50,8,4.3
+PROD841,Induction Cooktop Plus,Home & Kitchen,Kitchen Appliances,Prestige,Fortune Traders,3690,4570,3.13,Yes,No,200,5,4.2
+PROD842,Formal Shoes Deluxe,Clothing,Footwear,Puma,Kumar Industries,2540,3160,1.04,No,No,150,5,3.3
+PROD843,Multivitamin Tablets 60s V2,Health & Beauty,Health Supplements,MuscleBlaze,Metro Suppliers,590,770,0.15,No,Yes,100,1,4.5
+PROD844,Basketball Size 7 Ultra,Sports & Fitness,Sports Gear,Nivia,Sharma Enterprises,2020,2610,0.78,No,No,50,7,3.8
+PROD845,Helmet Full Face ISI Plus,Automotive,Bike Accessories,Rynox,Prime Wholesale,2930,3730,1.59,Yes,No,300,10,4.7
+PROD846,Car Phone Mount Basic,Automotive,Car Accessories,Amkette,Indian Traders Co,420,560,0.2,Yes,No,100,5,4.9
+PROD847,Microwave Oven 20L V2,Home & Kitchen,Kitchen Appliances,Butterfly,Heritage Trading,7720,9510,12.95,Yes,No,75,6,3.9
+PROD848,Moisturizer 200ml XL,Health & Beauty,Skincare,Plum,Star Enterprises,220,290,0.28,No,No,75,9,4.6
+PROD849,Business Laptop Elite,Electronics,Laptops,Asus,Heritage Trading,77980,92860,1.46,Yes,No,100,10,4.4
+PROD850,Lip Balm 10g Deluxe,Health & Beauty,Skincare,Nivea,Kumar Industries,80,110,0.02,No,No,250,5,4.5
+PROD851,Decorative Lamp Mini,Home & Kitchen,Home Decor,Ikea,Allied Trading,640,860,1.3,Yes,No,200,8,4.9
+PROD852,Conditioner 200ml Max,Health & Beauty,Haircare,Dyson,Keshav Traders,290,400,0.28,No,No,300,8,4.3
+PROD853,Soundbar Mini,Electronics,Audio Devices,boAt,Mehra Logistics,14410,18330,2.66,Yes,No,250,8,3.3
+PROD854,Baby Wipes Pack of 3 Deluxe,Baby & Kids,Baby Care,MamyPoko,Heritage Trading,310,420,0.66,No,No,150,4,3.2
+PROD855,Ghee 1L Classic,Grocery,Dairy Products,Parag,Eagle Enterprises,600,700,0.95,No,No,200,5,4.0
+PROD856,Moisturizer 200ml Pro,Health & Beauty,Skincare,Plum,Gupta & Sons,280,370,0.22,No,No,100,4,4.1
+PROD857,Red Chilli Powder 200g Plus,Grocery,Spices & Masala,Everest,Metro Suppliers,80,100,0.2,No,No,100,6,4.0
+PROD858,Gloves Max,Clothing,Winter Wear,Decathlon,Fortune Traders,600,790,0.22,No,No,250,7,3.8
+PROD859,Garam Masala 100g Lite,Grocery,Spices & Masala,Catch,Bharat Supply Co,70,90,0.08,No,No,50,9,4.6
+PROD860,Paneer 200g Max,Grocery,Dairy Products,Parag,Prime Wholesale,120,140,0.25,No,Yes,150,1,4.6
+PROD861,Mobile Holder for Bike Basic,Automotive,Bike Accessories,BoboGear,ABC Supplies,430,580,0.23,Yes,No,250,8,4.8
+PROD862,Whey Protein 2kg Ultra,Health & Beauty,Health Supplements,Himalaya,Singh Supply Chain,3670,4330,2.76,No,Yes,100,3,4.7
+PROD863,Laptop Stand Ultra,Electronics,Computer Accessories,Corsair,Metro Suppliers,1990,2710,0.91,No,No,100,5,4.0
+PROD864,Potato Chips 100g Deluxe,Grocery,Snacks & Beverages,Nestle,National Distributors,30,40,0.1,No,Yes,200,2,4.3
+PROD865,Bedside Table Mini,Furniture,Bedroom,Ikea,Mehra Logistics,1860,2520,5.63,No,No,300,9,4.5
+PROD866,Garam Masala 100g Ultra,Grocery,Spices & Masala,Catch,Patel Trading Co,120,160,0.12,No,No,75,6,3.4
+PROD867,Flower Vase Ceramic Elite,Home & Kitchen,Home Decor,Ikea,Gupta & Sons,460,600,0.58,Yes,No,200,7,4.0
+PROD868,Tennis Ball Pack of 6 Deluxe,Sports & Fitness,Sports Gear,Nivia,Star Enterprises,590,810,0.38,No,No,75,7,3.7
+PROD869,Heels XL,Clothing,Footwear,Puma,ABC Supplies,2170,2910,0.69,No,No,150,5,3.6
+PROD870,Showpiece Figurine Max,Home & Kitchen,Home Decor,Decornation,Prime Wholesale,350,460,0.6,Yes,No,250,10,4.0
+PROD871,Running Shoes Mini,Clothing,Footwear,Adidas,Sharma Enterprises,1370,1850,0.83,No,No,50,6,3.6
+PROD872,Instant Noodles Pack of 4 Basic,Grocery,Snacks & Beverages,Cadbury,Golden Supply,50,60,0.28,No,Yes,150,3,4.1
+PROD873,Shoe Rack 4-Tier Mini,Furniture,Living Room,Godrej Interio,Star Enterprises,1580,2060,7.78,No,No,300,10,3.3
+PROD874,Protein Powder 1kg Max,Health & Beauty,Health Supplements,Himalaya,Sharma Enterprises,3160,3990,1.44,No,Yes,300,1,4.0
+PROD875,Kadhai 3L Mini,Home & Kitchen,Cookware,Hawkins,Singh Supply Chain,710,980,1.42,No,No,300,9,4.3
+PROD876,Kadhai 3L Elite,Home & Kitchen,Cookware,Vinod,Gupta & Sons,1280,1650,1.77,No,No,300,5,4.7
+PROD877,Mouse Pad XL Ultra,Electronics,Computer Accessories,Portronics,Mehra Logistics,560,720,0.5,No,No,100,9,3.7
+PROD878,Shoe Rack 4-Tier V2,Furniture,Living Room,Wakefit,Imperial Distributors,2450,3190,9.73,No,No,50,5,4.9
+PROD879,Body Lotion 400ml Lite,Health & Beauty,Skincare,Nivea,Eagle Enterprises,300,410,0.37,No,No,300,5,3.6
+PROD880,Electric Kettle 1.5L Classic,Home & Kitchen,Kitchen Appliances,Havells,Gupta & Sons,1080,1410,1.21,Yes,No,200,9,3.7
+PROD881,Shampoo 400ml Plus,Health & Beauty,Haircare,L'Oreal,Allied Trading,240,320,0.42,No,No,200,9,3.7
+PROD882,Photo Frame Set of 5 Pro,Home & Kitchen,Home Decor,Home Centre,Jayshree Enterprises,860,1120,1.13,Yes,No,300,10,4.5
+PROD883,Yoga Mat 6mm Deluxe,Sports & Fitness,Gym Equipment,Decathlon,Heritage Trading,830,1080,0.83,No,No,200,7,3.6
+PROD884,Hair Serum 100ml Classic,Health & Beauty,Haircare,Tresemme,National Distributors,300,390,0.14,Yes,No,200,8,3.4
+PROD885,Tennis Ball Pack of 6 Gold,Sports & Fitness,Sports Gear,SG,Delta Distributors,550,740,0.38,No,No,50,9,4.6
+PROD886,Yoga Mat 6mm Lite,Sports & Fitness,Gym Equipment,Lifelong,Global Supply House,480,660,0.66,No,No,50,7,3.6
+PROD887,Blazer Deluxe,Clothing,Men's Wear,H&M,Naveen Enterprises,8170,11270,0.89,No,No,250,6,3.7
+PROD888,Flower Vase Ceramic Deluxe,Home & Kitchen,Home Decor,Decornation,Bharat Supply Co,500,640,0.58,Yes,No,100,9,4.5
+PROD889,Mustard Oil 1L Plus,Grocery,Staples,Fortune,Singh Supply Chain,180,210,0.91,No,No,150,4,3.4
+PROD890,Sugar 5kg Max,Grocery,Staples,India Gate,National Distributors,330,360,6.25,No,No,300,4,5.0
+PROD891,Hair Oil 200ml Elite,Health & Beauty,Haircare,Parachute,Naveen Enterprises,260,330,0.21,No,No,250,10,3.4
+PROD892,Mixer Grinder 750W XL,Home & Kitchen,Kitchen Appliances,Philips,Bharat Supply Co,2340,2810,6.41,Yes,No,250,5,3.3
+PROD893,Bean Bag XXXL Lite,Furniture,Living Room,Godrej Interio,Fortune Traders,760,970,2.6,No,No,75,9,4.5
+PROD894,Body Lotion 400ml Ultra,Health & Beauty,Skincare,Lakme,Keshav Traders,520,720,0.58,No,No,50,5,4.6
+PROD895,Bedside Table Elite,Furniture,Bedroom,Duroflex,Heritage Trading,3280,4510,7.04,No,No,75,5,3.7
+PROD896,Soundbar Classic,Electronics,Audio Devices,Noise,Sharma Enterprises,17760,22450,3.33,Yes,No,300,9,3.2
+PROD897,Feeding Bottle Set 2s V2,Baby & Kids,Baby Care,Huggies,Fortune Traders,320,420,0.34,Yes,No,150,6,4.4
+PROD898,Milk 1L Pro,Grocery,Dairy Products,Parag,Naveen Enterprises,70,80,1.0,No,Yes,200,1,5.0
+PROD899,Microwave Oven 20L Basic,Home & Kitchen,Kitchen Appliances,Havells,Metro Suppliers,5760,7250,12.95,Yes,No,200,9,3.5
+PROD900,Pull-Up Bar Gold,Sports & Fitness,Gym Equipment,Decathlon,Kumar Industries,1810,2330,2.73,No,No,75,4,4.9
+PROD901,Sunscreen SPF50 100g Max,Health & Beauty,Skincare,Biotique,Prime Wholesale,580,790,0.19,No,No,150,9,3.9
+PROD902,Tail Light LED Max,Automotive,Bike Accessories,Steelbird,Sharma Enterprises,770,980,0.14,Yes,No,50,8,4.9
+PROD903,Palazzo Pants Max,Clothing,Women's Wear,Zara,Imperial Distributors,810,1080,0.39,No,No,250,9,4.4
+PROD904,Kitchen King Masala 100g Elite,Grocery,Spices & Masala,Everest,Delta Distributors,80,110,0.1,No,No,75,4,4.9
+PROD905,Denim Jeans Pro,Clothing,Men's Wear,US Polo,Fortune Traders,1250,1570,0.81,No,No,250,9,3.5
+PROD906,Budget Smartphone Elite,Electronics,Mobile Phones,Xiaomi,Metro Suppliers,11230,12590,0.18,Yes,No,200,8,4.6
+PROD907,Ghee 1L Basic,Grocery,Dairy Products,Verka,Fortune Traders,500,600,0.95,No,No,50,10,4.8
+PROD908,Toaster 2-Slice Gold,Home & Kitchen,Kitchen Appliances,Bajaj,Eagle Enterprises,1950,2490,1.47,Yes,No,200,9,3.3
+PROD909,Dumbbell Set 10kg Max,Sports & Fitness,Gym Equipment,Cultsport,Mehra Logistics,2680,3420,12.5,No,No,100,5,3.7
+PROD910,Smart Glasses Ultra,Electronics,Wearable Tech,Amazfit,ABC Supplies,30930,37000,0.09,Yes,No,50,10,4.8
+PROD911,Paneer 200g Lite,Grocery,Dairy Products,Mother Dairy,Mehra Logistics,70,80,0.16,No,Yes,300,1,4.2
+PROD912,Baby Shampoo 200ml Plus,Baby & Kids,Baby Care,Chicco,National Distributors,220,270,0.25,No,No,100,10,3.3
+PROD913,Flower Vase Ceramic Mini,Home & Kitchen,Home Decor,Fabindia,Agarwal Traders,280,390,0.46,Yes,No,300,8,5.0
+PROD914,Face Serum 30ml Mini,Health & Beauty,Skincare,Biotique,Jayshree Enterprises,450,620,0.08,Yes,No,100,6,3.4
+PROD915,Dumbbell Set 10kg Lite,Sports & Fitness,Gym Equipment,Strauss,Fortune Traders,1560,1940,8.0,No,No,200,5,4.0
+PROD916,Dressing Table with Mirror Pro,Furniture,Bedroom,HomeTown,Keshav Traders,6570,8650,33.08,Yes,No,200,10,4.6
+PROD917,Leggings Lite,Clothing,Women's Wear,AND,Metro Suppliers,240,300,0.17,No,No,250,10,4.4
+PROD918,Foldable Phone XL,Electronics,Mobile Phones,Realme,Fortune Traders,81360,100520,0.3,Yes,No,100,4,3.6
+PROD919,Salt 1kg Plus,Grocery,Staples,Aashirvaad,Eagle Enterprises,30,30,1.0,No,No,100,4,3.3
+PROD920,Mustard Oil 1L Max,Grocery,Staples,Patanjali,Fortune Traders,190,230,1.14,No,No,50,8,3.4
+PROD921,Track Pants Deluxe,Clothing,Men's Wear,Levi's,Delta Distributors,1120,1410,0.31,No,No,150,9,4.9
+PROD922,Salt 1kg V2,Grocery,Staples,Patanjali,Eagle Enterprises,20,20,1.0,No,No,300,9,3.8
+PROD923,Whey Protein 2kg V2,Health & Beauty,Health Supplements,Himalaya,Golden Supply,2700,3540,2.21,No,Yes,300,3,3.4
+PROD924,Formal Shirt Basic,Clothing,Men's Wear,Allen Solly,Star Enterprises,760,990,0.26,No,No,100,10,3.6
+PROD925,Cumin Seeds 200g Pro,Grocery,Spices & Masala,Everest,Heritage Trading,120,150,0.2,No,No,250,6,4.7
+PROD926,Seat Cover Set Leatherette Lite,Automotive,Car Accessories,Amkette,Naveen Enterprises,1980,2690,3.53,No,No,250,5,4.9
+PROD927,Sunscreen SPF50 100g Max,Health & Beauty,Skincare,Biotique,Mehra Logistics,560,730,0.19,No,No,50,7,4.7
+PROD928,TV Unit Cabinet Elite,Furniture,Living Room,Ikea,Heritage Trading,10190,12370,25.67,Yes,No,300,5,3.4
+PROD929,Mouse Pad XL Gold,Electronics,Computer Accessories,Zebronics,Metro Suppliers,530,670,0.4,No,No,250,9,4.9
+PROD930,Soundbar Ultra,Electronics,Audio Devices,Sony,ABC Supplies,26440,34600,4.16,Yes,No,50,5,4.8
+PROD931,Omega-3 Capsules 60s Gold,Health & Beauty,Health Supplements,HealthKart,Patel Trading Co,880,1200,0.15,No,Yes,50,2,3.3
+PROD932,Shoe Rack 4-Tier Plus,Furniture,Living Room,Ikea,Allied Trading,2830,3630,9.73,No,No,250,7,3.5
+PROD933,Basmati Rice 5kg Basic,Grocery,Staples,Aashirvaad,Delta Distributors,610,710,5.0,No,No,200,8,4.3
+PROD934,Baby Wipes Pack of 3 V2,Baby & Kids,Baby Care,Johnson's,Delta Distributors,250,330,0.66,No,No,50,6,3.9
+PROD935,Conditioner 200ml Classic,Health & Beauty,Haircare,Dove,Bharat Supply Co,220,300,0.22,No,No,300,8,4.6
+PROD936,Wall Mirror Framed Gold,Home & Kitchen,Home Decor,Decornation,Metro Suppliers,3570,4720,2.58,Yes,No,200,8,3.8
+PROD937,Biscuits Pack Basic,Grocery,Snacks & Beverages,Lay's,Keshav Traders,60,80,0.2,No,Yes,300,2,3.3
+PROD938,Pull-Up Bar Max,Sports & Fitness,Gym Equipment,Boldfit,Mehra Logistics,2130,2740,3.41,No,No,50,5,4.4
+PROD939,Namkeen Mix 400g Max,Grocery,Snacks & Beverages,Lay's,Golden Supply,160,210,0.5,No,Yes,75,3,4.7
+PROD940,Face Wash 150ml XL,Health & Beauty,Skincare,Nivea,Mehra Logistics,220,300,0.25,No,No,75,8,3.8
+PROD941,Casserole Set 3-Piece Ultra,Home & Kitchen,Cookware,Vinod,Royal Trading,2420,3220,3.41,Yes,No,75,8,4.9
+PROD942,Basketball Size 7 Max,Sports & Fitness,Sports Gear,SG,Delta Distributors,1820,2360,0.78,No,No,75,8,3.6
+PROD943,Gel Pen Set of 10 Pro,Books & Stationery,Office Stationery,Cello,Heritage Trading,160,220,0.12,No,No,75,6,4.5
+PROD944,Electric Kettle 1.5L Lite,Home & Kitchen,Kitchen Appliances,Philips,Golden Supply,790,1020,0.97,Yes,No,50,10,4.1
+PROD945,Wall Clock Wooden Mini,Home & Kitchen,Home Decor,Decornation,Royal Trading,340,470,0.67,Yes,No,50,6,3.7
+PROD946,Track Pants Basic,Clothing,Men's Wear,US Polo,Indian Traders Co,720,950,0.31,No,No,250,6,3.5
+PROD947,Bookshelf 4-Tier Elite,Furniture,Living Room,Godrej Interio,Agarwal Traders,2300,3030,20.92,No,No,250,8,4.7
+PROD948,Decorative Lamp V2,Home & Kitchen,Home Decor,Fabindia,Fortune Traders,930,1200,1.63,Yes,No,50,9,4.9
+PROD949,Moisturizer 200ml Gold,Health & Beauty,Skincare,Plum,National Distributors,270,340,0.22,No,No,300,8,3.6
+PROD950,Bean Bag XXXL Mini,Furniture,Living Room,Wakefit,Naveen Enterprises,770,980,2.6,No,No,75,6,5.0
+PROD951,Running Shoes Deluxe,Clothing,Footwear,Skechers,Desi Distributors,2410,2970,1.04,No,No,250,9,4.8
+PROD952,Vitamin C Tablets 60s Lite,Health & Beauty,Health Supplements,MuscleBlaze,Metro Suppliers,230,300,0.07,No,Yes,100,1,4.5
+PROD953,Mechanical Keyboard Plus,Electronics,Computer Accessories,Corsair,Keshav Traders,2710,3460,1.08,Yes,No,150,7,4.8
+PROD954,Kadhai 3L Max,Home & Kitchen,Cookware,Vinod,Bharat Supply Co,1280,1730,2.21,No,No,300,9,3.6
+PROD955,Whey Protein 2kg Mini,Health & Beauty,Health Supplements,MuscleBlaze,National Distributors,2070,2450,1.77,No,Yes,100,1,3.3
+PROD956,Formal Shoes Plus,Clothing,Footwear,Nike,National Distributors,2440,3010,1.04,No,No,200,8,4.8
+PROD957,Student Laptop Plus,Electronics,Laptops,Asus,Mehra Logistics,47750,53310,2.08,Yes,No,50,4,3.8
+PROD958,Jacket Plus,Clothing,Winter Wear,UCB,Kumar Industries,5410,7230,0.79,No,No,250,6,3.7
+PROD959,Fitness Band Lite,Electronics,Wearable Tech,Fire-Boltt,Gupta & Sons,1140,1460,0.04,Yes,No,50,6,3.2
+PROD960,Neckband Earphones V2,Electronics,Audio Devices,Bose,Singh Supply Chain,2750,3630,0.06,No,No,50,4,3.6
+PROD961,Tail Light LED V2,Automotive,Bike Accessories,Steelbird,Sharma Enterprises,630,830,0.11,Yes,No,300,7,4.0
+PROD962,Baby Blanket Fleece V2,Baby & Kids,Baby Care,Huggies,Metro Suppliers,320,420,0.54,No,No,150,6,3.5
+PROD963,Wireless Mouse V2,Electronics,Computer Accessories,HyperX,Royal Trading,680,850,0.11,Yes,No,50,5,4.6
+PROD964,Building Blocks Set 100pc Mini,Baby & Kids,Toys,Toyshine,Prime Wholesale,290,370,0.78,Yes,No,300,8,3.6
+PROD965,Mouse Pad XL Plus,Electronics,Computer Accessories,Portronics,Desi Distributors,520,680,0.4,No,No,300,7,4.2
+PROD966,Salt 1kg Pro,Grocery,Staples,India Gate,Delta Distributors,30,40,1.0,No,No,200,8,4.8
+PROD967,Shoe Rack 4-Tier Deluxe,Furniture,Living Room,Urban Ladder,Mehra Logistics,2990,3720,9.73,No,No,75,5,4.7
+PROD968,Hoodie Lite,Clothing,Men's Wear,Zara,Singh Supply Chain,1750,2420,0.54,No,No,300,9,3.5
+PROD969,Car Phone Mount V2,Automotive,Car Accessories,3M,Naveen Enterprises,540,730,0.2,Yes,No,150,8,3.9
+PROD970,Induction Cooktop V2,Home & Kitchen,Kitchen Appliances,Prestige,Heritage Trading,3380,4420,3.13,Yes,No,250,8,4.3
+PROD971,Conditioner 200ml Mini,Health & Beauty,Haircare,Philips,Royal Trading,170,220,0.18,No,No,300,4,4.9
+PROD972,Bean Bag XXXL Gold,Furniture,Living Room,Pepperfry,Keshav Traders,1080,1400,3.25,No,No,100,7,3.7
+PROD973,Baby Shampoo 200ml Pro,Baby & Kids,Baby Care,Huggies,Kumar Industries,250,320,0.25,No,No,150,5,4.3
+PROD974,Jigsaw Puzzle 500pc Elite,Baby & Kids,Toys,Hot Wheels,Eagle Enterprises,510,670,0.58,No,No,75,4,4.5
+PROD975,Namkeen Mix 400g XL,Grocery,Snacks & Beverages,Parle,Sharma Enterprises,120,160,0.5,No,Yes,100,2,4.7
+PROD976,Action Figure 12-inch Mini,Baby & Kids,Toys,Hot Wheels,Fortune Traders,320,410,0.22,Yes,No,150,10,4.7
+PROD977,Namkeen Mix 400g Elite,Grocery,Snacks & Beverages,Haldiram's,Global Supply House,150,190,0.4,No,Yes,75,2,4.5
+PROD978,Biography XL,Books & Stationery,Books,Arihant,Naveen Enterprises,600,770,0.47,No,No,100,9,4.1
+PROD979,Track Pants Gold,Clothing,Men's Wear,Allen Solly,Mehra Logistics,1080,1490,0.31,No,No,75,10,3.6
+PROD980,Webcam HD Classic,Electronics,Computer Accessories,HyperX,Eagle Enterprises,1150,1390,0.26,Yes,No,75,6,3.9
+PROD981,Resistance Band Set Max,Sports & Fitness,Gym Equipment,Decathlon,Agarwal Traders,550,760,0.74,No,No,100,7,4.3
+PROD982,Sneakers Pro,Clothing,Footwear,Adidas,Imperial Distributors,3010,3840,0.9,No,No,100,9,4.7
+PROD983,Smartwatch V2,Electronics,Wearable Tech,Amazfit,Golden Supply,12240,14550,0.06,Yes,No,75,10,3.6
+PROD984,Sugar 5kg Deluxe,Grocery,Staples,Daawat,ABC Supplies,290,330,5.0,No,No,300,10,4.9
+PROD985,Jigsaw Puzzle 500pc Lite,Baby & Kids,Toys,Funskool,Diamond Suppliers,310,390,0.46,No,No,300,4,3.6
+PROD986,Car Vacuum Cleaner 12V Gold,Automotive,Car Accessories,Bosch,Prime Wholesale,900,1200,1.38,Yes,No,150,10,3.8
+PROD987,Butter 500g Classic,Grocery,Dairy Products,Parag,Allied Trading,180,210,0.5,No,Yes,200,1,3.2
+PROD988,Baby Blanket Fleece XL,Baby & Kids,Baby Care,MamyPoko,Sharma Enterprises,360,470,0.68,No,No,250,4,4.1
+PROD989,Water Purifier RO V2,Home & Kitchen,Kitchen Appliances,Bajaj,Bharat Supply Co,14290,18280,8.96,Yes,No,250,9,3.7
+PROD990,Leggings Max,Clothing,Women's Wear,Zara,Jayshree Enterprises,390,540,0.26,No,No,300,10,4.3
+PROD991,Baby Blanket Fleece XL,Baby & Kids,Baby Care,Chicco,Indian Traders Co,360,480,0.68,No,No,100,6,4.8
+PROD992,Night Cream 50g Plus,Health & Beauty,Skincare,Plum,Imperial Distributors,850,1140,0.12,Yes,No,75,6,4.5
+PROD993,Toor Dal 1kg Deluxe,Grocery,Staples,India Gate,Metro Suppliers,130,160,1.0,No,No,200,6,4.7
+PROD994,Feeding Bottle Set 2s Max,Baby & Kids,Baby Care,Huggies,Fortune Traders,400,490,0.43,Yes,No,100,9,4.7
+PROD995,Loafers Deluxe,Clothing,Footwear,Adidas,Metro Suppliers,860,1140,0.56,No,No,75,9,4.8
+PROD996,Conditioner 200ml Gold,Health & Beauty,Haircare,Philips,Sharma Enterprises,290,380,0.22,No,No,150,10,3.4
+PROD997,USB Hub Deluxe,Electronics,Computer Accessories,Logitech,Indian Traders Co,830,1140,0.11,No,No,75,8,3.4
+PROD998,Jigsaw Puzzle 500pc Plus,Baby & Kids,Toys,Funskool,Gupta & Sons,490,640,0.58,No,No,75,6,3.9
+PROD999,Side Table Wooden Pro,Furniture,Living Room,Nilkamal,Golden Supply,3000,4070,7.73,No,No,50,7,3.8
+PROD1000,Sneakers XL,Clothing,Footwear,Puma,Singh Supply Chain,2630,3210,1.12,No,No,300,10,3.5

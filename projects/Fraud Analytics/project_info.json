@@ -1,0 +1,39 @@
+{
+  "title": "Indian Financial Fraud Analytics Dashboard",
+  "tagline": "Transaction patterns, fraud detection, and financial risk analysis",
+  "overview": "Analyzed 250,000 financial transactions along with customer, card, and merchant data to identify fraud patterns, transaction trends, high-risk states, card-related risks, and merchant risk exposure using Python, SQL, and Power BI. Built a comprehensive dashboard focused on fraud rate, transaction performance, customer behavior, and financial risk analysis.",
+  "objectives": [
+    "Track core financial KPIs including Total Transactions, Fraud Rate, Fraud Amount, and Transaction Success Rate",
+    "Analyze fraud patterns across payment methods, transaction channels, devices, cards, and customer demographics",
+    "Identify high-risk states and merchant categories based on fraud exposure and fraud amount",
+    "Analyze transaction trends, customer behavior, merchant risk, and credit limit patterns"
+  ],
+  "key_insights": [
+    "Fraud Rate stands at 5.4%, while the overall transaction success rate is 91%",
+    "Expired Card transactions emerged as the leading fraud trigger",
+    "Fraud activity increases during late-night and early-morning hours",
+    "Kerala, Odisha, and Punjab show the highest fraud exposure",
+    "Hospital and Airline merchant categories account for the highest fraud amounts"
+  ],
+  "tech": [
+    "Python",
+    "Pandas",
+    "NumPy",
+    "SQL",
+    "MySQL",
+    "Power BI",
+    "DAX",
+    "Matplotlib",
+    "Seaborn"
+  ],
+  "tags": [
+    "Financial Analytics",
+    "Fraud Detection",
+    "Power BI",
+    "SQL",
+    "Python",
+    "Risk Analytics"
+  ],
+  "powerbi_embed_url": "https://app.powerbi.com/view?r=eyJrIjoiMmMxZGU0NDgtNTA5Yy00NTM0LWEwODctYjA4MTQ0NTk3MjAyIiwidCI6IjUzMTVhNjkzLTM3MjktNDY0NS1hOTIyLWMxY2EwMTVjNWY1MiJ9",
+  "github_description": "Financial fraud analytics project analyzing 250K transactions, fraud patterns, customer behavior, card risk, and merchant exposure"
+}

@@ -12,5 +12,13 @@
     "description": "Comprehensive synthetic hospital dataset with 40,000+ patients, 80 doctors, and 4,00,000+ billing transactions. Contains OPD/IPD patient records, disease-doctor mapping, treatment costs, and detailed transaction data for healthcare analytics and dashboard building.",
     "link": "https://www.kaggle.com/datasets/jatinkhandelwal112/gurugram-hospital-analytics-dataset",
     "tags": ["Healthcare", "Hospital Analytics", "Python", "SQL", "Power BI"]
+  },
+  {
+    "category": "🛒 Indian E-Commerce Sales Analytics Dataset",
+    "name": "E-commerce Analytics Dataset",
+    "description": "Comprehensive synthetic e-commerce dataset with 40,000+ customers, 2,000+ products, and 2,50,000+ transactions. Contains customer demographics, product details, transaction history, and sales data for e-commerce analytics and dashboard building.",
+    "link": "https://www.kaggle.com/datasets/jatinkhandelwal112/indian-e-commerce-sales-analytics-dataset",
+    "tags": ["E-commerce", "Analytics", "Python", "SQL", "Power BI"]
+
   }
 ]

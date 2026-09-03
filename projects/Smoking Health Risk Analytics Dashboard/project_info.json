@@ -1,0 +1,50 @@
+{
+  "title": "Smoking Health Risk Analytics Dashboard",
+  "tagline": "Synthetic smoking patterns, health-risk indicators, and organ-wise analytics",
+
+  "overview": "Designed a Power BI healthcare analytics project using a carefully controlled 30,000-row synthetic, risk-enriched screening cohort. The project analyzes smoking status, age, gender, blood pressure, cholesterol, lifestyle patterns, and illustrative organ-risk indicators across Human Body, Heart, Lungs, Liver, and Kidney views. The dashboard is created for educational analytics only; Healthy/Damaged labels and risk scores are synthetic indicators, not medical diagnoses or national population prevalence.",
+
+  "objectives": [
+    "Track core healthcare analytics KPIs including Total Patients, Smoking Status Distribution, Average Risk Score, Blood Pressure Profile, and Cholesterol Profile",
+    "Analyze Never, Current, and Former smoking patterns across age groups, gender, lifestyle habits, and synthetic health-risk indicators",
+    "Compare smoking exposure and illustrative risk patterns across Human Body, Heart, Lungs, Liver, and Kidney analysis cohorts",
+    "Build an interactive Power BI experience using organ navigation, Healthy/Damaged state selection, dynamic anatomy visuals, and DAX-based organ filtering",
+    "Explore relationships between smoking behavior, physical activity, alcohol use, blood pressure, cholesterol, BMI, and synthetic risk scores"
+  ],
+
+  "key_insights": [
+    "The final synthetic cohort contains 30,000 patient records distributed unevenly across five organ-analysis cohorts for more realistic dashboard comparison",
+    "Never smokers account for 46.17% of the cohort, while Current smokers account for 32.22% and Former smokers account for 21.62%",
+    "The Lungs cohort has the highest Current smoker share at 37%, making it the strongest smoking-exposure comparison view",
+    "The Liver cohort has the highest Never smoker share at 48% and the lowest Current smoker share at 29%",
+    "Healthy and Damaged states are balanced at a 60/40 split within every Organ and Smoking Status group, preventing the Healthy view from becoming overly dominated by Never smokers",
+    "Every age group contains meaningful Current and Former smoker records, ensuring complete age-wise smoking analysis"
+  ],
+
+  "tech": [
+    "Python",
+    "Pandas",
+    "NumPy",
+    "Power BI",
+    "DAX",
+    "Power Query",
+    "Data Modeling",
+    "Data Visualization",
+    "Pillow"
+  ],
+
+  "tags": [
+    "Healthcare Analytics",
+    "Smoking Risk Analysis",
+    "Power BI",
+    "DAX",
+    "Python",
+    "Synthetic Data",
+    "Risk Analytics",
+    "Data Visualization"
+  ],
+
+  "powerbi_embed_url": "https://app.powerbi.com/view?r=eyJrIjoiMTZjZTliZjAtNTk3ZS00YWFiLTkxM2QtYTQ2ZTg2MzNmN2JjIiwidCI6IjUzMTVhNjkzLTM3MjktNDY0NS1hOTIyLWMxY2EwMTVjNWY1MiJ9",
+
+  "github_description": "Synthetic healthcare analytics project using 30K patient records to analyze smoking status, lifestyle factors, blood pressure, cholesterol, age groups, gender, and organ-wise illustrative risk indicators in Power BI."
+}
