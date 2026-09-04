@@ -1,0 +1,11 @@
+﻿Organ,Organ_Order,Organ_Condition,Condition_Order,Image_URL
+Human Body,1,Healthy,1,https://drive.usercontent.google.com/download?id=1KOQB5SHJjxucn7LgaO0YD3NpG7WJxEtV&export=view
+Human Body,1,Damaged,2,https://drive.usercontent.google.com/download?id=1NzRJ-xzBB4SLbJL_TK7KKH53BykSGr7H&export=view
+Heart,2,Healthy,1,https://drive.usercontent.google.com/download?id=1NGhRiLUunYjNyMhjIwD9GCG8X750ptkT&export=view
+Heart,2,Damaged,2,https://drive.usercontent.google.com/download?id=15RFwY8BNGGALLu148KXCF584Ady6uX-D&export=view
+Lungs,3,Healthy,1,https://drive.usercontent.google.com/download?id=1VNQmWqe9R-2CjTT4QVZIgMD7d1VxnQme&export=view
+Lungs,3,Damaged,2,https://drive.usercontent.google.com/download?id=1obaPmpuanExoBoe1iQFeJH0iKWQWxV93&export=view
+Liver,4,Healthy,1,https://drive.usercontent.google.com/download?id=1k8rP8NfL7OCRhIM6i9ZEITOcqgvt5g9_&export=view
+Liver,4,Damaged,2,https://drive.usercontent.google.com/download?id=1FincO9ixmkh1H0Rl3ShxhOxMI5rprTfP&export=view
+Kidney,5,Healthy,1,https://drive.usercontent.google.com/download?id=1zYfkwnZDkaUdZQcH7bHlYmhpWFY3-TMG&export=view
+Kidney,5,Damaged,2,https://drive.usercontent.google.com/download?id=1AHbFkx6HU3IJNzc9EEVGbWDzEeLN-2c6&export=view

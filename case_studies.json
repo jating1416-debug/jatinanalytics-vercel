@@ -8,7 +8,6 @@
       "name": "Gurugram Hospital Analytics Dataset",
       "cover_image": "images/hospital-dataset-cover.png",
       "kaggle_link": "https://www.kaggle.com/datasets/jatinkhandelwal112/gurugram-hospital-analytics-dataset",
-      "github_link": "https://github.com/your-username/hospital-dataset-generator",
       "tags": ["Data Engineering", "Python Faker", "SQL", "Power BI"],
 
       "problem_statement": "Real healthcare data is protected under strict privacy regulations (HIPAA/DPDP). Publicly available datasets lack the complex relational structure of a real hospital management system. I built a custom Python script to generate a 400,000+ row relational database, simulating the exact chaos, patterns, and strict medical logic of a real multi-specialty hospital.",
@@ -58,7 +57,7 @@
       "name": "Indian Financial Fraud Dataset",
       "cover_image": "images/fraud-dataset-cover.png",
       "kaggle_link": "https://www.kaggle.com/datasets/jatinkhandelwal112/indian-financial-fraud-dataset",
-      "github_link": "https://github.com/your-username/fraud-dataset-generator",
+      "github_link":  "https://github.com/jating1416-debug/jatinanalytics-vercel/tree/main/projects/Indian-Financial-Fraud-Detection",
       "tags": ["Anomaly Detection", "Python", "Fraud Analytics", "ML"],
 
       "problem_statement": "Banking transaction data with actual fraud labels is virtually impossible to access publicly due to RBI compliance. I engineered a 250,000-row dataset across 4 relational tables. Instead of randomizing fraud, I programmed specific behavioral 'Fraud Signatures' that mimic how real financial cybercrimes occur in the Indian banking system.",
@@ -109,7 +108,7 @@
   "name": "Indian E-Commerce Sales Analytics Dataset",
   "cover_image": "images/ecommerce-dataset-cover.png",
   "kaggle_link": "https://www.kaggle.com/datasets/jatinkhandelwal112/indian-e-commerce-sales-analytics-dataset",
-  "github_link": "https://github.com/your-username/indian-ecommerce-sales-dataset-generator",
+  "github_link": "https://github.com/jating1416-debug/jatinanalytics-vercel/tree/main/projects/Ecommerce-Sales-Analysis",
   "tags": [
     "E-Commerce Analytics",
     "Retail Analytics",
