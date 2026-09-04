@@ -614,33 +614,72 @@ function initDatasetLibrary() {
 
 const detailDialog = () => document.getElementById('detail-dialog');
 
-/* ---------- Robust modal helpers (works even if top layer is disabled) ---------- */
+/* ---------- Modal system: pure fixed overlays (NO native top layer) ----------
+   The native <dialog> top layer behaves inconsistently inside iframes,
+   embedded previews and mobile webviews (dialog can render clipped,
+   invisible, or swallow touches — page looks "locked"). So every dialog
+   is rendered as a fixed overlay with its own backdrop + close logic.
+   Same behaviour everywhere, on every device. */
+const MODAL_IDS = ['dashboard-dialog', 'detail-dialog', 'lightbox-dialog'];
 let modalDepth = 0;
-function openModalDialog(dialog) {
-  if (!dialog) return;
-  try {
-    dialog.showModal();
-  } catch (err) {
-    dialog.classList.add('dialog-fallback');
-    dialog.setAttribute('open', '');
-  }
-  modalDepth += 1;
-  if (modalDepth === 1) {
+let modalZ = 250;
+
+function anyDialogOpen() {
+  return MODAL_IDS.some(id => {
+    const d = document.getElementById(id);
+    return !!d && (d.open || d.hasAttribute('open'));
+  });
+}
+
+function topDialog() {
+  let top = null;
+  let topZ = -1;
+  MODAL_IDS.forEach(id => {
+    const d = document.getElementById(id);
+    if (d && (d.open || d.hasAttribute('open'))) {
+      const z = parseInt(d.style.zIndex || '250', 10);
+      if (z >= topZ) { topZ = z; top = d; }
+    }
+  });
+  return top;
+}
+
+/* Derive the page scroll-lock from the ACTUAL dialog state — never from
+   counter arithmetic alone. If counters ever desync, this self-heals. */
+function syncModalLock() {
+  if (anyDialogOpen()) {
     document.documentElement.style.overflow = 'hidden';
     document.body.classList.add('dialog-open');
+  } else {
+    modalDepth = 0;
+    document.documentElement.style.overflow = '';
+    document.body.classList.remove('dialog-open');
   }
 }
+
+function openModalDialog(dialog) {
+  if (!dialog) return;
+  dialog.classList.add('dialog-fallback');
+  dialog.setAttribute('open', '');
+  dialog.style.zIndex = String(++modalZ);
+  modalDepth += 1;
+  syncModalLock();
+}
+
 function closeModalDialog(dialog) {
   if (dialog) {
     dialog.classList.remove('dialog-fallback');
+    dialog.style.zIndex = '';
+    dialog.style.transform = '';
+    dialog.style.opacity = '';
+    dialog.style.transition = '';
     if (dialog.hasAttribute('open')) dialog.removeAttribute('open');
     try { if (dialog.open) dialog.close(); } catch (err) {}
   }
   modalDepth = Math.max(0, modalDepth - 1);
-  if (modalDepth === 0) {
-    document.documentElement.style.overflow = '';
-    document.body.classList.remove('dialog-open');
-  }
+  syncModalLock();
+  /* self-heal one tick later in case state changed async */
+  window.setTimeout(syncModalLock, 120);
 }
 
 function openDetailDialog(eyebrow, title) {
@@ -1049,9 +1088,6 @@ function initDetailDialog() {
   const closeButton = document.getElementById('detail-dialog-close');
   if (!dialog) return;
   if (closeButton) closeButton.addEventListener('click', closeDetailDialog);
-  dialog.addEventListener('click', event => {
-    if (event.target === dialog) closeDetailDialog();
-  });
   dialog.addEventListener('cancel', () => { closeModalDialog(dialog); });
 }
 
@@ -1105,9 +1141,6 @@ function initLightbox() {
   const closeButton = document.getElementById('lightbox-close');
   if (!dialog) return;
   if (closeButton) closeButton.addEventListener('click', closeLightbox);
-  dialog.addEventListener('click', event => {
-    if (event.target === dialog) closeLightbox();
-  });
   dialog.addEventListener('cancel', () => { closeLightbox(); });
 
   document.body.addEventListener('click', event => {
@@ -1160,9 +1193,6 @@ function initDashboardDialog() {
   });
 
   closeButton.addEventListener('click', closeDialog);
-  dialog.addEventListener('click', event => {
-    if (event.target === dialog) closeDialog();
-  });
   dialog.addEventListener('cancel', () => {
     closeModalDialog(dialog);
     window.setTimeout(() => { frame.src = 'about:blank'; }, 0);
@@ -1328,6 +1358,83 @@ function applyTheme(theme) {
     btn.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
   }
 }
+function initModalSelfHeal() {
+  let t = 0;
+  const maybe = () => {
+    window.clearTimeout(t);
+    t = window.setTimeout(syncModalLock, 150);
+  };
+  document.addEventListener('click', maybe, true);
+  document.addEventListener('keydown', maybe, true);
+  document.addEventListener('touchend', maybe, true);
+  window.addEventListener('resize', maybe);
+  MODAL_IDS.forEach(id => {
+    const d = document.getElementById(id);
+    if (d) d.addEventListener('close', () => window.setTimeout(syncModalLock, 30));
+  });
+  /* global Escape: closes any open dialog from anywhere */
+  document.addEventListener('keydown', e => {
+    if (e.key !== 'Escape') return;
+    MODAL_IDS.forEach(id => {
+      const d = document.getElementById(id);
+      if (d && (d.open || d.hasAttribute('open'))) closeModalDialog(d);
+    });
+  }, true);
+  /* tap/click anywhere OUTSIDE the top dialog closes it (backdrop behaviour) */
+  document.addEventListener('pointerdown', e => {
+    const top = topDialog();
+    if (!top) return;
+    if (top.contains(e.target)) return;
+    closeModalDialog(top);
+  }, true);
+}
+
+/* Swipe the dialog header down to dismiss (mobile-native close gesture) */
+function initDialogSwipeClose() {
+  MODAL_IDS.forEach(id => {
+    const d = document.getElementById(id);
+    if (!d) return;
+    const header = d.querySelector('.dialog-header');
+    if (!header) return;
+    let startY = null;
+    header.addEventListener('touchstart', e => {
+      startY = e.touches[0].clientY;
+      d.style.transition = '';
+    }, { passive: true });
+    header.addEventListener('touchmove', e => {
+      if (startY === null) return;
+      const dy = e.touches[0].clientY - startY;
+      if (dy > 0) {
+        d.style.transition = 'none';
+        d.style.transform = `translateY(${Math.min(dy, 170)}px)`;
+        d.style.opacity = String(Math.max(0, 1 - dy / 280));
+      }
+    }, { passive: true });
+    header.addEventListener('touchend', e => {
+      if (startY === null) return;
+      const endY = e.changedTouches.length ? e.changedTouches[0].clientY : startY;
+      const dy = endY - startY;
+      startY = null;
+      if (dy > 70) {
+        d.style.transition = 'transform .18s ease, opacity .18s ease';
+        d.style.transform = 'translateY(70px)';
+        d.style.opacity = '0';
+        window.setTimeout(() => {
+          d.style.transform = '';
+          d.style.opacity = '';
+          d.style.transition = '';
+          closeModalDialog(d);
+        }, 170);
+      } else {
+        d.style.transition = 'transform .15s ease, opacity .15s ease';
+        d.style.transform = '';
+        d.style.opacity = '';
+        window.setTimeout(() => { d.style.transition = ''; }, 160);
+      }
+    }, { passive: true });
+  });
+}
+
 function initDarkMode() {
   let stored = null;
   try { stored = localStorage.getItem('jatin-theme'); } catch (e) {}
@@ -1742,5 +1849,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initKeyboardShortcuts();
   initDarkMode();
   initCommandPalette();
+  initModalSelfHeal();
+  initDialogSwipeClose();
   handleDeepLink();
 });
