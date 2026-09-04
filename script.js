@@ -1,1559 +1,1425 @@
 /* ============================================================
-   CONFIG
+   JATIN KUMAR — PORTFOLIO V2  ·  script.js
+   Projects, datasets, case studies and the detail dialog are
+   all rendered from the data blocks at the top of this file.
    ============================================================ */
-let CONFIG = {
-  github_user: '',
-  github_repo: '',
-  github_branch: 'main',
-  projects_base_path: 'projects',
-  projects: []
+
+/* ---------- GitHub source (where live data & files are fetched) ---------- */
+const GITHUB = {
+  user: 'jating1416-debug',
+  repo: 'jatinanalytics-vercel',
+  branch: 'main'
+};
+const RAW_BASE = `https://raw.githubusercontent.com/${GITHUB.user}/${GITHUB.repo}/${GITHUB.branch}`;
+const TREE_API = `https://api.github.com/repos/${GITHUB.user}/${GITHUB.repo}/git/trees/${GITHUB.branch}?recursive=1`;
+
+/* ---------- PROJECTS (edit here to add/change projects) ---------- */
+const PROJECTS = [
+  {
+    id: 'supply-chain',
+    title: 'Supply Chain & Logistics Control Tower',
+    label: 'OPERATIONS ANALYTICS',
+    summary: 'A Power BI control tower for order fulfilment, carrier performance, warehouse returns and profitability.',
+    metric: '200K orders · 86.19% on-time delivery',
+    tags: ['Power BI', 'DAX', 'Data Modelling'],
+    alt: 'Supply chain and logistics Power BI dashboard',
+    dashboard: 'https://app.powerbi.com/view?r=eyJrIjoiMzAzMGViOTMtYjliNy00NjlhLWIxMzktMTFjYzVjZTYwOGVkIiwidCI6IjUzMTVhNjkzLTM3MjktNDY0NS1hOTIyLWMxY2EwMTVjNWY1MiJ9',
+    source: 'https://github.com/jating1416-debug/jatinanalytics-vercel/tree/main/projects/Supply%20Chain%20Analytics',
+    folder: 'Supply Chain Analytics',
+    fallbackImage: `${RAW_BASE}/projects/Supply%20Chain%20Analytics/Dashboard%20Image/Supply%20Chain%20Analytics.png`,
+    info: {
+      tagline: 'Order fulfilment efficiency, carrier analytics, warehouse bottlenecks and logistics profitability.',
+      overview: 'Analyzed 200,000 supply chain order transactions along with customer, product, warehouse and carrier data to optimise logistics costs, evaluate courier SLAs, track fulfilment bottlenecks and analyse net profit margins using Python, DAX and Power BI. Built a high-impact single-page executive control tower dashboard focused on fulfilment KPIs, shipping cost distribution, warehouse return rates and financial performance.',
+      objectives: [
+        'Track core logistics KPIs including Total Revenue (₹3.95Bn), Net Profit (₹518.09M), Net Margin % (13.13%), On-Time Delivery % (86.19%) and Average Delivery Days (4 days).',
+        'Evaluate courier partner performance and shipping mode cost efficiency across 200,000 order shipments.',
+        'Identify warehouse fulfilment bottlenecks, dispatch delays and regional late order distributions.',
+        'Analyse product category profit margins, COGS impact, warehouse return rates (RTO) and customer segment profitability.'
+      ],
+      insights: [
+        'Overall on-time delivery rate of 86.19% with an average fulfilment cycle time of 4 days across 200K orders.',
+        'Air Freight is the costliest shipping mode at ₹266.99 average per order — nearly 80% higher than Road Freight (₹148.41).',
+        'Delhivery led logistics execution with 49.9K orders (~25% of total volume), outperforming other major carriers.',
+        'Clothing generated the highest profit margin at 15.0%, while Grocery recorded the lowest at 4.4%.',
+        'WH-Chennai had the highest warehouse return rate (6.24%); the West Region had the most late orders (5.1K).',
+        'Regular (43.58%) and Premium (37.24%) customer segments generated over 80% of total net profit.'
+      ],
+      tech: ['Python', 'Pandas', 'NumPy', 'Power BI', 'DAX', 'Data Modelling', 'Star Schema']
+    }
+  },
+  {
+    id: 'financial-fraud',
+    title: 'Indian Financial Fraud Analytics',
+    label: 'RISK ANALYTICS',
+    summary: 'An analytics dashboard exploring transaction behaviour, customer exposure, merchant risk and fraud signals.',
+    metric: '250K synthetic transactions · financial risk analysis',
+    tags: ['Power BI', 'SQL', 'Python'],
+    alt: 'Financial fraud analytics dashboard',
+    dashboard: 'https://app.powerbi.com/view?r=eyJrIjoiMmMxZGU0NDgtNTA5Yy00NTM0LWEwODctYjA4MTQ0NTk3MjAyIiwidCI6IjUzMTVhNjkzLTM3MjktNDY0NS1hOTIyLWMxY2EwMTVjNWY1MiJ9',
+    source: 'https://github.com/jating1416-debug/jatinanalytics-vercel/tree/main/projects/Indian-Financial-Fraud-Detection',
+    folder: 'Indian-Financial-Fraud-Detection',
+    fallbackImage: `${RAW_BASE}/projects/Indian-Financial-Fraud-Detection/Dashboard%20Image/Fraud%20Analytics%20Dashboard%20Image.png`,
+    info: {
+      tagline: 'Transaction patterns, fraud detection and financial risk analysis.',
+      overview: 'Analyzed 250,000 financial transactions along with customer, card and merchant data to identify fraud patterns, transaction trends, high-risk states, card-related risks and merchant risk exposure using Python, SQL and Power BI. Built a comprehensive dashboard focused on fraud rate, transaction performance, customer behaviour and financial risk analysis.',
+      objectives: [
+        'Track core financial KPIs including Total Transactions, Fraud Rate, Fraud Amount and Transaction Success Rate.',
+        'Analyse fraud patterns across payment methods, transaction channels, devices, cards and customer demographics.',
+        'Identify high-risk states and merchant categories based on fraud exposure and fraud amount.',
+        'Analyse transaction trends, customer behaviour, merchant risk and credit limit patterns.'
+      ],
+      insights: [
+        'Fraud rate stands at 5.4% while the overall transaction success rate is 91%.',
+        'Expired-card transactions emerged as the leading fraud trigger.',
+        'Fraud activity increases during late-night and early-morning hours.',
+        'Kerala, Odisha and Punjab show the highest fraud exposure.',
+        'Hospital and Airline merchant categories account for the highest fraud amounts.'
+      ],
+      tech: ['Python', 'Pandas', 'NumPy', 'SQL', 'MySQL', 'Power BI', 'DAX', 'Matplotlib', 'Seaborn']
+    }
+  },
+  {
+    id: 'ecommerce',
+    title: 'E-Commerce Sales Analytics',
+    label: 'RETAIL ANALYTICS',
+    summary: 'A decision-focused sales dashboard for category performance, regional demand and payment preferences.',
+    metric: '250K transactions · customer and sales analysis',
+    tags: ['Power BI', 'Python', 'SQL'],
+    alt: 'E-commerce sales Power BI dashboard',
+    dashboard: 'https://app.powerbi.com/view?r=eyJrIjoiNjdkNDFkMjEtN2VlYS00M2JiLTg2YjgtNTA4NWEwMmM1YzBkIiwidCI6IjUzMTVhNjkzLTM3MjktNDY0NS1hOTIyLWMxY2EwMTVjNWY1MiJ9',
+    source: 'https://github.com/jating1416-debug/jatinanalytics-vercel/tree/main/projects/Ecommerce-Sales-Analysis',
+    folder: 'Ecommerce-Sales-Analysis',
+    fallbackImage: `${RAW_BASE}/projects/Ecommerce-Sales-Analysis/Ecommerce_dashboard%20page1.png`,
+    info: {
+      tagline: 'Sales trends and category performance analysis using Power BI.',
+      overview: 'Analyzed e-commerce sales data to uncover revenue trends, category performance, regional sales patterns and payment preferences. Built an interactive Power BI dashboard to help business teams identify growth opportunities and optimise marketing strategy.',
+      objectives: [
+        'Track sales and profit performance across product categories.',
+        'Analyse regional sales distribution across India.',
+        'Identify top-selling products driving customer demand.',
+        'Monitor payment method preferences and seasonal demand patterns.'
+      ],
+      insights: [
+        'Strong seasonal demand observed across festive and peak shopping months.',
+        'Home Decor generated the highest sales and profit, making it the best-performing category.',
+        'South region recorded the lowest sales and requires targeted marketing campaigns.',
+        'Headphones emerged as the top-selling product, indicating consistently high customer demand.',
+        'Digital payment methods accounted for the majority of transactions.'
+      ],
+      tech: ['Python', 'Pandas', 'Power BI', 'DAX', 'Excel', 'SQL']
+    }
+  },
+  {
+    id: 'bank',
+    title: 'Bank Analytics Dashboard',
+    label: 'BANKING ANALYTICS',
+    summary: 'A dashboard connecting customer, branch, loan and transaction analysis for banking reporting.',
+    metric: 'Customer, branch and transaction performance',
+    tags: ['Power BI', 'SQL', 'Python'],
+    alt: 'Bank analytics dashboard',
+    dashboard: 'https://app.powerbi.com/view?r=eyJrIjoiMDdjZGM2OGYtMzNjOS00OWI3LWEzOTctMzQyYmY4ZTA3Y2U2IiwidCI6IjUzMTVhNjkzLTM3MjktNDY0NS1hOTIyLWMxY2EwMTVjNWY1MiJ9',
+    source: 'https://github.com/jating1416-debug/jatinanalytics-vercel/tree/main/projects/Bank%20Analytics',
+    folder: 'Bank Analytics',
+    fallbackImage: `${RAW_BASE}/projects/Bank%20Analytics/Dashboard%20Image/Bank_analytics_image%20page%201.png`,
+    info: {
+      tagline: 'End-to-end banking data analysis with fraud detection.',
+      overview: 'Analyzed 1M+ bank transactions to identify fraud patterns, customer behaviour and branch performance. Built an interactive Power BI dashboard for executive reporting.',
+      objectives: [
+        'Identify high-risk transaction patterns.',
+        'Analyse customer segmentation by account type.',
+        'Track branch-wise performance metrics.',
+        'Build an automated fraud detection pipeline.'
+      ],
+      insights: [
+        '78% of fraud transactions occurred in amounts between ₹45,000–₹1,25,000.',
+        'New accounts (under 6 months old) show 3x higher fraud probability.',
+        'Metro branches handle 65% of total transaction volume.',
+        'Loan default rate is highest in Q3 (monsoon season).'
+      ],
+      tech: ['Python', 'Pandas', 'NumPy', 'Power BI', 'DAX', 'MySQL', 'Excel', 'Matplotlib', 'Seaborn']
+    }
+  },
+  {
+    id: 'hr',
+    title: 'HR Analytics Dashboard',
+    label: 'WORKFORCE ANALYTICS',
+    summary: 'An employee analytics project covering workforce distribution, attrition, satisfaction and salary patterns.',
+    metric: '4,410 employee records · workforce insights',
+    tags: ['Power BI', 'SQL', 'Python'],
+    alt: 'Human resources analytics dashboard',
+    dashboard: 'https://app.powerbi.com/view?r=eyJrIjoiYTY1YmQxMGMtY2M5NC00YTQ5LTk4YjItY2QyOTgxZGZkZjZjIiwidCI6IjUzMTVhNjkzLTM3MjktNDY0NS1hOTIyLWMxY2EwMTVjNWY1MiJ9',
+    source: 'https://github.com/jating1416-debug/jatinanalytics-vercel/tree/main/projects/HR-Analytics',
+    folder: 'HR-Analytics',
+    fallbackImage: `${RAW_BASE}/projects/HR-Analytics/Images/HR_analytics_Dashboard.png`,
+    info: {
+      tagline: 'Workforce trends and employee attrition analysis.',
+      overview: 'Analyzed HR employee data to identify workforce trends, employee attrition, salary distribution and performance insights using SQL, Python and Power BI. Built a comprehensive dashboard featuring department-wise distribution, job satisfaction matrix and performance rating analysis.',
+      objectives: [
+        'Track core HR KPIs: Total/Active Employees, Attrition Rate and Average Age.',
+        'Analyse attrition and workforce distribution by department.',
+        'Monitor salary distribution across different departments and roles.',
+        'Evaluate age group distribution and job satisfaction levels.'
+      ],
+      insights: [
+        'Overall attrition rate stands at 16.12% out of 4,410 total employees (3,699 active).',
+        'Research & Development has the largest workforce.',
+        'Average salary is also highest in the R&D department.',
+        'The majority of employees belong to the 26–35 age group.'
+      ],
+      tech: ['Python', 'Pandas', 'SQL', 'MySQL', 'Power BI', 'DAX']
+    }
+  },
+  {
+    id: 'zomato',
+    title: 'Zomato Analytics Dashboard',
+    label: 'FOOD DELIVERY ANALYTICS',
+    summary: 'Restaurant and delivery analysis focused on cuisine preferences, payment patterns and city performance.',
+    metric: 'Restaurant operations and customer demand',
+    tags: ['Power BI', 'SQL', 'Python'],
+    alt: 'Zomato analytics dashboard',
+    dashboard: 'https://app.powerbi.com/view?r=eyJrIjoiNmFiYjQ3MzMtMzU3Ny00OTNlLTg0ZjEtMTBjNzBkOTczNzlhIiwidCI6IjUzMTVhNjkzLTM3MjktNDY0NS1hOTIyLWMxY2EwMTVjNWY1MiJ9',
+    source: 'https://github.com/jating1416-debug/jatinanalytics-vercel/tree/main/projects/Zomato%20Analytics',
+    folder: 'Zomato Analytics',
+    fallbackImage: `${RAW_BASE}/projects/Zomato%20Analytics/Dashboard_Image/Zomato_analytics.png`,
+    info: {
+      tagline: 'Transforming raw restaurant data into meaningful business insights.',
+      overview: 'Built this Zomato Analytics Dashboard using SQL, Python, MySQL and Power BI to transform raw restaurant data into meaningful business insights. The project covers data cleaning, SQL querying, data modelling, dashboard design and business storytelling.',
+      objectives: [
+        'Clean and preprocess raw restaurant order data using Python.',
+        'Perform in-depth analysis using MySQL queries.',
+        'Build an interactive Power BI dashboard with DAX measures.',
+        'Identify key business patterns in cuisine preference, payments and delivery performance.'
+      ],
+      insights: [
+        'North Indian cuisine generated the highest number of orders.',
+        'Around 75% of orders were successfully delivered.',
+        'Cash & Card remained the most preferred payment method.',
+        'Bangalore generated the highest revenue among all cities.',
+        'Highly popular restaurants contributed the maximum orders.'
+      ],
+      tech: ['Python', 'MySQL', 'Power BI', 'DAX', 'SQL']
+    }
+  },
+  {
+    id: 'smoking-health',
+    title: 'Synthetic Health Risk Analytics',
+    label: 'EDUCATIONAL ANALYTICS',
+    summary: 'A synthetic, non-clinical Power BI demonstration of smoking patterns, lifestyle factors and illustrative risk indicators.',
+    metric: '30K synthetic records · educational use only',
+    tags: ['Power BI', 'DAX', 'Python'],
+    alt: 'Synthetic health risk analytics dashboard',
+    dashboard: 'https://app.powerbi.com/view?r=eyJrIjoiMTZjZTliZjAtNTk3ZS00YWFiLTkxM2QtYTQ2ZTg2MzNmN2JjIiwidCI6IjUzMTVhNjkzLTM3MjktNDY0NS1hOTIyLWMxY2EwMTVjNWY1MiJ9',
+    source: 'https://github.com/jating1416-debug/jatinanalytics-vercel/tree/main/projects/Smoking%20Health%20Risk%20Analytics',
+    folder: 'Smoking Health Risk Analytics',
+    fallbackImage: `${RAW_BASE}/projects/Smoking%20Health%20Risk%20Analytics/Dashboard%20Image/Smoking%20%26%20Health%20Analytics%20Dashboard.png`,
+    info: {
+      tagline: 'Synthetic smoking patterns, health-risk indicators and organ-wise analytics.',
+      overview: 'Designed a Power BI healthcare analytics project using a carefully controlled 30,000-row synthetic, risk-enriched screening cohort. The project analyzes smoking status, age, gender, blood pressure, cholesterol, lifestyle patterns and illustrative organ-risk indicators across Human Body, Heart, Lungs, Liver and Kidney views. Created for educational analytics only — Healthy/Damaged labels and risk scores are synthetic indicators, not medical diagnoses.',
+      objectives: [
+        'Track core KPIs: Total Patients, Smoking Status Distribution, Average Risk Score, Blood Pressure and Cholesterol profiles.',
+        'Analyze Never, Current and Former smoking patterns across age groups, gender and lifestyle habits.',
+        'Compare smoking exposure across Human Body, Heart, Lungs, Liver and Kidney cohorts.',
+        'Build an interactive experience with organ navigation, Healthy/Damaged state selection and DAX-based filtering.',
+        'Explore relationships between smoking behaviour, activity, alcohol use, blood pressure, cholesterol, BMI and risk scores.'
+      ],
+      insights: [
+        '30,000 patient records distributed unevenly across five organ-analysis cohorts for realistic comparison.',
+        'Never smokers: 46.17% · Current smokers: 32.22% · Former smokers: 21.62%.',
+        'The Lungs cohort has the highest Current smoker share (37%) — the strongest exposure comparison view.',
+        'The Liver cohort has the highest Never smoker share (48%) and lowest Current share (29%).',
+        'Healthy/Damaged states are balanced 60/40 within every Organ × Smoking Status group.'
+      ],
+      tech: ['Python', 'Pandas', 'NumPy', 'Power BI', 'DAX', 'Power Query', 'Data Modelling', 'Pillow']
+    }
+  }
+];
+
+/* ---------- DATASETS (edit here to add/change Kaggle datasets) ---------- */
+const DATASETS = [
+  {
+    id: 'ecommerce-dataset',
+    type: 'E-COMMERCE',
+    title: 'Indian E-Commerce Sales Analytics',
+    summary: 'A retail analytics dataset built for customer, product, order and regional sales analysis.',
+    scale: '40K customers · 2K products · 250K orders',
+    structure: 'Customers, Products and Sales tables',
+    url: 'https://www.kaggle.com/datasets/jatinkhandelwal112/indian-e-commerce-sales-analytics-dataset',
+    cover: ['images/ecommerce-dataset-cover.webp', 'images/ecommerce-dataset-cover.png']
+  },
+  {
+    id: 'financial-fraud-dataset',
+    type: 'FINANCE',
+    title: 'Indian Financial Fraud Dataset',
+    summary: 'A structured dataset for studying transaction patterns, fraud signals and merchant risk.',
+    scale: '250K transactions',
+    structure: 'Customers, Cards, Merchants and Transactions tables',
+    url: 'https://www.kaggle.com/datasets/jatinkhandelwal112/indian-financial-fraud-dataset',
+    cover: ['images/fraud-dataset-cover.webp', 'images/fraud-dataset-cover.png']
+  },
+  {
+    id: 'hospital-dataset',
+    type: 'HEALTHCARE',
+    title: 'Gurugram Hospital Analytics',
+    summary: 'A synthetic educational dataset for relational modelling, SQL practice and BI learning.',
+    scale: '40K+ synthetic records and 400K+ billing rows',
+    structure: 'Doctors, Patients and Transactions tables',
+    url: 'https://www.kaggle.com/datasets/jatinkhandelwal112/gurugram-hospital-analytics-dataset',
+    cover: ['images/hospital-dataset-cover.webp', 'images/hospital-dataset-cover.png']
+  }
+];
+
+/* ---------- DATASET CASE STUDIES (merged into the Datasets section) ---------- */
+const CASE_STUDIES = {
+  'hospital-dataset': {
+    intro: 'I engineer these synthetic datasets from scratch using Python. Because real healthcare and banking data are highly confidential under privacy laws, I program complex real-world business logic into these datasets. This allows learners to practice SQL, data modelling and BI tools on data that behaves exactly like a production environment.',
+    problem: 'Real healthcare data is protected under strict privacy regulations (HIPAA/DPDP). Publicly available datasets lack the complex relational structure of a real hospital management system. I built a custom Python script to generate a 400,000+ row relational database, simulating the exact chaos, patterns and strict medical logic of a real multi-specialty hospital.',
+    architecture: [
+      'Designed a 3-tier relational database (Doctors, Patients, Transactions) ensuring 100% referential integrity.',
+      'Separated master data (Doctors) from transactional data (Billing) to mimic standard Hospital Management Systems.',
+      'Built strict primary–foreign key mappings preventing orphan records in the massive transaction table.'
+    ],
+    rules: [
+      "Mapped 15+ diseases to exact medical specializations (e.g. 'Viral Fever' → General Physician, 'Fracture' → Orthopedics).",
+      'Programmed chronological date logic: admission date is always strictly before treatment and discharge dates.',
+      'Engineered dynamic billing calculations: ICU room charges dynamically multiplied by 3x compared to general wards.'
+    ],
+    constraints: [
+      "Enforced age & gender constraints: 'Pregnancy' records computationally restricted to female patients aged 18–45.",
+      'Age-weighted diseases: severe cardiac issues statistically weighted to appear primarily in the 45+ demographic.',
+      'Injected controlled data chaos: intentionally added 4% missing values and inconsistent date formats (DD-MM-YYYY vs MM-DD-YYYY) to simulate real-world data entry errors.'
+    ],
+    structure: [
+      { table: 'doctors.csv', rows: '80', desc: 'Doctor profiles, exact shift timings and specializations' },
+      { table: 'patients.csv', rows: '40,600+', desc: 'Unique patient demographics and linked Doctor IDs' },
+      { table: 'transactions.csv', rows: '4,10,000+', desc: 'Granular billing data for medicines, rooms and lab tests' }
+    ],
+    snippet: "# Logic: Mapping diseases to exact specialists & calculating discharge dates\ndef generate_patient_record(patient_id):\n    disease = random.choice(list(DISEASE_TO_SPEC.keys()))\n    assigned_doctor = get_doctor_by_spec(DISEASE_TO_SPEC[disease])\n\n    # Enforcing chronological date logic\n    admission_date = fake.date_between(start_date='-2y', end_date='today')\n    recovery_days = DISEASE_SEVERITY[disease]['min_days']\n    discharge_date = admission_date + timedelta(days=random.randint(recovery_days, recovery_days + 5))\n\n    return patient_id, disease, assigned_doctor, admission_date, discharge_date",
+    challenges: [
+      'Writing scalable Python code to generate 400K+ rows without memory overflow (used chunking).',
+      'Balancing realistic statistical distributions so no single department looked artificially overloaded.',
+      "Ensuring the injected 'dirty data' was complex enough to challenge analysts during EDA, but not unfixable."
+    ],
+    insights: [
+      "Cardiology and Orthopedics combined generate 42% of the hospital's total revenue.",
+      'Average Length of Stay (ALOS) jumps from 2.4 days to 8.7 days for ICU-admitted patients.',
+      'Seasonal trend analysis revealed a 300% spike in vector-borne diseases (Dengue/Malaria) between July and September.'
+    ],
+    kaggle: 'https://www.kaggle.com/datasets/jatinkhandelwal112/gurugram-hospital-analytics-dataset',
+    github: null
+  },
+  'financial-fraud-dataset': {
+    intro: 'I engineer these synthetic datasets from scratch using Python. Because real healthcare and banking data are highly confidential under privacy laws, I program complex real-world business logic into these datasets. This allows learners to practice SQL, data modelling and BI tools on data that behaves exactly like a production environment.',
+    problem: 'Banking transaction data with actual fraud labels is virtually impossible to access publicly due to RBI compliance. I engineered a 250,000-row dataset across 4 relational tables. Instead of randomizing fraud, I programmed specific behavioral "fraud signatures" that mimic how real financial cybercrimes occur in the Indian banking system.',
+    architecture: [
+      'Created a 4-table star-like schema connecting Customers, Cards, Merchants and Transactions.',
+      'Maintained strict economic realism by computationally correlating customer income brackets directly with credit card limits.',
+      'Tuned the transaction generator to maintain exactly a 4.8% fraud class imbalance for realistic ML training.'
+    ],
+    rules: [
+      'Programmed geo-location anomalies: fraud flags when a customer swipes in Delhi and Mumbai within 30 minutes.',
+      'Built transaction velocity algorithms: simulating stolen-card behaviour with 5+ rapid transactions under 2 minutes.',
+      'Merchant risk routing: forced 65% of fraudulent volumes through high-risk categories like Crypto, Jewelry and Electronics.'
+    ],
+    constraints: [
+      "Card status validation: hardcoded transaction failures when attempted on 'Blocked', 'Lost' or 'Expired' cards.",
+      'Credit limit caps: transaction amounts never bypass the maximum assigned credit limit without triggering a high-utilization flag.',
+      'Time-based constraints: skewed fraudulent transaction probability to be 6x higher between 1:00 AM and 4:00 AM.'
+    ],
+    structure: [
+      { table: 'Cusmtomer_data.csv', rows: '~15,000', desc: 'Customer income segments, occupation and home city' },
+      { table: 'Cards_Data.csv', rows: '~20,000', desc: 'Card statuses (Active, Blocked, Expired) and credit limits' },
+      { table: 'merchant_table.csv', rows: '~2,000', desc: 'Merchant risk categories, geo-locations and ratings' },
+      { table: 'Transaction_Data_250k.csv', rows: '250,000', desc: 'Fact table linking all entities with engineered fraud signals' }
+    ],
+    snippet: "# Logic: Simulating geo-location anomalies & velocity fraud\ndef is_fraudulent_transaction(cust_city, merchant_city, time_diff, amount, limit):\n    fraud_score = 0\n\n    # Geo-mismatch: POS transaction 1000km away within 1 hour\n    if cust_city != merchant_city and time_diff.seconds < 3600:\n        fraud_score += 50\n\n    # Credit limit breach: sudden 95% utilization\n    if (amount / limit) > 0.95:\n        fraud_score += 40\n\n    return 1 if fraud_score >= 80 else 0",
+    challenges: [
+      'Designing the complex logic required to interlink foreign keys across 4 distinct tables seamlessly.',
+      'Writing geo-spatial logic to calculate realistic travel times between cities to flag impossible location hops.',
+      "Avoiding 'data leakage' where the fraud pattern becomes too obvious for ML models to predict with 100% accuracy."
+    ],
+    insights: [
+      'Transactions between 1:00 AM and 4:00 AM have a 6x higher probability of being fraudulent.',
+      'Over 80% of successful fraud amounts were processed through virtual/online payment modes rather than physical POS.',
+      'Customers with account age under 6 months are disproportionately targeted for velocity fraud attacks.'
+    ],
+    kaggle: 'https://www.kaggle.com/datasets/jatinkhandelwal112/indian-financial-fraud-dataset',
+    github: 'https://github.com/jating1416-debug/jatinanalytics-vercel/tree/main/projects/Indian-Financial-Fraud-Detection'
+  },
+  'ecommerce-dataset': {
+    intro: 'I engineer these synthetic datasets from scratch using Python. Because real e-commerce marketplace data contains confidential customer details, pricing strategies and transaction-level business information, I built a dataset that behaves like a production ecosystem — suitable for SQL joins, Power BI dashboards, Python EDA and retail analysis.',
+    problem: 'Real e-commerce marketplace data contains confidential customer details, commercial pricing strategies and transaction-level business information. Most public datasets are simple flat files that do not reflect a production e-commerce ecosystem. I engineered a realistic Indian e-commerce dataset with 250,000 sales records across Customers, Products and Sales tables, making it suitable for SQL joins, Power BI dashboards, Python EDA, customer segmentation and retail business analysis.',
+    architecture: [
+      'Designed a 3-table star-like relational model with Customers and Products as master tables and Sales as the central transaction fact table.',
+      'Mapped every sales record to a valid Customer_ID and Product_ID, ensuring complete referential integrity with no orphan transactions.',
+      'Created 40,000 customer profiles, 2,000 product catalog records and 250,000 detailed sales transactions.',
+      'Included location, age group, category, brand, payment mode, order status, coupon, review and delivery fields for multi-dimensional analysis.'
+    ],
+    rules: [
+      'Programmed product pricing logic: Selling_Price is calculated after applying Discount_Percent and Discount_Amount to Original_Price.',
+      'Calculated Order_Value using Quantity × Unit_Price, then Total_Amount using Order_Value, Shipping_Cost and Coupon_Discount.',
+      'Enforced chronological delivery logic: Delivery_Date is always later than Order_Date, with windows ranging from 2 to 7 days.',
+      'Generated realistic behaviour through multiple payment modes, order statuses, coupon usage, ratings, customer tiers and reviews.'
+    ],
+    constraints: [
+      'Maintained 100% valid Customer_ID and Product_ID mappings between master tables and the 250,000-row sales fact table.',
+      'Conditional coupon logic: orders without a coupon have blank Coupon_Code and zero Coupon_Discount.',
+      'Kept rating and review fields partially populated to simulate real e-commerce feedback behaviour.',
+      'Created diverse Indian state and city coverage for state-wise sales, city-level performance and regional demand analysis.'
+    ],
+    structure: [
+      { table: 'customers.csv', rows: '40,000', desc: 'Customer profiles, demographics, city/state, tier, total orders and total spending' },
+      { table: 'products.csv', rows: '2,000', desc: 'Product catalog with category, brand, pricing, stock, rating and review information' },
+      { table: 'sales.csv', rows: '250,000', desc: 'Fact table with order/delivery dates, quantity, payment mode, coupon discount, status, ratings and total amount' }
+    ],
+    snippet: "# Logic: Calculating order amounts and enforcing delivery chronology\ndef generate_sales_record(order_id, customer, product):\n    order_date = fake.date_between(start_date='-2y', end_date='today')\n    quantity = random.randint(1, 3)\n    unit_price = product['Selling_Price']\n\n    # Transaction value calculation\n    order_value = round(quantity * unit_price, 2)\n    shipping_cost = calculate_shipping_cost(order_value)\n    coupon_discount = apply_coupon_discount(order_value)\n    total_amount = round(order_value + shipping_cost - coupon_discount, 2)\n\n    # Enforcing chronological logistics logic\n    delivery_date = order_date + timedelta(days=random.randint(2, 7))\n\n    return order_id, customer['Customer_ID'], product['Product_ID'], order_date, delivery_date, total_amount",
+    challenges: [
+      'Generating 250,000 transaction records efficiently while preserving correct Customer_ID and Product_ID relationships.',
+      'Maintaining accurate pricing arithmetic across original price, discounts, quantity, shipping, coupons and final amount.',
+      'Creating realistic category, brand, payment, city, state, customer-tier and order-status distributions.',
+      'Balancing detailed transactional fields without making the dataset look artificially uniform.'
+    ],
+    insights: [
+      'The dataset contains approximately ₹593.07 crore in recorded Total_Amount across 250,000 transactions.',
+      'Electronics is the highest-value category, contributing approximately 72.6% of recorded transaction amount.',
+      'UPI is the most used payment mode at ~51.4% of transactions, followed by Cash on Delivery at ~32.8%.',
+      'Around 80.1% of orders are marked Delivered, with delivery durations of 2–7 days (avg ~4.5 days).',
+      'Uttar Pradesh records the highest state-level transaction amount at approximately ₹76.84 crore.'
+    ],
+    kaggle: 'https://www.kaggle.com/datasets/jatinkhandelwal112/indian-e-commerce-sales-analytics-dataset',
+    github: 'https://github.com/jating1416-debug/jatinanalytics-vercel/tree/main/projects/Ecommerce-Sales-Analysis'
+  }
 };
 
-let GITHUB_TREE_CACHE = null;
+/* ============================================================
+   Small helpers
+   ============================================================ */
+
+function escapeHTML(value) {
+  return String(value).replace(/[&<>'"]/g, character => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;'
+  }[character]));
+}
+
+function formatBytes(size) {
+  if (!Number.isFinite(size)) return '';
+  if (size < 1024) return size + ' B';
+  if (size < 1024 * 1024) return (size / 1024).toFixed(0) + ' KB';
+  return (size / (1024 * 1024)).toFixed(1) + ' MB';
+}
+
+function rawUrl(path) {
+  return `https://raw.githubusercontent.com/${GITHUB.user}/${GITHUB.repo}/${GITHUB.branch}/${path.split('/').map(encodeURIComponent).join('/')}`;
+}
+
+function blobUrl(path) {
+  return `https://github.com/${GITHUB.user}/${GITHUB.repo}/blob/${GITHUB.branch}/${path.split('/').map(encodeURIComponent).join('/')}`;
+}
+
+/* Minimal CSV line parser (handles quoted fields). */
+function parseCsvLine(line) {
+  const out = [];
+  let cur = '';
+  let inQuotes = false;
+  for (let i = 0; i < line.length; i++) {
+    const ch = line[i];
+    if (inQuotes) {
+      if (ch === '"') {
+        if (line[i + 1] === '"') { cur += '"'; i++; }
+        else inQuotes = false;
+      } else cur += ch;
+    } else if (ch === '"') inQuotes = true;
+    else if (ch === ',') { out.push(cur); cur = ''; }
+    else cur += ch;
+  }
+  out.push(cur);
+  return out;
+}
+
+/* Load the first working image from a list of candidates. */
+function loadImageCandidates(img, candidates, onSettled) {
+  let index = 0;
+  const tryNext = () => {
+    if (index >= candidates.length) { onSettled && onSettled(false); return; }
+    img.onload = () => { onSettled && onSettled(true); };
+    img.onerror = () => { index += 1; tryNext(); };
+    img.src = candidates[index++];
+  };
+  tryNext();
+}
 
 /* ============================================================
-   🔧 GENERIC CACHE HELPER (Naya — Caching Strategy)
+   Project cards
    ============================================================ */
-async function cachedFetch(cacheKey, url, options = {}, duration = 30 * 60 * 1000) {
-  const dataKey = `cache_${cacheKey}`;
-  const timeKey = `cache_${cacheKey}_time`;
 
-  const cached = localStorage.getItem(dataKey);
-  const cachedTime = localStorage.getItem(timeKey);
-  const age = Date.now() - parseInt(cachedTime || '0', 10);
-  const isValid = cached && age < duration;
+function projectCard(project) {
+  const tags = project.tags.map(tag => `<span>${escapeHTML(tag)}</span>`).join('');
+  return `
+    <article class="project-card" data-project="${escapeHTML(project.id)}">
+      <div class="project-visual">
+        <span class="project-label">${escapeHTML(project.label)}</span>
+        <img class="project-card-img" data-project-id="${escapeHTML(project.id)}" alt="${escapeHTML(project.alt)}" loading="lazy" decoding="async">
+      </div>
+      <div class="project-body">
+        <h3>${escapeHTML(project.title)}</h3>
+        <p>${escapeHTML(project.summary)}</p>
+        <p class="project-metric">${escapeHTML(project.metric)}</p>
+        <div class="project-tags">${tags}</div>
+        <div class="card-actions">
+          <button class="card-embed-button" type="button" data-details-id="${escapeHTML(project.id)}">View details</button>
+          <button class="card-link" type="button" data-dashboard-id="${escapeHTML(project.id)}">Live dashboard</button>
+          <a class="card-link" href="${escapeHTML(project.source)}" target="_blank" rel="noopener">Source</a>
+        </div>
+      </div>
+    </article>`;
+}
 
-  async function fetchFresh() {
-    const res = await fetch(url, options);
-    if (!res.ok) throw new Error(`Fetch failed: ${res.status}`);
-    const data = await res.json();
-    localStorage.setItem(dataKey, JSON.stringify(data));
-    localStorage.setItem(timeKey, Date.now().toString());
-    return data;
-  }
+const IMAGE_EXTS = ['png', 'jpg', 'jpeg', 'webp', 'gif'];
+const PROJECT_TOOL_FILTERS = ['All', 'Power BI', 'SQL', 'Python', 'DAX'];
 
-  if (isValid) {
-    fetchFresh().catch(() => {}); // background refresh, silent
-    return JSON.parse(cached);
-  }
+/* Card images load automatically from the project's GitHub folder —
+   whatever image file (any name) exists in projects/<folder>/ is used.
+   fallbackImage is only a last resort if GitHub cannot be reached. */
+const projectState = { query: '', tool: 'All' };
+const dynamicImageByProject = {};
 
+function projectMatches(project) {
+  const q = projectState.query.trim().toLowerCase();
+  const haystack = [project.title, project.label, project.summary, project.metric,
+    ...(project.tags || []), ...((project.info && project.info.tech) || [])].join(' ').toLowerCase();
+  const queryOk = !q || haystack.includes(q);
+  const toolOk = projectState.tool === 'All'
+    || (project.tags || []).some(tag => tag.toLowerCase() === projectState.tool.toLowerCase());
+  return queryOk && toolOk;
+}
+
+function cardImageCandidates(project) {
+  return [dynamicImageByProject[project.id], project.fallbackImage, `images/${project.id}-dashboard.png`].filter(Boolean);
+}
+
+function attachCardImages(scope) {
+  scope.querySelectorAll('.project-card-img').forEach(img => {
+    const project = PROJECTS.find(p => p.id === img.dataset.projectId);
+    const visual = img.closest('.project-visual');
+    if (!project || !visual) return;
+    visual.classList.add('is-loading');
+    loadImageCandidates(img, cardImageCandidates(project), ok => {
+      visual.classList.remove('is-loading');
+      if (!ok) visual.classList.add('image-unavailable');
+    });
+  });
+}
+
+function renderProjectGrid() {
+  const projectGrid = document.getElementById('project-grid');
+  if (!projectGrid) return;
+  const filtered = PROJECTS.filter(projectMatches);
+  projectGrid.innerHTML = filtered.length
+    ? filtered.map(projectCard).join('')
+    : '<p class="project-empty">No projects match. Try a different keyword or clear the filters.</p>';
+  const countEl = document.getElementById('project-count');
+  if (countEl) countEl.textContent = `${filtered.length} of ${PROJECTS.length} projects`;
+  attachCardImages(projectGrid);
+}
+
+function initProjectSearch() {
+  const input = document.getElementById('project-search');
+  const filterRow = document.getElementById('project-filters');
+  if (!input || !filterRow) return;
+
+  filterRow.innerHTML = PROJECT_TOOL_FILTERS.map(tool =>
+    `<button type="button" class="filter-chip${tool === 'All' ? ' is-active' : ''}" data-tool="${escapeHTML(tool)}">${escapeHTML(tool)}</button>`
+  ).join('');
+
+  let timer = null;
+  input.addEventListener('input', () => {
+    window.clearTimeout(timer);
+    timer = window.setTimeout(() => {
+      projectState.query = input.value;
+      renderProjectGrid();
+    }, 120);
+  });
+
+  filterRow.addEventListener('click', event => {
+    const chip = event.target.closest('.filter-chip');
+    if (!chip) return;
+    projectState.tool = chip.dataset.tool;
+    filterRow.querySelectorAll('.filter-chip').forEach(c => c.classList.toggle('is-active', c === chip));
+    renderProjectGrid();
+  });
+}
+
+function initProjectLibrary() {
+  const projectGrid = document.getElementById('project-grid');
+  if (!projectGrid) return;
+  renderProjectGrid();
+  initProjectSearch();
+
+  // Once the GitHub tree is known, use the first image actually present in
+  // each project folder (so newly added screenshots show up automatically).
+  getGitHubTree().then(tree => {
+    let changed = false;
+    PROJECTS.forEach(project => {
+      const images = filesForProject(tree, project.folder).filter(f => IMAGE_EXTS.includes(f.ext));
+      if (images.length) {
+        dynamicImageByProject[project.id] = rawUrl(images[0].fullPath);
+        changed = true;
+      }
+    });
+    if (changed) renderProjectGrid();
+  }).catch(() => { /* fallback images already shown */ });
+}
+
+/* ============================================================
+   Dataset cards
+   ============================================================ */
+
+function datasetCard(dataset) {
+  return `
+    <article class="dataset-card" data-dataset="${escapeHTML(dataset.id)}">
+      <div class="dataset-cover">
+        <img data-candidates='${JSON.stringify(dataset.cover)}' alt="${escapeHTML(dataset.title)} dataset cover" loading="lazy" decoding="async">
+      </div>
+      <div class="dataset-body">
+        <p class="dataset-type">${escapeHTML(dataset.type)}</p>
+        <h3>${escapeHTML(dataset.title)}</h3>
+        <p>${escapeHTML(dataset.summary)}</p>
+        <dl>
+          <div><dt>Scale</dt><dd>${escapeHTML(dataset.scale)}</dd></div>
+          <div><dt>Structure</dt><dd>${escapeHTML(dataset.structure)}</dd></div>
+        </dl>
+        <div class="dataset-actions">
+          <button class="card-embed-button" type="button" data-case-id="${escapeHTML(dataset.id)}">View case study</button>
+          <a class="card-link" href="${escapeHTML(dataset.url)}" target="_blank" rel="noopener">Kaggle</a>
+        </div>
+      </div>
+    </article>`;
+}
+
+function initDatasetLibrary() {
+  const datasetGrid = document.getElementById('dataset-grid');
+  if (!datasetGrid) return;
+  datasetGrid.innerHTML = DATASETS.map(datasetCard).join('');
+  datasetGrid.querySelectorAll('.dataset-cover img').forEach(img => {
+    const candidates = JSON.parse(img.dataset.candidates || '[]');
+    loadImageCandidates(img, candidates, ok => {
+      if (!ok) img.closest('.dataset-cover').classList.add('cover-unavailable');
+    });
+  });
+}
+
+/* ============================================================
+   Shared detail dialog (project details + dataset case studies)
+   ============================================================ */
+
+const detailDialog = () => document.getElementById('detail-dialog');
+
+function openDetailDialog(eyebrow, title) {
+  const dialog = detailDialog();
+  const eyebrowEl = document.getElementById('detail-dialog-eyebrow');
+  const titleEl = document.getElementById('detail-dialog-title');
+  const body = document.getElementById('detail-dialog-body');
+  if (!dialog || !body) return;
+  eyebrowEl.textContent = eyebrow;
+  titleEl.textContent = title;
+  body.innerHTML = '';
+  body.scrollTop = 0;
+  if (typeof dialog.showModal === 'function') dialog.showModal();
+  else dialog.setAttribute('open', '');
+}
+
+function closeDetailDialog() {
+  const dialog = detailDialog();
+  if (!dialog) return;
+  if (dialog.open) dialog.close();
+}
+
+/* ---------- Deep links: #project=<id> and #case=<id> ---------- */
+
+function detailLinkFor(kind, id) {
+  const base = window.location.href.split('#')[0];
+  return `${base}#${kind}=${id}`;
+}
+
+async function copyDetailLink(copyId, button) {
+  const [kind, id] = copyId.split(':');
+  const url = detailLinkFor(kind, id);
   try {
-    return await fetchFresh();
+    await navigator.clipboard.writeText(url);
   } catch (err) {
-    if (cached) {
-      console.warn(`⚠️ Using expired cache for ${cacheKey}`);
-      return JSON.parse(cached);
-    }
-    throw err;
+    const textarea = document.createElement('textarea');
+    textarea.value = url;
+    textarea.style.position = 'fixed';
+    textarea.style.opacity = '0';
+    document.body.appendChild(textarea);
+    textarea.select();
+    try { document.execCommand('copy'); } catch (e2) { /* ignore */ }
+    textarea.remove();
   }
+  const original = button.textContent;
+  button.textContent = 'Link copied ✓';
+  window.setTimeout(() => { button.textContent = original; }, 1600);
 }
 
-// Config ek hi baar load ho (race-condition FIX)
-async function ensureConfigLoaded() {
-  if (CONFIG.projects && CONFIG.projects.length > 0) return CONFIG;
-  const configData = await cachedFetch('projects_config', 'projects.json', {}, 60 * 60 * 1000);
-  CONFIG = { ...CONFIG, ...configData };
-  return CONFIG;
+function handleDeepLink() {
+  const match = window.location.hash.match(/^#(?:project|case)=([\w-]+)/);
+  if (!match) return;
+  const kind = window.location.hash.startsWith('#case') ? 'case' : 'project';
+  const id = match[1];
+  window.setTimeout(() => {
+    if (kind === 'project') openProjectDetails(id);
+    else openCaseStudy(id);
+  }, 250);
 }
 
-/* ============================================================
-   1. GITHUB API — SMART CACHE (Stale While Revalidate)
-   ============================================================ */
+/* ---------- GitHub tree (cached like the original site) ---------- */
+
 async function getGitHubTree() {
-  const CACHE_KEY = 'gh_tree_cache';
-  const CACHE_TIME_KEY = 'gh_tree_cache_time';
- const CACHE_DURATION = 2 * 60 * 60 * 1000; // 2 ghante
+  const DATA_KEY = 'v2_gh_tree';
+  const TIME_KEY = 'v2_gh_tree_time';
+  const MAX_AGE = 30 * 60 * 1000; // 30 minutes — new files pushed to GitHub appear within one refresh
 
-  const cached = localStorage.getItem(CACHE_KEY);
-  const cachedTime = localStorage.getItem(CACHE_TIME_KEY);
-  const cacheAge = Date.now() - parseInt(cachedTime || '0');
-  const isCacheValid = cached && cacheAge < CACHE_DURATION;
+  const cached = localStorage.getItem(DATA_KEY);
+  const cachedTime = parseInt(localStorage.getItem(TIME_KEY) || '0', 10);
 
-  const headers = {};
-  if (typeof GITHUB_TOKEN !== 'undefined' && GITHUB_TOKEN) {
-    headers['Authorization'] = `token ${GITHUB_TOKEN}`;
+  if (cached && Date.now() - cachedTime < MAX_AGE) {
+    try { return JSON.parse(cached); } catch (e) { /* fall through */ }
   }
 
-  const url = `https://api.github.com/repos/${CONFIG.github_user}/${CONFIG.github_repo}/git/trees/${CONFIG.github_branch}?recursive=1`;
-
-  async function fetchFreshData() {
-    const res = await fetch(url, { headers });
-    if (!res.ok) throw new Error(`GitHub API error: ${res.status}`);
-    const data = await res.json();
-    const tree = data.tree || [];
-    localStorage.setItem(CACHE_KEY, JSON.stringify(tree));
-    localStorage.setItem(CACHE_TIME_KEY, Date.now().toString());
-    return tree;
-  }
-
-  if (isCacheValid) {
-    GITHUB_TREE_CACHE = JSON.parse(cached);
-    fetchFreshData()
-      .then(tree => { GITHUB_TREE_CACHE = tree; console.log('✅ GitHub tree refreshed in background'); })
-      .catch(err => console.warn('⚠️ Background refresh failed (using cache):', err.message));
-    return GITHUB_TREE_CACHE;
-  }
-
+  const res = await fetch(TREE_API);
+  if (!res.ok) throw new Error(`GitHub API error (${res.status})`);
+  const data = await res.json();
+  const tree = data.tree || [];
   try {
-    const tree = await fetchFreshData();
-    GITHUB_TREE_CACHE = tree;
-    return tree;
-  } catch (err) {
-    console.error('GitHub tree fetch failed:', err);
-    if (cached) {
-      GITHUB_TREE_CACHE = JSON.parse(cached);
-      return GITHUB_TREE_CACHE;
-    }
-    return [];
-  }
+    localStorage.setItem(DATA_KEY, JSON.stringify(tree));
+    localStorage.setItem(TIME_KEY, String(Date.now()));
+  } catch (e) { /* storage full — ignore */ }
+  return tree;
 }
 
-function getFilesForFolder(tree, folderName) {
-  const prefix = `${CONFIG.projects_base_path}/${folderName}/`;
+function filesForProject(tree, folder) {
+  const prefix = `projects/${folder}/`;
   return tree
     .filter(item => item.type === 'blob' && item.path.startsWith(prefix))
-    .map(item => ({
-      fullPath: item.path,
-      relativePath: item.path.slice(prefix.length),
-      name: item.path.split('/').pop(),
-      ext: item.path.split('.').pop().toLowerCase()
-    }));
+    .map(item => {
+      const relativePath = item.path.slice(prefix.length);
+      const name = relativePath.split('/').pop();
+      const ext = name.split('.').pop().toLowerCase();
+      return {
+        fullPath: item.path,
+        relativePath,
+        name,
+        ext,
+        size: item.size
+      };
+    });
 }
 
-function getRawUrl(fullPath) {
-  const encodedPath = fullPath.split('/').map(encodeURIComponent).join('/');
-  return `https://raw.githubusercontent.com/${CONFIG.github_user}/${CONFIG.github_repo}/${CONFIG.github_branch}/${encodedPath}`;
-}
+/* Any file type dropped into a project folder shows up in its details dialog. */
+const FILE_GROUPS = [
+  { key: 'code', label: 'Code & analysis', exts: ['py', 'ipynb', 'sql', 'txt'], icon: '⌘' },
+  { key: 'data', label: 'Data files', exts: ['csv', 'xlsx', 'xls'], icon: '▤' },
+  { key: 'report', label: 'Power BI reports', exts: ['pbix'], icon: '◫' },
+  { key: 'other', label: 'Other files', exts: null, icon: '·' } // catch-all
+];
 
-function getBlobUrl(fullPath) {
-  const encodedPath = fullPath.split('/').map(encodeURIComponent).join('/');
-  return `https://github.com/${CONFIG.github_user}/${CONFIG.github_repo}/blob/${CONFIG.github_branch}/${encodedPath}`;
-}
-
-/* ============================================================
-   2. FILE CATEGORIZATION
-   ============================================================ */
-const IMAGE_EXTS = ['png', 'jpg', 'jpeg', 'gif', 'webp'];
-const CSV_EXTS = ['csv'];
-const CODE_CATEGORIES = {
-  'Python 🐍': ['py', 'ipynb'],
-  'SQL Database 💾': ['sql'],
-  'Excel / Data 📊': ['xlsx', 'xls', 'csv'],
-  'Power BI Report 📈': ['pbix']
-};
-
-function categorizeFiles(files) {
-  const images = files.filter(f => IMAGE_EXTS.includes(f.ext));
-  const csvFiles = files.filter(f => CSV_EXTS.includes(f.ext));
-  const pbixFiles = files.filter(f => f.ext === 'pbix');
-  const infoFile = files.find(f => f.name.toLowerCase() === 'project_info.json');
-  const readmeFile = files.find(f => f.name.toLowerCase() === 'readme.md');
-
-  const techUsed = [];
-  const downloadFiles = { 'Python 🐍': [], 'SQL Database 💾': [], 'Excel / Data 📊': [] };
-
-  files.forEach(f => {
-    for (const [category, exts] of Object.entries(CODE_CATEGORIES)) {
-      if (exts.includes(f.ext)) {
-        if (!techUsed.includes(category)) techUsed.push(category);
-        if (downloadFiles[category]) downloadFiles[category].push(f);
-      }
-    }
+function groupFiles(files) {
+  const groups = {};
+  files.forEach(file => {
+    const group = FILE_GROUPS.find(g => g.exts === null || g.exts.includes(file.ext));
+    if (group) (groups[group.key] = groups[group.key] || []).push(file);
   });
-
-  return { images, csvFiles, pbixFiles, infoFile, readmeFile, techUsed, downloadFiles };
+  return groups;
 }
 
-/* ============================================================
-   3. CSV PARSING + STATS
-   ============================================================ */
-async function fetchAndParseCSV(fileUrl) {
-  try {
-    // Sirf pehle 18KB fetch karo — poori file nahi
-    const res = await fetch(fileUrl, {
-      headers: { 'Range': 'bytes=0-18000' }
-    });
-
-    // Range request supported na ho toh bhi kaam kare
-    const text = await res.text();
-
-    // Sirf pehli 16 lines lo (1 header + 15 data rows)
-    const lines = text.split('\n').filter(l => l.trim() !== '');
-    const limitedLines = lines.slice(0, 16).join('\n');
-
-    const parsed = Papa.parse(limitedLines, {
-      header: false,
-      skipEmptyLines: true
-    });
-
-    const rows = parsed.data;
-    const headers = rows[0] || [];
-    const dataRows = rows.slice(1);
-
-    return {
-      headers,
-      dataRows,
-      totalRows: dataRows.length,
-      totalCols: headers.length,
-      isPreviewOnly: true  // Flag: yeh poora data nahi hai
-    };
-  } catch (err) {
-    console.error('CSV parse failed:', err);
-    return null;
-  }
+function fileChipHTML(file) {
+  return `
+    <a class="file-chip" href="${blobUrl(file.fullPath)}" target="_blank" rel="noopener" title="View on GitHub">
+      <span class="file-chip-ext">${escapeHTML(file.ext.toUpperCase())}</span>
+      <span class="file-chip-name">${escapeHTML(file.name)}</span>
+      <span class="file-chip-size">${formatBytes(file.size)}</span>
+    </a>`;
 }
 
-function computeStats(headers, dataRows) {
+/* ---------- CSV preview + stats (same idea as the old site) ---------- */
+
+async function fetchCsvPreview(path) {
+  const res = await fetch(rawUrl(path), { headers: { 'Range': 'bytes=0-18000' } });
+  if (!res.ok && res.status !== 206) throw new Error(`HTTP ${res.status}`);
+  const text = await res.text();
+  const lines = text.split(/\r?\n/).filter(line => line.trim() !== '');
+  if (lines.length < 2) return null;
+  const header = parseCsvLine(lines[0]);
+  const rows = lines.slice(1, 13).map(parseCsvLine);
+  return { header, rows };
+}
+
+function computeStats(header, rows) {
   const numericCols = [];
-
-  headers.forEach((h, colIdx) => {
-    const values = dataRows.map(r => parseFloat(r[colIdx])).filter(v => !isNaN(v));
-    if (values.length > dataRows.length * 0.5) numericCols.push({ name: h, values });
+  header.forEach((name, colIdx) => {
+    const values = rows
+      .map(row => parseFloat(row[colIdx]))
+      .filter(v => Number.isFinite(v));
+    if (values.length > rows.length * 0.5) numericCols.push({ name, values });
   });
-
   if (numericCols.length === 0) return null;
-
-  const statLabels = ['count', 'mean', 'std', 'min', '25%', '50%', '75%', 'max'];
-  const statsData = statLabels.map(label => {
+  const shown = numericCols.slice(0, 8);
+  const labels = ['count', 'mean', 'std', 'min', '25%', '50%', '75%', 'max'];
+  const data = labels.map(label => {
     const row = [label];
-    numericCols.forEach(col => {
+    shown.forEach(col => {
       const sorted = [...col.values].sort((a, b) => a - b);
       const n = sorted.length;
       let val;
-      switch (label) {
-        case 'count': val = n; break;
-        case 'mean': val = (sorted.reduce((a, b) => a + b, 0) / n).toFixed(2); break;
-        case 'std': {
-          const mean = sorted.reduce((a, b) => a + b, 0) / n;
-          const variance = sorted.reduce((a, b) => a + (b - mean) ** 2, 0) / n;
-          val = Math.sqrt(variance).toFixed(2);
-          break;
-        }
-        case 'min': val = sorted[0]?.toFixed(2); break;
-        case 'max': val = sorted[n - 1]?.toFixed(2); break;
-        case '25%': val = sorted[Math.floor(n * 0.25)]?.toFixed(2); break;
-        case '50%': val = sorted[Math.floor(n * 0.5)]?.toFixed(2); break;
-        case '75%': val = sorted[Math.floor(n * 0.75)]?.toFixed(2); break;
-      }
+      if (label === 'count') val = n;
+      else if (label === 'mean') val = (sorted.reduce((a, b) => a + b, 0) / n).toFixed(2);
+      else if (label === 'std') {
+        const mean = sorted.reduce((a, b) => a + b, 0) / n;
+        val = Math.sqrt(sorted.reduce((a, b) => a + (b - mean) ** 2, 0) / n).toFixed(2);
+      } else val = sorted[Math.floor(n * ({ 'min': 0, '25%': 0.25, '50%': 0.5, '75%': 0.75, 'max': 1 }[label]))]?.toFixed(2);
       row.push(val);
     });
     return row;
   });
-
-  return { headers: ['Metric', ...numericCols.map(c => c.name)], data: statsData };
+  return { headers: ['stat', ...shown.map(c => c.name)], data };
 }
 
-/* ============================================================
-   5. PROJECTS — MAIN RENDER LOGIC
-   ============================================================ */
-let ALL_PROJECTS_DATA = [];
-
-async function loadProjects() {
-  const container = document.getElementById('projects-container');
-  if (!container) return;
-
-  try {
-    await ensureConfigLoaded();
-    const tree = await getGitHubTree();
-
-    ALL_PROJECTS_DATA = [];
-    for (const proj of CONFIG.projects) {
-      const files = getFilesForFolder(tree, proj.folder);
-      const categorized = categorizeFiles(files);
-      ALL_PROJECTS_DATA.push({
-        id: proj.folder.replace(/\s+/g, '-').toLowerCase(),
-        folder: proj.folder,
-        files,
-        ...categorized,
-        info: null,
-        loaded: false
-      });
-    }
-
-    renderProjectsList(ALL_PROJECTS_DATA);
-  } catch (err) {
-    console.error(err);
-    container.innerHTML = `
-      <div class="error-state">
-        <h3>⚠️ Could not load projects</h3>
-        <p>${err.message}</p>
-      </div>`;
-  }
-}
-
-// Naya helper — Search Highlight ke liye
-function highlightMatch(text, query) {
-  const safe = escapeHtml(text);
-  if (!query) return safe;
-  const escapedQuery = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-  const regex = new RegExp(`(${escapedQuery})`, 'ig');
-  return safe.replace(regex, '<mark class="search-highlight">$1</mark>');
-}
-
-function renderProjectsList(projects, searchQuery = '', activeTag = 'All') {
-  const container = document.getElementById('projects-container');
-
-  const filtered = projects.filter(p => {
-    const matchesSearch = searchQuery === '' ||
-      p.folder.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      (p.techUsed || []).some(t => t.toLowerCase().includes(searchQuery.toLowerCase()));
-    const matchesTag = activeTag === 'All' || (p.tags || []).includes(activeTag);
-    return matchesSearch && matchesTag;
-  });
-
-  const countEl = document.getElementById('results-count');
-  if (countEl) countEl.textContent = `Showing ${filtered.length} of ${projects.length} projects`;
-
-  container.innerHTML = '';
-
-  if (filtered.length === 0) {
-    container.innerHTML = `<div class="error-state"><h3>😔 No projects found</h3></div>`;
-    return;
-  }
-
-  filtered.forEach((proj, idx) => {
-    const item = document.createElement('div');
-    item.className = 'accordion-item';
-    item.innerHTML = `
-      <button class="accordion-header" onclick="toggleProjectAccordion(this, '${proj.id}', ${idx})">
-        <span class="accordion-arrow">▶</span>
-        <span class="proj-number">Project ${idx + 1}</span>
-        <span class="proj-title">${highlightMatch(proj.folder, searchQuery)}</span>
-      </button>
-      <div class="accordion-content" id="content-${proj.id}">
-        <div class="accordion-body">
-          <p class="loading-text">Click to load project details...</p>
-        </div>
-      </div>`;
-    container.appendChild(item);
-  });
-}
-
-/* ============================================================
-   6. PROJECT ACCORDION — LAZY LOAD ON OPEN
-   ============================================================ */
-async function toggleProjectAccordion(header, projId, idx) {
-  const isOpen = header.classList.contains('open');
-  const content = header.nextElementSibling;
-
-  document.querySelectorAll('.accordion-header.open').forEach(h => {
-    if (h !== header) {
-      h.classList.remove('open');
-      h.nextElementSibling.style.maxHeight = null;
-    }
-  });
-
-  header.classList.toggle('open', !isOpen);
-
-  if (!isOpen) {
-    const proj = ALL_PROJECTS_DATA[idx];
-    if (!proj.loaded) {
-      await loadProjectDetails(proj, content);
-      proj.loaded = true;
-    }
-    content.style.maxHeight = content.scrollHeight + 'px';
-    setTimeout(() => {
-      if (header.classList.contains('open')) {
-        content.style.maxHeight = content.scrollHeight + 'px';
-      }
-    }, 300);
-  } else {
-    content.style.maxHeight = null;
-  }
-}
-
-async function loadProjectDetails(proj, contentEl) {
-  const body = contentEl.querySelector('.accordion-body');
-  body.innerHTML = `<div class="skeleton-list">
-    <div class="skeleton-line wide"></div>
-    <div class="skeleton-line medium"></div>
-    <div class="skeleton-line wide"></div>
-  </div>`;
-
-  let overview = '', objectives = [], keyInsights = [], tech = [], tags = [], powerbiEmbed = '';
-  let debugInfo = [];
-
-  try {
-    if (proj.infoFile) {
-      const infoUrl = getRawUrl(proj.infoFile.fullPath);
-      debugInfo.push(`Fetching: ${infoUrl}`);
-      const res = await fetch(infoUrl);
-      if (!res.ok) throw new Error(`HTTP ${res.status} - File not found at this URL`);
-      const rawText = await res.text();
-
-      let info;
-      try {
-        info = JSON.parse(rawText);
-      } catch (jsonErr) {
-        throw new Error(`Invalid JSON syntax: ${jsonErr.message}`);
-      }
-
-      overview = info.overview || '';
-      objectives = info.objectives || [];
-      keyInsights = info.key_insights || [];
-      tech = info.tech || [];
-      tags = info.tags || [];
-      powerbiEmbed = info.powerbi_embed_url || '';
-      proj.tags = tags;
-      debugInfo.push('✅ project_info.json loaded successfully');
-    } else if (proj.readmeFile) {
-      const res = await fetch(getRawUrl(proj.readmeFile.fullPath));
-      overview = await res.text();
-      debugInfo.push('✅ README.md loaded (no project_info.json found)');
-    } else {
-      debugInfo.push('⚠️ Neither project_info.json nor README.md found');
-    }
-  } catch (err) {
-    console.error(`[${proj.folder}] Overview load failed:`, err);
-    debugInfo.push(`❌ ERROR: ${err.message}`);
-    overview = `⚠️ Could not load project details: ${err.message}`;
-  }
-
-  if (tech.length === 0) tech = proj.techUsed;
-
-  let csvPreviewData = [];
-  try {
-    const csvPromises = proj.csvFiles.map(csvFile =>
-      fetchAndParseCSV(getRawUrl(csvFile.fullPath)).then(parsed => {
-        if (!parsed) return null;
-        return {
-          name: csvFile.name,
-          headers: parsed.headers,
-          preview: parsed.dataRows.slice(0, 10),
-          totalRows: parsed.totalRows,
-          totalCols: parsed.totalCols,
-          stats: computeStats(parsed.headers, parsed.dataRows)
-        };
-      }).catch(err => {
-        console.error(`CSV load failed: ${csvFile.name}`, err);
-        return null;
-      })
-    );
-    const csvResults = await Promise.all(csvPromises);
-    csvPreviewData = csvResults.filter(r => r !== null);
-  } catch (err) {
-    console.error(`[${proj.folder}] CSV loading failed:`, err);
-  }
-
-  try {
-    body.innerHTML = buildProjectHTML(proj, { overview, objectives, keyInsights, tech, powerbiEmbed, csvPreviewData });
-  } catch (err) {
-    console.error(`[${proj.folder}] Render failed:`, err);
-    body.innerHTML = `
-      <div class="error-state">
-        <h3>⚠️ Error Loading This Project</h3>
-        <p><strong>Error:</strong> ${err.message}</p>
-        <details style="margin-top:10px; text-align:left; font-size:0.8rem;">
-          <summary>Debug Info (click to expand)</summary>
-          <pre>${debugInfo.join('\n')}</pre>
-        </details>
-      </div>`;
-  }
-}
-
-function buildProjectHTML(proj, data) {
-  const { overview, objectives, keyInsights, tech, powerbiEmbed, csvPreviewData } = data;
-
-  const overviewHTML = overview
-    ? `<p class="overview-text">${escapeHtml(overview).replace(/\n/g, '<br>')}</p>`
-    : `<p class="no-content">No overview added yet. Add project_info.json to this folder.</p>`;
-
-  const objectivesHTML = objectives.length ? `
-    <h4>🎯 Objectives</h4>
-    <ul>${objectives.map(o => `<li>${escapeHtml(o)}</li>`).join('')}</ul>` : '';
-
-  const insightsHTML = keyInsights.length ? `
-    <div class="key-insights-box">
-      <h4>💡 Key Insights</h4>
-      <ul>${keyInsights.map(i => `<li>${escapeHtml(i)}</li>`).join('')}</ul>
-    </div>` : '';
-
-  const techHTML = tech.map(t => `<span class="badge">${t}</span>`).join('');
-
-  let filesHTML = '';
-  Object.entries(proj.downloadFiles).forEach(([category, files]) => {
-    if (files.length > 0) {
-      filesHTML += files.map(f => `
-        <a href="${getRawUrl(f.fullPath)}" download="${f.name}" class="file-card-btn" title="Download ${f.name}">
-          📄 ${f.name}
-        </a>`).join('');
-    }
-  });
-
-  let pbixHTML = '';
-  if (proj.pbixFiles.length > 0) {
-    if (powerbiEmbed) {
-      pbixHTML = `
-        <div class="section-block">
-          <h3>📊 Power BI Dashboard (Live View)</h3>
-          <div class="pbi-embed-wrapper">
-            <iframe src="${powerbiEmbed}" title="Power BI Dashboard" allowFullScreen></iframe>
-          </div>
-          <a href="${powerbiEmbed}" target="_blank" rel="noopener" class="pbi-fullscreen-link">
-            🔗 Open Full Dashboard in New Tab (View Only)
-          </a>
-        </div>`;
-    } else {
-      pbixHTML = `
-        <div class="section-block">
-          <h3>📊 Power BI Dashboard</h3>
-          <div class="pbi-no-embed">
-            🔒 <strong>${proj.pbixFiles[0].name}</strong><br>
-            <span style="font-size:0.85rem;">Live preview available soon. This file is view-only and not downloadable.</span>
-          </div>
-        </div>`;
-    }
-  }
-
-  let dsTabsHTML = '', dsTablesHTML = '';
-  if (csvPreviewData.length > 0) {
-    dsTabsHTML = csvPreviewData.map((ds, i) =>
-      `<button class="dataset-tab ${i === 0 ? 'active' : ''}" onclick="switchDatasetTab(event, '${proj.id}', ${i})">${ds.name}</button>`
-    ).join('');
-
-    dsTablesHTML = csvPreviewData.map((ds, i) => `
-      <div id="table-${proj.id}-${i}" class="dataset-table-view" style="display:${i === 0 ? 'block' : 'none'};">
-        <p class="shape-info">
-  <b>${ds.name}</b>
-  ${ds.isPreviewOnly
-    ? `— <span class="preview-badge">👁️ Preview: First 15 rows shown</span>`
-    : `— Shape: <code>${ds.totalRows.toLocaleString()} rows × ${ds.totalCols} columns</code>`
-  }
-</p>
-        <div class="table-scroll">${generateHTMLTable(ds.headers, ds.preview)}</div>
-        ${ds.stats ? `
-          <details class="stats-dropdown">
-            <summary>📈 Data Statistics</summary>
-            <div class="table-scroll">${generateHTMLTable(ds.stats.headers, ds.stats.data)}</div>
-          </details>` : ''}
-      </div>`).join('');
-  }
-
-  const imagesHTML = proj.images.length > 0
-    ? proj.images.map((img, i) => `
-        <div class="dash-img-item" onclick="openLightbox('${getRawUrl(img.fullPath)}', '${proj.folder} - ${img.name}')">
-          <img src="${getRawUrl(img.fullPath)}" 
-               alt="${proj.folder} Dashboard Screenshot ${i + 1}" 
-               loading="lazy"
-               onload="this.classList.add('img-loaded')"
-               onerror="this.parentElement.style.display='none'">
-        </div>`).join('')
-    : '<p class="no-content">No screenshots added yet</p>';
-
+function dataTableHTML(headers, rows, emptyText) {
+  if (!rows.length) return `<p class="detail-note">${escapeHTML(emptyText || 'No data available.')}</p>`;
+  const thead = headers.map(h => `<th>${escapeHTML(h)}</th>`).join('');
+  const tbody = rows.map(r => `<tr>${r.map(c => `<td>${escapeHTML(c ?? '')}</td>`).join('')}</tr>`).join('');
   return `
-    <div class="section-block">
-      <h3>🎯 Project Overview & Business Impact</h3>
-      ${overviewHTML}
-      ${objectivesHTML}
-      ${insightsHTML}
-    </div>
-
-    <div class="section-block">
-      <h3>🛠️ Technologies Used</h3>
-      <div class="tech-tags">${techHTML || '<span class="no-content">No tech detected</span>'}</div>
-    </div>
-
-    <div class="section-block">
-      <h3>📁 Project Files & Code</h3>
-      <div class="files-grid">${filesHTML || '<p class="no-content">No downloadable files</p>'}</div>
-    </div>
-
-    ${pbixHTML}
-
-    <div class="section-block">
-      <h3>📊 Dataset Preview</h3>
-      ${csvPreviewData.length ? `
-        <div class="dataset-tabs-bar">${dsTabsHTML}</div>
-        ${dsTablesHTML}` : '<p class="no-content">No CSV files found</p>'}
-    </div>
-
-    <div class="section-block">
-      <h3>🖼️ Dashboard Screenshots & Visualizations</h3>
-      <div class="dash-images-grid">${imagesHTML}</div>
+    <div class="detail-table-wrap">
+      <table class="detail-table">
+        <thead><tr>${thead}</tr></thead>
+        <tbody>${tbody}</tbody>
+      </table>
     </div>`;
 }
 
-function switchDatasetTab(evt, projId, fileIndex) {
-  const parent = evt.currentTarget.closest('.accordion-body');
-  parent.querySelectorAll('.dataset-tab').forEach(t => t.classList.remove('active'));
-  parent.querySelectorAll('.dataset-table-view').forEach(t => t.style.display = 'none');
-
-  evt.currentTarget.classList.add('active');
-  const table = document.getElementById(`table-${projId}-${fileIndex}`);
-  if (table) table.style.display = 'block';
-
-  const accContent = parent.closest('.accordion-content');
-  if (accContent) accContent.style.maxHeight = accContent.scrollHeight + 'px';
+function detailListHTML(items, ordered) {
+  const itemsHtml = items.map(item => `<li>${escapeHTML(item)}</li>`).join('');
+  return ordered
+    ? `<ol class="detail-list">${itemsHtml}</ol>`
+    : `<ul class="detail-list">${itemsHtml}</ul>`;
 }
 
-function escapeHtml(str) {
-  const div = document.createElement('div');
-  div.textContent = str;
-  return div.innerHTML;
+/* ---------- Project details ---------- */
+
+function projectDetailsSkeleton(project) {
+  const info = project.info || {};
+  const techChips = (info.tech || []).map(t => `<span>${escapeHTML(t)}</span>`).join('');
+  return `
+    <section class="detail-section">
+      <p class="detail-tagline">${escapeHTML(info.tagline || project.summary)}</p>
+      <p class="detail-overview">${escapeHTML(info.overview || project.summary)}</p>
+      <div class="detail-tech">${techChips}</div>
+    </section>
+    <div class="detail-two-col">
+      ${info.objectives && info.objectives.length ? `
+      <section class="detail-section">
+        <h3>Objectives</h3>
+        ${detailListHTML(info.objectives, true)}
+      </section>` : ''}
+      ${info.insights && info.insights.length ? `
+      <section class="detail-section">
+        <h3>Key insights</h3>
+        ${detailListHTML(info.insights)}
+      </section>` : ''}
+    </div>
+    <section class="detail-section" id="pd-files-section">
+      <h3>Project files</h3>
+      <p class="detail-note">Loading file list from GitHub…</p>
+    </section>
+    <section class="detail-section" id="pd-data-section">
+      <h3>Data preview</h3>
+      <p class="detail-note">Loading live data preview…</p>
+    </section>
+    <section class="detail-section" id="pd-gallery-section">
+      <h3>Dashboard visuals</h3>
+      <p class="detail-note">Loading visuals…</p>
+    </section>
+    <div class="detail-footer-actions">
+      <button class="button button-secondary" type="button" data-dashboard-id="${escapeHTML(project.id)}">Open live dashboard</button>
+      <a class="button button-primary" href="${escapeHTML(project.source)}" target="_blank" rel="noopener">Open source on GitHub</a>
+      <button class="detail-copy-link" type="button" data-copy-id="project:${escapeHTML(project.id)}">Copy project link</button>
+    </div>`;
 }
 
-function generateHTMLTable(headers, rows) {
-  if (!headers || !rows) return '<p class="no-content">No data</p>';
-  const thead = headers.map(h => `<th>${escapeHtml(String(h))}</th>`).join('');
-  const tbody = rows.map(r =>
-    `<tr>${r.map(cell => `<td>${escapeHtml(String(cell ?? '—'))}</td>`).join('')}</tr>`
-  ).join('');
-  return `<table class="custom-table"><thead><tr>${thead}</tr></thead><tbody>${tbody}</tbody></table>`;
-}
+async function loadProjectLiveData(project) {
+  const filesHost = document.getElementById('pd-files-section');
+  const dataHost = document.getElementById('pd-data-section');
+  const galleryHost = document.getElementById('pd-gallery-section');
 
-/* ============================================================
-   7. SEARCH + TAG FILTER (Debounced — already tha)
-   ============================================================ */
-function initProjectFilters() {
-  const searchInput = document.getElementById('project-search');
-  let searchTimer;
-
-  if (searchInput) {
-    searchInput.addEventListener('input', e => {
-      clearTimeout(searchTimer);
-      searchTimer = setTimeout(() => {
-        renderProjectsList(ALL_PROJECTS_DATA, e.target.value, window._activeTag || 'All');
-      }, 300);
-    });
-  }
-}
-
-window._activeTag = 'All';
-window.filterByTag = function (tag) {
-  window._activeTag = tag;
-  const query = document.getElementById('project-search')?.value || '';
-  renderProjectsList(ALL_PROJECTS_DATA, query, tag);
-};
-
-/* ============================================================
-   8. GALLERY (Lazy Load Fade-in Added)
-   ============================================================ */
-async function initGallery() {
-  const grid = document.getElementById('gallery-grid');
-  if (!grid || grid.dataset.loaded) return;
-
-  if (ALL_PROJECTS_DATA.length === 0) {
-    grid.innerHTML = '<p class="loading-text">Please visit Projects tab first...</p>';
-    return;
-  }
-
-  const allImages = [];
-  ALL_PROJECTS_DATA.forEach(proj => {
-    proj.images.forEach(img => {
-      allImages.push({ src: getRawUrl(img.fullPath), project: proj.folder, name: img.name });
-    });
-  });
-
-  const filterSelect = document.getElementById('gallery-project-filter');
-  if (filterSelect && filterSelect.options.length <= 1) {
-    const uniqueProjects = [...new Set(allImages.map(i => i.project))];
-    uniqueProjects.forEach(p => {
-      const opt = document.createElement('option');
-      opt.value = p;
-      opt.textContent = p;
-      filterSelect.appendChild(opt);
-    });
-  }
-
-  window._galleryImages = allImages;
-  renderGallery(allImages);
-  grid.dataset.loaded = 'true';
-}
-
-function renderGallery(images) {
-  const grid = document.getElementById('gallery-grid');
-  const countEl = document.getElementById('gallery-count');
-  if (countEl) countEl.textContent = `${images.length} images`;
-
-  if (images.length === 0) {
-    grid.innerHTML = '<p class="loading-text">No images found. Add screenshots to project folders.</p>';
-    return;
-  }
-
-  grid.innerHTML = images.map(img => `
-    <div class="gallery-item" onclick="openLightbox('${img.src}', '${img.project}')">
-      <img src="${img.src}" alt="${img.project} - ${img.name}" loading="lazy"
-           onload="this.classList.add('img-loaded')"
-           onerror="this.parentElement.style.display='none'">
-      <div class="gallery-overlay">${img.project}</div>
-    </div>`).join('');
-}
-
-window.filterGalleryImages = function () {
-  const val = document.getElementById('gallery-project-filter')?.value;
-  const images = window._galleryImages || [];
-  renderGallery(val === 'all' ? images : images.filter(i => i.project === val));
-};
-
-/* ============================================================
-   9. KAGGLE TAB (Cached)
-   ============================================================ */
-async function loadKaggleDatasets() {
-  const container = document.getElementById('kaggle-datasets-container');
-  if (!container) return;
-
+  let tree;
   try {
-    const datasets = await cachedFetch('kaggle_datasets', 'kaggle_datasets.json', {}, 60 * 60 * 1000);
-
-    if (datasets.length === 0) {
-      container.innerHTML = '<p class="no-content">No datasets added yet</p>';
+    tree = await getGitHubTree();
+  } catch (err) {
+    const stale = (() => {
+      try { return JSON.parse(localStorage.getItem('v2_gh_tree')); } catch (e) { return null; }
+    })();
+    if (!stale) {
+      const msg = 'Live data is temporarily unavailable (GitHub could not be reached).';
+      if (filesHost) filesHost.innerHTML = `<h3>Project files</h3><p class="detail-note">${msg} <a href="${escapeHTML(project.source)}" target="_blank" rel="noopener">Browse all files on GitHub →</a></p>`;
+      if (dataHost) dataHost.innerHTML = `<h3>Data preview</h3><p class="detail-note">${msg}</p>`;
+      if (galleryHost) galleryHost.remove();
       return;
     }
-
-    container.innerHTML = datasets.map((ds, idx) => `
-      <div class="kaggle-dataset-card">
-        <button class="kaggle-card-header" onclick="toggleKaggleCard(this)">
-          <div class="kaggle-header-left">
-            <span class="kaggle-emoji">${ds.category.split(' ')[0]}</span>
-            <span class="kaggle-header-title">${ds.category.split(' ').slice(1).join(' ')} | ${ds.name}</span>
-          </div>
-          <span class="kaggle-header-arrow">▶</span>
-        </button>
-        <div class="kaggle-card-body">
-          <div class="kaggle-card-content">
-            <p class="kaggle-desc">${ds.description}</p>
-            <div class="kaggle-tags">
-              ${ds.tags.map(t => `<span class="kaggle-badge">${t}</span>`).join('')}
-            </div>
-            <a href="${ds.link}" target="_blank" rel="noopener" class="btn-kaggle">
-              <i class="fab fa-kaggle"></i> View on Kaggle
-            </a>
-          </div>
-        </div>
-      </div>`).join('');
-  } catch (err) {
-    container.innerHTML = '<p class="error-state">Could not load datasets</p>';
+    tree = stale;
   }
-}
 
-function toggleKaggleCard(header) {
-  const isOpen = header.classList.contains('open');
-  const body = header.nextElementSibling;
+  const files = filesForProject(tree, project.folder);
+  const groups = groupFiles(files);
+  const images = files.filter(f => ['png', 'jpg', 'jpeg', 'webp', 'gif'].includes(f.ext));
+  const csvFiles = files.filter(f => f.ext === 'csv');
 
-  document.querySelectorAll('.kaggle-card-header.open').forEach(h => {
-    if (h !== header) {
-      h.classList.remove('open');
-      h.nextElementSibling.style.maxHeight = null;
+  /* --- Files --- */
+  if (filesHost) {
+    const groupHTML = FILE_GROUPS.map(group => {
+      const list = groups[group.key] || [];
+      if (!list.length) return '';
+      return `
+        <div class="file-group">
+          <p class="file-group-label">${escapeHTML(group.label)}</p>
+          <div class="file-chips">${list.map(fileChipHTML).join('')}</div>
+        </div>`;
+    }).join('');
+    filesHost.innerHTML = `<h3>Project files</h3>${groupHTML || '<p class="detail-note">No source files found in this project folder.</p>'}`;
+  }
+
+  /* --- Gallery --- */
+  if (galleryHost) {
+    if (images.length) {
+      const thumbs = images.map(img => `
+        <div class="gallery-thumb" title="${escapeHTML(img.name)} (click to enlarge)">
+          <img src="${rawUrl(img.fullPath)}" alt="${escapeHTML(img.name)}" loading="lazy">
+        </div>`).join('');
+      galleryHost.innerHTML = `<h3>Dashboard visuals</h3><div class="gallery-grid">${thumbs}</div>`;
+    } else {
+      galleryHost.remove();
     }
-  });
-
-  header.classList.toggle('open', !isOpen);
-  body.style.maxHeight = !isOpen ? body.scrollHeight + 'px' : null;
-}
-
-/* ============================================================
-   9.5. DATASET OVERVIEW (CASE STUDY) TAB
-   ============================================================ */
-let ALL_CASE_STUDIES = [];
-
-async function loadCaseStudies() {
-  const container = document.getElementById('case-studies-container');
-  const introEl = document.getElementById('case-study-intro');
-  if (!container) return;
-  if (container.dataset.loaded) return;
-
-  try {
-    const data = await cachedFetch('case_studies_v3', 'case_studies.json', {}, 60 * 60 * 1000);
-    if (introEl) introEl.textContent = data.intro || '';
-
-    ALL_CASE_STUDIES = (data.datasets || []).map((ds, i) => ({
-      ...ds,
-      uid: ds.id || `cs-${i}`,
-      loaded: false
-    }));
-
-    renderCaseStudiesList();
-    container.dataset.loaded = 'true';
-  } catch (err) {
-    console.error('Case studies load failed:', err);
-    container.innerHTML = `
-      <div class="error-state">
-        <h3>⚠️ Could not load case studies</h3>
-        <p>${err.message}</p>
-      </div>`;
-  }
-}
-
-function renderCaseStudiesList() {
-  const container = document.getElementById('case-studies-container');
-  if (ALL_CASE_STUDIES.length === 0) {
-    container.innerHTML = '<p class="no-content">No case studies added yet</p>';
-    return;
   }
 
-  container.innerHTML = '';
-  ALL_CASE_STUDIES.forEach((ds, idx) => {
-    const item = document.createElement('div');
-    item.className = 'accordion-item';
-    item.innerHTML = `
-      <button class="accordion-header" onclick="toggleCaseStudyAccordion(this, ${idx})">
-        <span class="accordion-arrow">▶</span>
-        <span class="proj-number">${idx + 1}</span>
-        <span class="proj-title">${escapeHtml(ds.category || '')} — ${escapeHtml(ds.name || '')}</span>
-      </button>
-      <div class="accordion-content" id="cs-content-${ds.uid}">
-        <div class="accordion-body">
-          <p class="loading-text">Loading...</p>
-        </div>
-      </div>`;
-    container.appendChild(item);
-  });
-}
-
-async function toggleCaseStudyAccordion(header, idx) {
-  const isOpen = header.classList.contains('open');
-  const content = header.nextElementSibling;
-
-  document.querySelectorAll('#case-studies-container .accordion-header.open').forEach(h => {
-    if (h !== header) {
-      h.classList.remove('open');
-      h.nextElementSibling.style.maxHeight = null;
+  /* --- Data preview (first 3 CSVs, sequentially) --- */
+  if (dataHost) {
+    if (!csvFiles.length) {
+      dataHost.innerHTML = `<h3>Data preview</h3><p class="detail-note">No CSV data files in this project folder.</p>`;
+      return;
     }
-  });
-
-  header.classList.toggle('open', !isOpen);
-
-  if (!isOpen) {
-    const ds = ALL_CASE_STUDIES[idx];
-    if (!ds.loaded) {
-      const body = content.querySelector('.accordion-body');
+    const previews = csvFiles.slice(0, 3);
+    const extra = csvFiles.length - previews.length;
+    dataHost.innerHTML = `<h3>Data preview</h3><p class="detail-note">Reading first rows from ${escapeHTML(previews.map(c => c.name).join(', '))}${extra > 0 ? ` (+${extra} more in the folder)` : ''}…</p>`;
+    let html = '';
+    for (const csv of previews) {
       try {
-        body.innerHTML = buildCaseStudyHTML(ds);
-        ds.loaded = true;
-      } catch(e) {
-        console.error('HTML Build Error:', e);
-        body.innerHTML = `<div class="error-state">⚠️ Error: ${e.message}</div>`;
+        const parsed = await fetchCsvPreview(csv.fullPath);
+        if (!parsed) {
+          html += `<div class="data-preview"><p class="detail-note">${escapeHTML(csv.name)} — not enough rows to preview.</p></div>`;
+          continue;
+        }
+        const stats = computeStats(parsed.header, parsed.rows);
+        html += `
+          <div class="data-preview">
+            <p class="data-preview-name">${escapeHTML(csv.name)} <span>· first ${parsed.rows.length} of ~${(csv.size / 1024).toFixed(0)} KB read</span></p>
+            ${dataTableHTML(parsed.header, parsed.rows)}
+            ${stats ? `<p class="data-preview-name" style="margin-top:14px">Quick statistics (sample)</p>${dataTableHTML(stats.headers, stats.data)}` : ''}
+          </div>`;
+      } catch (err) {
+        html += `<div class="data-preview"><p class="detail-note">${escapeHTML(csv.name)} — preview could not be loaded right now.</p></div>`;
       }
     }
-    content.style.maxHeight = content.scrollHeight + 'px';
-    setTimeout(() => {
-      if (header.classList.contains('open')) {
-        content.style.maxHeight = content.scrollHeight + 'px';
-      }
-    }, 300);
-  } else {
-    content.style.maxHeight = null;
+    dataHost.innerHTML = `<h3>Data preview</h3>${html}`;
   }
 }
 
-function buildCaseStudyHTML(ds) {
-  const coverHTML = ds.cover_image
-    ? `<div class="case-study-cover">
-         <img src="${ds.cover_image}" alt="${escapeHtml(ds.name || 'cover')}" loading="lazy"
-              onload="this.classList.add('img-loaded')"
-              onerror="this.parentElement.style.display='none'">
-       </div>`
-    : '';
+function openProjectDetails(projectId) {
+  const project = PROJECTS.find(p => p.id === projectId);
+  if (!project) return;
+  openDetailDialog('PROJECT DETAILS', project.title);
+  const body = document.getElementById('detail-dialog-body');
+  if (!body) return;
+  body.innerHTML = projectDetailsSkeleton(project);
+  loadProjectLiveData(project);
+}
 
-  const tagsHTML = (ds.tags && ds.tags.length)
-    ? `<div class="tech-tags" style="margin-bottom:18px;">
-        ${ds.tags.map(t => `<span class="badge">${escapeHtml(t)}</span>`).join('')}
-       </div>`
-    : '';
+/* ---------- Dataset case study ---------- */
 
-  const problemHTML = ds.problem_statement
-    ? `<p class="overview-text">${escapeHtml(ds.problem_statement).replace(/\n/g, '<br>')}</p>`
-    : '<p class="no-content">No problem statement added</p>';
-
-  const archHTML = (ds.architecture_logic && ds.architecture_logic.length)
-    ? `<ul>${ds.architecture_logic.map(i => `<li>${escapeHtml(i)}</li>`).join('')}</ul>`
-    : '';
-
-  const rulesHTML = (ds.generation_rules && ds.generation_rules.length)
-    ? `<ul>${ds.generation_rules.map(i => `<li>${escapeHtml(i)}</li>`).join('')}</ul>`
-    : '';
-
-  const constraintsHTML = (ds.realistic_constraints && ds.realistic_constraints.length)
-    ? `<ul>${ds.realistic_constraints.map(i => `<li>${escapeHtml(i)}</li>`).join('')}</ul>`
-    : '';
-
-  let structureHTML = '<p class="no-content">No dataset structure added</p>';
-  if (ds.dataset_structure && ds.dataset_structure.length) {
-    const headers = ['Table / File', 'Rows', 'Description'];
-    const rows = ds.dataset_structure.map(t => [t.table, t.rows, t.desc]);
-    structureHTML = `<div class="table-scroll">${generateHTMLTable(headers, rows)}</div>`;
-  }
-
-  const codeHTML = ds.python_snippet
-    ? `<pre class="code-snippet-block"><code>${escapeHtml(ds.python_snippet)}</code></pre>`
-    : '<p class="no-content">No code snippet added</p>';
-
-  const challengesHTML = (ds.challenges && ds.challenges.length)
-    ? `<ul>${ds.challenges.map(c => `<li>${escapeHtml(c)}</li>`).join('')}</ul>`
-    : '<p class="no-content">No challenges listed</p>';
-
-  const insightsHTML = (ds.insights && ds.insights.length)
-    ? `<div class="key-insights-box">
-        <ul>${ds.insights.map(i => `<li>${escapeHtml(i)}</li>`).join('')}</ul>
-       </div>`
-    : '<p class="no-content">No insights added</p>';
-
-  const btnsHTML = `
-    <div class="cs-btn-row">
-      ${ds.kaggle_link
-        ? `<a href="${ds.kaggle_link}" target="_blank" rel="noopener" class="btn-kaggle">
-             <i class="fab fa-kaggle"></i> View on Kaggle
-           </a>`
-        : ''}
-      ${ds.github_link
-        ? `<a href="${ds.github_link}" target="_blank" rel="noopener" class="s-btn github">
-             <i class="fab fa-github"></i> View on GitHub
-           </a>`
-        : ''}
-    </div>`;
-
+function caseStudyHTML(datasetId, dataset) {
+  const study = CASE_STUDIES[datasetId];
+  if (!study) return '';
+  const structRows = study.structure.map(s => `<tr><td><code>${escapeHTML(s.table)}</code></td><td>${escapeHTML(s.rows)}</td><td>${escapeHTML(s.desc)}</td></tr>`).join('');
+  const linkButtons = `
+    <a class="button button-primary" href="${escapeHTML(study.kaggle)}" target="_blank" rel="noopener">Open on Kaggle</a>
+    ${study.github ? `<a class="button button-secondary" href="${escapeHTML(study.github)}" target="_blank" rel="noopener">View source code</a>` : ''}`;
   return `
-    ${coverHTML}
-    ${tagsHTML}
-
-    <div class="section-block">
-      <h3>🎯 Problem Statement</h3>
-      ${problemHTML}
+    ${dataset && dataset.cover ? `<img class="case-cover" data-candidates='${JSON.stringify(dataset.cover)}' alt="${escapeHTML(dataset.title)} dataset cover">` : ''}
+    <section class="detail-section">
+      <h3>About this dataset</h3>
+      <p class="detail-overview">${escapeHTML(study.intro)}</p>
+    </section>
+    <section class="detail-section">
+      <h3>Problem statement</h3>
+      <p class="detail-overview">${escapeHTML(study.problem)}</p>
+    </section>
+    <div class="detail-two-col">
+      <section class="detail-section">
+        <h3>Architecture logic</h3>
+        ${detailListHTML(study.architecture)}
+      </section>
+      <section class="detail-section">
+        <h3>Generation rules</h3>
+        ${detailListHTML(study.rules)}
+      </section>
     </div>
-
-    ${archHTML ? `
-    <div class="section-block">
-      <h3>🏗️ Dataset Architecture Logic</h3>
-      ${archHTML}
-    </div>` : ''}
-
-    ${rulesHTML ? `
-    <div class="section-block">
-      <h3>⚙️ Data Generation Rules</h3>
-      ${rulesHTML}
-    </div>` : ''}
-
-    ${constraintsHTML ? `
-    <div class="section-block">
-      <h3>🔒 Realistic Constraints Applied</h3>
-      ${constraintsHTML}
-    </div>` : ''}
-
-    <div class="section-block">
-      <h3>📊 Dataset Structure</h3>
-      ${structureHTML}
+    <section class="detail-section">
+      <h3>Realistic constraints</h3>
+      ${detailListHTML(study.constraints)}
+    </section>
+    <section class="detail-section">
+      <h3>Dataset structure</h3>
+      <div class="detail-table-wrap">
+        <table class="detail-table">
+          <thead><tr><th>File</th><th>Rows</th><th>Contents</th></tr></thead>
+          <tbody>${structRows}</tbody>
+        </table>
+      </div>
+    </section>
+    <section class="detail-section">
+      <h3>Generator logic (Python)</h3>
+      <pre class="code-block"><code>${escapeHTML(study.snippet)}</code></pre>
+    </section>
+    <div class="detail-two-col">
+      <section class="detail-section">
+        <h3>Challenges</h3>
+        ${detailListHTML(study.challenges)}
+      </section>
+      <section class="detail-section">
+        <h3>Key insights from the data</h3>
+        ${detailListHTML(study.insights)}
+      </section>
     </div>
-
-    <div class="section-block">
-      <h3>🐍 Python Code Snippet</h3>
-      ${codeHTML}
-    </div>
-
-    <div class="section-block">
-      <h3>⚠️ Execution Challenges</h3>
-      ${challengesHTML}
-    </div>
-
-    <div class="section-block">
-      <h3>💡 Business Insights Generated</h3>
-      ${insightsHTML}
-    </div>
-
-    <div class="section-block">
-      ${btnsHTML}
-    </div>`;
+    <div class="detail-footer-actions">${linkButtons}<button class="detail-copy-link" type="button" data-copy-id="case:${escapeHTML(datasetId)}">Copy case study link</button></div>`;
 }
 
+function openCaseStudy(datasetId) {
+  const dataset = DATASETS.find(d => d.id === datasetId);
+  if (!dataset) return;
+  openDetailDialog('DATASET CASE STUDY', dataset.title);
+  const body = document.getElementById('detail-dialog-body');
+  if (!body) return;
+  body.innerHTML = caseStudyHTML(datasetId, dataset);
+  body.querySelectorAll('.case-cover').forEach(img => {
+    loadImageCandidates(img, JSON.parse(img.dataset.candidates || '[]'));
+  });
+}
+
+function initDetailDialog() {
+  const dialog = detailDialog();
+  const closeButton = document.getElementById('detail-dialog-close');
+  if (!dialog) return;
+  if (closeButton) closeButton.addEventListener('click', closeDetailDialog);
+  dialog.addEventListener('click', event => {
+    if (event.target === dialog) closeDetailDialog();
+  });
+  dialog.addEventListener('cancel', () => { /* body clears on next open */ });
+}
+
+function initDetailTriggers() {
+  document.body.addEventListener('click', event => {
+    const copyTrigger = event.target.closest('[data-copy-id]');
+    if (copyTrigger) { copyDetailLink(copyTrigger.dataset.copyId, copyTrigger); return; }
+    const detailsTrigger = event.target.closest('[data-details-id]');
+    if (detailsTrigger) {
+      openProjectDetails(detailsTrigger.dataset.detailsId);
+      return;
+    }
+    const caseTrigger = event.target.closest('[data-case-id]');
+    if (caseTrigger) openCaseStudy(caseTrigger.dataset.caseId);
+  });
+}
 
 /* ============================================================
-   10. LIGHTBOX
+   Lightbox (project images, dashboard visuals, profile photo)
    ============================================================ */
+
 function openLightbox(src, caption) {
-  const lb = document.getElementById('lightbox');
-  document.getElementById('lightbox-img').src = src;
-  document.getElementById('lightbox-caption').textContent = caption;
-  lb.classList.add('active');
-  document.body.style.overflow = 'hidden';
+  const dialog = document.getElementById('lightbox-dialog');
+  const img = document.getElementById('lightbox-img');
+  const captionEl = document.getElementById('lightbox-caption');
+  if (!dialog || !img) return;
+  img.src = src;
+  img.alt = caption || 'Image preview';
+  if (captionEl) captionEl.textContent = caption || '';
+  if (typeof dialog.showModal === 'function') dialog.showModal();
+  else dialog.setAttribute('open', '');
 }
 
 function closeLightbox() {
-  document.getElementById('lightbox').classList.remove('active');
-  document.body.style.overflow = '';
+  const dialog = document.getElementById('lightbox-dialog');
+  if (!dialog) return;
+  if (dialog.open) dialog.close();
 }
 
-document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') closeLightbox();
-});
-
-/* ============================================================
-   11. TAB NAVIGATION (+ Keyboard Accessibility)
-   ============================================================ */
-function openTab(evt, tabId) {
-  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
-  document.querySelectorAll('.tab-item').forEach(t => {
-    t.classList.remove('active');
-    t.setAttribute('aria-selected', 'false');
+function initLightbox() {
+  const dialog = document.getElementById('lightbox-dialog');
+  const closeButton = document.getElementById('lightbox-close');
+  if (!dialog) return;
+  if (closeButton) closeButton.addEventListener('click', closeLightbox);
+  dialog.addEventListener('click', event => {
+    if (event.target === dialog) closeLightbox();
   });
 
-  document.getElementById(tabId).classList.add('active');
-  evt.currentTarget.classList.add('active');
-  evt.currentTarget.setAttribute('aria-selected', 'true');
-
-  history.replaceState(null, null, `#${tabId}`);
-
-    if (tabId === 'tab-gallery') initGallery();
-  if (tabId === 'tab-casestudy') loadCaseStudies();
-  setTimeout(initReveal, 100);
-}
-
-// Naya — keyboard se tabs use karne ke liye
-function handleTabKeydown(e, el) {
-  if (e.key === 'Enter' || e.key === ' ') {
-    e.preventDefault();
-    el.click();
-  }
-}
-
-window.addEventListener('load', () => {
-  const hash = window.location.hash.replace('#', '');
-  const validTabs = ['tab-home','tab-projects','tab-gallery','tab-kaggle','tab-casestudy','tab-tool','tab-resume','tab-contact'];
-  if (hash && validTabs.includes(hash)) {
-    document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
-    document.querySelectorAll('.tab-item').forEach(t => t.classList.remove('active'));
-    document.getElementById(hash).classList.add('active');
-    document.querySelectorAll('.tab-item').forEach(item => {
-      if (item.getAttribute('onclick')?.includes(hash)) item.classList.add('active');
-    });
-  }
-});
-
-/* ============================================================
-   12. CONTACT FORM (Web3Forms — SIRF EK HANDLER, FIXED)
-   ============================================================ */
-function initContactForm() {
-  const form = document.getElementById('contact-form');
-  if (!form) return;
-
-  form.addEventListener('submit', async function (e) {
-    e.preventDefault();
-
-    const btn = form.querySelector('.form-submit-btn');
-    const name = document.getElementById('form-name').value.trim();
-    const email = document.getElementById('form-email').value.trim();
-    const message = document.getElementById('form-message').value.trim();
-    const statusEl = document.getElementById('form-status');
-
-    if (!name || !email || !message) {
-      statusEl.innerHTML = `<div class="form-msg-error">⚠️ Please fill all required fields</div>`;
+  document.body.addEventListener('click', event => {
+    const profileImg = event.target.closest('#profile-photo');
+    if (profileImg && !profileImg.hidden && profileImg.currentSrc) {
+      openLightbox(profileImg.currentSrc, 'Jatin Kumar — Data Analyst');
       return;
     }
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      statusEl.innerHTML = `<div class="form-msg-error">⚠️ Enter a valid email</div>`;
+    const cardImg = event.target.closest('.project-card-img');
+    if (cardImg && cardImg.currentSrc) {
+      const project = PROJECTS.find(p => p.id === cardImg.dataset.projectId);
+      openLightbox(cardImg.currentSrc, project ? `${project.title} — dashboard screenshot` : 'Dashboard screenshot');
       return;
     }
-
-    btn.disabled = true;
-    btn.textContent = '📤 Sending...';
-    statusEl.innerHTML = '';
-
-    const formData = new FormData(form);
-    const payload = Object.fromEntries(formData);
-
-    try {
-      const res = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify(payload)
-      });
-      const result = await res.json();
-
-      if (result.success) {
-        statusEl.innerHTML = `<div class="form-msg-success">✅ Message sent! I'll reply within 24 hours.</div>`;
-        form.reset();
-      } else {
-        statusEl.innerHTML = `<div class="form-msg-error">❌ ${result.message || 'Something went wrong'}</div>`;
-      }
-    } catch (err) {
-      statusEl.innerHTML = `<div class="form-msg-error">❌ Failed. Email directly: jatin@jatinanalytics.co.in</div>`;
-    } finally {
-      btn.disabled = false;
-      btn.textContent = '📤 Send Message';
+    const thumbImg = event.target.closest('.gallery-thumb img');
+    if (thumbImg && thumbImg.currentSrc) {
+      openLightbox(thumbImg.currentSrc, thumbImg.alt || 'Dashboard visual');
     }
   });
 }
 
 /* ============================================================
-   13. VISITOR COUNTER
+   Power BI dashboard dialog
    ============================================================ */
-async function loadVisitorCount() {
-  const el = document.getElementById('visitor-count');
-  if (!el) return;
-  try {
-    const res = await fetch('https://api.countapi.xyz/hit/jatinanalytics.co.in/visits');
-    const data = await res.json();
-    el.textContent = data.value?.toLocaleString() || '1,000+';
-  } catch {
-    el.textContent = '1,000+';
-  }
+
+function initDashboardDialog() {
+  const dialog = document.getElementById('dashboard-dialog');
+  const frame = document.getElementById('dashboard-iframe');
+  const title = document.getElementById('dashboard-dialog-title');
+  const fullLink = document.getElementById('dashboard-full-link');
+  const closeButton = document.getElementById('dashboard-dialog-close');
+  if (!dialog || !frame || !title || !fullLink || !closeButton) return;
+
+  const closeDialog = () => {
+    if (dialog.open) dialog.close();
+    frame.src = 'about:blank';
+  };
+
+  document.body.addEventListener('click', event => {
+    const trigger = event.target.closest('[data-dashboard-id]');
+    if (!trigger) return;
+    const project = PROJECTS.find(item => item.id === trigger.dataset.dashboardId);
+    if (!project) return;
+    title.textContent = project.title;
+    fullLink.href = project.dashboard;
+    frame.src = project.dashboard;
+    if (typeof dialog.showModal === 'function') dialog.showModal();
+    else dialog.setAttribute('open', '');
+  });
+
+  closeButton.addEventListener('click', closeDialog);
+  dialog.addEventListener('click', event => {
+    if (event.target === dialog) closeDialog();
+  });
+  dialog.addEventListener('cancel', () => {
+    window.setTimeout(() => { frame.src = 'about:blank'; }, 0);
+  });
 }
 
 /* ============================================================
-   14. DARK MODE TOGGLE (Naya)
+   Profile photo auto-loader
    ============================================================ */
-function toggleDarkMode() {
-  const html = document.documentElement;
-  const current = html.getAttribute('data-theme');
-  const next = current === 'dark' ? 'light' : 'dark';
-  html.setAttribute('data-theme', next);
-  localStorage.setItem('theme', next);
-  const btn = document.getElementById('dark-mode-toggle');
-  if (btn) btn.textContent = next === 'dark' ? '☀️' : '🌙';
-}
 
-/* ============================================================
-   15. TYPING ANIMATION (Naya)
-   ============================================================ */
-function initTypingAnimation() {
-  const el = document.getElementById('typed-text');
-  if (!el) return;
-  const phrases = ['Data Analyst', 'Problem Solver', 'Insight Generator', 'Power BI Developer', 'Turning Data into Insights'];
-  let phraseIndex = 0, charIndex = 0, deleting = false;
+function initProfilePhoto() {
+  const image = document.getElementById('profile-photo');
+  const frame = document.querySelector('.profile-photo-frame');
+  if (!image || !frame) return;
 
-  function tick() {
-    const current = phrases[phraseIndex];
-    if (!deleting) {
-      charIndex++;
-      el.textContent = current.slice(0, charIndex);
-      if (charIndex === current.length) {
-        deleting = true;
-        setTimeout(tick, 1400);
-        return;
-      }
-    } else {
-      charIndex--;
-      el.textContent = current.slice(0, charIndex);
-      if (charIndex === 0) {
-        deleting = false;
-        phraseIndex = (phraseIndex + 1) % phrases.length;
-      }
+  const candidates = [
+    'assets/profile-photo.webp',
+    'assets/profile-photo.png',
+    'assets/profile-photo.jpg',
+    'assets/profile-photo.jpeg'
+  ];
+  let index = 0;
+
+  const tryNextPhoto = () => {
+    if (index >= candidates.length) {
+      image.removeAttribute('src');
+      return;
     }
-    setTimeout(tick, deleting ? 40 : 80);
-  }
-  tick();
+    const source = candidates[index++];
+    image.onload = () => {
+      image.hidden = false;
+      frame.classList.add('is-loaded');
+    };
+    image.onerror = tryNextPhoto;
+    image.src = source;
+  };
+  tryNextPhoto();
 }
 
 /* ============================================================
-   16. ANIMATED COUNTERS (Naya)
+   Mobile navigation
    ============================================================ */
-const counterObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      animateCounter(entry.target);
-      counterObserver.unobserve(entry.target);
-    }
+
+function initMobileNavigation() {
+  const toggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('.primary-nav');
+  if (!toggle || !nav) return;
+
+  const closeMenu = () => {
+    nav.classList.remove('is-open');
+    toggle.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('menu-open');
+  };
+
+  toggle.addEventListener('click', () => {
+    const open = nav.classList.toggle('is-open');
+    toggle.setAttribute('aria-expanded', String(open));
+    document.body.classList.toggle('menu-open', open);
   });
-}, { threshold: 0.3 });
-
-function animateCounter(el) {
-  const target = parseInt(el.dataset.target, 10) || 0;
-  const suffix = el.dataset.suffix || '';
-  const duration = 1200;
-  const startTime = performance.now();
-
-  function step(now) {
-    const progress = Math.min((now - startTime) / duration, 1);
-    const eased = 1 - Math.pow(1 - progress, 3);
-    const current = Math.floor(eased * target);
-    el.textContent = current + suffix;
-    if (progress < 1) requestAnimationFrame(step);
-    else el.textContent = target + suffix;
-  }
-  requestAnimationFrame(step);
-}
-
-function initCounters() {
-  document.querySelectorAll('.counter:not([data-counter-bound])').forEach(el => {
-    el.setAttribute('data-counter-bound', 'true');
-    counterObserver.observe(el);
+  nav.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+  document.addEventListener('click', event => {
+    if (!nav.contains(event.target) && !toggle.contains(event.target)) closeMenu();
   });
-}
-
-/* ============================================================
-   17. SCROLL PROGRESS BAR (Naya)
-   ============================================================ */
-function initScrollProgress() {
-  const bar = document.getElementById('scroll-progress');
-  if (!bar) return;
-  window.addEventListener('scroll', () => {
-    const scrollTop = window.scrollY;
-    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-    bar.style.width = progress + '%';
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 820) closeMenu();
   });
 }
 
 /* ============================================================
-   18. SCROLL REVEAL ANIMATIONS
+   Scroll reveal
    ============================================================ */
-const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      revealObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.12 });
 
 function initReveal() {
-  document.querySelectorAll('.reveal, .reveal-left, .reveal-right')
-    .forEach(el => revealObserver.observe(el));
+  const elements = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window)) {
+    elements.forEach(element => element.classList.add('is-visible'));
+    return;
+  }
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  elements.forEach(element => observer.observe(element));
 }
 
 /* ============================================================
-   19. CACHE CLEAR + SECRET SHORTCUT
+   Active navigation
    ============================================================ */
-window.clearCacheManually = function () {
-  const btn = document.getElementById('cache-clear-btn');
-  btn.textContent = '⏳ Clearing...';
-  btn.classList.add('clearing');
-  btn.disabled = true;
 
-  Object.keys(localStorage).forEach(key => {
-    if (key.startsWith('cache_') || key.startsWith('gh_tree_cache')) {
-      localStorage.removeItem(key);
-    }
-  });
-  sessionStorage.clear();
-
-  setTimeout(() => {
-    btn.textContent = '✅ Done! Reloading...';
-    setTimeout(() => window.location.reload(), 800);
-  }, 500);
-};
+function initActiveNavigation() {
+  const navLinks = [...document.querySelectorAll('.primary-nav a')];
+  const sections = navLinks.map(link => document.querySelector(link.getAttribute('href'))).filter(Boolean);
+  if (!('IntersectionObserver' in window)) return;
+  const observer = new IntersectionObserver(entries => {
+    const visible = entries.filter(entry => entry.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+    if (!visible) return;
+    navLinks.forEach(link => link.classList.toggle('is-current', link.getAttribute('href') === `#${visible.target.id}`));
+  }, { rootMargin: '-25% 0px -65% 0px', threshold: [0.1, 0.4, 0.7] });
+  sections.forEach(section => observer.observe(section));
+}
 
 /* ============================================================
-   20. AI CHATBOT — ADVANCED (Best-match + Memory + Follow-ups)
+   Contact form (Web3Forms)
    ============================================================ */
-const CHATBOT_KNOWLEDGE = {
-  greetings: ['hi', 'hello', 'hey', 'namaste', 'hii'],
 
-  answers: {
-    projects: {
-      keywords: ['project', 'built', 'made', 'work', 'portfolio', 'kaam'],
-      response: `📊 <b>Jatin has built 4+ projects:</b><br><br>
-        🏦 <b>Bank Analytics</b> - Banking intelligence dashboard with fraud detection using Power BI & SQL<br><br>
-        🛒 <b>Ecommerce Sales Analysis</b> - Sales trends and customer behavior analysis<br><br>
-        👥 <b>HR Analytics</b> - Employee performance and attrition analysis<br><br>
-        🍕 <b>Zomato Analytics</b> - Food delivery data analysis and insights<br><br>
-        Click the <b>Projects tab</b> to explore each one in detail!`,
-      followUps: [
-        { label: '🏦 Bank Project', query: 'Tell me about Bank Analytics project' },
-        { label: '🛠️ Skills', query: 'What are Jatin skills?' },
-        { label: '📬 Contact', query: 'How to contact Jatin?' }
-      ]
-    },
-    skills: {
-      keywords: ['skill', 'know', 'technology', 'tech', 'expertise', 'languages'],
-      response: `🛠️ <b>Jatin's Technical Skills:</b><br><br>
-        🐍 <b>Python</b> - Pandas, NumPy, Matplotlib, Seaborn, Plotly<br>
-        🗄️ <b>SQL</b> - MySQL, Data Querying, Joins<br>
-        📊 <b>Power BI</b> - DAX, Data Modeling, Interactive Dashboards<br>
-        📋 <b>Excel</b> - Advanced formulas, Pivot Tables<br>
-        🤖 <b>Machine Learning</b> - Basics, Fraud Detection<br>
-        ☁️ <b>Tools</b> - GitHub, Streamlit, Vercel`,
-      followUps: [
-        { label: '⚙️ Tools', query: 'What tools does Jatin use?' },
-        { label: '🎓 Education', query: 'Tell me about Jatin education' },
-        { label: '📊 Projects', query: 'What projects has Jatin built?' }
-      ]
-    },
-    contact: {
-      keywords: ['contact', 'reach', 'email', 'connect', 'hire', 'touch'],
-      response: `📬 <b>Contact Jatin:</b><br><br>
-        📧 <b>Email:</b> jatin@jatinanalytics.co.in<br>
-        💼 <b>LinkedIn:</b> linkedin.com/in/jatin-kumar-5a46a720a<br>
-        🐙 <b>GitHub:</b> github.com/jating1416-debug<br>
-        🏆 <b>Kaggle:</b> kaggle.com/jatinkhandelwal112<br><br>
-        Or use the <b>Contact tab</b> to send a direct message!`,
-      followUps: [
-        { label: '💼 Availability', query: 'Is Jatin available for work?' },
-        { label: '📊 Projects', query: 'What projects has Jatin built?' }
-      ]
-    },
-    bank: {
-      keywords: ['bank', 'banking', 'financial', 'loan', 'transaction'],
-      response: `🏦 <b>Bank Analytics Project:</b><br><br>
-        Built an interactive <b>Digital Banking Intelligence Dashboard</b> using Power BI.<br><br>
-        📌 <b>Key Features:</b><br>
-        • 75K+ customers analyzed<br>
-        • $3bn loan portfolio tracked<br>
-        • Transaction fraud patterns detected<br>
-        • City-wise customer distribution<br><br>
-        🛠️ <b>Tools:</b> Power BI, DAX, SQL, Excel<br><br>
-        Open the Projects tab to see the live dashboard!`,
-      followUps: [
-        { label: '📊 All Projects', query: 'What projects has Jatin built?' },
-        { label: '⚙️ Tools Used', query: 'What tools does Jatin use?' }
-      ]
-    },
-    tools: {
-      keywords: ['tool', 'software', 'use', 'powerbi', 'python', 'sql'],
-      response: `⚙️ <b>Tools Jatin Uses:</b><br><br>
-        📊 Power BI + DAX<br>
-        🐍 Python (Pandas, NumPy, Plotly)<br>
-        🗄️ MySQL<br>
-        📋 Excel (Advanced)<br>
-        📓 Jupyter Notebook<br>
-        🐙 GitHub<br>
-        🌐 Streamlit + Vercel<br><br>
-        Total: <b>6+ tools mastered</b> with 500+ hours of practice!`,
-      followUps: [
-        { label: '🛠️ Skills', query: 'What are Jatin skills?' },
-        { label: '📊 Projects', query: 'What projects has Jatin built?' }
-      ]
-    },
-    availability: {
-      keywords: ['available', 'job', 'hire', 'work', 'opportunity', 'fresher', 'open'],
-      response: `💼 <b>Availability:</b><br><br>
-        ✅ <b>Currently Open to Opportunities!</b><br><br>
-        🎯 Looking for:<br>
-        • Data Analyst roles<br>
-        • Business Intelligence Analyst<br>
-        • Power BI Developer<br><br>
-        📍 Open to: Full-time, Internship, Remote/WFH<br>
-        ⏰ Response time: Within 24 hours<br><br>
-        📧 Reach out: jatin@jatinanalytics.co.in`,
-      followUps: [
-        { label: '📬 Contact', query: 'How to contact Jatin?' },
-        { label: '🎓 Education', query: 'Tell me about Jatin education' }
-      ]
-    },
-    education: {
-      keywords: ['education', 'degree', 'study', 'college', 'university', 'mba', 'bca'],
-      response: `🎓 <b>Jatin's Education:</b><br><br>
-        📚 <b>MBA</b> - Operation Management<br>
-        Vivekananda Global University (Pursuing)<br><br>
-        💻 <b>BCA</b> - Bachelor of Computer Application<br>
-        Sikkim Alpine University (2022-2025)<br><br>
-        💊 <b>D.Pharm</b> - Diploma in Pharmacy<br>
-        Apeejay Stya University (2020-2022)<br><br>
-        Self-taught in Data Analytics through 500+ hours of practical projects!`,
-      followUps: [
-        { label: '🛠️ Skills', query: 'What are Jatin skills?' },
-        { label: '📊 Projects', query: 'What projects has Jatin built?' }
-      ]
-    },
-    kaggle: {
-      keywords: ['kaggle', 'dataset', 'data', 'published'],
-      response: `🏆 <b>Kaggle Contributions:</b><br><br>
-        📦 <b>Indian Financial Fraud Dataset</b><br>
-        Comprehensive dataset with 50,000+ fraud cases from Indian banking sector.<br><br>
-        🏷️ Tags: Finance, Fraud Detection, Python, ML<br><br>
-        Visit the <b>Kaggle tab</b> for direct links, or go to:<br>
-        kaggle.com/jatinkhandelwal112`,
-      followUps: [
-        { label: '📊 Projects', query: 'What projects has Jatin built?' },
-        { label: '⚙️ Tools', query: 'What tools does Jatin use?' }
-      ]
+function initContactForm() {
+  const form = document.getElementById('contact-form');
+  const status = document.getElementById('form-status');
+  if (!form || !status) return;
+
+  form.addEventListener('submit', async event => {
+    event.preventDefault();
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
     }
-  },
+    if (form.elements.botcheck?.checked) return;
 
-  fallback: `🤔 I didn't quite understand that. Here's what I can help with:<br><br>
-    • 📊 <b>Projects</b> - Ask about any specific project<br>
-    • 🛠️ <b>Skills</b> - Python, SQL, Power BI expertise<br>
-    • 📬 <b>Contact</b> - How to reach Jatin<br>
-    • 🎓 <b>Education</b> - Academic background<br>
-    • 💼 <b>Availability</b> - Job opportunities<br>
-    • 🏆 <b>Kaggle</b> - Published datasets<br><br>
-    Try asking: "<i>What projects has Jatin built?</i>"`
-};
+    const submitButton = form.querySelector('button[type="submit"]');
+    submitButton.disabled = true;
+    submitButton.textContent = 'Sending message';
+    status.textContent = '';
+    status.classList.remove('is-error');
 
-function generateChatResponse(text) {
-  if (CHATBOT_KNOWLEDGE.greetings.some(g => text.includes(g))) {
-    return {
-      html: `👋 Hello! Great to meet you!<br><br>I'm Jatin's Portfolio AI. I can tell you about his <b>projects, skills, experience, and how to contact him</b>.<br><br>What would you like to know?`,
-      followUps: [
-        { label: '📊 Projects', query: 'What projects has Jatin built?' },
-        { label: '🛠️ Skills', query: 'What are Jatin skills?' },
-        { label: '📬 Contact', query: 'How to contact Jatin?' }
-      ]
-    };
-  }
-
-  // Best-match scoring (naya — ab sabse relevant answer milega)
-  let bestKey = null, bestScore = 0;
-  for (const [key, data] of Object.entries(CHATBOT_KNOWLEDGE.answers)) {
-    const score = data.keywords.filter(kw => text.includes(kw)).length;
-    if (score > bestScore) { bestScore = score; bestKey = key; }
-  }
-
-  if (bestKey) {
-    const match = CHATBOT_KNOWLEDGE.answers[bestKey];
-    return { html: match.response, followUps: match.followUps || [] };
-  }
-
-  return {
-    html: CHATBOT_KNOWLEDGE.fallback,
-    followUps: [
-      { label: '📊 Projects', query: 'What projects has Jatin built?' },
-      { label: '🛠️ Skills', query: 'What are Jatin skills?' },
-      { label: '🎓 Education', query: 'Tell me about Jatin education' }
-    ]
-  };
-}
-
-function saveChatHistory() {
-  const messages = document.getElementById('chatbot-messages');
-  if (messages) localStorage.setItem('chatbot_history', messages.innerHTML);
-}
-
-function loadChatHistory() {
-  const saved = localStorage.getItem('chatbot_history');
-  const messages = document.getElementById('chatbot-messages');
-  if (saved && messages) messages.innerHTML = saved;
-}
-
-let chatHistoryLoaded = false;
-
-window.toggleChatbot = function () {
-  const box = document.getElementById('chatbot-box');
-  box.classList.toggle('chatbot-hidden');
-
-  if (!box.classList.contains('chatbot-hidden')) {
-    if (!chatHistoryLoaded) {
-      loadChatHistory();
-      chatHistoryLoaded = true;
-    }
-    localStorage.setItem('chatbot_opened_once', 'true');
-    const notify = document.getElementById('chatbot-notify');
-    if (notify) notify.style.display = 'none';
-    document.getElementById('chatbot-input')?.focus();
-  }
-};
-
-window.askQuestion = function (question) {
-  document.getElementById('chatbot-input').value = question;
-  sendChatMessage();
-};
-
-window.sendChatMessage = function () {
-  const input = document.getElementById('chatbot-input');
-  const messages = document.getElementById('chatbot-messages');
-  const text = input.value.trim();
-  if (!text) return;
-
-  const userDiv = document.createElement('div');
-  userDiv.className = 'user-msg';
-  userDiv.textContent = text;
-  messages.appendChild(userDiv);
-  input.value = '';
-  messages.scrollTop = messages.scrollHeight;
-
-  const typing = document.createElement('div');
-  typing.className = 'typing-indicator';
-  typing.innerHTML = '<div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div>';
-  messages.appendChild(typing);
-  messages.scrollTop = messages.scrollHeight;
-
-  setTimeout(() => {
-    typing.remove();
-    const result = generateChatResponse(text.toLowerCase());
-
-    const botDiv = document.createElement('div');
-    botDiv.className = 'bot-msg';
-    botDiv.innerHTML = result.html;
-    messages.appendChild(botDiv);
-
-    if (result.followUps && result.followUps.length) {
-      const followDiv = document.createElement('div');
-      followDiv.className = 'followup-questions';
-      followDiv.innerHTML = result.followUps.map(f =>
-        `<button onclick="askQuestion('${f.query.replace(/'/g, "\\'")}')">${f.label}</button>`
-      ).join('');
-      messages.appendChild(followDiv);
-    }
-
-    messages.scrollTop = messages.scrollHeight;
-    saveChatHistory();
-  }, 900);
-
-  saveChatHistory();
-};
-
-/* ============================================================
-   21. MASTER INIT — SIRF EK DOMContentLoaded (Duplicates hataye)
-   ============================================================ */
-document.addEventListener('DOMContentLoaded', () => {
-
-  // Page Loader hide
-  const loader = document.getElementById('page-loader');
-  if (loader) {
-    setTimeout(() => {
-      loader.classList.add('hidden');
-      setTimeout(() => loader.remove(), 400);
-    }, 1300);
-  }
-
-  // Dark mode icon set
-  const savedTheme = localStorage.getItem('theme') || 'light';
-  const darkBtn = document.getElementById('dark-mode-toggle');
-  if (darkBtn) darkBtn.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
-
-  // Core data loads
-  loadProjects();
-  loadKaggleDatasets();
-  initProjectFilters();
-  initContactForm();
-  loadVisitorCount();
-
-  // New features
-  initTypingAnimation();
-  initScrollProgress();
-  initCounters();
-  initReveal();
-
-  // Chatbot notify dot (8 sec baad)
-  setTimeout(() => {
-    if (!localStorage.getItem('chatbot_opened_once')) {
-      const notify = document.getElementById('chatbot-notify');
-      if (notify) notify.style.display = 'block';
-    }
-  }, 8000);
-
-  // Secret Developer Shortcut: Ctrl + Shift + R
-  document.addEventListener('keydown', (e) => {
-    if (e.ctrlKey && e.shiftKey && e.key === 'R') {
-      e.preventDefault();
-      Object.keys(localStorage).forEach(key => {
-        if (key.startsWith('cache_') || key.startsWith('gh_tree_cache')) {
-          localStorage.removeItem(key);
-        }
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(Object.fromEntries(new FormData(form)))
       });
-      sessionStorage.clear();
-      console.log('🔄 Cache cleared! Reloading...');
-      window.location.reload();
+      const result = await response.json();
+      if (!response.ok || !result.success) throw new Error(result.message || 'Unable to send the message.');
+      form.reset();
+      status.textContent = 'Message sent. I will get back to you soon.';
+    } catch (error) {
+      status.textContent = 'Message could not be sent. Please email jating1416@gmail.com directly.';
+      status.classList.add('is-error');
+    } finally {
+      submitButton.disabled = false;
+      submitButton.textContent = 'Send message';
     }
   });
+}
 
-});
+/* ============================================================
+   Portfolio assistant
+   ============================================================ */
 
-// ============================================================
-// Streamlit Lazy Load (DOMContentLoaded ke BAHAR — sahi jagah)
-// ============================================================
-window.loadStreamlitNow = function() {
-  const btn = document.getElementById('load-streamlit-btn');
-  const placeholder = document.getElementById('streamlit-placeholder');
-  const iframe = document.getElementById('streamlit-iframe');
-  if (!btn || !placeholder || !iframe) return;
+/* ============================================================
+   Portfolio assistant — intent scoring (more powerful)
+   ============================================================ */
 
-  btn.textContent = '⏳ Waking up server...';
-  btn.disabled = true;
+const ASSISTANT_PROMPTS = {
+  projects: 'Tell me about the projects',
+  details: 'How do I see project details and the data preview?',
+  dashboards: 'Where are the live dashboards?',
+  datasets: 'What datasets are published?',
+  'case-study': 'Tell me about the case studies',
+  skills: 'What skills and tools do you use?',
+  resume: 'Tell me about the resume and education',
+  certificate: 'Tell me about the certificate',
+  contact: 'How can I contact you?'
+};
 
-  const tip = document.createElement('p');
-  tip.className = 'st-loading-text';
-  tip.textContent = '🔄 Free server wake-up: 15-20 seconds lag sakte hain';
-  placeholder.querySelector('.streamlit-placeholder-inner').appendChild(tip);
+const ASSISTANT_TOPICS = [
+  {
+    keywords: ['power bi', 'powerbi', 'pbix', 'dashboard', 'live report', 'embed'],
+    answer: 'Every project has a published Power BI dashboard. Click Live dashboard on the card — it opens inside the portfolio, and you can pop it out in a new tab. The .pbix report files are also listed under each project\'s View details section.'
+  },
+  {
+    keywords: ['details', 'detail', 'data preview', 'preview', 'csv', 'row', 'column', 'statistic', 'file', 'code'],
+    answer: 'Click View details on any project card. It opens the full breakdown: overview, objectives, key insights, every source file (Python, SQL, PBIX, CSV), a live preview of the actual data with quick statistics, and all dashboard visuals. Everything is read straight from the GitHub project folder — add a file there and it appears here.'
+  },
+  {
+    keywords: ['dataset', 'kaggle', 'case study', 'case studies', 'hospital', 'gurugram'],
+    answer: 'Three datasets are published on Kaggle: Indian E-Commerce Sales (250K orders), Indian Financial Fraud (250K transactions) and Gurugram Hospital Analytics (40K+ patients, 400K+ billing rows). Click View case study on any dataset card to read how each one was engineered — architecture, generation rules, the Python generator logic and key insights.'
+  },
+  {
+    keywords: ['certificate', 'certification', 'course', 'bootcamp', 'training', 'udemy', 'krish'],
+    answer: 'I completed an 89-hour Complete Data Analyst Bootcamp (Krish Naik, Jayant Topnani & KRISHAI Technologies, Udemy) on 11 July 2026. It is in the Resume section with a Verify-on-Udemy link, and the certificate PDF can be viewed and downloaded there.'
+  },
+  {
+    keywords: ['resume', 'cv', 'education', 'degree', 'mba', 'bca', 'diploma', 'university', 'qualification', 'study'],
+    answer: 'Professional experience: 2 years as a Registered Pharmacist (dispensing, patient counselling and pharmacy operations). Education: MBA in Operations Management (Vivekananda Global University, pursuing), BCA (Sikkim Alpine University, 2022–2025) and Diploma in Pharmacy (Apeejay Stya University, 2020–2022). The full resume PDF is in the navbar and the Resume section.'
+  },
+  {
+    keywords: ['skill', 'skills', 'tool', 'tools', 'stack', 'sql', 'python', 'excel', 'pandas', 'numpy', 'dax', 'mysql', 'technology'],
+    answer: 'The core toolkit: Power BI + DAX, SQL/MySQL, Python (Pandas, NumPy), Excel and Matplotlib/Seaborn. The focus is the full pipeline — cleaning, data modelling, KPI analysis and dashboard storytelling. The Skills section has a card for each area.'
+  },
+  {
+    keywords: ['process', 'method', 'methodology', 'approach', 'workflow', 'eda', 'steps', 'how do you work'],
+    answer: 'Every project follows the same 6 steps: Understand the business problem → Clean the data → Exploratory analysis → Analyse (KPIs, segments, trends) → Visualise in Power BI → Turn findings into recommendations. The full breakdown is in the Analytics Process section.'
+  },
+  {
+    keywords: ['contact', 'email', 'mail', 'reach', 'hire', 'hiring', 'opportunity', 'opportunities', 'job', 'jobs', 'internship', 'intern', 'apply', 'career', 'remote', 'available', 'salary'],
+    answer: 'You can email jating1416@gmail.com directly or use the contact form in the Contact section — it lands straight in the inbox. Jatin — with 2 years of registered pharmacist experience — is open to entry-level Data Analyst, BI Analyst, internship and remote opportunities.'
+  },
+  {
+    keywords: ['project', 'projects', 'work', 'portfolio', 'built', 'supply chain', 'zomato', 'bank', 'fraud', 'hr'],
+    answer: 'There are 7 end-to-end projects: Supply Chain & Logistics, Indian Financial Fraud, E-Commerce Sales, Bank Analytics, HR Analytics, Zomato and Synthetic Health Risk. Use the search box above the grid (try "fraud" or "DAX"), and each card has View details, Live dashboard and Source.'
+  },
+  {
+    keywords: ['about', 'who', 'background', 'self', 'introduce', 'jatin', 'experience', 'fresher'],
+    answer: 'Jatin Kumar is a fresher Data Analyst from India, actively seeking his first analyst job. His first profession was pharmacy — he worked as a Registered Pharmacist for 2 years — before he moved into self-taught data analytics. He builds end-to-end projects across operations, finance, retail, HR and healthcare with Python, SQL and Power BI, and is currently pursuing an MBA in Operations Management.'
+  },
+  {
+    keywords: ['hello', 'hi', 'hey', 'hii', 'namaste', 'good morning', 'good evening', 'good afternoon'],
+    answer: 'Hello! 👋 Ask me anything about the projects, data previews, live dashboards, Kaggle datasets, skills, resume, certificate or how to get in touch. The quick buttons below are a good start.'
+  },
+  {
+    keywords: ['thank', 'thanks', 'thx', 'shukriya'],
+    answer: 'You\'re welcome! If anything here is useful, feel free to reach out at jating1416@gmail.com. 🙌'
+  }
+];
 
-  iframe.src = iframe.dataset.src;
+function initPortfolioAssistant() {
+  const toggle = document.getElementById('assistant-toggle');
+  const panel = document.getElementById('assistant-panel');
+  const close = document.getElementById('assistant-close');
+  const form = document.getElementById('assistant-form');
+  const input = document.getElementById('assistant-input');
+  const messages = document.getElementById('assistant-messages');
+  if (!toggle || !panel || !close || !form || !input || !messages) return;
 
-  iframe.onload = function() {
-    placeholder.style.display = 'none';
-    iframe.style.display = 'block';
+  const appendMessage = (text, user = false) => {
+    const message = document.createElement('p');
+    message.className = `assistant-message${user ? ' is-user' : ''}`;
+    message.textContent = text;
+    messages.appendChild(message);
+    messages.scrollTop = messages.scrollHeight;
   };
 
-  // 25 sec baad force show
-  setTimeout(() => {
-    placeholder.style.display = 'none';
-    iframe.style.display = 'block';
-  }, 25000);
-};
+  const topicScore = (question, keywords) => {
+    let score = 0;
+    keywords.forEach(keyword => {
+      const escaped = keyword.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      if (new RegExp(`\\b${escaped}`, 'i').test(question)) score += 1;
+    });
+    return score;
+  };
+
+  const responseFor = question => {
+    let best = null;
+    let bestScore = 0;
+    ASSISTANT_TOPICS.forEach(topic => {
+      const score = topicScore(question, topic.keywords);
+      if (score > bestScore) { best = topic; bestScore = score; }
+    });
+    if (best) return best.answer;
+    return 'I can help with: projects, project details & data previews, live dashboards, Kaggle datasets & case studies, skills, resume/education, the certificate, the analytics process, or contact details. Try one of those!';
+  };
+
+  const openAssistant = () => {
+    panel.hidden = false;
+    toggle.setAttribute('aria-expanded', 'true');
+    window.setTimeout(() => input.focus(), 0);
+  };
+  const closeAssistant = () => {
+    panel.hidden = true;
+    toggle.setAttribute('aria-expanded', 'false');
+  };
+  const ask = question => {
+    const cleaned = question.trim();
+    if (!cleaned) return;
+    appendMessage(cleaned, true);
+    window.setTimeout(() => appendMessage(responseFor(cleaned)), 180);
+  };
+
+  toggle.addEventListener('click', () => panel.hidden ? openAssistant() : closeAssistant());
+  close.addEventListener('click', closeAssistant);
+  form.addEventListener('submit', event => {
+    event.preventDefault();
+    ask(input.value);
+    input.value = '';
+  });
+  document.querySelectorAll('[data-assistant-prompt]').forEach(button => {
+    button.addEventListener('click', () => {
+      const prompt = ASSISTANT_PROMPTS[button.dataset.assistantPrompt] || button.dataset.assistantPrompt;
+      ask(prompt);
+    });
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const year = document.getElementById('current-year');
+  if (year) year.textContent = new Date().getFullYear();
+  initProfilePhoto();
+  initProjectLibrary();
+  initDatasetLibrary();
+  initDashboardDialog();
+  initDetailDialog();
+  initDetailTriggers();
+  initLightbox();
+  initMobileNavigation();
+  initReveal();
+  initActiveNavigation();
+  initContactForm();
+  initPortfolioAssistant();
+  handleDeepLink();
+});

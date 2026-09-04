@@ -1,754 +1,360 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-156R2LZZX6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-156R2LZZX6');
-</script>
-  <meta charset="UTF-8">
-  
-  <!-- Dark mode flash-fix: theme lagana sabse pehle -->
-  <script>
-    (function() {
-      var theme = localStorage.getItem('theme') || 'light';
-      document.documentElement.setAttribute('data-theme', theme);
-    })();
-  </script>
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- Primary SEO -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1220">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230b1220'/><text x='50' y='68' font-size='52' font-family='monospace' fill='%2376a8ff' text-anchor='middle' font-weight='bold'>JK</text></svg>">
+  <script>document.documentElement.classList.add('js');</script>
   <title>Jatin Kumar | Data Analyst Portfolio - Python, Power BI, SQL</title>
-  <meta name="description" content="Jatin Kumar - Data Analyst Portfolio. Expert in Python, SQL, Power BI, Excel. View 7+ live projects, datasets, and interactive dashboards.">
-  <meta name="keywords" content="Jatin Kumar, Data Analyst, Power BI, Python, SQL, Excel, Kaggle, Data Cleaning, Dashboard, Portfolio, India">
-  <meta name="author" content="Jatin Kumar">
-  <meta name="robots" content="index, follow">
+  <meta name="description" content="Jatin Kumar is a Data Analyst creating practical Power BI, SQL and Python analytics projects across operations, finance and e-commerce.">
   <link rel="canonical" href="https://jatinanalytics.co.in/">
 
-  <!-- Open Graph (WhatsApp/LinkedIn preview) -->
   <meta property="og:title" content="Jatin Kumar | Data Analyst Portfolio">
-  <meta property="og:description" content="Turning Data into Decisions - Python, SQL, Power BI, Excel. View live projects and dashboards.">
+  <meta property="og:description" content="Practical analytics projects in Power BI, SQL and Python.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jatinanalytics.co.in/">
   <meta property="og:image" content="https://jatinanalytics.co.in/og-image.webp">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Jatin Kumar - Data Analyst Portfolio">
-  <meta property="og:image:type" content="image/webp"> 
   <meta property="og:site_name" content="Jatin Kumar Portfolio">
-
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Jatin Kumar | Data Analyst">
-  <meta name="twitter:description" content="Data Analyst Portfolio - Python, Power BI, SQL">
+  <meta name="twitter:title" content="Jatin Kumar | Data Analyst Portfolio">
+  <meta name="twitter:description" content="Practical analytics projects in Power BI, SQL and Python.">
   <meta name="twitter:image" content="https://jatinanalytics.co.in/og-image.webp">
 
-  <!-- JSON-LD Schema -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-156R2LZZX6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-156R2LZZX6');
+  </script>
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Jatin Kumar",
     "jobTitle": "Data Analyst",
-    "url": "https://jatinanalytics.co.in",
-    "email": "jatin@jatinanalytics.co.in",
-    "image": "https://jatinanalytics.co.in/og-image.webp",
+    "url": "https://jatinanalytics.co.in/",
+    "email": "jating1416@gmail.com",
     "sameAs": [
       "https://www.linkedin.com/in/jatin-kumar-5a46a720a",
       "https://github.com/jating1416-debug",
       "https://www.kaggle.com/jatinkhandelwal112"
     ],
-    "knowsAbout": ["Python","SQL","Power BI","Excel","Data Cleaning","Pandas","NumPy","DAX","Matplotlib","Seaborn"],
-    "alumniOf": [
-      { "@type": "CollegeOrUniversity", "name": "Sikkim Alpine University" },
-      { "@type": "CollegeOrUniversity", "name": "Vivekananda Global University" }
-    ]
+    "knowsAbout": ["Python", "SQL", "Power BI", "Excel", "Pandas", "DAX", "Data Visualization"]
   }
   </script>
 
-  <!-- Google Analytics 4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-
-    function trackTabClick(tabName) {
-      gtag('event', 'tab_click', { 'event_category': 'Navigation', 'event_label': tabName });
-    }
-    function trackProjectOpen(projectName) {
-      gtag('event', 'project_view', { 'event_category': 'Projects', 'event_label': projectName });
-    }
-    function trackDownload(fileName) {
-      gtag('event', 'file_download', { 'event_category': 'Downloads', 'event_label': fileName });
-    }
-  </script>
-
-  <!-- Google Font for Developer Look -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
-
-  <!-- Styles -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
-
-</head> 
+</head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-<!-- ♿ Skip to content (Accessibility) -->
-<a href="#main-content" class="skip-link">Skip to main content</a>
-
-<!-- 📊 Scroll Progress Bar -->
-<div id="scroll-progress"></div>
-
-<!-- PAGE LOADER -->
-<div id="page-loader">
-  <div class="loader-content">
-    <div class="loader-logo">📊</div>
-    <div class="loader-bar-wrapper">
-      <div class="loader-bar"></div>
-    </div>
-    <p class="loader-text">Loading Portfolio...</p>
-  </div>
-</div>
-
-<!-- ==================== NAVBAR ==================== -->
-<header class="navbar">
-  <div class="logo">📊 Jatin Kumar <span class="sub-logo">Data Analyst</span></div>
-  <div class="social-header">
-    <button id="dark-mode-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode" title="Toggle dark mode">🌙</button>
-    <a href="https://www.linkedin.com/in/jatin-kumar-5a46a720a" target="_blank" rel="noopener" aria-label="LinkedIn">
-      <i class="fab fa-linkedin"></i>
-    </a>
-    <a href="https://github.com/jating1416-debug" target="_blank" rel="noopener" aria-label="GitHub">
-      <i class="fab fa-github"></i>
-    </a>
-  </div>
-</header>
-
-<!-- ==================== MAIN LAYOUT ==================== -->
-<div class="layout-wrapper">
-
-  <!-- ===== SIDEBAR (Desktop pe ye top bar ban jayega — CSS media query dekho) ===== -->
-  <aside class="sidebar">
-    <div class="profile-card">
-      <div class="avatar"><img src="/og-image.webp?v=1"></div>
-      <h3>Jatin Kumar</h3>
-      <p class="role">Data Analyst</p>
-    </div>
-
-    <div class="nav-guide">
-      <h4>📍 Page Navigation</h4>
-      <p><strong>👆 Use the tabs to navigate:</strong></p>
-      <ul>
-        <li>🏠 <b>Home</b> - About & Skills</li>
-        <li>🎯 <b>Projects</b> - 7+ Projects</li>
-        <li>🖼️ <b>Gallery</b> - All Visuals</li>
-        <li>📊 <b>Kaggle</b> - Datasets</li>
-        <li>📁 <b>Dataset Overview</b> - About Dataset</li>
-        <li>🧹 <b>Tool</b> - Clean Data</li>
-        <li>📄 <b>Resume</b> - Download CV</li>
-        <li>📬 <b>Contact</b> - Get in Touch</li>
-      </ul>
-    </div>
-
-    <div class="sidebar-links">
-      <h4>🔗 Connect With Me</h4>
-      <a href="https://www.linkedin.com/in/jatin-kumar-5a46a720a" target="_blank" rel="noopener" class="s-btn linkedin">
-        <i class="fab fa-linkedin"></i> LinkedIn
+  <header class="site-header" id="top">
+    <div class="nav-shell">
+      <a class="brand" href="#about" aria-label="Jatin Kumar, About me">
+        <span class="brand-mark" aria-hidden="true">JK</span>
+        <span class="brand-text">Jatin Kumar <small>Data Analyst</small></span>
       </a>
-      <a href="https://github.com/jating1416-debug" target="_blank" rel="noopener" class="s-btn github">
-        <i class="fab fa-github"></i> GitHub
-      </a>
-      <a href="https://www.kaggle.com/jatinkhandelwal112" target="_blank" rel="noopener" class="s-btn kaggle">
-        <i class="fab fa-kaggle"></i> Kaggle
-      </a>
-      <a href="mailto:jatin@jatinanalytics.co.in" class="s-btn email">
-        <i class="fas fa-envelope"></i> Email
-      </a>
-    </div>
 
-    <div class="status-box">
-      <h4>🎯 Current Status</h4>
-      <span class="badge-success">✅ Open to Opportunities</span>
-      <p>📍 Seeking: Data Analyst / BI Analyst</p>
-    </div>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">Menu</button>
 
-    <a href="resume.pdf" download class="s-btn download-btn">
-      📥 Download Resume
-    </a>
+      <nav class="primary-nav" id="primary-navigation" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#work">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#resume">Resume</a>
+        <a href="#datasets">Datasets</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-    <div class="ad-sidebar" aria-label="Advertisement">
-      <p></p>
+      <a class="nav-resume" href="resume.pdf" download>Download Resume</a>
     </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero section-shell" id="about" aria-labelledby="about-title">
+      <div class="hero-copy reveal">
+        <div class="profile-intro">
+          <div class="profile-photo-frame" aria-label="Jatin Kumar profile photo">
+            <span class="profile-photo-placeholder" id="profile-photo-placeholder" aria-hidden="true">JK</span>
+            <img id="profile-photo" alt="Jatin Kumar, Data Analyst" hidden>
+          </div>
+          <div>
+            <p class="eyebrow">ABOUT ME</p>
+            <p class="profile-role">Jatin Kumar · Data Analyst (Fresher)</p>
+            <p class="profile-location">India · First Profession: Registered Pharmacist (2 Years)</p>
+          </div>
+        </div>
+        <h1 id="about-title">About Me</h1>
+        <p class="hero-statement">After 2 years as a Registered Pharmacist, I’ve chosen data analytics as my next profession. I’m a fresher Data Analyst — actively looking for my first analyst job — and passionate about uncovering insights from data and creating impactful visualizations.</p>
+        <p class="hero-intro">With hands-on experience in <strong>Python, SQL, Excel and Power BI</strong>, I specialize in turning raw data into useful, decision-ready analysis.</p>
+
+        <div class="about-specialities" aria-label="Analytics specialities">
+          <article><p>01</p><h3>Data cleaning &amp; transformation</h3><span>Turning messy data into structured, reliable datasets.</span></article>
+          <article><p>02</p><h3>Dashboard development</h3><span>Building interactive Power BI dashboards that make performance clear.</span></article>
+          <article><p>03</p><h3>Statistical analysis</h3><span>Finding meaningful patterns, trends and anomalies in the data.</span></article>
+          <article><p>04</p><h3>Business intelligence</h3><span>Converting analysis into actionable recommendations.</span></article>
+        </div>
+
+        <div class="about-context" aria-label="Professional profile highlights">
+          <article><span>BACKGROUND</span><p>Registered Pharmacist for 2 years — my first profession — then self-taught data analytics through courses and practical projects.</p></article>
+          <article><span>CURRENTLY</span><p>Fresher in analytics · Actively seeking my first Data Analyst role.</p></article>
+          <article><span>STRENGTH</span><p>Quick learner with strong problem-solving skills.</p></article>
+        </div>
+
+        <div class="hero-actions">
+          <a class="button button-primary" href="#work">Explore projects</a>
+          <a class="button button-secondary" href="#contact">Start a conversation</a>
+        </div>
+      </div>
+
+      <aside class="analytics-panel reveal delay-1" aria-label="Illustrative analytics summary">
+        <div class="panel-topline">
+          <span>ANALYTICS SNAPSHOT</span>
+          <span class="availability">Open to opportunities</span>
+        </div>
+        <div class="panel-main">
+          <div>
+            <p class="panel-label">Focus</p>
+            <p class="panel-value">Business intelligence</p>
+          </div>
+          <div class="panel-stat"><strong>7</strong><span>projects</span></div>
+        </div>
+        <div class="panel-stats-row" aria-label="Profile highlights">
+          <div><strong>3</strong><span>Kaggle datasets</span></div>
+          <div><strong>89h</strong><span>certified training</span></div>
+          <div><strong>1M+</strong><span>rows analyzed</span></div>
+        </div>
+        <div class="mini-chart" aria-hidden="true">
+          <div class="chart-grid"></div>
+          <svg viewBox="0 0 420 160" preserveAspectRatio="none" focusable="false">
+            <polyline points="0,128 48,108 92,120 142,72 188,88 240,46 290,76 338,34 420,18" fill="none" stroke="currentColor" stroke-width="4" vector-effect="non-scaling-stroke"></polyline>
+            <circle cx="338" cy="34" r="6" fill="currentColor"></circle>
+            <circle cx="420" cy="18" r="6" fill="currentColor"></circle>
+          </svg>
+        </div>
+        <div class="panel-breakdown">
+          <div><span>Prepare</span><b style="--bar: 82%"></b></div>
+          <div><span>Analyse</span><b style="--bar: 68%"></b></div>
+          <div><span>Communicate</span><b style="--bar: 91%"></b></div>
+        </div>
+        <p class="panel-footnote">A concise, decision-first analytics workflow.</p>
+      </aside>
+    </section>
+
+    <section class="section-shell work-section" id="work" aria-labelledby="work-title">
+      <div class="section-heading reveal">
+        <div>
+          <p class="eyebrow">PORTFOLIO PROJECTS</p>
+          <h2 id="work-title">All analytics work in one place.</h2>
+        </div>
+        <p>Every project can be viewed here, with its source code and live Power BI dashboard.</p>
+      </div>
+      <div class="project-toolbar reveal" aria-label="Project search and filters">
+        <label class="project-search">
+          <span class="project-search-icon" aria-hidden="true">⌕</span>
+          <input id="project-search" type="search" placeholder="Search projects — try “fraud”, “HR”, “DAX”…" aria-label="Search projects">
+        </label>
+        <div class="project-filters" id="project-filters" role="group" aria-label="Filter projects by tool"></div>
+        <p class="project-count" id="project-count" aria-live="polite"></p>
+      </div>
+      <div class="project-grid" id="project-grid" aria-live="polite"></div>
+    </section>
+
+    <section class="section-shell process-section" id="process" aria-labelledby="process-title">
+      <div class="section-heading reveal">
+        <div>
+          <p class="eyebrow">ANALYTICS PROCESS</p>
+          <h2 id="process-title">A repeatable route from raw data to action.</h2>
+        </div>
+        <p>Good dashboards start with a clear business question—not a chart selection.</p>
+      </div>
+      <ol class="process-grid process-grid--six">
+        <li class="reveal delay-1">
+          <span>01</span><p class="process-phase">UNDERSTAND</p><h3>Step 1 — Understand the Data</h3>
+          <p>Before touching any tool, I first understand the <strong>business problem</strong>: what question needs to be answered, what each column means and what outcome is expected. This defines the direction of analysis.</p>
+          <div class="process-tags"><b>Problem definition</b><b>Domain understanding</b><b>Stakeholder goals</b></div>
+        </li>
+        <li class="reveal delay-2">
+          <span>02</span><p class="process-phase">CLEAN</p><h3>Step 2 — Data Cleaning</h3>
+          <p>Raw data is often messy. I handle <strong>missing values, duplicates, inconsistent formats, outliers</strong> and incorrect data types with Python or Excel, so analysis begins with a reliable foundation.</p>
+          <div class="process-tags"><b>Python / Pandas</b><b>Excel</b><b>Data quality</b></div>
+        </li>
+        <li class="reveal delay-3">
+          <span>03</span><p class="process-phase">EXPLORE</p><h3>Step 3 — Exploratory Data Analysis (EDA)</h3>
+          <p>I examine <strong>distributions, correlations, trends and anomalies</strong>. This is where patterns emerge and useful hypotheses are formed before focused analysis begins.</p>
+          <div class="process-tags"><b>NumPy</b><b>Statistical analysis</b><b>Pattern recognition</b></div>
+        </li>
+        <li class="reveal delay-4">
+          <span>04</span><p class="process-phase">ANALYSE</p><h3>Step 4 — Analyze</h3>
+          <p>With clean data and EDA complete, I use <strong>segmentation, aggregations, KPI calculations</strong> and trend analysis to answer the business questions set out in Step 1.</p>
+          <div class="process-tags"><b>SQL / MySQL</b><b>DAX</b><b>KPI analysis</b></div>
+        </li>
+        <li class="reveal delay-1">
+          <span>05</span><p class="process-phase">VISUALISE</p><h3>Step 5 — Visualization &amp; Dashboard</h3>
+          <p>Numbers alone do not convince. I build interactive <strong>Power BI dashboards</strong> and visualizations with Matplotlib and Seaborn that tell a clear story for technical and non-technical audiences.</p>
+          <div class="process-tags"><b>Power BI</b><b>Matplotlib</b><b>Seaborn</b></div>
+        </li>
+        <li class="reveal delay-2">
+          <span>06</span><p class="process-phase">RECOMMEND</p><h3>Step 6 — Insights &amp; Recommendations</h3>
+          <p>The final and most important step is translating findings into <strong>clear business recommendations</strong>: what action to take, which risk exists and what opportunity the data reveals.</p>
+          <div class="process-tags"><b>Business intelligence</b><b>Storytelling</b><b>Decision support</b></div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section-shell skills-section" id="skills" aria-labelledby="skills-title">
+      <div class="section-heading reveal">
+        <div>
+          <p class="eyebrow">TOOLKIT</p>
+          <h2 id="skills-title">Practical tools for end-to-end analytics.</h2>
+        </div>
+        <p>A balanced stack for cleaning data, querying databases, modelling metrics and communicating results.</p>
+      </div>
+      <div class="skills-grid">
+        <article class="skill-card reveal delay-1"><p class="skill-index">01</p><h3>Data analysis</h3><p>Python, Pandas, NumPy, Excel and data quality workflows.</p><ul><li>Data cleaning</li><li>Exploratory analysis</li><li>Statistical summaries</li></ul></article>
+        <article class="skill-card reveal delay-2"><p class="skill-index">02</p><h3>Business intelligence</h3><p>Power BI, DAX, data modelling and interactive dashboard development.</p><ul><li>KPI design</li><li>Star schemas</li><li>Decision-ready reporting</li></ul></article>
+        <article class="skill-card reveal delay-3"><p class="skill-index">03</p><h3>Data querying</h3><p>SQL and MySQL for joins, aggregations, analysis and structured reporting.</p><ul><li>Joins and CTEs</li><li>Window functions</li><li>Business queries</li></ul></article>
+        <article class="skill-card reveal delay-4"><p class="skill-index">04</p><h3>Communication</h3><p>Clear visual storytelling for technical and non-technical audiences.</p><ul><li>Dashboard design</li><li>Insight narratives</li><li>Recommendations</li></ul></article>
+      </div>
+    </section>
+
+    <section class="section-shell resume-section" id="resume" aria-labelledby="resume-title">
+      <div class="section-heading reveal">
+        <div>
+          <p class="eyebrow">RESUME & PROFILE</p>
+          <h2 id="resume-title">Professional background and education.</h2>
+        </div>
+        <p>A concise profile of my professional experience, academic background, technical focus and current career direction.</p>
+      </div>
+      <div class="resume-layout">
+        <article class="resume-summary-card reveal delay-1">
+          <p class="resume-label">CURRENT FOCUS</p>
+          <h3>Entry-level Data Analyst and BI Analyst opportunities.</h3>
+          <p>My first profession was pharmacy — 2 years as a Registered Pharmacist. As a fresher Data Analyst, I bring that precision, compliance mindset and attention to detail into end-to-end analytics projects across finance, retail, operations, HR and data products.</p>
+          <div class="resume-actions"><a class="button button-primary" href="resume.pdf" download>Download full resume</a><a class="button button-secondary" href="#contact">Contact me</a></div>
+        </article>
+        <div class="education-list reveal delay-2">
+          <article class="is-experience"><p>2 YRS</p><div><h3>Registered Pharmacist — 2 Years of Experience</h3><span>Dispensing, patient counselling and pharmacy operations · before shifting into data analytics</span></div></article>
+          <article><p>MBA</p><div><h3>Operations Management</h3><span>Vivekananda Global University · Pursuing</span></div></article>
+          <article><p>BCA</p><div><h3>Bachelor of Computer Application</h3><span>Sikkim Alpine University · 2022–2025</span></div></article>
+          <article><p>DPH</p><div><h3>Diploma in Pharmacy</h3><span>Apeejay Stya University · 2020–2022</span></div></article>
+        </div>
+      </div>
+      <div class="resume-skills reveal delay-3"><span>Python</span><span>SQL / MySQL</span><span>Power BI</span><span>DAX</span><span>Excel</span><span>Pandas / NumPy</span><span>Matplotlib / Seaborn</span></div>
+      <article class="certificate-card reveal delay-4" aria-label="Professional certificate">
+        <div class="certificate-copy">
+          <p class="certificate-label">CERTIFICATE</p>
+          <h3>Complete Data Analyst Bootcamp — From Basics to Advanced</h3>
+          <p>89 hours of hands-on data analytics training · Krish Naik, Jayant Topnani &amp; KRISHAI Technologies (Udemy) · Completed July 11, 2026.</p>
+          <a class="certificate-verify" href="https://ude.my/UC-0424329d-4d67-4fb8-b596-33cc47844312" target="_blank" rel="noopener">Verify certificate on Udemy →</a>
+        </div>
+        <div class="certificate-actions">
+          <a class="button button-secondary" href="certificate.pdf" target="_blank" rel="noopener">View certificate</a>
+          <a class="button button-primary" href="certificate.pdf" download>Download PDF</a>
+        </div>
+      </article>
+    </section>
+
+    <section class="section-shell dataset-section" id="datasets" aria-labelledby="datasets-title">
+      <div class="section-heading reveal">
+        <div>
+          <p class="eyebrow">PUBLISHED DATASETS & OVERVIEW</p>
+          <h2 id="datasets-title">Datasets designed for meaningful analysis practice.</h2>
+        </div>
+        <p>Each dataset is published on Kaggle with an overview of its structure and intended analytics use.</p>
+      </div>
+      <div class="dataset-grid" id="dataset-grid" aria-live="polite"></div>
+      <p class="dataset-note">Healthcare-related datasets are synthetic and educational. They are not medical records, clinical guidance or real population findings.</p>
+    </section>
+
+    <section class="contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="contact-shell">
+        <div class="contact-copy reveal">
+          <p class="eyebrow">CONTACT</p>
+          <h2 id="contact-title">Let’s discuss the data problem you need to solve.</h2>
+          <p>Open to entry-level Data Analyst, BI Analyst, internship and remote opportunities.</p>
+          <div class="contact-links">
+            <a href="mailto:jating1416@gmail.com">jating1416@gmail.com</a>
+            <a href="https://www.linkedin.com/in/jatin-kumar-5a46a720a" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://github.com/jating1416-debug" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.kaggle.com/jatinkhandelwal112" target="_blank" rel="noopener">Kaggle</a>
+          </div>
+        </div>
+
+        <form class="contact-form reveal delay-1" id="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+          <input type="hidden" name="access_key" value="224be4-96c2-4ed7-8ba5-675213ca5199">
+          <input type="hidden" name="subject" value="Portfolio enquiry for Jatin Kumar">
+          <input class="honeypot" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div class="form-row">
+            <label>Name<input type="text" name="name" id="form-name" autocomplete="name" required></label>
+            <label>Email<input type="email" name="email" id="form-email" autocomplete="email" required></label>
+          </div>
+          <label>Message<textarea name="message" id="form-message" rows="5" required></textarea></label>
+          <button class="button button-primary" type="submit">Send message</button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-shell">
+      <p>Jatin Kumar <span>Data Analyst Portfolio</span></p>
+      <div>
+        <a href="https://www.linkedin.com/in/jatin-kumar-5a46a720a" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/jating1416-debug" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.kaggle.com/jatinkhandelwal112" target="_blank" rel="noopener">Kaggle</a>
+        <a href="#top">Back to top</a>
+        <a href="resume.pdf" download>Resume</a>
+      </div>
+      <p class="copyright">© <span id="current-year"></span></p>
+    </div>
+  </footer>
+
+  <dialog class="dashboard-dialog" id="dashboard-dialog" aria-labelledby="dashboard-dialog-title">
+    <div class="dialog-header">
+      <div><p class="eyebrow">POWER BI DASHBOARD</p><h2 id="dashboard-dialog-title">Live dashboard</h2></div>
+      <button class="dialog-close" type="button" id="dashboard-dialog-close">Close</button>
+    </div>
+    <div class="dashboard-frame"><iframe id="dashboard-iframe" title="Power BI dashboard" allowfullscreen></iframe></div>
+    <a class="dialog-full-link" id="dashboard-full-link" target="_blank" rel="noopener">Open dashboard in a new tab</a>
+  </dialog>
+
+  <dialog class="detail-dialog" id="detail-dialog" aria-labelledby="detail-dialog-title">
+    <div class="dialog-header">
+      <div><p class="eyebrow" id="detail-dialog-eyebrow">PROJECT DETAILS</p><h2 id="detail-dialog-title">Project</h2></div>
+      <button class="dialog-close" type="button" id="detail-dialog-close">Close</button>
+    </div>
+    <div class="detail-body" id="detail-dialog-body" tabindex="-1"></div>
+  </dialog>
+
+  <dialog class="lightbox-dialog" id="lightbox-dialog" aria-label="Image preview">
+    <button class="dialog-close lightbox-close" type="button" id="lightbox-close">Close</button>
+    <figure class="lightbox-figure">
+      <img id="lightbox-img" alt="">
+      <figcaption class="lightbox-caption" id="lightbox-caption"></figcaption>
+    </figure>
+  </dialog>
+
+  <aside class="assistant-widget" aria-label="Portfolio Assistant">
+    <button class="assistant-toggle" id="assistant-toggle" type="button" aria-expanded="false" aria-controls="assistant-panel">Ask portfolio assistant</button>
+    <section class="assistant-panel" id="assistant-panel" hidden>
+      <div class="assistant-header"><div><p>PORTFOLIO ASSISTANT</p><h2>How can I help?</h2></div><button id="assistant-close" type="button">Close</button></div>
+      <div class="assistant-messages" id="assistant-messages" aria-live="polite"><p class="assistant-message">Ask about projects, live dashboards, skills, resume details or contact information.</p></div>
+      <div class="assistant-prompts"><button type="button" data-assistant-prompt="projects">Projects</button><button type="button" data-assistant-prompt="details">Details</button><button type="button" data-assistant-prompt="dashboards">Dashboards</button><button type="button" data-assistant-prompt="datasets">Datasets</button><button type="button" data-assistant-prompt="case-study">Case study</button><button type="button" data-assistant-prompt="skills">Skills</button><button type="button" data-assistant-prompt="resume">Resume</button><button type="button" data-assistant-prompt="certificate">Certificate</button><button type="button" data-assistant-prompt="contact">Contact</button></div>
+      <form class="assistant-form" id="assistant-form"><label class="sr-only" for="assistant-input">Ask a question</label><input id="assistant-input" type="text" placeholder="Ask about the portfolio"><button type="submit">Send</button></form>
+    </section>
   </aside>
 
-  <!-- ===== MAIN CONTENT ===== -->
-  <main class="main-content" id="main-content">
-
-    <div class="tabs-container">
-        <ul class="tab-menu" role="tablist">
-            <li class="tab-item active" role="tab" tabindex="0" aria-selected="true" aria-controls="tab-home" onclick="openTab(event, 'tab-home')" onkeydown="handleTabKeydown(event, this)">🏠 Home & About Me</li>
-            <li class="tab-item" role="tab" tabindex="0" aria-selected="false" aria-controls="tab-projects" onclick="openTab(event, 'tab-projects')" onkeydown="handleTabKeydown(event, this)">🎯 Projects Showcase</li>
-            <li class="tab-item" role="tab" tabindex="0" aria-selected="false" aria-controls="tab-gallery" onclick="openTab(event, 'tab-gallery')" onkeydown="handleTabKeydown(event, this)">🖼️ All Images Gallery</li>
-            <li class="tab-item" role="tab" tabindex="0" aria-selected="false" aria-controls="tab-kaggle" onclick="openTab(event, 'tab-kaggle')" onkeydown="handleTabKeydown(event, this)">📊 Kaggle Datasets</li>
-            <li class="tab-item" role="tab" tabindex="0" aria-selected="false" aria-controls="tab-casestudy" onclick="openTab(event, 'tab-casestudy')" onkeydown="handleTabKeydown(event, this)">📁 Dataset Overview</li>
-            <li class="tab-item" role="tab" tabindex="0" aria-selected="false" aria-controls="tab-tool" onclick="openTab(event, 'tab-tool')" onkeydown="handleTabKeydown(event, this)">🧹 Clean & Visualize Tool ℹ️</li>
-            <li class="tab-item" role="tab" tabindex="0" aria-selected="false" aria-controls="tab-resume" onclick="openTab(event, 'tab-resume')" onkeydown="handleTabKeydown(event, this)">📄 Resume & Profile</li>
-            <li class="tab-item" role="tab" tabindex="0" aria-selected="false" aria-controls="tab-contact" onclick="openTab(event, 'tab-contact')" onkeydown="handleTabKeydown(event, this)">📬 Contact Me</li>
-        </ul>
-    </div>
-
-    <!-- ==================== TAB 1: HOME ==================== -->
-    <div id="tab-home" class="tab-content active" role="tabpanel">
-      
-      <div class="hero-banner reveal">
-        <h1>👋 Hi, I'm Jatin Kumar</h1>
-        <h2>Aspiring <span id="typed-text" class="typed-cursor"></span></h2>
-        <p>Passionate about transforming raw data into actionable business intelligence using <strong>Python, SQL, Power BI, and Excel</strong>.</p>
-      </div>
-
-      <h2>👤 About Me</h2>
-      <div class="grid-2col">
-        <div>
-          <p>I'm a <strong>fresher Data Analyst</strong> passionate about uncovering insights from data and creating impactful visualizations. With hands-on experience in <strong>Python, SQL, Excel, and Power BI</strong>, I specialize in:</p>
-          <ul>
-            <li>📊 <b>Data Cleaning & Transformation</b> - Turning messy data into structured datasets</li>
-            <li>📈 <b>Dashboard Development</b> - Building interactive Power BI dashboards</li>
-            <li>💡 <b>Statistical Analysis</b> - Finding patterns and trends</li>
-            <li>🎯 <b>Business Intelligence</b> - Converting data into actionable recommendations</li>
-          </ul>
-          <p>🎓 <b>Background:</b> Self-taught through online courses and practical projects<br>
-          🔍 <b>Currently:</b> Actively seeking entry-level Data Analyst opportunities<br>
-          💪 <b>Strength:</b> Quick learner with strong problem-solving skills</p>
-        </div>
-        <div class="metrics-card reveal-right">
-          <h3>📊 Quick Stats</h3>
-          <div class="metric-row"><span>Projects Completed</span><strong><span class="counter" data-target="7" data-suffix="+ Live">0</span></strong></div>
-          <div class="metric-row"><span>Tools Mastered</span><strong><span class="counter" data-target="6" data-suffix=" Tools">0</span></strong></div>
-          <div class="metric-row"><span>Learning Hours</span><strong><span class="counter" data-target="500" data-suffix="+ Hours">0</span></strong></div>
-          <div class="metric-row"><span>GitHub Repos</span><strong><span class="counter" data-target="5" data-suffix="+ Public">0</span></strong></div>
-        </div>
-      </div>
-
-      <!-- ===== ANALYTICS PROCESS ===== -->
-<h2>⚙️ My Analytics Process</h2>
-<p style="color:#718096; margin-bottom: 20px;">Every project I work on follows this structured approach — from raw data to actionable insights.</p>
-
-<div class="process-timeline">
-
-  <div class="process-step reveal delay-1">
-    <div class="process-icon">🔍</div>
-    <div class="process-connector"></div>
-    <div class="process-body">
-      <h4>Step 1 — Understand the Data</h4>
-      <p>Before touching any tool, I first understand the <strong>business problem</strong>. What question needs to be answered? What does each column mean? What is the expected outcome? This defines the entire direction of analysis.</p>
-      <div class="process-tags">
-        <span>Problem Definition</span>
-        <span>Domain Understanding</span>
-        <span>Stakeholder Goals</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="process-step reveal delay-2">
-    <div class="process-icon">🧹</div>
-    <div class="process-connector"></div>
-    <div class="process-body">
-      <h4>Step 2 — Data Cleaning</h4>
-      <p>Raw data is always messy. I handle <strong>missing values, duplicates, inconsistent formats, outliers</strong>, and wrong data types using Python (Pandas) or Excel — so the analysis is built on a solid, reliable foundation.</p>
-      <div class="process-tags">
-        <span>Python / Pandas</span>
-        <span>Excel</span>
-        <span>Data Quality</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="process-step reveal delay-3">
-    <div class="process-icon">📐</div>
-    <div class="process-connector"></div>
-    <div class="process-body">
-      <h4>Step 3 — Exploratory Data Analysis (EDA)</h4>
-      <p>I dig deep into the data — checking <strong>distributions, correlations, trends, and anomalies</strong>. This is where patterns start to emerge and hypotheses are formed before any formal analysis begins.</p>
-      <div class="process-tags">
-        <span>NumPy</span>
-        <span>Statistical Analysis</span>
-        <span>Pattern Recognition</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="process-step reveal delay-4">
-    <div class="process-icon">📊</div>
-    <div class="process-connector"></div>
-    <div class="process-body">
-      <h4>Step 4 — Analyze</h4>
-      <p>With clean data and EDA done, I perform focused analysis — <strong>segmentation, aggregations, KPI calculations, trend analysis</strong> — to extract specific answers to the business questions identified in Step 1.</p>
-      <div class="process-tags">
-        <span>SQL / MySQL</span>
-        <span>DAX</span>
-        <span>KPI Analysis</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="process-step reveal delay-5">
-    <div class="process-icon">📈</div>
-    <div class="process-connector"></div>
-    <div class="process-body">
-      <h4>Step 5 — Visualization & Dashboard</h4>
-      <p>Numbers alone don't convince. I build <strong>interactive dashboards in Power BI</strong> and create charts using Matplotlib/Seaborn that tell a clear, compelling story — designed for both technical and non-technical audiences.</p>
-      <div class="process-tags">
-        <span>Power BI</span>
-        <span>Matplotlib</span>
-        <span>Seaborn</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="process-step reveal delay-6">
-    <div class="process-icon">💡</div>
-    <div class="process-body">
-      <h4>Step 6 — Insights & Recommendations</h4>
-      <p>The final and most important step. I translate findings into <strong>clear business recommendations</strong> — what action should be taken, what risk exists, and what opportunity the data reveals. Data is only valuable when it drives decisions.</p>
-      <div class="process-tags">
-        <span>Business Intelligence</span>
-        <span>Storytelling</span>
-        <span>Decision Support</span>
-      </div>
-    </div>
-  </div>
-
-</div>
-
-<hr>
-
-<!-- ===== CERTIFICATION ===== -->
-<h2>🏆 Certification</h2>
-<p style="color:#718096; margin-bottom: 20px;">Verified completion of structured learning — 89 hours of hands-on Data Analytics training.</p>
-
-<div class="cert-card reveal">
-  <div class="cert-left">
-    <div class="cert-platform">
-      <span class="cert-platform-logo">u</span>
-      <span class="cert-platform-name">Udemy</span>
-    </div>
-    <div class="cert-badge">✅ Verified Certificate</div>
-  </div>
-  <div class="cert-middle">
-    <h3 class="cert-title">Complete Data Analyst Bootcamp<br>From Basics To Advanced</h3>
-    <p class="cert-instructors">👨‍🏫 Krish Naik · Jayant Topnani · KRISHAI Technologies</p>
-    <div class="cert-meta">
-      <span>📅 Completed: July 11, 2026</span>
-      <span>⏱️ 89 Total Hours</span>
-      <span>🔖 Ref: UC-0424329d</span>
-    </div>
-  </div>
-  <div class="cert-right">
-    <a href="https://ude.my/UC-0424329d-4d67-4fb8-b596-33cc47844312" 
-       target="_blank" 
-       rel="noopener"
-       class="cert-verify-btn">
-      🔗 Verify Certificate
-    </a>
-    <a href="certificate.pdf" 
-       download 
-       class="cert-download-btn">
-      📥 Download PDF
-    </a>
-  </div>
-</div>
-
-<hr>
-
-      <h2>🛠️ Technical Skills & Toolkit</h2>
-      <div class="grid-3col">
-         <div class="skill-box reveal delay-1">
-          <h3>📊 Data Analysis</h3>
-          <span class="badge">Python (Pandas, NumPy)</span>
-          <span class="badge">SQL (MySQL)</span>
-          <span class="badge">Excel (Advanced)</span>
-          <span class="badge">Statistics</span>
-        </div>
-        <div class="skill-box reveal delay-2">
-          <h3>📈 Visualization</h3>
-          <span class="badge">Power BI</span>
-          <span class="badge">DAX Queries</span>
-          <span class="badge">Matplotlib</span>
-          <span class="badge">Seaborn</span>
-        </div>
-        <div class="skill-box reveal delay-3">
-          <h3>💼 Business Skills</h3>
-          <span class="badge">Data Storytelling</span>
-          <span class="badge">KPI Tracking</span>
-          <span class="badge">Problem Solving</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- ==================== TAB 2: PROJECTS ==================== -->
-    <div id="tab-projects" class="tab-content" role="tabpanel">
-      <h2>🎯 Featured Projects Portfolio</h2>
-      <p>Click on any project to view detailed analysis, code files, and visualizations.</p>
-      
-      <div class="projects-filter-bar">
-        <input type="text" 
-               id="project-search" 
-               class="project-search-input" 
-               placeholder="🔍 Search projects by name or technology...">
-        <div id="tag-filter-row" class="tag-filter-row"></div>
-        <p id="results-count" class="results-count"></p>
-      </div>
-
-      <div id="projects-container">
-        <div class="skeleton-list">
-          <div class="skeleton-project-card"><div class="skeleton-line wide"></div><div class="skeleton-line medium"></div></div>
-          <div class="skeleton-project-card"><div class="skeleton-line wide"></div><div class="skeleton-line medium"></div></div>
-          <div class="skeleton-project-card"><div class="skeleton-line wide"></div><div class="skeleton-line medium"></div></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ==================== TAB 3: GALLERY ==================== -->
-    <div id="tab-gallery" class="tab-content" role="tabpanel">
-      <h2>🖼️ Complete Portfolio Gallery</h2>
-      <p>All project visualizations and dashboard screenshots.</p>
-      
-      <div class="gallery-controls">
-        <label for="gallery-project-filter">🔍 Filter by Project:</label>
-        <select id="gallery-project-filter" onchange="filterGalleryImages()">
-          <option value="all">All Projects</option>
-        </select>
-        <span id="gallery-count" class="results-count"></span>
-      </div>
-
-      <div id="gallery-grid" class="gallery-grid">
-        <p class="loading-text">Loading gallery...</p>
-      </div>
-    </div>
-
-    <!-- ==================== TAB 4: KAGGLE ==================== -->
-    <div id="tab-kaggle" class="tab-content" role="tabpanel">
-      <h2>📊 My Kaggle Datasets</h2>
-      <p>All datasets I have created and published on Kaggle. Click to access directly.</p>
-      <hr>
-      
-      <div id="kaggle-datasets-container">
-        <p class="loading-text">Loading datasets...</p>
-      </div>
-
-      <div class="kaggle-profile-card">
-        <div class="kaggle-profile-left">
-          <div class="kaggle-avatar">K</div>
-          <div>
-            <h3>Jatin Kumar</h3>
-            <p>@jatinkhandelwal112</p>
-          </div>
-        </div>
-        <div class="kaggle-profile-right">
-          <h3>🏆 My Kaggle Profile</h3>
-          <p>View all my published datasets, notebooks and contributions on Kaggle.</p>
-          <a href="https://www.kaggle.com/jatinkhandelwal112" 
-             target="_blank" 
-             rel="noopener"
-             class="btn-kaggle-main">
-            <i class="fab fa-kaggle"></i> Visit Kaggle Profile
-          </a>
-        </div>
-      </div>
-    </div>
-    <!-- ==================== TAB: DATASET OVERVIEW (CASE STUDY) ==================== -->
-<div id="tab-casestudy" class="tab-content" role="tabpanel">
-  <h2>📁 Dataset Overview (Case Study)</h2>
-  <p id="case-study-intro" class="case-study-intro">Loading...</p>
-  <hr>
-
-  <div id="case-studies-container">
-    <div class="skeleton-list">
-      <div class="skeleton-project-card"><div class="skeleton-line wide"></div><div class="skeleton-line medium"></div></div>
-      <div class="skeleton-project-card"><div class="skeleton-line wide"></div><div class="skeleton-line medium"></div></div>
-    </div>
-  </div>
-</div>
-
-   <!-- ==================== TAB 5: CLEAN TOOL ==================== -->
-<div id="tab-tool" class="tab-content" role="tabpanel">
-  <h2>🧹 Clean & Visualize Your Data
-    <span class="info-badge" 
-          title="Maximum 150,000 rows. Zero data stored after session ends.">
-      ℹ️
-    </span>
-  </h2>
-
-  <div class="tool-info-banner">
-    <div class="tool-info-item">
-      🔒 <strong>Privacy First</strong> - Your data is never stored
-    </div>
-    <div class="tool-info-item">
-      📊 <strong>Max 150,000 rows</strong> per file
-    </div>
-    <div class="tool-info-item">
-      ⚡ <strong>Session Only</strong> - Data clears on reload
-    </div>
-    <div class="tool-info-item">
-      📁 <strong>Formats</strong> - CSV, Excel, JSON
-    </div>
-  </div>
-
-  <!-- Wake Up Wrapper -->
-  <div id="streamlit-wake-wrapper">
-
-    <!-- Placeholder (pehle yeh dikhega) -->
-    <div id="streamlit-placeholder" class="streamlit-placeholder">
-      <div class="streamlit-placeholder-inner">
-        <div class="st-wake-icon">🧹</div>
-        <h3>Data Cleaning & Visualization Tool</h3>
-        <p style="color:#718096; margin-bottom: 6px;">
-          Upload CSV/Excel/JSON → Clean → Visualize
-        </p>
-        <small style="color:#a0aec0;">
-          ⚠️ Hosted on free server — first load takes 15-20 seconds
-        </small>
-        <br>
-        <button id="load-streamlit-btn" 
-                onclick="loadStreamlitNow()" 
-                class="st-load-btn">
-          ▶ Launch Tool
-        </button>
-      </div>
-    </div>
-
-    <!-- Iframe (baad mein load hoga) -->
-    <iframe
-      id="streamlit-iframe"
-      src=""
-      data-src="https://jatinanalytics.streamlit.app/?embed=true"
-      class="tool-frame"
-      frameborder="0"
-      title="Data Cleaning and Visualization Tool"
-      loading="lazy"
-      style="display:none;">
-    </iframe>
-
-  </div>
-</div>
-
-    <!-- ==================== TAB 6: RESUME ==================== -->
-    <div id="tab-resume" class="tab-content" role="tabpanel">
-      <h2>📄 Resume & Professional Profile</h2>
-
-      <div class="resume-wrapper">
-        <div class="resume-main">
-          <h1 class="candidate-name">Jatin Kumar</h1>
-          <p class="candidate-role">Aspiring Data Analyst</p>
-
-          <div class="resume-section">
-            <h3>🎓 Education</h3>
-            <p class="degree-title"><b>Master's Degree</b></p>
-            <ul>
-              <li><b>Program:</b> MBA in Operation Management</li>
-              <li><b>University:</b> Vivekananda Global University</li>
-              <li><b>Status:</b> Pursuing</li>
-            </ul>
-            <p class="degree-title"><b>Bachelor's Degree</b></p>
-            <ul>
-              <li><b>Program:</b> Bachelor of Computer Application</li>
-              <li><b>University:</b> Sikkim Alpine University</li>
-              <li><b>Year:</b> 2022–2025</li>
-            </ul>
-            <p class="degree-title"><b>Diploma</b></p>
-            <ul>
-              <li><b>Program:</b> Diploma in Pharmacy</li>
-              <li><b>University:</b> Apeejay Stya University</li>
-              <li><b>Year:</b> 2020–2022</li>
-            </ul>
-          </div>
-
-          <div class="resume-section">
-            <h3>💼 Technical Expertise</h3>
-            <ul>
-              <li><b>Languages:</b> Python, SQL</li>
-              <li><b>Tools:</b> Power BI, DAX, Excel, Pandas, NumPy</li>
-              <li><b>Databases:</b> MySQL</li>
-              <li><b>Visualization:</b> Matplotlib, Seaborn, Plotly</li>
-            </ul>
-          </div>
-
-          <div class="resume-section">
-            <h3>🏆 Key Achievements</h3>
-            <ul class="achievements-list">
-              <li>✅ Completed 7+ end-to-end data analysis projects</li>
-              <li>✅ Built interactive dashboards viewed by 100+ users</li>
-              <li>✅ Self-taught Python and SQL through practical projects</li>
-              <li>✅ Active contributor on GitHub and Kaggle</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="resume-sidebar">
-          <div class="side-card">
-            <h3>🕹️ Download Options</h3>
-            <a href="resume.pdf" download class="btn-download-pdf">📄 Download Resume (PDF)</a>
-            <div class="status-download">✅ Resume available for download</div>
-          </div>
-          <div class="side-card">
-            <h3>📊 Portfolio Stats</h3>
-            <div class="stat-block"><p class="stat-label">Projects</p><p class="stat-number"><span class="counter" data-target="7" data-suffix="+">0</span></p></div>
-            <div class="stat-block"><p class="stat-label">Code Files</p><p class="stat-number"><span class="counter" data-target="15" data-suffix="+">0</span></p></div>
-            <div class="stat-block"><p class="stat-label">Visualizations</p><p class="stat-number"><span class="counter" data-target="20" data-suffix="+">0</span></p></div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ==================== TAB 7: CONTACT ==================== -->
-    <div id="tab-contact" class="tab-content" role="tabpanel">
-      <h2>📬 Let's Connect!</h2>
-      <p>I'm actively looking for Data Analyst opportunities. Feel free to reach out!</p>
-
-      <div class="grid-4col" style="margin-bottom:30px;">
-        <div class="card-social">
-          <div class="card-social-icon">📧</div>
-          <h4>Email</h4>
-          <a href="mailto:jatin@jatinanalytics.co.in">Send Message</a>
-        </div>
-        <div class="card-social">
-          <div class="card-social-icon">💼</div>
-          <h4>LinkedIn</h4>
-          <a href="https://www.linkedin.com/in/jatin-kumar-5a46a720a" target="_blank" rel="noopener">Connect</a>
-        </div>
-        <div class="card-social">
-          <div class="card-social-icon">🐙</div>
-          <h4>GitHub</h4>
-          <a href="https://github.com/jating1416-debug" target="_blank" rel="noopener">View Code</a>
-        </div>
-        <div class="card-social">
-          <div class="card-social-icon">🏆</div>
-          <h4>Kaggle</h4>
-          <a href="https://www.kaggle.com/jatinkhandelwal112" target="_blank" rel="noopener">Explore</a>
-        </div>
-      </div>
-
-      <hr>
-      <h3>✉️ Send Me a Direct Message</h3>
-
-      <form action="https://api.web3forms.com/submit" method="POST" id="contact-form" class="contact-form" novalidate>
-        <input type="hidden" name="access_key" value="224be4-96c2-4ed7-8ba5-675213ca5199">
-
-        <div class="form-row">
-          <div class="form-group">
-            <label for="form-name">Your Name *</label>
-            <input type="text" id="form-name" name="name" placeholder="John Doe" required>
-          </div>
-          <div class="form-group">
-            <label for="form-email">Your Email *</label>
-            <input type="email" id="form-email" name="email" placeholder="john@example.com" required>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="form-subject">Subject</label>
-          <input type="text" id="form-subject" name="subject" placeholder="Job Opportunity / Collaboration / Query">
-        </div>
-        <div class="form-group">
-          <label for="form-message">Message *</label>
-          <textarea id="form-message" name="message" rows="5" placeholder="Hi Jatin, I came across your portfolio..." required></textarea>
-        </div>
-        <button type="submit" class="form-submit-btn">📤 Send Message</button>
-        <div id="form-status"></div>
-      </form>
-
-      <hr>
-      <div class="grid-2col" style="margin-top:20px;">
-        <div>
-          <h4>📍 Location</h4>
-          <p>India (Open to Remote)</p>
-          <h4>⏰ Response Time</h4>
-          <p>Within 24 hours</p>
-        </div>
-        <div>
-          <h4>💼 Availability</h4>
-          <p>🟢 Open for Full-time, Internship, WFH roles</p>
-          <h4>📧 Business Email</h4>
-          <p>jatin@jatinanalytics.co.in</p>
-        </div>
-      </div>
-    </div>
-
-  </main>
-</div>
-
-<!-- ==================== FOOTER ==================== -->
-<footer>
-  <p><strong>Jatin Kumar</strong> - Data Analyst Portfolio | © 2026 All Rights Reserved</p>
-  <p class="visitor-line">
-    👁️ Total Visitors: <strong id="visitor-count">...</strong>
-  </p>
-  <button id="cache-clear-btn" onclick="clearCacheManually()" title="Clear cache to see latest updates">
-    🔄 Refresh Data
-  </button>
-  <p class="footer-links">
-    <a href="/sitemap.xml">Sitemap</a> | 
-    <a href="mailto:jatin@jatinanalytics.co.in">Contact</a>
-  </p>
-  <p class="footer-tagline">📊 Turning Data into Decisions | 🚀 Always Learning | 💡 Problem Solver</p>
-</footer>
-
-<!-- ==================== LIGHTBOX ==================== -->
-<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
-  <div class="lightbox-content" onclick="event.stopPropagation()">
-    <button class="lightbox-close" onclick="closeLightbox()">✕</button>
-    <img id="lightbox-img" src="" alt="Dashboard Screenshot">
-    <p id="lightbox-caption"></p>
-  </div>
-</div>
-
-<!-- AI Chatbot Widget -->
-<div id="chatbot-widget">
-  <button id="chatbot-toggle" onclick="toggleChatbot()" title="Ask me about my projects!" aria-label="Open chatbot">
-    💬
-    <span id="chatbot-notify" class="chatbot-notify-dot" style="display:none;"></span>
-  </button>
-  <div id="chatbot-box" class="chatbot-hidden">
-    <div class="chatbot-header">
-      <span>🤖 Ask Jatin's Portfolio AI</span>
-      <button onclick="toggleChatbot()" class="chatbot-close-btn">✕</button>
-    </div>
-    <div id="chatbot-messages" class="chatbot-messages">
-      <div class="bot-msg">
-        👋 Hi! I'm Jatin's Portfolio Assistant.<br><br>
-        Ask me anything about his projects, skills, or experience!<br><br>
-        <b>Quick Questions:</b>
-      </div>
-      <div class="quick-questions">
-        <button onclick="askQuestion('What projects has Jatin built?')">📊 Projects</button>
-        <button onclick="askQuestion('What are Jatin skills?')">🛠️ Skills</button>
-        <button onclick="askQuestion('How to contact Jatin?')">📬 Contact</button>
-        <button onclick="askQuestion('Tell me about Bank Analytics project')">🏦 Bank Project</button>
-        <button onclick="askQuestion('What tools does Jatin use?')">⚙️ Tools</button>
-        <button onclick="askQuestion('Is Jatin available for work?')">💼 Availability</button>
-      </div>
-    </div>
-    <div class="chatbot-input-row">
-      <input type="text" 
-             id="chatbot-input" 
-             placeholder="Type your question..." 
-             onkeydown="if(event.key==='Enter') sendChatMessage()">
-      <button onclick="sendChatMessage()">➤</button>
-    </div>
-  </div>
-</div>
-
-<!-- PapaParse (CSV parsing ke liye) -->
-<script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
