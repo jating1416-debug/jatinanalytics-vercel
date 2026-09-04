@@ -474,7 +474,7 @@ function projectCard(project) {
 }
 
 const IMAGE_EXTS = ['png', 'jpg', 'jpeg', 'webp', 'gif'];
-const PROJECT_TOOL_FILTERS = ['All', 'Power BI', 'SQL', 'Python', 'DAX'];
+const PROJECT_TOOL_FILTERS = ['All'];
 
 /* Card images load automatically from the project's GitHub folder —
    whatever image file (any name) exists in projects/<folder>/ is used.
@@ -535,6 +535,7 @@ function initProjectSearch() {
     window.clearTimeout(timer);
     timer = window.setTimeout(() => {
       projectState.query = input.value;
+      if (input.value.trim()) trackEvent('search_projects', { query: input.value.trim() });
       renderProjectGrid();
     }, 120);
   });
@@ -613,24 +614,51 @@ function initDatasetLibrary() {
 
 const detailDialog = () => document.getElementById('detail-dialog');
 
+/* ---------- Robust modal helpers (works even if top layer is disabled) ---------- */
+let modalDepth = 0;
+function openModalDialog(dialog) {
+  if (!dialog) return;
+  try {
+    dialog.showModal();
+  } catch (err) {
+    dialog.classList.add('dialog-fallback');
+    dialog.setAttribute('open', '');
+  }
+  modalDepth += 1;
+  if (modalDepth === 1) {
+    document.documentElement.style.overflow = 'hidden';
+    document.body.classList.add('dialog-open');
+  }
+}
+function closeModalDialog(dialog) {
+  if (dialog) {
+    dialog.classList.remove('dialog-fallback');
+    if (dialog.hasAttribute('open')) dialog.removeAttribute('open');
+    try { if (dialog.open) dialog.close(); } catch (err) {}
+  }
+  modalDepth = Math.max(0, modalDepth - 1);
+  if (modalDepth === 0) {
+    document.documentElement.style.overflow = '';
+    document.body.classList.remove('dialog-open');
+  }
+}
+
 function openDetailDialog(eyebrow, title) {
   const dialog = detailDialog();
   const eyebrowEl = document.getElementById('detail-dialog-eyebrow');
   const titleEl = document.getElementById('detail-dialog-title');
   const body = document.getElementById('detail-dialog-body');
   if (!dialog || !body) return;
+  if (dialog.open || dialog.hasAttribute('open')) closeModalDialog(dialog);
   eyebrowEl.textContent = eyebrow;
   titleEl.textContent = title;
   body.innerHTML = '';
   body.scrollTop = 0;
-  if (typeof dialog.showModal === 'function') dialog.showModal();
-  else dialog.setAttribute('open', '');
+  openModalDialog(dialog);
 }
 
 function closeDetailDialog() {
-  const dialog = detailDialog();
-  if (!dialog) return;
-  if (dialog.open) dialog.close();
+  closeModalDialog(detailDialog());
 }
 
 /* ---------- Deep links: #project=<id> and #case=<id> ---------- */
@@ -643,6 +671,7 @@ function detailLinkFor(kind, id) {
 async function copyDetailLink(copyId, button) {
   const [kind, id] = copyId.split(':');
   const url = detailLinkFor(kind, id);
+  trackEvent('copy_link', { link_kind: kind, link_id: id });
   try {
     await navigator.clipboard.writeText(url);
   } catch (err) {
@@ -839,6 +868,7 @@ function projectDetailsSkeleton(project) {
       <p class="detail-note">Loading visuals…</p>
     </section>
     <div class="detail-footer-actions">
+      <button class="detail-back-link" type="button" data-back-to-work>&#8592; Back to projects</button>
       <button class="button button-secondary" type="button" data-dashboard-id="${escapeHTML(project.id)}">Open live dashboard</button>
       <a class="button button-primary" href="${escapeHTML(project.source)}" target="_blank" rel="noopener">Open source on GitHub</a>
       <button class="detail-copy-link" type="button" data-copy-id="project:${escapeHTML(project.id)}">Copy project link</button>
@@ -934,6 +964,7 @@ async function loadProjectLiveData(project) {
 function openProjectDetails(projectId) {
   const project = PROJECTS.find(p => p.id === projectId);
   if (!project) return;
+  trackEvent('view_project_details', { project_id: projectId });
   openDetailDialog('PROJECT DETAILS', project.title);
   const body = document.getElementById('detail-dialog-body');
   if (!body) return;
@@ -1003,6 +1034,7 @@ function caseStudyHTML(datasetId, dataset) {
 function openCaseStudy(datasetId) {
   const dataset = DATASETS.find(d => d.id === datasetId);
   if (!dataset) return;
+  trackEvent('view_case_study', { dataset_id: datasetId });
   openDetailDialog('DATASET CASE STUDY', dataset.title);
   const body = document.getElementById('detail-dialog-body');
   if (!body) return;
@@ -1020,11 +1052,23 @@ function initDetailDialog() {
   dialog.addEventListener('click', event => {
     if (event.target === dialog) closeDetailDialog();
   });
-  dialog.addEventListener('cancel', () => { /* body clears on next open */ });
+  dialog.addEventListener('cancel', () => { closeModalDialog(dialog); });
 }
 
 function initDetailTriggers() {
   document.body.addEventListener('click', event => {
+    const backTrigger = event.target.closest('[data-back-to-work]');
+    if (backTrigger) {
+      closeDetailDialog();
+      if (/^#(?:project|case)=/.test(window.location.hash)) {
+        history.replaceState(null, '', window.location.pathname + window.location.search);
+      }
+      window.setTimeout(() => {
+        const work = document.getElementById('work');
+        if (work) work.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 60);
+      return;
+    }
     const copyTrigger = event.target.closest('[data-copy-id]');
     if (copyTrigger) { copyDetailLink(copyTrigger.dataset.copyId, copyTrigger); return; }
     const detailsTrigger = event.target.closest('[data-details-id]');
@@ -1049,14 +1093,11 @@ function openLightbox(src, caption) {
   img.src = src;
   img.alt = caption || 'Image preview';
   if (captionEl) captionEl.textContent = caption || '';
-  if (typeof dialog.showModal === 'function') dialog.showModal();
-  else dialog.setAttribute('open', '');
+  openModalDialog(dialog);
 }
 
 function closeLightbox() {
-  const dialog = document.getElementById('lightbox-dialog');
-  if (!dialog) return;
-  if (dialog.open) dialog.close();
+  closeModalDialog(document.getElementById('lightbox-dialog'));
 }
 
 function initLightbox() {
@@ -1067,6 +1108,7 @@ function initLightbox() {
   dialog.addEventListener('click', event => {
     if (event.target === dialog) closeLightbox();
   });
+  dialog.addEventListener('cancel', () => { closeLightbox(); });
 
   document.body.addEventListener('click', event => {
     const profileImg = event.target.closest('#profile-photo');
@@ -1100,7 +1142,7 @@ function initDashboardDialog() {
   if (!dialog || !frame || !title || !fullLink || !closeButton) return;
 
   const closeDialog = () => {
-    if (dialog.open) dialog.close();
+    closeModalDialog(dialog);
     frame.src = 'about:blank';
   };
 
@@ -1109,11 +1151,12 @@ function initDashboardDialog() {
     if (!trigger) return;
     const project = PROJECTS.find(item => item.id === trigger.dataset.dashboardId);
     if (!project) return;
+    trackEvent('view_live_dashboard', { project_id: project.id });
     title.textContent = project.title;
     fullLink.href = project.dashboard;
     frame.src = project.dashboard;
-    if (typeof dialog.showModal === 'function') dialog.showModal();
-    else dialog.setAttribute('open', '');
+    if (dialog.open || dialog.hasAttribute('open')) closeModalDialog(dialog);
+    openModalDialog(dialog);
   });
 
   closeButton.addEventListener('click', closeDialog);
@@ -1121,6 +1164,7 @@ function initDashboardDialog() {
     if (event.target === dialog) closeDialog();
   });
   dialog.addEventListener('cancel', () => {
+    closeModalDialog(dialog);
     window.setTimeout(() => { frame.src = 'about:blank'; }, 0);
   });
 }
@@ -1159,8 +1203,278 @@ function initProfilePhoto() {
 }
 
 /* ============================================================
+   Animated stat counters
+   ============================================================ */
+
+function initCounters() {
+  const targets = document.querySelectorAll('[data-count]');
+  if (!targets.length) return;
+
+  const animate = el => {
+    const target = parseInt(el.dataset.count, 10) || 0;
+    const suffix = el.dataset.suffix || '';
+    const duration = 900;
+    const start = performance.now();
+    el.textContent = '0' + suffix;
+    const step = now => {
+      const t = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - t, 3);
+      el.textContent = Math.round(target * eased) + suffix;
+      if (t < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  };
+
+  if (!('IntersectionObserver' in window)) {
+    targets.forEach(el => { el.textContent = el.dataset.count + (el.dataset.suffix || ''); });
+    return;
+  }
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animate(entry.target);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+  targets.forEach(el => observer.observe(el));
+}
+
+/* ============================================================
+   Scroll progress bar
+   ============================================================ */
+
+function initScrollProgress() {
+  const bar = document.getElementById('scroll-progress');
+  if (!bar) return;
+  const update = () => {
+    const doc = document.documentElement;
+    const max = doc.scrollHeight - window.innerHeight;
+    bar.style.width = (max > 0 ? (window.scrollY / max) * 100 : 0) + '%';
+  };
+  window.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update);
+  update();
+}
+
+/* ============================================================
+   Copy-email quick action
+   ============================================================ */
+
+function initCopyEmail() {
+  document.querySelectorAll('[data-copy-email]').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const email = btn.dataset.copyEmail;
+      try {
+        await navigator.clipboard.writeText(email);
+      } catch (err) {
+        const textarea = document.createElement('textarea');
+        textarea.value = email;
+        textarea.style.position = 'fixed';
+        textarea.style.opacity = '0';
+        document.body.appendChild(textarea);
+        textarea.select();
+        try { document.execCommand('copy'); } catch (e2) { /* ignore */ }
+        textarea.remove();
+      }
+      trackEvent('copy_email', { email });
+      const original = btn.textContent;
+      btn.textContent = 'Copied ✓';
+      window.setTimeout(() => { btn.textContent = original; }, 1600);
+    });
+  });
+}
+
+/* ============================================================
+   Keyboard shortcuts (" / " focuses project search)
+   ============================================================ */
+
+function initKeyboardShortcuts() {
+  const search = document.getElementById('project-search');
+  if (!search) return;
+  document.addEventListener('keydown', event => {
+    const active = document.activeElement;
+    const typing = active && /input|textarea|select/i.test(active.tagName);
+    if (event.key === '/' && !typing) {
+      event.preventDefault();
+      search.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      search.focus();
+    } else if (event.key === 'Escape' && active === search) {
+      search.blur();
+    }
+  });
+}
+
+/* ============================================================
+   Analytics event tracking (GA4)
+   ============================================================ */
+
+function trackEvent(name, params) {
+  try {
+    if (typeof window.gtag === 'function') window.gtag('event', name, params || {});
+  } catch (err) { /* analytics must never break the page */ }
+}
+
+/* ============================================================
    Mobile navigation
    ============================================================ */
+
+/* ---------- DARK MODE ---------- */
+function applyTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  const btn = document.getElementById('theme-toggle');
+  if (btn) {
+    btn.setAttribute('aria-pressed', String(theme === 'dark'));
+    btn.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+  }
+}
+function initDarkMode() {
+  let stored = null;
+  try { stored = localStorage.getItem('jatin-theme'); } catch (e) {}
+  applyTheme(stored === 'dark' ? 'dark' : 'light');
+  const btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  btn.addEventListener('click', () => {
+    const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    applyTheme(next);
+    try { localStorage.setItem('jatin-theme', next); } catch (e) {}
+    trackEvent('theme_toggle', { theme: next });
+  });
+}
+
+/* ---------- COMMAND PALETTE (Ctrl+K) ---------- */
+const CMDK_SECTIONS = [
+  { label: 'About', target: 'about' },
+  { label: 'My Journey', target: 'journey' },
+  { label: 'Projects', target: 'work' },
+  { label: 'Process', target: 'process' },
+  { label: 'Skills', target: 'skills' },
+  { label: 'Resume & Education', target: 'resume' },
+  { label: 'Datasets & Case Studies', target: 'datasets' },
+  { label: 'Contact', target: 'contact' }
+];
+function buildCmdkItems() {
+  const items = CMDK_SECTIONS.map(s => ({ kind: 'section', label: s.label, hint: 'Go to section', target: s.target }));
+  PROJECTS.forEach(p => items.push({ kind: 'project', label: p.title, hint: p.metric || 'Project details', id: p.id }));
+  DATASETS.forEach(d => items.push({ kind: 'dataset', label: d.title, hint: 'Case study · ' + d.type, id: d.id }));
+  items.push(
+    { kind: 'action', label: 'Copy email address', hint: 'jating1416@gmail.com', action: 'copy-email' },
+    { kind: 'action', label: 'Download resume (PDF)', hint: 'Action', action: 'resume' },
+    { kind: 'action', label: 'Toggle dark mode', hint: 'Action', action: 'theme' },
+    { kind: 'action', label: 'Ask portfolio assistant', hint: 'Action', action: 'assistant' }
+  );
+  return items;
+}
+function initCommandPalette() {
+  const overlay = document.getElementById('cmdk');
+  const input = document.getElementById('cmdk-input');
+  const list = document.getElementById('cmdk-list');
+  const opener = document.getElementById('cmdk-open');
+  if (!overlay || !input || !list) return;
+  const items = buildCmdkItems();
+  const kindLabel = { section: 'Section', project: 'Project', dataset: 'Dataset', action: 'Action' };
+  let visible = [];
+  let activeIndex = 0;
+  let isOpen = false;
+
+  function render(query) {
+    const q = String(query || '').trim().toLowerCase();
+    visible = items
+      .map((it, i) => {
+        const hay = (it.label + ' ' + (it.hint || '') + ' ' + it.kind).toLowerCase();
+        let score = 0;
+        if (q) {
+          score = it.label.toLowerCase().startsWith(q) ? 2 : (hay.includes(q) ? 1 : -1);
+        }
+        return { it, i, score };
+      })
+      .filter(r => r.score >= 0)
+      .sort((a, b) => (b.score - a.score) || (a.i - b.i))
+      .slice(0, 8)
+      .map(r => r.it);
+    activeIndex = 0;
+    list.innerHTML = visible.length
+      ? visible.map((it, idx) => (
+        `<li role="option" aria-selected="${idx === 0}" data-cmdk-index="${idx}" class="${idx === 0 ? 'is-active' : ''}">` +
+        `<span class="cmdk-kind">${kindLabel[it.kind]}</span>` +
+        `<span class="cmdk-label">${escapeHTML(it.label)}</span>` +
+        (it.hint ? `<span class="cmdk-hint">${escapeHTML(it.hint)}</span>` : '') +
+        `</li>`
+      )).join('')
+      : '<li class="cmdk-empty">No matches — try "zomato", "skills" or "email"</li>';
+  }
+
+  function closeCmdk() {
+    if (!isOpen) return;
+    isOpen = false;
+    overlay.hidden = true;
+    input.value = '';
+    document.body.classList.remove('cmdk-open');
+  }
+
+  function run(item) {
+    if (!item) return;
+    closeCmdk();
+    trackEvent('command_palette', { kind: item.kind, label: item.label });
+    if (item.kind === 'section') {
+      const el = document.getElementById(item.target);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else if (item.kind === 'project') {
+      openProjectDetails(item.id);
+    } else if (item.kind === 'dataset') {
+      openCaseStudy(item.id);
+    } else if (item.kind === 'action') {
+      const byAction = {
+        'copy-email': '[data-copy-email]',
+        'resume': '.nav-resume',
+        'theme': '#theme-toggle',
+        'assistant': '#assistant-toggle'
+      };
+      const el = document.querySelector(byAction[item.action]);
+      if (el) el.click();
+    }
+  }
+
+  function openCmdk() {
+    if (isOpen) return;
+    isOpen = true;
+    overlay.hidden = false;
+    document.body.classList.add('cmdk-open');
+    requestAnimationFrame(() => { input.focus(); render(''); });
+  }
+
+  function moveActive(delta) {
+    if (!visible.length) return;
+    activeIndex = (activeIndex + delta + visible.length) % visible.length;
+    Array.from(list.children).forEach((li, idx) => {
+      li.classList.toggle('is-active', idx === activeIndex);
+      li.setAttribute('aria-selected', String(idx === activeIndex));
+    });
+    const active = list.children[activeIndex];
+    if (active) active.scrollIntoView({ block: 'nearest' });
+  }
+
+  overlay.addEventListener('click', e => { if (e.target === overlay) closeCmdk(); });
+  if (opener) opener.addEventListener('click', openCmdk);
+  input.addEventListener('input', () => render(input.value));
+  input.addEventListener('keydown', e => {
+    if (e.key === 'ArrowDown') { e.preventDefault(); moveActive(1); }
+    else if (e.key === 'ArrowUp') { e.preventDefault(); moveActive(-1); }
+    else if (e.key === 'Enter') { e.preventDefault(); run(visible[activeIndex]); }
+  });
+  list.addEventListener('click', e => {
+    const li = e.target.closest('li[data-cmdk-index]');
+    if (li) run(visible[Number(li.dataset.cmdkIndex)]);
+  });
+  document.addEventListener('keydown', e => {
+    if ((e.ctrlKey || e.metaKey) && String(e.key).toLowerCase() === 'k') {
+      e.preventDefault();
+      if (isOpen) closeCmdk(); else openCmdk();
+    } else if (e.key === 'Escape' && isOpen) {
+      closeCmdk();
+    }
+  });
+}
 
 function initMobileNavigation() {
   const toggle = document.querySelector('.menu-toggle');
@@ -1257,6 +1571,7 @@ function initContactForm() {
       if (!response.ok || !result.success) throw new Error(result.message || 'Unable to send the message.');
       form.reset();
       status.textContent = 'Message sent. I will get back to you soon.';
+      trackEvent('contact_form_submitted');
     } catch (error) {
       status.textContent = 'Message could not be sent. Please email jating1416@gmail.com directly.';
       status.classList.add('is-error');
@@ -1421,5 +1736,11 @@ document.addEventListener('DOMContentLoaded', () => {
   initActiveNavigation();
   initContactForm();
   initPortfolioAssistant();
+  initCounters();
+  initScrollProgress();
+  initCopyEmail();
+  initKeyboardShortcuts();
+  initDarkMode();
+  initCommandPalette();
   handleDeepLink();
 });

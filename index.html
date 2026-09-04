@@ -53,8 +53,16 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script>
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem('jatin-theme'); } catch (e) {}
+      document.documentElement.setAttribute('data-theme', t === 'dark' ? 'dark' : 'light');
+    })();
+  </script>
 </head>
 <body>
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
   <header class="site-header" id="top">
@@ -68,6 +76,7 @@
 
       <nav class="primary-nav" id="primary-navigation" aria-label="Primary navigation">
         <a href="#about">About</a>
+        <a href="#journey">Journey</a>
         <a href="#work">Projects</a>
         <a href="#skills">Skills</a>
         <a href="#resume">Resume</a>
@@ -75,6 +84,14 @@
         <a href="#contact">Contact</a>
       </nav>
 
+      <button class="nav-icon-btn" type="button" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode" aria-pressed="false">
+        <svg class="theme-icon theme-icon-moon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        <svg class="theme-icon theme-icon-sun" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path></svg>
+      </button>
+      <button class="nav-cmdk" type="button" id="cmdk-open" aria-label="Open command palette (Ctrl+K)" title="Command palette (Ctrl+K)">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.35-4.35"></path></svg>
+        <kbd>Ctrl K</kbd>
+      </button>
       <a class="nav-resume" href="resume.pdf" download>Download Resume</a>
     </div>
   </header>
@@ -126,11 +143,11 @@
             <p class="panel-label">Focus</p>
             <p class="panel-value">Business intelligence</p>
           </div>
-          <div class="panel-stat"><strong>7</strong><span>projects</span></div>
+          <div class="panel-stat"><strong data-count="7">7</strong><span>projects</span></div>
         </div>
         <div class="panel-stats-row" aria-label="Profile highlights">
-          <div><strong>3</strong><span>Kaggle datasets</span></div>
-          <div><strong>89h</strong><span>certified training</span></div>
+          <div><strong data-count="3">3</strong><span>Kaggle datasets</span></div>
+          <div><strong data-count="89" data-suffix="h">89h</strong><span>certified training</span></div>
           <div><strong>1M+</strong><span>rows analyzed</span></div>
         </div>
         <div class="mini-chart" aria-hidden="true">
@@ -150,6 +167,67 @@
       </aside>
     </section>
 
+    <section class="journey-section section-shell" id="journey" aria-labelledby="journey-title">
+      <p class="eyebrow">MY JOURNEY</p>
+      <div class="journey-heading">
+        <h2 id="journey-title">From pharmacy counter to analytics dashboards</h2>
+        <p>Two years as a Registered Pharmacist taught me precision, compliance and dealing with real people. Now I bring that discipline to data — as a fresher building toward my first analyst role.</p>
+      </div>
+
+      <div class="timeline">
+
+        <div class="milestone reveal">
+          <div class="milestone-card">
+            <div class="milestone-top">
+              <span class="milestone-year">2024 – 2026</span>
+              <span class="milestone-role">Registered Pharmacist</span>
+            </div>
+            <p class="milestone-org">My first profession · 2 years of full-time experience</p>
+            <p>Worked as a Registered Pharmacist — prescription verification, inventory and stock management, customer counselling and strict regulatory compliance. Every day was about accuracy, record-keeping and process discipline: the same skills that power clean data workflows.</p>
+            <div class="milestone-tags"><span>PRECISION</span><span>COMPLIANCE</span><span>STOCK &amp; RECORDS</span><span>CUSTOMER HANDLING</span></div>
+          </div>
+        </div>
+
+        <div class="milestone reveal delay-1">
+          <div class="milestone-card">
+            <div class="milestone-top">
+              <span class="milestone-year">JUL 2026</span>
+              <span class="milestone-role">Certified — Complete Data Analyst Bootcamp</span>
+            </div>
+            <p class="milestone-org">89-hour certification · Krish Naik / KRISHAI Technologies</p>
+            <p>Structured training across the full analytics stack — SQL, Python, data modelling and Power BI — with a verified certificate. Paired it with self-driven practice on real project datasets.</p>
+            <div class="milestone-tags"><span>SQL</span><span>PYTHON</span><span>POWER BI</span><span>DAX</span></div>
+          </div>
+        </div>
+
+        <div class="milestone reveal delay-2">
+          <div class="milestone-card">
+            <div class="milestone-top">
+              <span class="milestone-year">2026</span>
+              <span class="milestone-role">7 End-to-End Analytics Projects</span>
+            </div>
+            <p class="milestone-org">Self-taught portfolio · Power BI + SQL + Python</p>
+            <p>Built and deployed seven complete analytics projects — from a 200K-order supply chain control tower to multi-table bank fraud analysis — each with a live Power BI dashboard, documented data previews and full source on GitHub.</p>
+            <div class="milestone-tags"><span>200K+ ROWS ANALYSED</span><span>LIVE DASHBOARDS</span><span>GITHUB SOURCE</span></div>
+          </div>
+        </div>
+
+        <div class="milestone is-active reveal delay-3">
+          <div class="milestone-card">
+            <span class="milestone-status">OPEN TO OFFERS</span>
+            <div class="milestone-top">
+              <span class="milestone-year">NOW →</span>
+              <span class="milestone-role">Fresher Data Analyst — seeking my first role</span>
+            </div>
+            <p class="milestone-org">India · Ready to join</p>
+            <p>Actively looking for my first Data Analyst position. Bringing 2 years of professional discipline from pharmacy, a certified analytics foundation, and a portfolio that proves the full pipeline — from raw CSV to executive dashboard.</p>
+            <div class="milestone-tags"><span>DATA ANALYST</span><span>BUSINESS INTELLIGENCE</span><span>FIRST ROLE</span></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
     <section class="section-shell work-section" id="work" aria-labelledby="work-title">
       <div class="section-heading reveal">
         <div>
@@ -161,7 +239,7 @@
       <div class="project-toolbar reveal" aria-label="Project search and filters">
         <label class="project-search">
           <span class="project-search-icon" aria-hidden="true">⌕</span>
-          <input id="project-search" type="search" placeholder="Search projects — try “fraud”, “HR”, “DAX”…" aria-label="Search projects">
+          <input id="project-search" type="search" placeholder="Search projects — try “fraud”, “HR”, “DAX”  (press /)" aria-label="Search projects">
         </label>
         <div class="project-filters" id="project-filters" role="group" aria-label="Filter projects by tool"></div>
         <p class="project-count" id="project-count" aria-live="polite"></p>
@@ -284,6 +362,7 @@
           <p>Open to entry-level Data Analyst, BI Analyst, internship and remote opportunities.</p>
           <div class="contact-links">
             <a href="mailto:jating1416@gmail.com">jating1416@gmail.com</a>
+            <button class="copy-email" type="button" data-copy-email="jating1416@gmail.com" title="Copy email address">⧉ Copy email</button>
             <a href="https://www.linkedin.com/in/jatin-kumar-5a46a720a" target="_blank" rel="noopener">LinkedIn</a>
             <a href="https://github.com/jating1416-debug" target="_blank" rel="noopener">GitHub</a>
             <a href="https://www.kaggle.com/jatinkhandelwal112" target="_blank" rel="noopener">Kaggle</a>
@@ -354,6 +433,18 @@
       <form class="assistant-form" id="assistant-form"><label class="sr-only" for="assistant-input">Ask a question</label><input id="assistant-input" type="text" placeholder="Ask about the portfolio"><button type="submit">Send</button></form>
     </section>
   </aside>
+
+  <div class="cmdk-overlay" id="cmdk" hidden>
+    <div class="cmdk-panel" role="dialog" aria-modal="true" aria-label="Command palette">
+      <div class="cmdk-head">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.35-4.35"></path></svg>
+        <input id="cmdk-input" type="text" placeholder="Jump to a section, project, dataset or action…" autocomplete="off" spellcheck="false" aria-label="Command palette search">
+        <kbd>esc</kbd>
+      </div>
+      <ul class="cmdk-list" id="cmdk-list" role="listbox" aria-label="Commands"></ul>
+      <div class="cmdk-foot"><span><kbd>↑</kbd><kbd>↓</kbd> navigate</span><span><kbd>↵</kbd> open</span><span class="cmdk-brand">JK · Command Palette</span></div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
