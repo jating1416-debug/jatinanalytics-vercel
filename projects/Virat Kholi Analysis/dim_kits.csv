@@ -1,8 +1,8 @@
 Format,image_url,note
-TEST,https://upload.wikimedia.org/wikipedia/commons/e/ef/Virat_Kohli_during_the_India_vs_Aus_4th_Test_match_at_Narendra_Modi_Stadium_on_09_March_2023.jpg,Test whites 2023 NMS Test (PMO official - free license)
-ODI,https://upload.wikimedia.org/wikipedia/commons/e/e7/2015_CWC_I_v_UAE_02-28_Kohli_%2812%29_%28cropped%29.JPG,Blue ODI kit 2015 World Cup (CC BY-SA - free)
-T20I,,APNA LINK YAHAN - latest T20I photo khud pick karke GitHub pe host karo (README mein how-to)
-IPL,https://upload.wikimedia.org/wikipedia/commons/6/67/Virat_Kohli_at_the_2015_IPL_opening_ceremony.jpg,RCB kit 2015 IPL opener (CC - free)
-TOUR_TEST,,Tour hero - Test tours (ya TEST wala same link)
-TOUR_ODI,,Tour hero - ODI tours (ya ODI wala same link)
-TOUR_T20I,,Tour hero - T20I tours (ya T20I wala same link)
+TEST,https://raw.githubusercontent.com/jating1416-debug/jatinanalytics-vercel/main/projects/Virat%20Kholi%20Analysis/Images/virat-test.webp,Test whites - apni GitHub photo
+ODI,https://raw.githubusercontent.com/jating1416-debug/jatinanalytics-vercel/main/projects/Virat%20Kholi%20Analysis/Images/virat-odi.webp,Blue ODI kit - apni GitHub photo
+T20I,https://raw.githubusercontent.com/jating1416-debug/jatinanalytics-vercel/main/projects/Virat%20Kholi%20Analysis/Images/virat-t20.webp,T20I kit - apni GitHub photo
+IPL,https://raw.githubusercontent.com/jating1416-debug/jatinanalytics-vercel/main/projects/Virat%20Kholi%20Analysis/Images/virat-ipl.webp,RCB IPL kit - apni GitHub photo
+TOUR_TEST,https://raw.githubusercontent.com/jating1416-debug/jatinanalytics-vercel/main/projects/Virat%20Kholi%20Analysis/Images/virat-tour-test.webp,Tour hero - Test tours
+TOUR_ODI,https://raw.githubusercontent.com/jating1416-debug/jatinanalytics-vercel/main/projects/Virat%20Kholi%20Analysis/Images/virat-tour-odi.webp,Tour hero - ODI tours
+TOUR_T20I,https://raw.githubusercontent.com/jating1416-debug/jatinanalytics-vercel/main/projects/Virat%20Kholi%20Analysis/Images/virat-tour-t20.webp,Tour hero - T20I tours
