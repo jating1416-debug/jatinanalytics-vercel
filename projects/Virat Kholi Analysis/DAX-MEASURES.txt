@@ -1,0 +1,236 @@
+=====================================================================
+VIRAT KOHLI · PLAYER 360  —  DAX MEASURES (Power BI)
+=====================================================================
+Sab pehle: Home → New Measure, phir har measure ka naam + formula
+paste karo. Table names exactly aise hi use karo (Power BI unke naam
+dega CSV files se — agar alag hai toh sirf naam change karna).
+
+Tables (9 CSV import karo — sab kohli-pb folder mein hain):
+  fact_innings      (868 rows — sirf woh innings jisme Kohli ne bating ki)
+  dim_dates, dim_formats, dim_modes, dim_tours (128 rows, matches = Kohli kheli matches)
+  dim_partners      (20 rows — har format ka TOP 5 partner)
+  dim_centuries     (94 rows — century wall ke liye, relationship NAHI)
+  dim_opponents     (35 rows — opponents table ke liye, relationship NAHI)
+  dim_kits          (7 rows — 4 jersey + 3 tour PHOTO LINKS, relationship NAHI)
+
+---------------------------------------------------------------------
+SECTION 0 — FORMAT (global slicer se chalta hai)
+---------------------------------------------------------------------
+
+Selected Format =
+IF (
+    ISFILTERED ( 'dim_formats'[Format] ),
+    SELECTEDVALUE ( 'dim_formats'[Format], "All Formats" ),
+    "All Formats"
+)
+
+// Dynamic jersey image — links dim_kits.csv mein hain (import karo, relationship NAHI chahiye)
+// Slicer se format badalte hi photo auto-change
+Jersey URL =
+SWITCH (
+    SELECTEDVALUE ( 'dim_formats'[Format], "ODI" ),
+    "TEST", MAXX ( FILTER ( 'dim_kits', 'dim_kits'[Format] = "TEST" ), 'dim_kits'[image_url] ),
+    "ODI",  MAXX ( FILTER ( 'dim_kits', 'dim_kits'[Format] = "ODI"  ), 'dim_kits'[image_url] ),
+    "T20I", MAXX ( FILTER ( 'dim_kits', 'dim_kits'[Format] = "T20I" ), 'dim_kits'[image_url] ),
+    "IPL",  MAXX ( FILTER ( 'dim_kits', 'dim_kits'[Format] = "IPL"  ), 'dim_kits'[image_url] ),
+    MAXX ( FILTER ( 'dim_kits', 'dim_kits'[Format] = "ODI" ), 'dim_kits'[image_url] )
+)
+
+// Jersey photo dikhane ka tareeka (4 steps):
+// 1. dim_kits.csv import karo (no relationship)
+// 2. [Jersey URL] measure banao (upar wala)
+// 3. Table visual banao -> sirf [Jersey URL] field daalo
+// 4. Field format = Image URL, borders OFF (Visual formatting)
+
+// Page title
+Page Title =
+"VIRAT KOHLI · PLAYER 360 — " & [Selected Format]
+
+---------------------------------------------------------------------
+SECTION 1 — MODE FLAGS (yahi magic hai: slicer se charts switch)
+---------------------------------------------------------------------
+
+Show Solo =
+IF ( SELECTEDVALUE ( 'dim_modes'[Mode], "SOLO" ) = "SOLO", 1, 0 )
+
+Show Partner =
+IF ( SELECTEDVALUE ( 'dim_modes'[Mode], "SOLO" ) = "PARTNER", 1, 0 )
+
+Show Tour =
+IF ( SELECTEDVALUE ( 'dim_modes'[Mode], "SOLO" ) = "TOUR", 1, 0 )
+
+---------------------------------------------------------------------
+SECTION 2 — KOHLI KPIs (SOLO + TOUR dono modes mein chalte hain)
+---------------------------------------------------------------------
+
+Total Runs = SUM ( 'fact_innings'[runs] )
+
+Total Matches = DISTINCTCOUNT ( 'fact_innings'[match_ref] )
+
+Total Innings = COUNT ( 'fact_innings'[runs] )
+
+High Score = MAX ( 'fact_innings'[runs] )
+
+Batting Avg =
+DIVIDE (
+    [Total Runs],
+    [Total Innings] - COUNTROWS ( FILTER ( 'fact_innings', 'fact_innings'[not_out] = "yes" ) )
+)
+
+Strike Rate = DIVIDE ( [Total Runs], SUM ( 'fact_innings'[balls] ) )
+
+Hundreds = COUNTROWS ( FILTER ( 'fact_innings', 'fact_innings'[runs] >= 100 ) )
+
+Fifties =
+COUNTROWS (
+    FILTER ( 'fact_innings', 'fact_innings'[runs] >= 50 && 'fact_innings'[runs] < 100 )
+)
+
+Total Fours = SUM ( 'fact_innings'[fours] )
+
+Total Sixes = SUM ( 'fact_innings'[sixes] )
+
+// ---- KPI card text (cards mein ye measures use karo) ----
+
+KPI Runs = IF ( [Total Runs] > 0, FORMAT ( [Total Runs], "#,0" ), "—" )
+
+KPI Matches = IF ( [Total Matches] > 0, FORMAT ( [Total Matches], "#,0" ), "—" )
+
+KPI HS =
+IF ( ISBLANK ( [High Score] ), "—", FORMAT ( [High Score], "#,0" ) )
+
+KPI Avg = IF ( ISBLANK ( [Batting Avg] ), "—", FORMAT ( [Batting Avg], "0.00" ) )
+
+KPI SR = IF ( ISBLANK ( [Strike Rate] ), "—", FORMAT ( [Strike Rate], "0.0" ) )
+
+KPI 100s50s = FORMAT ( [Hundreds], "#,0" ) & " / " & FORMAT ( [Fifties], "#,0" )
+
+KPI 4s6s = FORMAT ( [Total Fours], "#,0" ) & " / " & FORMAT ( [Total Sixes], "#,0" )
+
+---------------------------------------------------------------------
+SECTION 3 — PARTNER MODE
+---------------------------------------------------------------------
+NOTE: dim_partners ab format slicer se bhi filter hota hai
+(dim_formats[Format] 1:∞ dim_partners[competition] relationship).
+Format = ODI select karo toh sirf ODI partners dikhenge
+(Rohit 5743, Dhawan 3430, Raina 2238...), Test = Rahane/Pujara,
+IPL = ABD/Gayle. Koi format select mat kiya toh saare 57 partners.
+
+Selected Partner =
+IF (
+    HASONEVALUE ( 'dim_partners'[partner] ),
+    SELECTEDVALUE ( 'dim_partners'[partner] ),
+    "All Partners"
+)
+
+Partner Image URL =
+VAR _u = SELECTEDVALUE ( 'dim_partners'[image_url] )
+RETURN IF ( ISBLANK ( _u ), "", _u )
+
+Partner Total Runs = SUM ( 'dim_partners'[total_runs] )
+
+Partner Highest = MAX ( 'dim_partners'[highest] )
+
+Partner Count = SUM ( 'dim_partners'[partnerships] )
+
+Partner Avg = DIVIDE ( [Partner Total Runs], [Partner Count] )
+
+Partner Title =
+"PARTNERSHIP WITH — " & [Selected Partner]
+
+KPI P Total = IF ( [Partner Total Runs] > 0, FORMAT ( [Partner Total Runs], "#,0" ), "—" )
+
+KPI P Highest = IF ( ISBLANK ( [Partner Highest] ), "—", FORMAT ( [Partner Highest], "#,0" ) )
+
+KPI P Count = IF ( [Partner Count] > 0, FORMAT ( [Partner Count], "#,0" ), "—" )
+
+KPI P Avg = IF ( ISBLANK ( [Partner Avg] ), "—", FORMAT ( [Partner Avg], "0.0" ) )
+
+---------------------------------------------------------------------
+SECTION 4 — TOUR MODE
+---------------------------------------------------------------------
+
+Selected Tour =
+IF (
+    ISFILTERED ( 'dim_tours'[tour] ),
+    SELECTEDVALUE ( 'dim_tours'[tour], "Multiple Tours" ),
+    "All Tours 2014-2025"
+)
+
+Tour Title = "TOUR MODE — " & [Selected Tour]
+
+// Tour card ki photo — tour ke format se dim_kits ka TOUR_* link kheenchta hai
+// (Test wala tour → TOUR_TEST, ODI wala → TOUR_ODI, T20I wala → TOUR_T20I)
+// Table visual mein [Tour Image] daalo, format = Image URL
+Tour Image =
+SWITCH (
+    TRUE (),
+    SEARCH ( "Test", 'dim_tours'[formats] ) <> BLANK (),
+        MAXX ( FILTER ( 'dim_kits', 'dim_kits'[Format] = "TOUR_TEST" ), 'dim_kits'[image_url] ),
+    SEARCH ( "ODI",  'dim_tours'[formats] ) <> BLANK (),
+        MAXX ( FILTER ( 'dim_kits', 'dim_kits'[Format] = "TOUR_ODI"  ), 'dim_kits'[image_url] ),
+    MAXX ( FILTER ( 'dim_kits', 'dim_kits'[Format] = "TOUR_T20I" ), 'dim_kits'[image_url] )
+)
+
+---------------------------------------------------------------------
+SECTION 5 — TOP INNINGS TABLE (SOLO mode bottom)
+---------------------------------------------------------------------
+
+// Table visual mein column: date, opponent, venue, runs, balls, fours, sixes, dismissal
+// Visual-level filter: Show Solo = 1
+// (table top 10 rakhte ho toh visual ke ke Settings mein "Top N" = 10 by runs)
+
+Top 10 Runs =
+TOPN (
+    10,
+    'fact_innings',
+    'fact_innings'[runs]
+)
+// Note: top-N table ke liye table visual mein sirf columns daalo,
+// aur visual filter mein [Total Runs] > 0 lagao. Simple hai.
+
+=====================================================================
+VISUAL-LEVEL FILTERS (IMPORTANT — sabse important part)
+=====================================================================
+Har chart visual pe right-click → Filter → Fx → "Advanced" mein:
+  Condition: Is equal to
+  Value: 1
+  aur measure select karo:
+
+• SOLO zone ke saare visuals     → [Show Solo] = 1
+• PARTNER zone ke saare visuals  → [Show Partner] = 1
+• TOUR zone ke saare visuals     → [Show Tour] = 1
+  (TOUR zone ka tour slicer bhi [Show Tour] = 1 pe filter karo)
+
+Mode slicer (SOLO/PARTNER/TOUR) chalaoge toh visuals khud
+appear/hide ho jayenge. Zone ke visuals ki background transparency
+100% kar do taaki inactive zone bilkul invisible lage.
+
+=====================================================================
+RELATIONSHIPS (Model view mein banao)
+=====================================================================
+1. dim_dates[date]      1:∞  → fact_innings[date]        (single dir)
+2. dim_formats[Format]  1:∞  → fact_innings[format]      (single dir)
+3. dim_tours[tour_id]   1:∞  → fact_innings[tour_id]     (single dir)
+4. dim_formats[Format]  1:∞  → dim_partners[competition] (single dir)
+5. dim_modes            → (koi relationship NAHI — sirf slicer)
+   (dim_partners partner slicer + measures se chalta hai;
+    competition column se format slicer ke saath juda hai)
+
+Date table mark karo: dim_dates select → Table tools → Mark as date table → date column.
+
+=====================================================================
+IMAGE VISUAL TRICK (jersey + partner images)
+=====================================================================
+1. Jersey URL measure ko Image visual ke jagah ISSE dikhao:
+   - Table visual banao
+   - sirf [Jersey URL] field daalo
+   - Column 'Jersey URL' pe: select column → Column tools →
+     Data Category = Image URL  (ye Power Query/Transform pe bhi ho sakta hai)
+   - Table ki borders OFF, background TRANSPARENT, title OFF
+   - Row headers OFF
+   → ab yeh ek clean image visual ban jayega jo format slicer se
+     turant badlega
+2. Partner Image URL ke liye same trick (table visual, 1 field)
+
+=====================================================================

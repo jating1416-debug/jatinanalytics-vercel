@@ -1,0 +1,36 @@
+opponent,format,matches,innings,runs,hs,avg,strike_rate
+Australia,Test,30,53,2232,186,42.11,52.0
+Australia,ODI,53,51,2525,123,49.51,93.21
+Australia,T20I,23,22,794,90*,36.09,142.55
+England,Test,28,50,1991,235,39.82,52.07
+England,ODI,41,41,1541,122,37.59,89.85
+England,T20I,21,21,648,80*,30.86,135.0
+Sri Lanka,Test,11,18,1085,243,60.28,68.28
+Sri Lanka,ODI,56,54,2652,166*,49.11,93.68
+Sri Lanka,T20I,8,7,339,82,48.43,138.37
+West Indies,Test,16,21,1019,200,48.52,53.16
+West Indies,ODI,43,41,2261,157*,55.15,96.96
+West Indies,T20I,14,13,570,94*,43.85,150.79
+South Africa,Test,16,28,1408,254*,50.29,57.26
+South Africa,ODI,34,32,1806,160*,56.44,89.76
+South Africa,T20I,14,13,394,76,30.31,133.11
+New Zealand,Test,14,27,959,211,35.52,53.91
+New Zealand,ODI,36,36,1897,154*,52.69,96.64
+New Zealand,T20I,10,10,311,70,31.1,138.84
+Bangladesh,Test,8,13,536,204,41.23,71.66
+Bangladesh,ODI,17,17,932,136,54.82,100.0
+Bangladesh,T20I,6,6,230,64*,38.33,123.66
+Pakistan,ODI,17,17,778,183,45.76,98.86
+Pakistan,T20I,11,11,492,82*,44.73,123.93
+Afghanistan,ODI,3,2,122,67,61.0,102.52
+Afghanistan,T20I,6,5,225,122*,45.0,159.57
+Zimbabwe,ODI,8,6,253,115,42.17,86.94
+Zimbabwe,T20I,3,2,52,26*,26.0,113.04
+Netherlands,ODI,2,2,63,51,31.5,82.89
+Netherlands,T20I,1,1,62,62*,62.0,140.91
+Ireland,ODI,2,2,78,44*,39.0,82.11
+Ireland,T20I,3,3,10,9,3.33,66.67
+Hong Kong,T20I,1,1,59,59*,59.0,134.09
+U.A.E.,ODI,1,1,33,33*,33.0,80.49
+Scotland,T20I,1,1,2,2*,2.0,100.0
+U.S.A.,T20I,1,1,0,0,0.0,0.0

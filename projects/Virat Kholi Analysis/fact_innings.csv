@@ -1,0 +1,869 @@
+format,date,opponent,venue,runs,balls,fours,sixes,not_out,dismissal,tour,away,season,match_ref,tour_id
+ODI,2008-08-18,Sri Lanka,Dambulla,12,22,1,,,lbw,,yes,,ODI # 2742,
+ODI,2008-08-20,Sri Lanka,Dambulla,37,67,6,,,caught,,yes,,ODI # 2745,
+ODI,2008-08-24,Sri Lanka,Colombo (RPS),25,38,4,,,run out,,yes,,ODI # 2750,
+ODI,2008-08-27,Sri Lanka,Colombo (RPS),54,66,7,,,bowled,,yes,,ODI # 2755,
+ODI,2008-08-29,Sri Lanka,Colombo (RPS),31,46,3,1,,lbw,,yes,,ODI # 2756,
+ODI,2009-09-14,Sri Lanka,Colombo (RPS),2,2,,,yes,not out,,yes,,ODI # 2889,
+ODI,2009-09-26,Pakistan,Centurion,16,24,1,,,caught,,yes,,ODI # 2898,
+ODI,2009-09-30,West Indies,Johannesburg,79,104,9,2,yes,not out,,yes,,ODI # 2904,
+ODI,2009-10-25,Australia,Vadodara,30,41,3,,,caught,,no,,ODI # 2913,
+ODI,2009-11-02,Australia,Mohali,10,16,1,,,caught,,no,,ODI # 2919,
+ODI,2009-12-15,Sri Lanka,Rajkot,27,19,4,,,bowled,,no,,ODI # 2932,
+ODI,2009-12-18,Sri Lanka,Nagpur,54,65,7,,,lbw,,no,,ODI # 2933,
+ODI,2009-12-24,Sri Lanka,Eden Gardens,107,114,11,1,,caught,,no,,ODI # 2935,
+ODI,2010-01-05,Sri Lanka,Mirpur,9,12,1,,,caught,,yes,,ODI # 2938,
+ODI,2010-01-07,Bangladesh,Mirpur,91,102,7,,,caught,,yes,,ODI # 2939,
+ODI,2010-01-10,Sri Lanka,Mirpur,71,68,9,,yes,not out,,yes,,ODI # 2941,
+ODI,2010-01-11,Bangladesh,Mirpur,102,95,11,,yes,not out,,yes,,ODI # 2942,
+ODI,2010-01-13,Sri Lanka,Mirpur,2,8,,,,caught,,yes,,ODI # 2943,
+ODI,2010-02-21,South Africa,Jaipur,31,46,1,,,caught,,no,,ODI # 2961,
+ODI,2010-02-27,South Africa,Ahmedabad,57,71,4,1,,caught,,no,,ODI # 2963,
+ODI,2010-05-28,Zimbabwe,Bulawayo,0,,,,,run out,,yes,,ODI # 2981,
+ODI,2010-05-30,Sri Lanka,Bulawayo,82,92,4,,,caught,,yes,,ODI # 2983,
+ODI,2010-06-03,Zimbabwe,Harare,18,29,1,,,caught,,yes,,ODI # 2986,
+ODI,2010-06-05,Sri Lanka,Harare,68,95,5,,,caught,,yes,,ODI # 2988,
+T20I,2010-06-12,Zimbabwe,Harare,26,21,3,1,yes,not out,,yes,,T20I # 182,
+ODI,2010-06-16,Bangladesh,Dambulla,11,22,,,,stumped,,yes,,ODI # 2993,
+ODI,2010-06-19,Pakistan,Dambulla,18,27,1,,,bowled,,yes,,ODI # 2996,
+ODI,2010-06-22,Sri Lanka,Dambulla,10,14,1,,,caught,,yes,,ODI # 2999,
+ODI,2010-06-24,Sri Lanka,Dambulla,28,34,4,,,caught,,yes,,ODI # 3001,
+ODI,2010-08-16,Sri Lanka,Dambulla,0,3,,,,caught,,yes,,ODI # 3032,
+ODI,2010-08-25,New Zealand,Dambulla,8,16,1,,,caught,,yes,,ODI # 3039,
+ODI,2010-08-28,Sri Lanka,Dambulla,37,57,5,,,caught,,yes,,ODI # 3040,
+ODI,2010-10-20,Australia,Visakhapatnam,118,121,11,1,,caught,,no,,ODI # 3060,
+ODI,2010-11-28,New Zealand,Guwahati,105,104,10,,,caught,,no,,ODI # 3070,
+ODI,2010-12-01,New Zealand,Jaipur,64,73,8,,,caught,,no,,ODI # 3072,
+ODI,2010-12-04,New Zealand,Vadodara,63,70,6,2,yes,not out,,no,,ODI # 3074,
+ODI,2010-12-07,New Zealand,Bengaluru,0,2,,,,caught,,no,,ODI # 3076,
+ODI,2010-12-10,New Zealand,Chennai,2,8,,,,caught,,no,,ODI # 3077,
+T20I,2011-01-09,South Africa,Durban,28,19,5,,,bowled,,yes,,T20I # 196,
+ODI,2011-01-12,South Africa,Durban,54,70,2,1,,caught,,yes,,ODI # 3079,
+ODI,2011-01-15,South Africa,Johannesburg,22,34,1,,,run out,,yes,,ODI # 3080,
+ODI,2011-01-18,South Africa,Cape Town,28,41,5,,,caught,,yes,,ODI # 3082,
+ODI,2011-01-21,South Africa,Gqeberha,87,92,7,2,yes,not out,,yes,,ODI # 3084,
+ODI,2011-01-23,South Africa,Centurion,2,6,,,,caught,,yes,,ODI # 3087,
+ODI,2011-02-19,Bangladesh,Mirpur,100,83,8,2,yes,not out,,yes,,ODI # 3100,
+ODI,2011-02-27,England,Bengaluru,8,5,1,,,bowled,,no,,ODI # 3110,
+ODI,2011-03-06,Ireland,Bengaluru,34,53,3,,,run out,,no,,ODI # 3121,
+ODI,2011-03-09,Netherlands,Delhi,12,20,2,,,bowled,,no,,ODI # 3124,
+ODI,2011-03-12,South Africa,Nagpur,1,3,,,,caught,,no,,ODI # 3128,
+ODI,2011-03-20,West Indies,Chennai,59,76,5,,,bowled,,no,,ODI # 3141,
+ODI,2011-03-24,Australia,Ahmedabad,24,33,1,,,caught,,no,,ODI # 3143,
+ODI,2011-03-30,Pakistan,Mohali,9,21,,,,caught,,no,,ODI # 3147,
+ODI,2011-04-02,Sri Lanka,Wankhede,35,49,4,,,caught,,no,,ODI # 3148,
+IPL,2011-04-09,Kochi Tuskers Kerala,Nehru Stadium,23,18,4,0,,lbw,,,IPL 2011,IPL-501200,
+IPL,2011-04-12,Mumbai Indians,M Chinnaswamy Stadium,12,19,2,0,,caught (DJ Jacobs),,,IPL 2011,IPL-501205,
+IPL,2011-04-14,Deccan Chargers,"Rajiv Gandhi International Stadium, Uppal",71,51,5,3,,bowled,,,IPL 2011,IPL-501208,
+IPL,2011-04-16,Chennai Super Kings,"MA Chidambaram Stadium, Chepauk",35,28,4,1,,caught (S Anirudha),,,IPL 2011,IPL-501211,
+IPL,2011-04-22,Kolkata Knight Riders,Eden Gardens,30,24,3,1,,,,,IPL 2011,IPL-501222,
+IPL,2011-04-26,Delhi Daredevils,Feroz Shah Kotla,56,40,8,2,,bowled,,,IPL 2011,IPL-501227,
+IPL,2011-04-29,Pune Warriors,M Chinnaswamy Stadium,67,43,4,4,,caught (Harpreet Singh),,,IPL 2011,IPL-501232,
+IPL,2011-05-06,Kings XI Punjab,M Chinnaswamy Stadium,27,32,4,0,,bowled,,,IPL 2011,IPL-501244,
+IPL,2011-05-08,Kochi Tuskers Kerala,M Chinnaswamy Stadium,27,34,3,0,,,,,IPL 2011,IPL-501247,
+IPL,2011-05-11,Rajasthan Royals,Sawai Mansingh Stadium,39,35,3,1,,,,,IPL 2011,IPL-501252,
+IPL,2011-05-14,Kolkata Knight Riders,M Chinnaswamy Stadium,15,16,2,0,,caught (MV Boucher),,,IPL 2011,IPL-501255,
+IPL,2011-05-17,Kings XI Punjab,Himachal Pradesh Cricket Association Stadium,11,12,2,0,,caught (KD Karthik),,,IPL 2011,IPL-501260,
+IPL,2011-05-22,Chennai Super Kings,M Chinnaswamy Stadium,31,31,5,0,,caught (R Ashwin),,,IPL 2011,IPL-501266,
+IPL,2011-05-24,Chennai Super Kings,Wankhede Stadium,70,46,5,3,,,,,IPL 2011,IPL-501268,
+IPL,2011-05-27,Mumbai Indians,"MA Chidambaram Stadium, Chepauk",8,12,0,0,,bowled,,,IPL 2011,IPL-501270,
+IPL,2011-05-28,Chennai Super Kings,"MA Chidambaram Stadium, Chepauk",35,32,1,1,,lbw,,,IPL 2011,IPL-501271,
+T20I,2011-06-04,West Indies,Port of Spain,14,12,2,,,caught,,yes,,T20I # 200,
+ODI,2011-06-06,West Indies,Port of Spain,2,8,,,,caught,,yes,,ODI # 3159,
+ODI,2011-06-08,West Indies,Port of Spain,81,103,6,1,,caught,,yes,,ODI # 3160,
+ODI,2011-06-11,West Indies,North Sound,0,1,,,,lbw,,yes,,ODI # 3161,
+ODI,2011-06-13,West Indies,North Sound,22,33,1,,,stumped,,yes,,ODI # 3162,
+ODI,2011-06-16,West Indies,Kingston,94,104,10,,,run out,,yes,,ODI # 3163,
+Test,2011-06-20,West Indies,Kingston,4,10,1,,,caught,,yes,,Test # 1997,
+Test,2011-06-20,West Indies,Kingston,15,54,2,,,caught,,yes,,Test # 1997,
+Test,2011-06-28,West Indies,Bridgetown,0,2,,,,caught,,yes,,Test # 1998,
+Test,2011-06-28,West Indies,Bridgetown,27,107,1,1,,caught,,yes,,Test # 1998,
+Test,2011-07-06,West Indies,Roseau,30,53,2,,,caught,,yes,,Test # 1999,
+T20I,2011-08-31,England,Manchester,4,5,,,,caught,,yes,,T20I # 204,
+ODI,2011-09-03,England,Chester-le-Street,55,73,4,,,bowled,,yes,,ODI # 3186,
+ODI,2011-09-06,England,Southampton,9,9,,,,caught,,yes,,ODI # 3187,
+ODI,2011-09-09,England,The Oval,7,18,,,,caught,,yes,,ODI # 3189,
+ODI,2011-09-11,England,Lord's,16,36,1,,,caught,,yes,,ODI # 3191,
+ODI,2011-09-16,England,Cardiff,107,93,9,1,,hit wicket,,yes,,ODI # 3195,
+ODI,2011-10-14,England,Hyderabad,37,63,,,,caught,,no,,ODI # 3199,
+ODI,2011-10-17,England,Delhi,112,98,16,,yes,not out,,no,,ODI # 3201,
+ODI,2011-10-20,England,Mohali,35,30,5,,,lbw,,no,,ODI # 3205,
+ODI,2011-10-23,England,Wankhede,86,99,11,,yes,not out,,no,,ODI # 3207,
+ODI,2011-10-25,England,Eden Gardens,0,5,,,,bowled,,no,,ODI # 3210,
+T20I,2011-10-29,England,Eden Gardens,15,16,3,,,caught,,no,,T20I # 214,
+Test,2011-11-22,West Indies,Wankhede,52,111,5,,,caught,,no,,Test # 2019,
+Test,2011-11-22,West Indies,Wankhede,63,114,3,1,,caught,,no,,Test # 2019,
+ODI,2011-11-29,West Indies,Cuttack,3,6,,,,bowled,,no,,ODI # 3217,
+ODI,2011-12-02,West Indies,Visakhapatnam,117,123,14,,,caught,,no,,ODI # 3219,
+ODI,2011-12-05,West Indies,Ahmedabad,20,30,3,,,lbw,,no,,ODI # 3221,
+ODI,2011-12-08,West Indies,Indore,23,11,3,,yes,not out,,no,,ODI # 3223,
+ODI,2011-12-11,West Indies,Chennai,80,85,5,,,caught,,no,,ODI # 3224,
+Test,2011-12-26,Australia,Melbourne,11,21,1,,,caught,,yes,,Test # 2025,
+Test,2011-12-26,Australia,Melbourne,0,1,,,,lbw,,yes,,Test # 2025,
+Test,2012-01-03,Australia,Sydney,23,41,3,,,caught,,yes,,Test # 2027,
+Test,2012-01-03,Australia,Sydney,9,24,2,,,lbw,,yes,,Test # 2027,
+Test,2012-01-13,Australia,W.A.C.A,44,81,6,,,caught,,yes,,Test # 2029,
+Test,2012-01-13,Australia,W.A.C.A,75,136,9,,,caught,,yes,,Test # 2029,
+Test,2012-01-24,Australia,Adelaide,116,213,11,1,,lbw,,yes,,Test # 2031,
+Test,2012-01-24,Australia,Adelaide,22,62,2,,,run out,,yes,,Test # 2031,
+T20I,2012-02-01,Australia,Sydney,22,21,,1,,caught,,yes,,T20I # 217,
+T20I,2012-02-03,Australia,Melbourne,31,24,3,,,caught,,yes,,T20I # 218,
+ODI,2012-02-05,Australia,Melbourne,31,34,3,,,caught,,yes,,ODI # 3231,
+ODI,2012-02-08,Sri Lanka,W.A.C.A,77,94,8,1,,run out,,yes,,ODI # 3233,
+ODI,2012-02-12,Australia,Adelaide,18,28,1,,,caught,,yes,,ODI # 3237,
+ODI,2012-02-14,Sri Lanka,Adelaide,15,25,1,,,lbw,,yes,,ODI # 3239,
+ODI,2012-02-19,Australia,Brisbane,12,25,,,,caught,,yes,,ODI # 3244,
+ODI,2012-02-21,Sri Lanka,Brisbane,66,83,2,,,caught,,yes,,ODI # 3246,
+ODI,2012-02-26,Australia,Sydney,21,27,2,,,caught,,yes,,ODI # 3250,
+ODI,2012-02-28,Sri Lanka,Hobart,133,86,16,2,yes,not out,,yes,,ODI # 3251,
+ODI,2012-03-13,Sri Lanka,Mirpur,108,120,7,,,caught,,yes,,ODI # 3259,
+ODI,2012-03-16,Bangladesh,Mirpur,66,82,5,,,bowled,,yes,,ODI # 3261,
+ODI,2012-03-18,Pakistan,Mirpur,183,148,22,1,,caught,,yes,,ODI # 3263,
+IPL,2012-04-07,Delhi Daredevils,M Chinnaswamy Stadium,8,8,1,0,,caught (Y Nagar),,,IPL 2012,IPL-548310,
+IPL,2012-04-10,Kolkata Knight Riders,M Chinnaswamy Stadium,6,14,1,0,,caught (MK Tiwary),,,IPL 2012,IPL-548315,
+IPL,2012-04-12,Chennai Super Kings,"MA Chidambaram Stadium, Chepauk",57,48,5,2,,caught (F du Plessis),,,IPL 2012,IPL-548318,
+IPL,2012-04-15,Rajasthan Royals,M Chinnaswamy Stadium,22,18,2,0,,bowled,,,IPL 2012,IPL-548324,
+IPL,2012-04-17,Pune Warriors,M Chinnaswamy Stadium,16,19,1,0,,caught (R Sharma),,,IPL 2012,IPL-548327,
+IPL,2012-04-20,Kings XI Punjab,"Punjab Cricket Association Stadium, Mohali",4,4,1,0,,caught (SE Marsh),,,IPL 2012,IPL-548331,
+IPL,2012-04-23,Rajasthan Royals,Sawai Mansingh Stadium,16,16,2,0,,caught (BJ Hodge),,,IPL 2012,IPL-548336,
+IPL,2012-04-28,Kolkata Knight Riders,Eden Gardens,18,19,3,0,,lbw,,,IPL 2012,IPL-548344,
+IPL,2012-05-02,Kings XI Punjab,M Chinnaswamy Stadium,45,42,3,2,,bowled,,,IPL 2012,IPL-548350,
+IPL,2012-05-06,Deccan Chargers,M Chinnaswamy Stadium,9,9,1,0,,caught (DW Steyn),,,IPL 2012,IPL-548356,
+IPL,2012-05-09,Mumbai Indians,Wankhede Stadium,36,27,1,2,,,,,IPL 2012,IPL-548360,
+IPL,2012-05-11,Pune Warriors,Subrata Roy Sahara Stadium,9,12,1,0,,caught (SPD Smith),,,IPL 2012,IPL-548362,
+IPL,2012-05-14,Mumbai Indians,M Chinnaswamy Stadium,3,1,0,0,,,,,IPL 2012,IPL-548367,
+IPL,2012-05-17,Delhi Daredevils,Feroz Shah Kotla,73,55,9,1,,,,,IPL 2012,IPL-548372,
+IPL,2012-05-20,Deccan Chargers,"Rajiv Gandhi International Stadium, Uppal",42,41,2,3,,caught (MS Gony),,,IPL 2012,IPL-548376,
+ODI,2012-07-21,Sri Lanka,Hambantota,106,113,9,,,caught,,yes,,ODI # 3291,
+ODI,2012-07-24,Sri Lanka,Hambantota,1,5,,,,caught,,yes,,ODI # 3292,
+ODI,2012-07-28,Sri Lanka,Colombo (RPS),38,65,2,,,caught,,yes,,ODI # 3293,
+ODI,2012-07-31,Sri Lanka,Colombo (RPS),128,119,12,1,yes,not out,,yes,,ODI # 3294,
+ODI,2012-08-04,Sri Lanka,Pallekele,23,35,2,,,lbw,,yes,,ODI # 3295,
+T20I,2012-08-07,Sri Lanka,Pallekele,68,48,11,1,,caught,,yes,,T20I # 255,
+Test,2012-08-23,New Zealand,Hyderabad,58,107,8,,,caught,,no,,Test # 2054,
+Test,2012-08-31,New Zealand,Bengaluru,103,193,14,1,,lbw,,no,,Test # 2055,
+Test,2012-08-31,New Zealand,Bengaluru,51,82,9,,yes,not out,,no,,Test # 2055,
+T20I,2012-09-11,New Zealand,Chennai,70,41,10,1,,caught,,no,,T20I # 261,
+T20I,2012-09-19,Afghanistan,Colombo (RPS),50,39,4,2,,caught,,yes,,T20I # 265,
+T20I,2012-09-23,England,Colombo (RPS),40,32,6,,,caught,,yes,,T20I # 272,
+T20I,2012-09-28,Australia,Colombo (RPS),15,13,2,,,caught,,yes,,T20I # 278,
+T20I,2012-09-30,Pakistan,Colombo (RPS),78,61,8,2,yes,not out,,yes,,T20I # 282,
+T20I,2012-10-02,South Africa,Colombo (RPS),2,6,,,,caught,,yes,,T20I # 286,
+Test,2012-11-15,England,Ahmedabad,19,67,3,,,bowled,,no,,Test # 2058,
+Test,2012-11-15,England,Ahmedabad,14,21,3,,yes,not out,,no,,Test # 2058,
+Test,2012-11-23,England,Wankhede,19,55,3,,,caught,,no,,Test # 2062,
+Test,2012-11-23,England,Wankhede,7,13,1,,,caught,,no,,Test # 2062,
+Test,2012-12-05,England,Eden Gardens,6,24,1,,,caught,,no,,Test # 2065,
+Test,2012-12-05,England,Eden Gardens,20,60,3,,,caught,,no,,Test # 2065,
+Test,2012-12-13,England,Nagpur,103,295,11,,,lbw,,no,,Test # 2066,
+T20I,2012-12-20,England,Pune,21,17,2,,,bowled,,no,,T20I # 292,
+T20I,2012-12-22,England,Wankhede,38,20,7,,,lbw,,no,,T20I # 294,
+T20I,2012-12-25,Pakistan,Bengaluru,9,11,1,,,caught,,no,,T20I # 296,
+T20I,2012-12-28,Pakistan,Ahmedabad,27,22,3,,,run out,,no,,T20I # 298,
+ODI,2012-12-30,Pakistan,Chennai,0,5,,,,bowled,,no,,ODI # 3314,
+ODI,2013-01-03,Pakistan,Eden Gardens,6,9,1,,,caught,,no,,ODI # 3315,
+ODI,2013-01-06,Pakistan,Delhi,7,17,1,,,caught,,no,,ODI # 3316,
+ODI,2013-01-11,England,Rajkot,15,22,1,,,caught,,no,,ODI # 3318,
+ODI,2013-01-15,England,Kochi,37,54,1,1,,caught,,no,,ODI # 3320,
+ODI,2013-01-19,England,Ranchi,77,79,9,2,yes,not out,,no,,ODI # 3322,
+ODI,2013-01-23,England,Mohali,26,33,3,,,caught,,no,,ODI # 3327,
+ODI,2013-01-27,England,Dharamsala,0,1,,,,caught,,no,,ODI # 3329,
+Test,2013-02-22,Australia,Chennai,107,206,15,1,,caught,,no,,Test # 2074,
+Test,2013-03-02,Australia,Hyderabad,34,92,3,,,caught,,no,,Test # 2076,
+Test,2013-03-14,Australia,Mohali,67,129,7,1,yes,not out,,no,,Test # 2081,
+Test,2013-03-14,Australia,Mohali,34,61,6,,,caught,,no,,Test # 2081,
+Test,2013-03-22,Australia,Delhi,1,8,,,,lbw,,no,,Test # 2085,
+Test,2013-03-22,Australia,Delhi,41,60,4,,,lbw,,no,,Test # 2085,
+IPL,2013-04-04,Mumbai Indians,M Chinnaswamy Stadium,24,14,4,1,,lbw,,,IPL 2013,IPL-597999,
+IPL,2013-04-07,Sunrisers Hyderabad,"Rajiv Gandhi International Stadium, Uppal",46,45,5,1,,caught and bowled,,,IPL 2013,IPL-598004,
+IPL,2013-04-07,Sunrisers Hyderabad,"Rajiv Gandhi International Stadium, Uppal",5,2,1,0,,,,,IPL 2013,IPL-598004,
+IPL,2013-04-09,Sunrisers Hyderabad,M Chinnaswamy Stadium,93,51,11,4,,,,,IPL 2013,IPL-598048,
+IPL,2013-04-11,Kolkata Knight Riders,M Chinnaswamy Stadium,35,28,4,2,,caught (EJG Morgan),,,IPL 2013,IPL-598008,
+IPL,2013-04-13,Chennai Super Kings,"MA Chidambaram Stadium, Chepauk",58,48,2,2,,caught (MS Dhoni),,,IPL 2013,IPL-598012,
+IPL,2013-04-16,Delhi Daredevils,M Chinnaswamy Stadium,65,51,7,1,,caught (DPMD Jayawardene),,,IPL 2013,IPL-598017,
+IPL,2013-04-20,Rajasthan Royals,M Chinnaswamy Stadium,1,5,0,0,,bowled,,,IPL 2013,IPL-598023,
+IPL,2013-04-23,Pune Warriors,M Chinnaswamy Stadium,11,9,0,1,,run out (AB Dinda),,,IPL 2013,IPL-598027,
+IPL,2013-04-27,Mumbai Indians,Wankhede Stadium,1,4,0,0,,caught (KD Karthik),,,IPL 2013,IPL-598033,
+IPL,2013-04-29,Rajasthan Royals,Sawai Mansingh Stadium,32,35,3,0,,caught (JP Faulkner),,,IPL 2013,IPL-598036,
+IPL,2013-05-02,Pune Warriors,Subrata Roy Sahara Stadium,25,18,3,0,,bowled,,,IPL 2013,IPL-598042,
+IPL,2013-05-06,Kings XI Punjab,"Punjab Cricket Association Stadium, Mohali",14,16,1,0,,caught (SE Marsh),,,IPL 2013,IPL-598064,
+IPL,2013-05-10,Delhi Daredevils,Feroz Shah Kotla,99,59,10,4,,"run out (BJ Rohrer,KM Jadhav)",,,IPL 2013,IPL-598054,
+IPL,2013-05-12,Kolkata Knight Riders,JSCA International Stadium Complex,17,14,2,0,,bowled,,,IPL 2013,IPL-598057,
+IPL,2013-05-14,Kings XI Punjab,M Chinnaswamy Stadium,57,43,6,2,,lbw,,,IPL 2013,IPL-598045,
+IPL,2013-05-18,Chennai Super Kings,M Chinnaswamy Stadium,56,29,6,4,,,,,IPL 2013,IPL-598068,
+ODI,2013-06-06,South Africa,Cardiff,31,41,2,,,caught,,yes,,ODI # 3363,
+ODI,2013-06-11,West Indies,The Oval,22,18,4,,,bowled,,yes,,ODI # 3368,
+ODI,2013-06-15,Pakistan,Birmingham,22,27,3,,yes,not out,,yes,,ODI # 3372,
+ODI,2013-06-20,Sri Lanka,Cardiff,58,64,4,1,yes,not out,,yes,,ODI # 3376,
+ODI,2013-06-23,England,Birmingham,43,34,4,1,,caught,,yes,,ODI # 3377,
+ODI,2013-06-30,West Indies,Kingston,11,21,,1,,caught,,yes,,ODI # 3380,
+ODI,2013-07-02,Sri Lanka,Kingston,2,5,,,,caught,,yes,,ODI # 3382,
+ODI,2013-07-05,West Indies,Port of Spain,102,83,13,2,,caught,,yes,,ODI # 3383,
+ODI,2013-07-09,Sri Lanka,Port of Spain,31,52,4,,,lbw,,yes,,ODI # 3387,
+ODI,2013-07-11,Sri Lanka,Port of Spain,2,5,,,,caught,,yes,,ODI # 3388,
+ODI,2013-07-24,Zimbabwe,Harare,115,108,13,1,,caught,,yes,,ODI # 3395,
+ODI,2013-07-26,Zimbabwe,Harare,14,18,2,,,caught,,yes,,ODI # 3397,
+ODI,2013-07-28,Zimbabwe,Harare,68,88,5,1,yes,not out,,yes,,ODI # 3399,
+T20I,2013-10-10,Australia,Rajkot,29,22,2,1,,caught,,no,,T20I # 331,
+ODI,2013-10-13,Australia,Pune,61,85,6,,,lbw,,no,,ODI # 3419,
+ODI,2013-10-16,Australia,Jaipur,100,52,8,7,yes,not out,,no,,ODI # 3420,
+ODI,2013-10-19,Australia,Mohali,68,73,9,,,caught,,no,,ODI # 3421,
+ODI,2013-10-30,Australia,Nagpur,115,66,18,1,yes,not out,,no,,ODI # 3424,
+ODI,2013-11-02,Australia,Bengaluru,0,3,,,,run out,,no,,ODI # 3428,
+Test,2013-11-06,West Indies,Eden Gardens,3,5,,,,caught,,no,,Test # 2101,
+Test,2013-11-14,West Indies,Wankhede,57,78,5,,,caught,,no,,Test # 2102,
+ODI,2013-11-21,West Indies,Kochi,86,84,9,2,,caught,,no,,ODI # 3436,
+ODI,2013-11-24,West Indies,Visakhapatnam,99,100,9,,,caught,,no,,ODI # 3437,
+ODI,2013-11-27,West Indies,Kanpur,19,18,3,,,caught,,no,,ODI # 3439,
+ODI,2013-12-05,South Africa,Johannesburg,31,35,5,,,caught,,yes,,ODI # 3442,
+ODI,2013-12-08,South Africa,Durban,0,5,,,,caught,,yes,,ODI # 3443,
+Test,2013-12-18,South Africa,Johannesburg,119,181,18,,,caught,,yes,,Test # 2108,
+Test,2013-12-18,South Africa,Johannesburg,96,193,9,,,caught,,yes,,Test # 2108,
+Test,2013-12-26,South Africa,Durban,46,87,5,,,caught,,yes,,Test # 2111,
+Test,2013-12-26,South Africa,Durban,11,27,1,,,caught,,yes,,Test # 2111,
+ODI,2014-01-19,New Zealand,Napier,123,111,11,2,,caught,India in New Zealand 2014 — v New Zealand,yes,,ODI # 3456,India in New Zealand 2014 — v New Zealand|New Zealand
+ODI,2014-01-22,New Zealand,Hamilton,78,65,7,2,,caught,India in New Zealand 2014 — v New Zealand,yes,,ODI # 3458,India in New Zealand 2014 — v New Zealand|New Zealand
+ODI,2014-01-25,New Zealand,Auckland,6,20,1,,,caught,India in New Zealand 2014 — v New Zealand,yes,,ODI # 3462,India in New Zealand 2014 — v New Zealand|New Zealand
+ODI,2014-01-28,New Zealand,Hamilton,2,10,,,,caught,India in New Zealand 2014 — v New Zealand,yes,,ODI # 3465,India in New Zealand 2014 — v New Zealand|New Zealand
+ODI,2014-01-31,New Zealand,Wellington,82,78,7,3,,caught,India in New Zealand 2014 — v New Zealand,yes,,ODI # 3467,India in New Zealand 2014 — v New Zealand|New Zealand
+Test,2014-02-06,New Zealand,Auckland,4,13,1,,,caught,India in New Zealand 2014 — v New Zealand,yes,,Test # 2118,India in New Zealand 2014 — v New Zealand|New Zealand
+Test,2014-02-06,New Zealand,Auckland,67,102,12,,,caught,India in New Zealand 2014 — v New Zealand,yes,,Test # 2118,India in New Zealand 2014 — v New Zealand|New Zealand
+Test,2014-02-14,New Zealand,Wellington,38,93,4,,,caught,India in New Zealand 2014 — v New Zealand,yes,,Test # 2120,India in New Zealand 2014 — v New Zealand|New Zealand
+Test,2014-02-14,New Zealand,Wellington,105,135,15,1,yes,not out,India in New Zealand 2014 — v New Zealand,yes,,Test # 2120,India in New Zealand 2014 — v New Zealand|New Zealand
+ODI,2014-02-26,Bangladesh,Fatullah,136,122,16,2,,bowled,India in Bangladesh 2014 — v Bangladesh,yes,,ODI # 3474,India in Bangladesh 2014 — v Bangladesh|Bangladesh
+ODI,2014-02-28,Sri Lanka,Fatullah,48,51,4,1,,bowled,Tournament in Bangladesh 2014,yes,,ODI # 3476,Tournament in Bangladesh 2014|Sri Lanka
+ODI,2014-03-02,Pakistan,Mirpur,5,11,,,,caught,Tournament in Bangladesh 2014,yes,,ODI # 3479,Tournament in Bangladesh 2014|Pakistan
+T20I,2014-03-21,Pakistan,Mirpur,36,32,4,1,yes,not out,Tournament in Bangladesh 2014,yes,,T20I # 378,Tournament in Bangladesh 2014|Pakistan
+T20I,2014-03-23,West Indies,Mirpur,54,41,5,1,,bowled,Tournament in Bangladesh 2014,yes,,T20I # 382,Tournament in Bangladesh 2014|West Indies
+T20I,2014-03-28,Bangladesh,Mirpur,57,50,3,1,yes,not out,India in Bangladesh 2014 — v Bangladesh,yes,,T20I # 389,India in Bangladesh 2014 — v Bangladesh|Bangladesh
+T20I,2014-03-30,Australia,Mirpur,23,22,2,1,,caught,Tournament in Bangladesh 2014,yes,,T20I # 393,Tournament in Bangladesh 2014|Australia
+T20I,2014-04-04,South Africa,Mirpur,72,44,5,2,yes,not out,Tournament in Bangladesh 2014,yes,,T20I # 399,Tournament in Bangladesh 2014|South Africa
+T20I,2014-04-06,Sri Lanka,Mirpur,77,58,5,4,,run out,Tournament in Bangladesh 2014,yes,,T20I # 400,Tournament in Bangladesh 2014|Sri Lanka
+IPL,2014-04-17,Delhi Daredevils,Sharjah Cricket Stadium,49,38,2,3,,,,,IPL 2014,IPL-729281,
+IPL,2014-04-19,Mumbai Indians,Dubai International Cricket Stadium,0,2,0,0,,caught (Harbhajan Singh),,,IPL 2014,IPL-729287,
+IPL,2014-04-24,Kolkata Knight Riders,Sharjah Cricket Stadium,31,23,4,0,,bowled,,,IPL 2014,IPL-729299,
+IPL,2014-04-26,Rajasthan Royals,Sheikh Zayed Stadium,21,25,3,0,,caught (TG Southee),,,IPL 2014,IPL-729305,
+IPL,2014-04-28,Kings XI Punjab,Dubai International Cricket Stadium,4,2,1,0,,lbw,,,IPL 2014,IPL-729313,
+IPL,2014-05-04,Sunrisers Hyderabad,M Chinnaswamy Stadium,0,6,0,0,,caught (NV Ojha),,,IPL 2014,IPL-733977,
+IPL,2014-05-06,Mumbai Indians,Wankhede Stadium,35,28,2,2,,caught (CJ Anderson),,,IPL 2014,IPL-733983,
+IPL,2014-05-09,Kings XI Punjab,M Chinnaswamy Stadium,0,1,0,0,,caught (WP Saha),,,IPL 2014,IPL-733991,
+IPL,2014-05-11,Rajasthan Royals,M Chinnaswamy Stadium,4,9,1,0,,caught (R Bhatia),,,IPL 2014,IPL-733999,
+IPL,2014-05-13,Delhi Daredevils,M Chinnaswamy Stadium,10,11,0,0,,"run out (R Shukla,Q de Kock)",,,IPL 2014,IPL-734005,
+IPL,2014-05-18,Chennai Super Kings,JSCA International Stadium Complex,27,29,1,1,,stumped (MS Dhoni),,,IPL 2014,IPL-734013,
+IPL,2014-05-20,Sunrisers Hyderabad,"Rajiv Gandhi International Stadium, Uppal",67,43,4,4,,caught (DW Steyn),,,IPL 2014,IPL-734021,
+IPL,2014-05-22,Kolkata Knight Riders,Eden Gardens,38,31,3,1,,caught (M Morkel),,,IPL 2014,IPL-734027,
+IPL,2014-05-24,Chennai Super Kings,M Chinnaswamy Stadium,73,53,2,5,,bowled,,,IPL 2014,IPL-734035,
+Test,2014-07-09,England,Nottingham,1,8,,,,caught,India in England 2014 — v England,yes,,Test # 2128,India in England 2014 — v England|England
+Test,2014-07-09,England,Nottingham,8,29,1,,,lbw,India in England 2014 — v England,yes,,Test # 2128,India in England 2014 — v England|England
+Test,2014-07-17,England,Lord's,25,34,4,,,caught,India in England 2014 — v England,yes,,Test # 2130,India in England 2014 — v England|England
+Test,2014-07-17,England,Lord's,0,1,,,,bowled,India in England 2014 — v England,yes,,Test # 2130,India in England 2014 — v England|England
+Test,2014-07-27,England,Southampton,39,75,3,,,caught,India in England 2014 — v England,yes,,Test # 2132,India in England 2014 — v England|England
+Test,2014-07-27,England,Southampton,28,56,3,,,caught,India in England 2014 — v England,yes,,Test # 2132,India in England 2014 — v England|England
+Test,2014-08-07,England,Manchester,0,2,,,,caught,India in England 2014 — v England,yes,,Test # 2134,India in England 2014 — v England|England
+Test,2014-08-07,England,Manchester,7,11,1,,,caught,India in England 2014 — v England,yes,,Test # 2134,India in England 2014 — v England|England
+Test,2014-08-15,England,The Oval,6,18,1,,,lbw,India in England 2014 — v England,yes,,Test # 2137,India in England 2014 — v England|England
+Test,2014-08-15,England,The Oval,20,54,2,,,caught,India in England 2014 — v England,yes,,Test # 2137,India in England 2014 — v England|England
+ODI,2014-08-27,England,Cardiff,0,3,,,,caught,India in England 2014 — v England,yes,,ODI # 3517,India in England 2014 — v England|England
+ODI,2014-08-30,England,Nottingham,40,50,2,1,,caught,India in England 2014 — v England,yes,,ODI # 3520,India in England 2014 — v England|England
+ODI,2014-09-02,England,Birmingham,1,3,,,yes,not out,India in England 2014 — v England,yes,,ODI # 3523,India in England 2014 — v England|England
+ODI,2014-09-05,England,Leeds,13,21,2,,,caught,India in England 2014 — v England,yes,,ODI # 3525,India in England 2014 — v England|England
+T20I,2014-09-07,England,Birmingham,66,41,9,1,,caught,India in England 2014 — v England,yes,,T20I # 405,India in England 2014 — v England|England
+ODI,2014-10-08,West Indies,Kochi,2,5,,,,caught,v West Indies in India 2014,no,,ODI # 3531,v West Indies in India 2014|West Indies
+ODI,2014-10-11,West Indies,Delhi,62,78,5,,,caught,v West Indies in India 2014,no,,ODI # 3533,v West Indies in India 2014|West Indies
+ODI,2014-10-17,West Indies,Dharamsala,127,114,13,3,,run out,v West Indies in India 2014,no,,ODI # 3535,v West Indies in India 2014|West Indies
+ODI,2014-11-02,Sri Lanka,Cuttack,22,21,2,,,caught,v Sri Lanka in India 2014,no,,ODI # 3539,v Sri Lanka in India 2014|Sri Lanka
+ODI,2014-11-06,Sri Lanka,Ahmedabad,49,44,2,2,,caught,v Sri Lanka in India 2014,no,,ODI # 3540,v Sri Lanka in India 2014|Sri Lanka
+ODI,2014-11-09,Sri Lanka,Hyderabad,53,61,4,1,,caught,v Sri Lanka in India 2014,no,,ODI # 3543,v Sri Lanka in India 2014|Sri Lanka
+ODI,2014-11-13,Sri Lanka,Eden Gardens,66,64,6,,,run out,v Sri Lanka in India 2014,no,,ODI # 3544,v Sri Lanka in India 2014|Sri Lanka
+ODI,2014-11-16,Sri Lanka,Ranchi,139,126,12,3,yes,not out,v Sri Lanka in India 2014,no,,ODI # 3547,v Sri Lanka in India 2014|Sri Lanka
+Test,2014-12-09,Australia,Adelaide,115,184,12,,,caught,India in Australia 2015 — v Australia,yes,,Test # 2148,India in Australia 2015 — v Australia|Australia
+Test,2014-12-09,Australia,Adelaide,141,175,16,1,,caught,India in Australia 2015 — v Australia,yes,,Test # 2148,India in Australia 2015 — v Australia|Australia
+Test,2014-12-17,Australia,Brisbane,19,27,1,,,caught,India in Australia 2015 — v Australia,yes,,Test # 2149,India in Australia 2015 — v Australia|Australia
+Test,2014-12-17,Australia,Brisbane,1,11,,,,bowled,India in Australia 2015 — v Australia,yes,,Test # 2149,India in Australia 2015 — v Australia|Australia
+Test,2014-12-26,Australia,Melbourne,169,272,18,,,caught,India in Australia 2015 — v Australia,yes,,Test # 2152,India in Australia 2015 — v Australia|Australia
+Test,2014-12-26,Australia,Melbourne,54,99,7,,,caught,India in Australia 2015 — v Australia,yes,,Test # 2152,India in Australia 2015 — v Australia|Australia
+Test,2015-01-06,Australia,Sydney,147,230,20,,,caught,India in Australia 2015 — v Australia,yes,,Test # 2156,India in Australia 2015 — v Australia|Australia
+Test,2015-01-06,Australia,Sydney,46,95,3,,,caught,India in Australia 2015 — v Australia,yes,,Test # 2156,India in Australia 2015 — v Australia|Australia
+ODI,2015-01-18,Australia,Melbourne,9,16,,,,caught,India in Australia 2015 — v Australia,yes,,ODI # 3582,India in Australia 2015 — v Australia|Australia
+ODI,2015-01-20,England,Brisbane,4,8,,,,caught,Tournament in Australia 2015,yes,,ODI # 3586,Tournament in Australia 2015|England
+ODI,2015-01-26,Australia,Sydney,3,9,,,yes,not out,India in Australia 2015 — v Australia,yes,,ODI # 3592,India in Australia 2015 — v Australia|Australia
+ODI,2015-01-30,England,W.A.C.A,8,19,,,,caught,Tournament in Australia 2015,yes,,ODI # 3595,Tournament in Australia 2015|England
+ODI,2015-02-15,Pakistan,Adelaide,107,126,8,,,caught,Tournament in Australia 2015,yes,,ODI # 3602,Tournament in Australia 2015|Pakistan
+ODI,2015-02-22,South Africa,Melbourne,46,60,3,,,caught,Tournament in Australia 2015,yes,,ODI # 3610,Tournament in Australia 2015|South Africa
+ODI,2015-02-28,U.A.E.,W.A.C.A,33,41,5,,yes,not out,Tournament in Australia 2015,yes,,ODI # 3618,Tournament in Australia 2015|U.A.E.
+ODI,2015-03-06,West Indies,W.A.C.A,33,36,5,,,caught,Tournament in Australia 2015,yes,,ODI # 3625,Tournament in Australia 2015|West Indies
+ODI,2015-03-10,Ireland,Hamilton,44,42,4,1,yes,not out,Tournament in New Zealand 2015,yes,,ODI # 3631,Tournament in New Zealand 2015|Ireland
+ODI,2015-03-14,Zimbabwe,Auckland,38,48,4,,,bowled,Tournament in New Zealand 2015,yes,,ODI # 3636,Tournament in New Zealand 2015|Zimbabwe
+ODI,2015-03-19,Bangladesh,Melbourne,3,8,,,,caught,Tournament in Australia 2015,yes,,ODI # 3641,Tournament in Australia 2015|Bangladesh
+ODI,2015-03-26,Australia,Sydney,1,13,,,,caught,India in Australia 2015 — v Australia,yes,,ODI # 3645,India in Australia 2015 — v Australia|Australia
+IPL,2015-04-11,Kolkata Knight Riders,Eden Gardens,13,15,0,1,,caught (RV Uthappa),,,IPL 2015,IPL-829713,
+IPL,2015-04-13,Sunrisers Hyderabad,M Chinnaswamy Stadium,41,42,4,2,,bowled,,,IPL 2015,IPL-829719,
+IPL,2015-04-19,Mumbai Indians,M Chinnaswamy Stadium,18,19,1,1,,caught (AT Rayudu),,,IPL 2015,IPL-829737,
+IPL,2015-04-22,Chennai Super Kings,M Chinnaswamy Stadium,51,43,4,2,,caught (DR Smith),,,IPL 2015,IPL-829745,
+IPL,2015-04-24,Rajasthan Royals,"Sardar Patel Stadium, Motera",62,46,1,3,,,,,IPL 2015,IPL-829749,
+IPL,2015-04-26,Delhi Daredevils,Feroz Shah Kotla,35,23,6,0,,,,,IPL 2015,IPL-829757,
+IPL,2015-04-29,Rajasthan Royals,M Chinnaswamy Stadium,1,4,0,0,,caught (SV Samson),,,IPL 2015,IPL-829763,
+IPL,2015-05-02,Kolkata Knight Riders,M Chinnaswamy Stadium,34,20,2,3,,caught (SA Yadav),,,IPL 2015,IPL-829771,
+IPL,2015-05-04,Chennai Super Kings,"MA Chidambaram Stadium, Chepauk",48,44,2,1,,run out (DJ Bravo),,,IPL 2015,IPL-829779,
+IPL,2015-05-06,Kings XI Punjab,M Chinnaswamy Stadium,32,31,3,1,,bowled,,,IPL 2015,IPL-829785,
+IPL,2015-05-10,Mumbai Indians,Wankhede Stadium,82,51,6,4,,,,,IPL 2015,IPL-829795,
+IPL,2015-05-13,Kings XI Punjab,"Punjab Cricket Association Stadium, Mohali",19,9,2,1,,bowled,,,IPL 2015,IPL-829803,
+IPL,2015-05-15,Sunrisers Hyderabad,"Rajiv Gandhi International Stadium, Uppal",44,19,3,3,,,,,IPL 2015,IPL-829807,
+IPL,2015-05-17,Delhi Daredevils,M Chinnaswamy Stadium,1,2,0,0,,,,,IPL 2015,IPL-829813,
+IPL,2015-05-20,Rajasthan Royals,Maharashtra Cricket Association Stadium,12,18,0,0,,caught and bowled,,,IPL 2015,IPL-829819,
+IPL,2015-05-22,Chennai Super Kings,JSCA International Stadium Complex,12,9,1,1,,caught (MM Sharma),,,IPL 2015,IPL-829821,
+Test,2015-06-10,Bangladesh,Fatullah,14,22,2,,,bowled,India in Bangladesh 2015 — v Bangladesh,yes,,Test # 2165,India in Bangladesh 2015 — v Bangladesh|Bangladesh
+ODI,2015-06-18,Bangladesh,Mirpur,1,4,,,,caught,India in Bangladesh 2015 — v Bangladesh,yes,,ODI # 3658,India in Bangladesh 2015 — v Bangladesh|Bangladesh
+ODI,2015-06-21,Bangladesh,Mirpur,23,27,3,1,,lbw,India in Bangladesh 2015 — v Bangladesh,yes,,ODI # 3660,India in Bangladesh 2015 — v Bangladesh|Bangladesh
+ODI,2015-06-24,Bangladesh,Mirpur,25,35,1,,,bowled,India in Bangladesh 2015 — v Bangladesh,yes,,ODI # 3661,India in Bangladesh 2015 — v Bangladesh|Bangladesh
+Test,2015-08-12,Sri Lanka,Galle,103,191,11,,,lbw,India in Sri Lanka 2015 — v Sri Lanka,yes,,Test # 2176,India in Sri Lanka 2015 — v Sri Lanka|Sri Lanka
+Test,2015-08-12,Sri Lanka,Galle,3,10,,,,caught,India in Sri Lanka 2015 — v Sri Lanka,yes,,Test # 2176,India in Sri Lanka 2015 — v Sri Lanka|Sri Lanka
+Test,2015-08-20,Sri Lanka,Colombo (PSS),78,107,8,1,,caught,India in Sri Lanka 2015 — v Sri Lanka,yes,,Test # 2177,India in Sri Lanka 2015 — v Sri Lanka|Sri Lanka
+Test,2015-08-20,Sri Lanka,Colombo (PSS),10,19,,,,lbw,India in Sri Lanka 2015 — v Sri Lanka,yes,,Test # 2177,India in Sri Lanka 2015 — v Sri Lanka|Sri Lanka
+Test,2015-08-28,Sri Lanka,Colombo (SSC),18,60,3,,,caught,India in Sri Lanka 2015 — v Sri Lanka,yes,,Test # 2179,India in Sri Lanka 2015 — v Sri Lanka|Sri Lanka
+Test,2015-08-28,Sri Lanka,Colombo (SSC),21,63,2,,,caught,India in Sri Lanka 2015 — v Sri Lanka,yes,,Test # 2179,India in Sri Lanka 2015 — v Sri Lanka|Sri Lanka
+T20I,2015-10-02,South Africa,Dharamsala,43,27,1,3,,caught,v South Africa in India 2015,no,,T20I # 456,v South Africa in India 2015|South Africa
+T20I,2015-10-05,South Africa,Cuttack,1,1,,,,run out,v South Africa in India 2015,no,,T20I # 457,v South Africa in India 2015|South Africa
+ODI,2015-10-11,South Africa,Kanpur,11,18,,,,caught,v South Africa in India 2015,no,,ODI # 3689,v South Africa in India 2015|South Africa
+ODI,2015-10-14,South Africa,Indore,12,18,,,,run out,v South Africa in India 2015,no,,ODI # 3692,v South Africa in India 2015|South Africa
+ODI,2015-10-18,South Africa,Rajkot,77,99,5,,,caught,v South Africa in India 2015,no,,ODI # 3695,v South Africa in India 2015|South Africa
+ODI,2015-10-22,South Africa,Chennai,138,140,6,5,,caught,v South Africa in India 2015,no,,ODI # 3698,v South Africa in India 2015|South Africa
+ODI,2015-10-25,South Africa,Wankhede,7,6,,1,,caught,v South Africa in India 2015,no,,ODI # 3700,v South Africa in India 2015|South Africa
+Test,2015-11-05,South Africa,Mohali,1,4,,,,caught,v South Africa in India 2015,no,,Test # 2186,v South Africa in India 2015|South Africa
+Test,2015-11-05,South Africa,Mohali,29,71,4,,,caught,v South Africa in India 2015,no,,Test # 2186,v South Africa in India 2015|South Africa
+Test,2015-11-25,South Africa,Nagpur,22,55,2,,,caught,v South Africa in India 2015,no,,Test # 2189,v South Africa in India 2015|South Africa
+Test,2015-11-25,South Africa,Nagpur,16,30,2,,,caught,v South Africa in India 2015,no,,Test # 2189,v South Africa in India 2015|South Africa
+Test,2015-12-03,South Africa,Delhi,44,62,7,,,caught,v South Africa in India 2015,no,,Test # 2191,v South Africa in India 2015|South Africa
+Test,2015-12-03,South Africa,Delhi,88,165,10,,,lbw,v South Africa in India 2015,no,,Test # 2191,v South Africa in India 2015|South Africa
+ODI,2016-01-12,Australia,W.A.C.A,91,97,9,1,,caught,India in Australia 2016 — v Australia,yes,,ODI # 3723,India in Australia 2016 — v Australia|Australia
+ODI,2016-01-15,Australia,Brisbane,59,67,4,,,run out,India in Australia 2016 — v Australia,yes,,ODI # 3724,India in Australia 2016 — v Australia|Australia
+ODI,2016-01-17,Australia,Melbourne,117,117,7,2,,caught,India in Australia 2016 — v Australia,yes,,ODI # 3725,India in Australia 2016 — v Australia|Australia
+ODI,2016-01-20,Australia,Canberra,106,92,11,1,,caught,India in Australia 2016 — v Australia,yes,,ODI # 3726,India in Australia 2016 — v Australia|Australia
+ODI,2016-01-23,Australia,Sydney,8,11,1,,,caught,India in Australia 2016 — v Australia,yes,,ODI # 3727,India in Australia 2016 — v Australia|Australia
+T20I,2016-01-26,Australia,Adelaide,90,55,9,2,yes,not out,India in Australia 2016 — v Australia,yes,,T20I # 485,India in Australia 2016 — v Australia|Australia
+T20I,2016-01-29,Australia,Melbourne,59,33,7,1,yes,not out,India in Australia 2016 — v Australia,yes,,T20I # 486,India in Australia 2016 — v Australia|Australia
+T20I,2016-01-31,Australia,Sydney,50,36,2,1,,bowled,India in Australia 2016 — v Australia,yes,,T20I # 489,India in Australia 2016 — v Australia|Australia
+T20I,2016-02-24,Bangladesh,Mirpur,7,12,1,,,caught,India in Bangladesh 2016 — v Bangladesh,yes,,T20I # 509,India in Bangladesh 2016 — v Bangladesh|Bangladesh
+T20I,2016-02-27,Pakistan,Mirpur,49,51,7,,,lbw,Tournament in Bangladesh 2016,yes,,T20I # 512,Tournament in Bangladesh 2016|Pakistan
+T20I,2016-03-01,Sri Lanka,Mirpur,56,47,7,,yes,not out,Tournament in Bangladesh 2016,yes,,T20I # 515,Tournament in Bangladesh 2016|Sri Lanka
+T20I,2016-03-06,Bangladesh,Mirpur,41,28,5,,yes,not out,India in Bangladesh 2016 — v Bangladesh,yes,,T20I # 521,India in Bangladesh 2016 — v Bangladesh|Bangladesh
+T20I,2016-03-15,New Zealand,Nagpur,23,27,2,,,caught,v New Zealand in India 2016,no,,T20I # 535,v New Zealand in India 2016|New Zealand
+T20I,2016-03-19,Pakistan,Eden Gardens,55,37,7,1,yes,not out,v Pakistan in India 2016,no,,T20I # 541,v Pakistan in India 2016|Pakistan
+T20I,2016-03-23,Bangladesh,Bengaluru,24,24,,1,,bowled,v Bangladesh in India 2016,no,,T20I # 547,v Bangladesh in India 2016|Bangladesh
+T20I,2016-03-27,Australia,Mohali,82,51,9,2,yes,not out,v Australia in India 2016,no,,T20I # 553,v Australia in India 2016|Australia
+T20I,2016-03-31,West Indies,Wankhede,89,47,11,1,yes,not out,v West Indies in India 2016,no,,T20I # 556,v West Indies in India 2016|West Indies
+IPL,2016-04-12,Sunrisers Hyderabad,M Chinnaswamy Stadium,75,51,7,3,,bowled,,,IPL 2016,IPL-980907,
+IPL,2016-04-17,Delhi Daredevils,M Chinnaswamy Stadium,79,48,7,3,,caught (SS Iyer),,,IPL 2016,IPL-980921,
+IPL,2016-04-20,Mumbai Indians,Wankhede Stadium,33,34,3,0,,caught (TG Southee),,,IPL 2016,IPL-980927,
+IPL,2016-04-22,Rising Pune Supergiants,Maharashtra Cricket Association Stadium,80,70,7,2,,caught (AM Rahane),,,IPL 2016,IPL-980931,
+IPL,2016-04-24,Gujarat Lions,Saurashtra Cricket Association Stadium,100,64,11,1,,,,,IPL 2016,IPL-980937,
+IPL,2016-04-30,Sunrisers Hyderabad,"Rajiv Gandhi International Stadium, Uppal",14,17,1,0,,caught (A Ashish Reddy),,,IPL 2016,IPL-980953,
+IPL,2016-05-02,Kolkata Knight Riders,M Chinnaswamy Stadium,52,44,4,0,,caught (AD Russell),,,IPL 2016,IPL-980959,
+IPL,2016-05-07,Rising Pune Supergiants,M Chinnaswamy Stadium,108,58,8,7,,,,,IPL 2016,IPL-980969,
+IPL,2016-05-09,Kings XI Punjab,"Punjab Cricket Association IS Bindra Stadium, Mohali",20,21,2,0,,caught (M Vijay),,,IPL 2016,IPL-980977,
+IPL,2016-05-11,Mumbai Indians,M Chinnaswamy Stadium,7,8,0,1,,caught (Harbhajan Singh),,,IPL 2016,IPL-980981,
+IPL,2016-05-14,Gujarat Lions,M Chinnaswamy Stadium,109,55,6,8,,caught (DJ Bravo),,,IPL 2016,IPL-980987,
+IPL,2016-05-16,Kolkata Knight Riders,Eden Gardens,75,51,5,3,,,,,IPL 2016,IPL-980995,
+IPL,2016-05-18,Kings XI Punjab,M Chinnaswamy Stadium,113,51,12,8,,caught (DA Miller),,,IPL 2016,IPL-980999,
+IPL,2016-05-22,Delhi Daredevils,Shaheed Veer Narayan Singh International Stadium,54,45,6,0,,,,,IPL 2016,IPL-981011,
+IPL,2016-05-24,Gujarat Lions,M Chinnaswamy Stadium,0,2,0,0,,bowled,,,IPL 2016,IPL-981013,
+IPL,2016-05-29,Sunrisers Hyderabad,M Chinnaswamy Stadium,54,36,5,2,,bowled,,,IPL 2016,IPL-981019,
+Test,2016-07-21,West Indies,North Sound,200,283,24,,,bowled,India in West Indies 2016 — v West Indies,yes,,Test # 2207,India in West Indies 2016 — v West Indies|West Indies
+Test,2016-07-30,West Indies,Kingston,44,90,4,1,,caught,India in West Indies 2016 — v West Indies,yes,,Test # 2211,India in West Indies 2016 — v West Indies|West Indies
+Test,2016-08-09,West Indies,Gros Islet,3,8,,,,caught,India in West Indies 2016 — v West Indies,yes,,Test # 2215,India in West Indies 2016 — v West Indies|West Indies
+Test,2016-08-09,West Indies,Gros Islet,4,17,,,,lbw,India in West Indies 2016 — v West Indies,yes,,Test # 2215,India in West Indies 2016 — v West Indies|West Indies
+T20I,2016-08-27,West Indies,Lauderhill,16,9,3,,,caught,Tournament in USA 2016,yes,,T20I # 562,Tournament in USA 2016|West Indies
+Test,2016-09-22,New Zealand,Kanpur,9,10,2,,,caught,v New Zealand in India 2016,no,,Test # 2221,v New Zealand in India 2016|New Zealand
+Test,2016-09-22,New Zealand,Kanpur,18,40,3,,,caught,v New Zealand in India 2016,no,,Test # 2221,v New Zealand in India 2016|New Zealand
+Test,2016-09-30,New Zealand,Eden Gardens,9,28,1,,,caught,v New Zealand in India 2016,no,,Test # 2222,v New Zealand in India 2016|New Zealand
+Test,2016-09-30,New Zealand,Eden Gardens,45,65,7,,,lbw,v New Zealand in India 2016,no,,Test # 2222,v New Zealand in India 2016|New Zealand
+Test,2016-10-08,New Zealand,Indore,211,366,20,,,lbw,v New Zealand in India 2016,no,,Test # 2223,v New Zealand in India 2016|New Zealand
+Test,2016-10-08,New Zealand,Indore,17,28,1,,,lbw,v New Zealand in India 2016,no,,Test # 2223,v New Zealand in India 2016|New Zealand
+ODI,2016-10-16,New Zealand,Dharamsala,85,81,9,1,yes,not out,v New Zealand in India 2016,no,,ODI # 3796,v New Zealand in India 2016|New Zealand
+ODI,2016-10-20,New Zealand,Delhi,9,13,1,,,caught,v New Zealand in India 2016,no,,ODI # 3797,v New Zealand in India 2016|New Zealand
+ODI,2016-10-23,New Zealand,Mohali,154,134,16,1,yes,not out,v New Zealand in India 2016,no,,ODI # 3798,v New Zealand in India 2016|New Zealand
+ODI,2016-10-26,New Zealand,Ranchi,45,51,2,1,,caught,v New Zealand in India 2016,no,,ODI # 3799,v New Zealand in India 2016|New Zealand
+ODI,2016-10-29,New Zealand,Visakhapatnam,65,76,2,1,,caught,v New Zealand in India 2016,no,,ODI # 3800,v New Zealand in India 2016|New Zealand
+Test,2016-11-09,England,Rajkot,40,95,5,,,hit wicket,v England in India 2016,no,,Test # 2232,v England in India 2016|England
+Test,2016-11-09,England,Rajkot,49,98,6,,yes,not out,v England in India 2016,no,,Test # 2232,v England in India 2016|England
+Test,2016-11-17,England,Visakhapatnam,167,267,18,,,caught,v England in India 2016,no,,Test # 2235,v England in India 2016|England
+Test,2016-11-17,England,Visakhapatnam,81,109,8,,,caught,v England in India 2016,no,,Test # 2235,v England in India 2016|England
+Test,2016-11-26,England,Mohali,62,127,9,,,caught,v England in India 2016,no,,Test # 2238,v England in India 2016|England
+Test,2016-11-26,England,Mohali,6,11,,,yes,not out,v England in India 2016,no,,Test # 2238,v England in India 2016|England
+Test,2016-12-08,England,Wankhede,235,340,25,1,,caught,v England in India 2016,no,,Test # 2239,v England in India 2016|England
+Test,2016-12-16,England,Chennai,15,29,1,,,caught,v England in India 2016,no,,Test # 2241,v England in India 2016|England
+ODI,2017-01-15,England,Pune,122,105,8,5,,caught,v England in India 2017,no,,ODI # 3819,v England in India 2017|England
+ODI,2017-01-19,England,Cuttack,8,5,2,,,caught,v England in India 2017,no,,ODI # 3821,v England in India 2017|England
+ODI,2017-01-22,England,Eden Gardens,55,63,8,,,caught,v England in India 2017,no,,ODI # 3824,v England in India 2017|England
+T20I,2017-01-26,England,Kanpur,29,26,4,,,caught,v England in India 2017,no,,T20I # 592,v England in India 2017|England
+T20I,2017-01-29,England,Nagpur,21,15,2,1,,caught,v England in India 2017,no,,T20I # 593,v England in India 2017|England
+T20I,2017-02-01,England,Bengaluru,2,4,,,,run out,v England in India 2017,no,,T20I # 594,v England in India 2017|England
+Test,2017-02-09,Bangladesh,Hyderabad,204,246,24,,,lbw,v Bangladesh in India 2017,no,,Test # 2249,v Bangladesh in India 2017|Bangladesh
+Test,2017-02-09,Bangladesh,Hyderabad,38,40,2,1,,caught,v Bangladesh in India 2017,no,,Test # 2249,v Bangladesh in India 2017|Bangladesh
+Test,2017-02-23,Australia,Pune,0,2,,,,caught,v Australia in India 2017,no,,Test # 2250,v Australia in India 2017|Australia
+Test,2017-02-23,Australia,Pune,13,37,1,,,bowled,v Australia in India 2017,no,,Test # 2250,v Australia in India 2017|Australia
+Test,2017-03-04,Australia,Bengaluru,12,17,2,,,lbw,v Australia in India 2017,no,,Test # 2251,v Australia in India 2017|Australia
+Test,2017-03-04,Australia,Bengaluru,15,25,1,,,lbw,v Australia in India 2017,no,,Test # 2251,v Australia in India 2017|Australia
+Test,2017-03-16,Australia,Ranchi,6,23,,,,caught,v Australia in India 2017,no,,Test # 2256,v Australia in India 2017|Australia
+IPL,2017-04-14,Mumbai Indians,M Chinnaswamy Stadium,62,48,5,2,,caught (JC Buttler),,,IPL 2017,IPL-1082602,
+IPL,2017-04-16,Rising Pune Supergiant,M Chinnaswamy Stadium,28,19,3,1,,caught (AM Rahane),,,IPL 2017,IPL-1082607,
+IPL,2017-04-18,Gujarat Lions,Saurashtra Cricket Association Stadium,64,51,7,1,,caught (DR Smith),,,IPL 2017,IPL-1082610,
+IPL,2017-04-23,Kolkata Knight Riders,Eden Gardens,0,1,0,0,,caught (MK Pandey),,,IPL 2017,IPL-1082617,
+IPL,2017-04-27,Gujarat Lions,M Chinnaswamy Stadium,10,14,0,1,,caught (AJ Finch),,,IPL 2017,IPL-1082621,
+IPL,2017-04-29,Rising Pune Supergiant,Maharashtra Cricket Association Stadium,55,48,4,1,,caught (MA Agarwal),,,IPL 2017,IPL-1082624,
+IPL,2017-05-01,Mumbai Indians,Wankhede Stadium,20,15,0,2,,caught (RG Sharma),,,IPL 2017,IPL-1082628,
+IPL,2017-05-05,Kings XI Punjab,M Chinnaswamy Stadium,6,6,1,0,,bowled,,,IPL 2017,IPL-1082633,
+IPL,2017-05-07,Kolkata Knight Riders,M Chinnaswamy Stadium,5,9,0,0,,lbw,,,IPL 2017,IPL-1082636,
+IPL,2017-05-14,Delhi Daredevils,Feroz Shah Kotla,58,46,3,3,,caught (S Nadeem),,,IPL 2017,IPL-1082646,
+ODI,2017-06-04,Pakistan,Birmingham,81,68,6,3,yes,not out,Tournament in England 2017,yes,,ODI # 3878,Tournament in England 2017|Pakistan
+ODI,2017-06-08,Sri Lanka,The Oval,0,5,,,,caught,Tournament in England 2017,yes,,ODI # 3882,Tournament in England 2017|Sri Lanka
+ODI,2017-06-11,South Africa,The Oval,76,101,7,1,yes,not out,Tournament in England 2017,yes,,ODI # 3886,Tournament in England 2017|South Africa
+ODI,2017-06-15,Bangladesh,Birmingham,96,78,13,,yes,not out,Tournament in England 2017,yes,,ODI # 3891,Tournament in England 2017|Bangladesh
+ODI,2017-06-18,Pakistan,The Oval,5,9,,,,caught,Tournament in England 2017,yes,,ODI # 3894,Tournament in England 2017|Pakistan
+ODI,2017-06-23,West Indies,Port of Spain,32,47,1,,yes,not out,India in West Indies 2017 — v West Indies,yes,,ODI # 3895,India in West Indies 2017 — v West Indies|West Indies
+ODI,2017-06-25,West Indies,Port of Spain,87,66,4,4,,caught,India in West Indies 2017 — v West Indies,yes,,ODI # 3896,India in West Indies 2017 — v West Indies|West Indies
+ODI,2017-06-30,West Indies,North Sound,11,22,2,,,caught,India in West Indies 2017 — v West Indies,yes,,ODI # 3898,India in West Indies 2017 — v West Indies|West Indies
+ODI,2017-07-02,West Indies,North Sound,3,12,,,,caught,India in West Indies 2017 — v West Indies,yes,,ODI # 3900,India in West Indies 2017 — v West Indies|West Indies
+ODI,2017-07-06,West Indies,Kingston,111,115,12,2,yes,not out,India in West Indies 2017 — v West Indies,yes,,ODI # 3902,India in West Indies 2017 — v West Indies|West Indies
+T20I,2017-07-09,West Indies,Kingston,39,22,7,1,,caught,India in West Indies 2017 — v West Indies,yes,,T20I # 617,India in West Indies 2017 — v West Indies|West Indies
+Test,2017-07-26,Sri Lanka,Galle,3,8,,,,caught,India in Sri Lanka 2017 — v Sri Lanka,yes,,Test # 2265,India in Sri Lanka 2017 — v Sri Lanka|Sri Lanka
+Test,2017-07-26,Sri Lanka,Galle,103,136,5,1,yes,not out,India in Sri Lanka 2017 — v Sri Lanka,yes,,Test # 2265,India in Sri Lanka 2017 — v Sri Lanka|Sri Lanka
+Test,2017-08-03,Sri Lanka,Colombo (SSC),13,29,2,,,caught,India in Sri Lanka 2017 — v Sri Lanka,yes,,Test # 2267,India in Sri Lanka 2017 — v Sri Lanka|Sri Lanka
+Test,2017-08-12,Sri Lanka,Pallekele,42,84,3,,,caught,India in Sri Lanka 2017 — v Sri Lanka,yes,,Test # 2269,India in Sri Lanka 2017 — v Sri Lanka|Sri Lanka
+ODI,2017-08-20,Sri Lanka,Dambulla,82,70,10,1,yes,not out,India in Sri Lanka 2017 — v Sri Lanka,yes,,ODI # 3905,India in Sri Lanka 2017 — v Sri Lanka|Sri Lanka
+ODI,2017-08-24,Sri Lanka,Pallekele,4,2,1,,,bowled,India in Sri Lanka 2017 — v Sri Lanka,yes,,ODI # 3906,India in Sri Lanka 2017 — v Sri Lanka|Sri Lanka
+ODI,2017-08-27,Sri Lanka,Pallekele,3,11,,,,caught,India in Sri Lanka 2017 — v Sri Lanka,yes,,ODI # 3907,India in Sri Lanka 2017 — v Sri Lanka|Sri Lanka
+ODI,2017-08-31,Sri Lanka,Colombo (RPS),131,96,17,2,,caught,India in Sri Lanka 2017 — v Sri Lanka,yes,,ODI # 3908,India in Sri Lanka 2017 — v Sri Lanka|Sri Lanka
+ODI,2017-09-03,Sri Lanka,Colombo (RPS),110,116,9,,yes,not out,India in Sri Lanka 2017 — v Sri Lanka,yes,,ODI # 3909,India in Sri Lanka 2017 — v Sri Lanka|Sri Lanka
+T20I,2017-09-06,Sri Lanka,Colombo (RPS),82,54,7,1,,caught,India in Sri Lanka 2017 — v Sri Lanka,yes,,T20I # 618,India in Sri Lanka 2017 — v Sri Lanka|Sri Lanka
+ODI,2017-09-17,Australia,Chennai,0,4,,,,caught,v Australia in India 2017,no,,ODI # 3910,v Australia in India 2017|Australia
+ODI,2017-09-21,Australia,Eden Gardens,92,107,8,,,bowled,v Australia in India 2017,no,,ODI # 3912,v Australia in India 2017|Australia
+ODI,2017-09-24,Australia,Indore,28,35,2,,,caught,v Australia in India 2017,no,,ODI # 3914,v Australia in India 2017|Australia
+ODI,2017-09-28,Australia,Bengaluru,21,21,3,,,bowled,v Australia in India 2017,no,,ODI # 3917,v Australia in India 2017|Australia
+ODI,2017-10-01,Australia,Nagpur,39,55,2,,,caught,v Australia in India 2017,no,,ODI # 3919,v Australia in India 2017|Australia
+T20I,2017-10-07,Australia,Ranchi,22,14,3,,yes,not out,v Australia in India 2017,no,,T20I # 623,v Australia in India 2017|Australia
+T20I,2017-10-10,Australia,Guwahati,0,2,,,,caught,v Australia in India 2017,no,,T20I # 624,v Australia in India 2017|Australia
+ODI,2017-10-22,New Zealand,Wankhede,121,125,9,2,,caught,v New Zealand in India 2017,no,,ODI # 3928,v New Zealand in India 2017|New Zealand
+ODI,2017-10-25,New Zealand,Pune,29,29,3,1,,caught,v New Zealand in India 2017,no,,ODI # 3931,v New Zealand in India 2017|New Zealand
+ODI,2017-10-29,New Zealand,Kanpur,113,106,9,1,,caught,v New Zealand in India 2017,no,,ODI # 3932,v New Zealand in India 2017|New Zealand
+T20I,2017-11-01,New Zealand,Delhi,26,11,,3,yes,not out,v New Zealand in India 2017,no,,T20I # 630,v New Zealand in India 2017|New Zealand
+T20I,2017-11-04,New Zealand,Rajkot,65,42,8,1,,caught,v New Zealand in India 2017,no,,T20I # 631,v New Zealand in India 2017|New Zealand
+T20I,2017-11-07,New Zealand,Thiruvananthapuram,13,6,1,1,,caught,v New Zealand in India 2017,no,,T20I # 632,v New Zealand in India 2017|New Zealand
+Test,2017-11-16,Sri Lanka,Eden Gardens,0,11,,,,lbw,v Sri Lanka in India 2017,no,,Test # 2281,v Sri Lanka in India 2017|Sri Lanka
+Test,2017-11-16,Sri Lanka,Eden Gardens,104,119,12,2,yes,not out,v Sri Lanka in India 2017,no,,Test # 2281,v Sri Lanka in India 2017|Sri Lanka
+Test,2017-11-24,Sri Lanka,Nagpur,213,267,17,2,,caught,v Sri Lanka in India 2017,no,,Test # 2283,v Sri Lanka in India 2017|Sri Lanka
+Test,2017-12-02,Sri Lanka,Delhi,243,287,25,,,lbw,v Sri Lanka in India 2017,no,,Test # 2286,v Sri Lanka in India 2017|Sri Lanka
+Test,2017-12-02,Sri Lanka,Delhi,50,58,3,,,caught,v Sri Lanka in India 2017,no,,Test # 2286,v Sri Lanka in India 2017|Sri Lanka
+Test,2018-01-05,South Africa,Cape Town,5,13,,,,caught,India in South Africa 2018 — v South Africa,yes,,Test # 2292,India in South Africa 2018 — v South Africa|South Africa
+Test,2018-01-05,South Africa,Cape Town,28,40,4,,,lbw,India in South Africa 2018 — v South Africa,yes,,Test # 2292,India in South Africa 2018 — v South Africa|South Africa
+Test,2018-01-13,South Africa,Centurion,153,217,15,,,caught,India in South Africa 2018 — v South Africa,yes,,Test # 2293,India in South Africa 2018 — v South Africa|South Africa
+Test,2018-01-13,South Africa,Centurion,5,20,1,,,lbw,India in South Africa 2018 — v South Africa,yes,,Test # 2293,India in South Africa 2018 — v South Africa|South Africa
+Test,2018-01-24,South Africa,Johannesburg,54,106,9,,,caught,India in South Africa 2018 — v South Africa,yes,,Test # 2294,India in South Africa 2018 — v South Africa|South Africa
+Test,2018-01-24,South Africa,Johannesburg,41,79,6,,,bowled,India in South Africa 2018 — v South Africa,yes,,Test # 2294,India in South Africa 2018 — v South Africa|South Africa
+ODI,2018-02-01,South Africa,Durban,112,119,10,,,caught,India in South Africa 2018 — v South Africa,yes,,ODI # 3969,India in South Africa 2018 — v South Africa|South Africa
+ODI,2018-02-04,South Africa,Centurion,46,50,4,1,yes,not out,India in South Africa 2018 — v South Africa,yes,,ODI # 3970,India in South Africa 2018 — v South Africa|South Africa
+ODI,2018-02-07,South Africa,Cape Town,160,159,12,2,yes,not out,India in South Africa 2018 — v South Africa,yes,,ODI # 3971,India in South Africa 2018 — v South Africa|South Africa
+ODI,2018-02-10,South Africa,Johannesburg,75,83,7,1,,caught,India in South Africa 2018 — v South Africa,yes,,ODI # 3973,India in South Africa 2018 — v South Africa|South Africa
+ODI,2018-02-13,South Africa,Gqeberha,36,54,2,,,run out,India in South Africa 2018 — v South Africa,yes,,ODI # 3976,India in South Africa 2018 — v South Africa|South Africa
+ODI,2018-02-16,South Africa,Centurion,129,96,19,2,yes,not out,India in South Africa 2018 — v South Africa,yes,,ODI # 3978,India in South Africa 2018 — v South Africa|South Africa
+T20I,2018-02-18,South Africa,Johannesburg,26,20,2,1,,lbw,India in South Africa 2018 — v South Africa,yes,,T20I # 652,India in South Africa 2018 — v South Africa|South Africa
+T20I,2018-02-21,South Africa,Centurion,1,5,,,,caught,India in South Africa 2018 — v South Africa,yes,,T20I # 654,India in South Africa 2018 — v South Africa|South Africa
+IPL,2018-04-08,Kolkata Knight Riders,Eden Gardens,31,33,1,1,,bowled,,,IPL 2018,IPL-1136563,
+IPL,2018-04-13,Kings XI Punjab,M.Chinnaswamy Stadium,21,16,4,0,,bowled,,,IPL 2018,IPL-1136568,
+IPL,2018-04-15,Rajasthan Royals,M.Chinnaswamy Stadium,57,31,7,2,,caught (DJM Short),,,IPL 2018,IPL-1136571,
+IPL,2018-04-17,Mumbai Indians,Wankhede Stadium,92,62,7,4,,,,,IPL 2018,IPL-1136574,
+IPL,2018-04-21,Delhi Daredevils,M.Chinnaswamy Stadium,30,26,2,1,,caught (TA Boult),,,IPL 2018,IPL-1136579,
+IPL,2018-04-25,Chennai Super Kings,M.Chinnaswamy Stadium,18,15,3,0,,caught (RA Jadeja),,,IPL 2018,IPL-1136584,
+IPL,2018-04-29,Kolkata Knight Riders,M.Chinnaswamy Stadium,68,44,5,3,,,,,IPL 2018,IPL-1136589,
+IPL,2018-05-01,Mumbai Indians,M.Chinnaswamy Stadium,32,26,2,1,,caught (KA Pollard),,,IPL 2018,IPL-1136591,
+IPL,2018-05-05,Chennai Super Kings,Maharashtra Cricket Association Stadium,8,11,1,0,,bowled,,,IPL 2018,IPL-1136595,
+IPL,2018-05-07,Sunrisers Hyderabad,Rajiv Gandhi International Stadium,39,30,5,1,,caught (YK Pathan),,,IPL 2018,IPL-1136599,
+IPL,2018-05-12,Delhi Daredevils,Arun Jaitley Stadium,70,42,7,3,,caught (RR Pant),,,IPL 2018,IPL-1136605,
+IPL,2018-05-14,Kings XI Punjab,Holkar Cricket Stadium,48,29,6,2,,,,,IPL 2018,IPL-1136608,
+IPL,2018-05-17,Sunrisers Hyderabad,M.Chinnaswamy Stadium,12,11,2,0,,bowled,,,IPL 2018,IPL-1136611,
+IPL,2018-05-19,Rajasthan Royals,Sawai Mansingh Stadium,4,9,0,0,,bowled,,,IPL 2018,IPL-1136613,
+T20I,2018-06-27,Ireland,Dublin (Malahide),0,2,,,,caught,India in Ireland 2018 — v Ireland,yes,,T20I # 678,India in Ireland 2018 — v Ireland|Ireland
+T20I,2018-06-29,Ireland,Dublin (Malahide),9,8,1,,,caught,India in Ireland 2018 — v Ireland,yes,,T20I # 680,India in Ireland 2018 — v Ireland|Ireland
+T20I,2018-07-03,England,Manchester,20,22,,1,yes,not out,India in England 2018 — v England,yes,,T20I # 684,India in England 2018 — v England|England
+T20I,2018-07-06,England,Cardiff,47,38,1,2,,caught,India in England 2018 — v England,yes,,T20I # 688,India in England 2018 — v England|England
+T20I,2018-07-08,England,Bristol,43,29,2,2,,caught,India in England 2018 — v England,yes,,T20I # 690,India in England 2018 — v England|England
+ODI,2018-07-12,England,Nottingham,75,82,7,,,stumped,India in England 2018 — v England,yes,,ODI # 4014,India in England 2018 — v England|England
+ODI,2018-07-14,England,Lord's,45,56,2,,,lbw,India in England 2018 — v England,yes,,ODI # 4016,India in England 2018 — v England|England
+ODI,2018-07-17,England,Leeds,71,72,8,,,bowled,India in England 2018 — v England,yes,,ODI # 4018,India in England 2018 — v England|England
+Test,2018-08-01,England,Birmingham,149,225,22,1,,caught,India in England 2018 — v England,yes,,Test # 2314,India in England 2018 — v England|England
+Test,2018-08-01,England,Birmingham,51,93,4,,,lbw,India in England 2018 — v England,yes,,Test # 2314,India in England 2018 — v England|England
+Test,2018-08-09,England,Lord's,23,57,2,,,caught,India in England 2018 — v England,yes,,Test # 2315,India in England 2018 — v England|England
+Test,2018-08-09,England,Lord's,17,29,2,,,caught,India in England 2018 — v England,yes,,Test # 2315,India in England 2018 — v England|England
+Test,2018-08-18,England,Nottingham,97,152,11,,,caught,India in England 2018 — v England,yes,,Test # 2316,India in England 2018 — v England|England
+Test,2018-08-18,England,Nottingham,103,197,10,,,lbw,India in England 2018 — v England,yes,,Test # 2316,India in England 2018 — v England|England
+Test,2018-08-30,England,Southampton,46,71,6,,,caught,India in England 2018 — v England,yes,,Test # 2317,India in England 2018 — v England|England
+Test,2018-08-30,England,Southampton,58,130,4,,,caught,India in England 2018 — v England,yes,,Test # 2317,India in England 2018 — v England|England
+Test,2018-09-07,England,The Oval,49,70,6,,,caught,India in England 2018 — v England,yes,,Test # 2318,India in England 2018 — v England|England
+Test,2018-09-07,England,The Oval,0,1,,,,caught,India in England 2018 — v England,yes,,Test # 2318,India in England 2018 — v England|England
+Test,2018-10-04,West Indies,Rajkot,139,230,10,,,caught,v West Indies in India 2018,no,,Test # 2319,v West Indies in India 2018|West Indies
+Test,2018-10-12,West Indies,Hyderabad,45,78,5,,,lbw,v West Indies in India 2018,no,,Test # 2321,v West Indies in India 2018|West Indies
+ODI,2018-10-21,West Indies,Guwahati,140,107,21,2,,stumped,v West Indies in India 2018,no,,ODI # 4056,v West Indies in India 2018|West Indies
+ODI,2018-10-24,West Indies,Visakhapatnam,157,129,13,4,yes,not out,v West Indies in India 2018,no,,ODI # 4059,v West Indies in India 2018|West Indies
+ODI,2018-10-27,West Indies,Pune,107,119,10,1,,bowled,v West Indies in India 2018,no,,ODI # 4062,v West Indies in India 2018|West Indies
+ODI,2018-10-29,West Indies,Brabourne,16,17,2,,,caught,v West Indies in India 2018,no,,ODI # 4063,v West Indies in India 2018|West Indies
+ODI,2018-11-01,West Indies,Thiruvananthapuram,33,29,6,,yes,not out,v West Indies in India 2018,no,,ODI # 4064,v West Indies in India 2018|West Indies
+T20I,2018-11-21,Australia,Brisbane,4,8,,,,caught,India in Australia 2018/19 — v Australia,yes,,T20I # 712,India in Australia 2018/19 — v Australia|Australia
+T20I,2018-11-25,Australia,Sydney,61,41,4,2,yes,not out,India in Australia 2018/19 — v Australia,yes,,T20I # 714,India in Australia 2018/19 — v Australia|Australia
+Test,2018-12-06,Australia,Adelaide,3,16,,,,caught,India in Australia 2018/19 — v Australia,yes,,Test # 2333,India in Australia 2018/19 — v Australia|Australia
+Test,2018-12-06,Australia,Adelaide,34,104,3,,,caught,India in Australia 2018/19 — v Australia,yes,,Test # 2333,India in Australia 2018/19 — v Australia|Australia
+Test,2018-12-14,Australia,Perth,123,257,13,1,,caught,India in Australia 2018/19 — v Australia,yes,,Test # 2334,India in Australia 2018/19 — v Australia|Australia
+Test,2018-12-14,Australia,Perth,17,40,2,,,caught,India in Australia 2018/19 — v Australia,yes,,Test # 2334,India in Australia 2018/19 — v Australia|Australia
+Test,2018-12-26,Australia,Melbourne,82,204,9,,,caught,India in Australia 2018/19 — v Australia,yes,,Test # 2337,India in Australia 2018/19 — v Australia|Australia
+Test,2018-12-26,Australia,Melbourne,0,4,,,,caught,India in Australia 2018/19 — v Australia,yes,,Test # 2337,India in Australia 2018/19 — v Australia|Australia
+Test,2019-01-03,Australia,Sydney,23,59,4,,,caught,India in Australia 2018/19 — v Australia,yes,,Test # 2339,India in Australia 2018/19 — v Australia|Australia
+ODI,2019-01-12,Australia,Sydney,3,8,,,,caught,India in Australia 2018/19 — v Australia,yes,,ODI # 4077,India in Australia 2018/19 — v Australia|Australia
+ODI,2019-01-15,Australia,Adelaide,104,112,5,2,,caught,India in Australia 2018/19 — v Australia,yes,,ODI # 4078,India in Australia 2018/19 — v Australia|Australia
+ODI,2019-01-18,Australia,Melbourne,46,62,3,,,caught,India in Australia 2018/19 — v Australia,yes,,ODI # 4079,India in Australia 2018/19 — v Australia|Australia
+ODI,2019-01-23,New Zealand,Napier,45,59,3,,,caught,India in New Zealand 2019 — v New Zealand,yes,,ODI # 4082,India in New Zealand 2019 — v New Zealand|New Zealand
+ODI,2019-01-26,New Zealand,Mount Maunganui,43,45,5,,,caught,India in New Zealand 2019 — v New Zealand,yes,,ODI # 4085,India in New Zealand 2019 — v New Zealand|New Zealand
+ODI,2019-01-28,New Zealand,Mount Maunganui,60,74,6,1,,caught,India in New Zealand 2019 — v New Zealand,yes,,ODI # 4088,India in New Zealand 2019 — v New Zealand|New Zealand
+T20I,2019-02-24,Australia,Visakhapatnam,24,17,3,,,caught,v Australia in India 2019,no,,T20I # 748,v Australia in India 2019|Australia
+T20I,2019-02-27,Australia,Bengaluru,72,38,2,6,yes,not out,v Australia in India 2019,no,,T20I # 749,v Australia in India 2019|Australia
+ODI,2019-03-02,Australia,Hyderabad,44,45,6,1,,lbw,v Australia in India 2019,no,,ODI # 4102,v Australia in India 2019|Australia
+ODI,2019-03-05,Australia,Nagpur,116,120,10,,,caught,v Australia in India 2019,no,,ODI # 4106,v Australia in India 2019|Australia
+ODI,2019-03-08,Australia,Ranchi,123,95,16,1,,bowled,v Australia in India 2019,no,,ODI # 4109,v Australia in India 2019|Australia
+ODI,2019-03-10,Australia,Mohali,7,6,1,,,caught,v Australia in India 2019,no,,ODI # 4111,v Australia in India 2019|Australia
+ODI,2019-03-13,Australia,Delhi,20,22,2,,,caught,v Australia in India 2019,no,,ODI # 4113,v Australia in India 2019|Australia
+IPL,2019-03-23,Chennai Super Kings,MA Chidambaram Stadium,6,12,0,0,,caught (RA Jadeja),,,IPL 2019,IPL-1175356,
+IPL,2019-03-28,Mumbai Indians,M.Chinnaswamy Stadium,46,33,6,0,,caught (HH Pandya),,,IPL 2019,IPL-1175362,
+IPL,2019-03-31,Sunrisers Hyderabad,Rajiv Gandhi International Stadium,3,10,0,0,,caught (DA Warner),,,IPL 2019,IPL-1175366,
+IPL,2019-04-02,Rajasthan Royals,Sawai Mansingh Stadium,23,26,3,0,,bowled,,,IPL 2019,IPL-1175369,
+IPL,2019-04-05,Kolkata Knight Riders,M.Chinnaswamy Stadium,84,49,9,2,,caught and bowled,,,IPL 2019,IPL-1175372,
+IPL,2019-04-07,Delhi Capitals,M.Chinnaswamy Stadium,41,33,1,2,,caught (SS Iyer),,,IPL 2019,IPL-1178395,
+IPL,2019-04-13,Kings XI Punjab,Punjab Cricket Association IS Bindra Stadium,67,54,8,0,,caught (M Ashwin),,,IPL 2019,IPL-1178403,
+IPL,2019-04-15,Mumbai Indians,Wankhede Stadium,8,10,1,0,,caught (Q de Kock),,,IPL 2019,IPL-1178406,
+IPL,2019-04-19,Kolkata Knight Riders,Eden Gardens,100,58,9,4,,caught (Shubman Gill),,,IPL 2019,IPL-1178410,
+IPL,2019-04-21,Chennai Super Kings,M.Chinnaswamy Stadium,9,8,2,0,,caught (MS Dhoni),,,IPL 2019,IPL-1178414,
+IPL,2019-04-24,Kings XI Punjab,M.Chinnaswamy Stadium,13,8,2,0,,caught (Mandeep Singh),,,IPL 2019,IPL-1178417,
+IPL,2019-04-28,Delhi Capitals,Arun Jaitley Stadium,23,17,2,1,,caught (SE Rutherford),,,IPL 2019,IPL-1178421,
+IPL,2019-04-30,Rajasthan Royals,M.Chinnaswamy Stadium,25,7,1,3,,caught (LS Livingstone),,,IPL 2019,IPL-1178424,
+IPL,2019-05-04,Sunrisers Hyderabad,M.Chinnaswamy Stadium,16,7,2,1,,caught (WP Saha),,,IPL 2019,IPL-1178429,
+ODI,2019-06-05,South Africa,Southampton,18,34,1,,,caught,Tournament in England 2019,yes,,ODI # 4150,Tournament in England 2019|South Africa
+ODI,2019-06-09,Australia,The Oval,82,77,4,2,,caught,Tournament in England 2019,yes,,ODI # 4155,Tournament in England 2019|Australia
+ODI,2019-06-16,Pakistan,Manchester,77,65,7,,,caught,Tournament in England 2019,yes,,ODI # 4161,Tournament in England 2019|Pakistan
+ODI,2019-06-22,Afghanistan,Southampton,67,63,5,,,caught,Tournament in England 2019,yes,,ODI # 4169,Tournament in England 2019|Afghanistan
+ODI,2019-06-27,West Indies,Manchester,72,82,8,,,caught,Tournament in England 2019,yes,,ODI # 4175,Tournament in England 2019|West Indies
+ODI,2019-06-30,England,Birmingham,66,76,7,,,caught,India in England 2019 — v England,yes,,ODI # 4179,India in England 2019 — v England|England
+ODI,2019-07-02,Bangladesh,Birmingham,26,27,3,,,caught,Tournament in England 2019,yes,,ODI # 4182,Tournament in England 2019|Bangladesh
+ODI,2019-07-06,Sri Lanka,Leeds,34,41,3,,yes,not out,Tournament in England 2019,yes,,ODI # 4187,Tournament in England 2019|Sri Lanka
+ODI,2019-07-09,New Zealand,Manchester,1,6,,,,lbw,Tournament in England 2019,yes,,ODI # 4190,Tournament in England 2019|New Zealand
+T20I,2019-08-03,West Indies,Lauderhill,19,29,1,,,caught,Tournament in USA 2019,yes,,T20I # 842,Tournament in USA 2019|West Indies
+T20I,2019-08-04,West Indies,Lauderhill,28,23,1,1,,bowled,Tournament in USA 2019,yes,,T20I # 843,Tournament in USA 2019|West Indies
+T20I,2019-08-06,West Indies,Providence,59,45,6,,,caught,India in West Indies 2019 — v West Indies,yes,,T20I # 846,India in West Indies 2019 — v West Indies|West Indies
+ODI,2019-08-11,West Indies,Port of Spain,120,125,14,1,,caught,India in West Indies 2019 — v West Indies,yes,,ODI # 4197,India in West Indies 2019 — v West Indies|West Indies
+ODI,2019-08-14,West Indies,Port of Spain,114,99,14,,yes,not out,India in West Indies 2019 — v West Indies,yes,,ODI # 4199,India in West Indies 2019 — v West Indies|West Indies
+Test,2019-08-22,West Indies,North Sound,9,12,2,,,caught,India in West Indies 2019 — v West Indies,yes,,Test # 2358,India in West Indies 2019 — v West Indies|West Indies
+Test,2019-08-22,West Indies,North Sound,51,113,2,,,caught,India in West Indies 2019 — v West Indies,yes,,Test # 2358,India in West Indies 2019 — v West Indies|West Indies
+Test,2019-08-30,West Indies,Kingston,76,163,10,,,caught,India in West Indies 2019 — v West Indies,yes,,Test # 2359,India in West Indies 2019 — v West Indies|West Indies
+Test,2019-08-30,West Indies,Kingston,0,1,,,,caught,India in West Indies 2019 — v West Indies,yes,,Test # 2359,India in West Indies 2019 — v West Indies|West Indies
+T20I,2019-09-18,South Africa,Mohali,72,52,4,3,yes,not out,v South Africa in India 2019,no,,T20I # 888,v South Africa in India 2019|South Africa
+T20I,2019-09-22,South Africa,Bengaluru,9,15,,,,caught,v South Africa in India 2019,no,,T20I # 893,v South Africa in India 2019|South Africa
+Test,2019-10-02,South Africa,Visakhapatnam,20,40,4,,,caught,v South Africa in India 2019,no,,Test # 2363,v South Africa in India 2019|South Africa
+Test,2019-10-02,South Africa,Visakhapatnam,31,25,3,1,yes,not out,v South Africa in India 2019,no,,Test # 2363,v South Africa in India 2019|South Africa
+Test,2019-10-10,South Africa,Pune,254,336,33,2,yes,not out,v South Africa in India 2019,no,,Test # 2364,v South Africa in India 2019|South Africa
+Test,2019-10-19,South Africa,Ranchi,12,22,2,,,lbw,v South Africa in India 2019,no,,Test # 2365,v South Africa in India 2019|South Africa
+Test,2019-11-14,Bangladesh,Indore,0,2,,,,lbw,v Bangladesh in India 2019,no,,Test # 2366,v Bangladesh in India 2019|Bangladesh
+Test,2019-11-22,Bangladesh,Eden Gardens,136,194,18,,,caught,v Bangladesh in India 2019,no,,Test # 2369,v Bangladesh in India 2019|Bangladesh
+T20I,2019-12-06,West Indies,Hyderabad,94,50,6,6,yes,not out,v West Indies in India 2019,no,,T20I # 1020,v West Indies in India 2019|West Indies
+T20I,2019-12-08,West Indies,Thiruvananthapuram,19,17,2,,,caught,v West Indies in India 2019,no,,T20I # 1022,v West Indies in India 2019|West Indies
+T20I,2019-12-11,West Indies,Wankhede,70,29,4,7,yes,not out,v West Indies in India 2019,no,,T20I # 1024,v West Indies in India 2019|West Indies
+ODI,2019-12-15,West Indies,Chennai,4,4,1,,,bowled,v West Indies in India 2019,no,,ODI # 4221,v West Indies in India 2019|West Indies
+ODI,2019-12-18,West Indies,Visakhapatnam,0,1,,,,caught,v West Indies in India 2019,no,,ODI # 4222,v West Indies in India 2019|West Indies
+ODI,2019-12-22,West Indies,Cuttack,85,81,9,,,bowled,v West Indies in India 2019,no,,ODI # 4223,v West Indies in India 2019|West Indies
+T20I,2020-01-07,Sri Lanka,Indore,30,17,1,2,yes,not out,v Sri Lanka in India 2020,no,,T20I # 1026,v Sri Lanka in India 2020|Sri Lanka
+T20I,2020-01-10,Sri Lanka,Pune,26,17,2,1,,run out,v Sri Lanka in India 2020,no,,T20I # 1027,v Sri Lanka in India 2020|Sri Lanka
+ODI,2020-01-14,Australia,Wankhede,16,14,,1,,caught,v Australia in India 2020,no,,ODI # 4231,v Australia in India 2020|Australia
+ODI,2020-01-17,Australia,Rajkot,78,76,6,,,caught,v Australia in India 2020,no,,ODI # 4232,v Australia in India 2020|Australia
+ODI,2020-01-19,Australia,Bengaluru,89,91,8,,,bowled,v Australia in India 2020,no,,ODI # 4233,v Australia in India 2020|Australia
+T20I,2020-01-24,New Zealand,Auckland,45,32,3,1,,caught,India in New Zealand 2020 — v New Zealand,yes,,T20I # 1031,India in New Zealand 2020 — v New Zealand|New Zealand
+T20I,2020-01-26,New Zealand,Auckland,11,12,1,,,caught,India in New Zealand 2020 — v New Zealand,yes,,T20I # 1034,India in New Zealand 2020 — v New Zealand|New Zealand
+T20I,2020-01-29,New Zealand,Hamilton,38,27,2,1,,caught,India in New Zealand 2020 — v New Zealand,yes,,T20I # 1035,India in New Zealand 2020 — v New Zealand|New Zealand
+T20I,2020-01-31,New Zealand,Wellington,11,9,2,,,caught,India in New Zealand 2020 — v New Zealand,yes,,T20I # 1036,India in New Zealand 2020 — v New Zealand|New Zealand
+ODI,2020-02-05,New Zealand,Hamilton,51,63,6,,,bowled,India in New Zealand 2020 — v New Zealand,yes,,ODI # 4235,India in New Zealand 2020 — v New Zealand|New Zealand
+ODI,2020-02-08,New Zealand,Auckland,15,25,1,,,bowled,India in New Zealand 2020 — v New Zealand,yes,,ODI # 4239,India in New Zealand 2020 — v New Zealand|New Zealand
+ODI,2020-02-11,New Zealand,Mount Maunganui,9,12,,1,,caught,India in New Zealand 2020 — v New Zealand,yes,,ODI # 4243,India in New Zealand 2020 — v New Zealand|New Zealand
+Test,2020-02-21,New Zealand,Wellington,2,7,,,,caught,India in New Zealand 2020 — v New Zealand,yes,,Test # 2385,India in New Zealand 2020 — v New Zealand|New Zealand
+Test,2020-02-21,New Zealand,Wellington,19,43,3,,,caught,India in New Zealand 2020 — v New Zealand,yes,,Test # 2385,India in New Zealand 2020 — v New Zealand|New Zealand
+Test,2020-02-29,New Zealand,Christchurch,3,15,,,,lbw,India in New Zealand 2020 — v New Zealand,yes,,Test # 2387,India in New Zealand 2020 — v New Zealand|New Zealand
+Test,2020-02-29,New Zealand,Christchurch,14,30,3,,,lbw,India in New Zealand 2020 — v New Zealand,yes,,Test # 2387,India in New Zealand 2020 — v New Zealand|New Zealand
+IPL,2020-09-21,Sunrisers Hyderabad,Dubai International Cricket Stadium,14,13,0,0,,caught (Rashid Khan),,,IPL 2020,IPL-1216534,
+IPL,2020-09-24,Kings XI Punjab,Dubai International Cricket Stadium,1,5,0,0,,caught (Ravi Bishnoi),,,IPL 2020,IPL-1216510,
+IPL,2020-09-28,Mumbai Indians,Dubai International Cricket Stadium,3,11,0,0,,caught (RG Sharma),,,IPL 2020,IPL-1216547,
+IPL,2020-09-28,Mumbai Indians,Dubai International Cricket Stadium,5,2,1,0,,,,,IPL 2020,IPL-1216547,
+IPL,2020-10-03,Rajasthan Royals,Sheikh Zayed Stadium,72,53,7,2,,,,,IPL 2020,IPL-1216514,
+IPL,2020-10-05,Delhi Capitals,Dubai International Cricket Stadium,43,42,2,1,,caught (RR Pant),,,IPL 2020,IPL-1216519,
+IPL,2020-10-10,Chennai Super Kings,Dubai International Cricket Stadium,90,57,4,4,,,,,IPL 2020,IPL-1216525,
+IPL,2020-10-12,Kolkata Knight Riders,Sharjah Cricket Stadium,33,30,1,0,,,,,IPL 2020,IPL-1216540,
+IPL,2020-10-15,Kings XI Punjab,Sharjah Cricket Stadium,48,41,3,0,,caught (KL Rahul),,,IPL 2020,IPL-1216531,
+IPL,2020-10-17,Rajasthan Royals,Dubai International Cricket Stadium,43,34,1,2,,caught (R Tewatia),,,IPL 2020,IPL-1216522,
+IPL,2020-10-21,Kolkata Knight Riders,Sheikh Zayed Stadium,18,17,2,0,,,,,IPL 2020,IPL-1216494,
+IPL,2020-10-25,Chennai Super Kings,Dubai International Cricket Stadium,50,45,1,1,,caught (F du Plessis),,,IPL 2020,IPL-1216544,
+IPL,2020-10-28,Mumbai Indians,Sheikh Zayed Stadium,9,14,0,0,,caught (SS Tiwary),,,IPL 2020,IPL-1216499,
+IPL,2020-10-31,Sunrisers Hyderabad,Sharjah Cricket Stadium,7,7,0,0,,caught (KS Williamson),,,IPL 2020,IPL-1216502,
+IPL,2020-11-02,Delhi Capitals,Sheikh Zayed Stadium,29,24,2,1,,caught (MP Stoinis),,,IPL 2020,IPL-1216505,
+IPL,2020-11-06,Sunrisers Hyderabad,Sheikh Zayed Stadium,6,7,0,0,,caught (SP Goswami),,,IPL 2020,IPL-1237178,
+ODI,2020-11-27,Australia,Sydney,21,21,2,1,,caught,India in Australia 2020/21 — v Australia,yes,,ODI # 4265,India in Australia 2020/21 — v Australia|Australia
+ODI,2020-11-29,Australia,Sydney,89,87,7,2,,caught,India in Australia 2020/21 — v Australia,yes,,ODI # 4266,India in Australia 2020/21 — v Australia|Australia
+ODI,2020-12-02,Australia,Canberra,63,78,5,,,caught,India in Australia 2020/21 — v Australia,yes,,ODI # 4267,India in Australia 2020/21 — v Australia|Australia
+T20I,2020-12-04,Australia,Canberra,9,9,1,,,caught,India in Australia 2020/21 — v Australia,yes,,T20I # 1114,India in Australia 2020/21 — v Australia|Australia
+T20I,2020-12-06,Australia,Sydney,40,24,2,2,,caught,India in Australia 2020/21 — v Australia,yes,,T20I # 1115,India in Australia 2020/21 — v Australia|Australia
+T20I,2020-12-08,Australia,Sydney,85,61,4,3,,caught,India in Australia 2020/21 — v Australia,yes,,T20I # 1116,India in Australia 2020/21 — v Australia|Australia
+Test,2020-12-17,Australia,Adelaide,74,180,8,,,run out,India in Australia 2020/21 — v Australia,yes,,Test # 2396,India in Australia 2020/21 — v Australia|Australia
+Test,2020-12-17,Australia,Adelaide,4,8,1,,,caught,India in Australia 2020/21 — v Australia,yes,,Test # 2396,India in Australia 2020/21 — v Australia|Australia
+Test,2021-02-05,England,Chennai,11,48,,,,caught,v England in India 2021,no,,Test # 2409,v England in India 2021|England
+Test,2021-02-05,England,Chennai,72,104,9,,,bowled,v England in India 2021,no,,Test # 2409,v England in India 2021|England
+Test,2021-02-13,England,Chennai,0,5,,,,bowled,v England in India 2021,no,,Test # 2411,v England in India 2021|England
+Test,2021-02-13,England,Chennai,62,149,7,,,lbw,v England in India 2021,no,,Test # 2411,v England in India 2021|England
+Test,2021-02-24,England,Ahmedabad,27,58,3,,,bowled,v England in India 2021,no,,Test # 2412,v England in India 2021|England
+Test,2021-03-04,England,Ahmedabad,0,8,,,,caught,v England in India 2021,no,,Test # 2414,v England in India 2021|England
+T20I,2021-03-12,England,Ahmedabad,0,5,,,,caught,v England in India 2021,no,,T20I # 1131,v England in India 2021|England
+T20I,2021-03-14,England,Ahmedabad,73,49,5,3,yes,not out,v England in India 2021,no,,T20I # 1132,v England in India 2021|England
+T20I,2021-03-16,England,Ahmedabad,77,46,8,4,yes,not out,v England in India 2021,no,,T20I # 1133,v England in India 2021|England
+T20I,2021-03-18,England,Ahmedabad,1,5,,,,stumped,v England in India 2021,no,,T20I # 1135,v England in India 2021|England
+T20I,2021-03-20,England,Ahmedabad,80,52,7,2,yes,not out,v England in India 2021,no,,T20I # 1138,v England in India 2021|England
+ODI,2021-03-23,England,Pune,56,60,6,,,caught,v England in India 2021,no,,ODI # 4281,v England in India 2021|England
+ODI,2021-03-26,England,Pune,66,79,3,1,,caught,v England in India 2021,no,,ODI # 4283,v England in India 2021|England
+ODI,2021-03-28,England,Pune,7,10,1,,,bowled,v England in India 2021,no,,ODI # 4284,v England in India 2021|England
+IPL,2021-04-09,Mumbai Indians,"MA Chidambaram Stadium, Chepauk, Chennai",33,29,4,0,,lbw,,,IPL 2021,IPL-1254058,
+IPL,2021-04-14,Sunrisers Hyderabad,"MA Chidambaram Stadium, Chepauk, Chennai",33,30,4,0,,caught (V Shankar),,,IPL 2021,IPL-1254063,
+IPL,2021-04-18,Kolkata Knight Riders,"MA Chidambaram Stadium, Chepauk, Chennai",5,6,1,0,,caught (RA Tripathi),,,IPL 2021,IPL-1254067,
+IPL,2021-04-22,Rajasthan Royals,"Wankhede Stadium, Mumbai",72,47,6,3,,,,,IPL 2021,IPL-1254073,
+IPL,2021-04-25,Chennai Super Kings,"Wankhede Stadium, Mumbai",8,8,1,0,,caught (MS Dhoni),,,IPL 2021,IPL-1254076,
+IPL,2021-04-27,Delhi Capitals,"Narendra Modi Stadium, Ahmedabad",12,12,2,0,,bowled,,,IPL 2021,IPL-1254079,
+IPL,2021-04-30,Punjab Kings,"Narendra Modi Stadium, Ahmedabad",35,34,3,1,,bowled,,,IPL 2021,IPL-1254083,
+Test,2021-06-18,New Zealand,Southampton,44,132,1,,,lbw,Tournament in England 2021,yes,,Test # 2425,Tournament in England 2021|New Zealand
+Test,2021-06-18,New Zealand,Southampton,13,29,,,,caught,Tournament in England 2021,yes,,Test # 2425,Tournament in England 2021|New Zealand
+Test,2021-08-04,England,Nottingham,0,1,,,,caught,India in England 2021 — v England,yes,,Test # 2428,India in England 2021 — v England|England
+Test,2021-08-12,England,Lord's,42,103,3,,,caught,India in England 2021 — v England,yes,,Test # 2429,India in England 2021 — v England|England
+Test,2021-08-12,England,Lord's,20,31,4,,,caught,India in England 2021 — v England,yes,,Test # 2429,India in England 2021 — v England|England
+Test,2021-08-25,England,Leeds,7,17,1,,,caught,India in England 2021 — v England,yes,,Test # 2432,India in England 2021 — v England|England
+Test,2021-08-25,England,Leeds,55,125,8,,,caught,India in England 2021 — v England,yes,,Test # 2432,India in England 2021 — v England|England
+Test,2021-09-02,England,The Oval,50,96,8,,,caught,India in England 2021 — v England,yes,,Test # 2433,India in England 2021 — v England|England
+Test,2021-09-02,England,The Oval,44,96,7,,,caught,India in England 2021 — v England,yes,,Test # 2433,India in England 2021 — v England|England
+IPL,2021-09-20,Kolkata Knight Riders,"Zayed Cricket Stadium, Abu Dhabi",5,5,1,0,,lbw,,,IPL 2021,IPL-1254087,
+IPL,2021-09-24,Chennai Super Kings,Sharjah Cricket Stadium,53,42,6,1,,caught (RA Jadeja),,,IPL 2021,IPL-1254113,
+IPL,2021-09-26,Mumbai Indians,Dubai International Cricket Stadium,51,44,3,3,,caught (AS Roy),,,IPL 2021,IPL-1254108,
+IPL,2021-09-29,Rajasthan Royals,Dubai International Cricket Stadium,25,20,4,0,,run out (R Parag),,,IPL 2021,IPL-1254103,
+IPL,2021-10-03,Punjab Kings,Sharjah Cricket Stadium,25,25,2,1,,bowled,,,IPL 2021,IPL-1254090,
+IPL,2021-10-06,Sunrisers Hyderabad,"Zayed Cricket Stadium, Abu Dhabi",5,4,1,0,,lbw,,,IPL 2021,IPL-1254095,
+IPL,2021-10-08,Delhi Capitals,Dubai International Cricket Stadium,4,8,0,0,,caught (K Rabada),,,IPL 2021,IPL-1254101,
+IPL,2021-10-11,Kolkata Knight Riders,Sharjah Cricket Stadium,39,33,5,0,,bowled,,,IPL 2021,IPL-1254115,
+T20I,2021-10-24,Pakistan,Dubai (DICS),57,49,5,1,,caught,Tournament in UAE 2021,yes,,T20I # 1361,Tournament in UAE 2021|Pakistan
+T20I,2021-10-31,New Zealand,Dubai (DICS),9,17,,,,caught,Tournament in UAE 2021,yes,,T20I # 1381,Tournament in UAE 2021|New Zealand
+T20I,2021-11-05,Scotland,Dubai (DICS),2,2,,,yes,not out,Tournament in UAE 2021,yes,,T20I # 1396,Tournament in UAE 2021|Scotland
+Test,2021-12-03,New Zealand,Wankhede,0,4,,,,lbw,v New Zealand in India 2021,no,,Test # 2438,v New Zealand in India 2021|New Zealand
+Test,2021-12-03,New Zealand,Wankhede,36,84,1,1,,bowled,v New Zealand in India 2021,no,,Test # 2438,v New Zealand in India 2021|New Zealand
+Test,2021-12-26,South Africa,Centurion,35,94,4,,,caught,India in South Africa 2022 — v South Africa,yes,,Test # 2443,India in South Africa 2022 — v South Africa|South Africa
+Test,2021-12-26,South Africa,Centurion,18,32,4,,,caught,India in South Africa 2022 — v South Africa,yes,,Test # 2443,India in South Africa 2022 — v South Africa|South Africa
+Test,2022-01-11,South Africa,Cape Town,79,201,12,1,,caught,India in South Africa 2022 — v South Africa,yes,,Test # 2448,India in South Africa 2022 — v South Africa|South Africa
+Test,2022-01-11,South Africa,Cape Town,29,143,4,,,caught,India in South Africa 2022 — v South Africa,yes,,Test # 2448,India in South Africa 2022 — v South Africa|South Africa
+ODI,2022-01-19,South Africa,Paarl,51,63,3,,,caught,India in South Africa 2022 — v South Africa,yes,,ODI # 4344,India in South Africa 2022 — v South Africa|South Africa
+ODI,2022-01-21,South Africa,Paarl,0,5,,,,caught,India in South Africa 2022 — v South Africa,yes,,ODI # 4346,India in South Africa 2022 — v South Africa|South Africa
+ODI,2022-01-23,South Africa,Cape Town,65,84,5,,,caught,India in South Africa 2022 — v South Africa,yes,,ODI # 4349,India in South Africa 2022 — v South Africa|South Africa
+ODI,2022-02-06,West Indies,Ahmedabad,8,4,2,,,caught,v West Indies in India 2022,no,,ODI # 4353,v West Indies in India 2022|West Indies
+ODI,2022-02-09,West Indies,Ahmedabad,18,30,3,,,caught,v West Indies in India 2022,no,,ODI # 4355,v West Indies in India 2022|West Indies
+ODI,2022-02-11,West Indies,Ahmedabad,0,2,,,,caught,v West Indies in India 2022,no,,ODI # 4356,v West Indies in India 2022|West Indies
+T20I,2022-02-16,West Indies,Eden Gardens,17,13,1,,,caught,v West Indies in India 2022,no,,T20I # 1467,v West Indies in India 2022|West Indies
+T20I,2022-02-18,West Indies,Eden Gardens,52,41,7,1,,bowled,v West Indies in India 2022,no,,T20I # 1473,v West Indies in India 2022|West Indies
+Test,2022-03-04,Sri Lanka,Mohali,45,76,5,,,bowled,v Sri Lanka in India 2022,no,,Test # 2452,v Sri Lanka in India 2022|Sri Lanka
+Test,2022-03-12,Sri Lanka,Bengaluru,23,48,2,,,lbw,v Sri Lanka in India 2022,no,,Test # 2456,v Sri Lanka in India 2022|Sri Lanka
+Test,2022-03-12,Sri Lanka,Bengaluru,13,16,1,,,lbw,v Sri Lanka in India 2022,no,,Test # 2456,v Sri Lanka in India 2022|Sri Lanka
+IPL,2022-03-27,Punjab Kings,"Dr DY Patil Sports Academy, Mumbai",41,31,1,2,,,,,IPL 2022,IPL-1304049,
+IPL,2022-03-30,Kolkata Knight Riders,"Dr DY Patil Sports Academy, Mumbai",12,7,2,0,,caught (SP Jackson),,,IPL 2022,IPL-1304052,
+IPL,2022-04-05,Rajasthan Royals,"Wankhede Stadium, Mumbai",5,6,0,0,,,,,IPL 2022,IPL-1304059,
+IPL,2022-04-09,Mumbai Indians,"Maharashtra Cricket Association Stadium, Pune",48,36,5,0,,lbw,,,IPL 2022,IPL-1304064,
+IPL,2022-04-12,Chennai Super Kings,"Dr DY Patil Sports Academy, Mumbai",1,3,0,0,,caught (S Dube),,,IPL 2022,IPL-1304068,
+IPL,2022-04-16,Delhi Capitals,"Wankhede Stadium, Mumbai",12,14,1,0,,run out (Lalit Yadav),,,IPL 2022,IPL-1304073,
+IPL,2022-04-19,Lucknow Super Giants,"Dr DY Patil Sports Academy, Mumbai",0,1,0,0,,caught (DJ Hooda),,,IPL 2022,IPL-1304077,
+IPL,2022-04-23,Sunrisers Hyderabad,"Brabourne Stadium, Mumbai",0,1,0,0,,caught (AK Markram),,,IPL 2022,IPL-1304082,
+IPL,2022-04-26,Rajasthan Royals,"Maharashtra Cricket Association Stadium, Pune",9,11,2,0,,caught (R Parag),,,IPL 2022,IPL-1304085,
+IPL,2022-04-30,Gujarat Titans,"Brabourne Stadium, Mumbai",58,54,6,1,,bowled,,,IPL 2022,IPL-1304089,
+IPL,2022-05-04,Chennai Super Kings,"Maharashtra Cricket Association Stadium, Pune",30,35,3,1,,bowled,,,IPL 2022,IPL-1304095,
+IPL,2022-05-08,Sunrisers Hyderabad,"Wankhede Stadium, Mumbai",0,1,0,0,,caught (KS Williamson),,,IPL 2022,IPL-1304100,
+IPL,2022-05-13,Punjab Kings,"Brabourne Stadium, Mumbai",20,16,2,1,,caught (RD Chahar),,,IPL 2022,IPL-1304106,
+IPL,2022-05-19,Gujarat Titans,"Wankhede Stadium, Mumbai",73,56,8,2,,stumped (MS Wade),,,IPL 2022,IPL-1304113,
+IPL,2022-05-25,Lucknow Super Giants,"Eden Gardens, Kolkata",25,26,2,0,,caught (Mohsin Khan),,,IPL 2022,IPL-1312198,
+IPL,2022-05-27,Rajasthan Royals,"Narendra Modi Stadium, Ahmedabad",7,8,0,1,,caught (SV Samson),,,IPL 2022,IPL-1312199,
+Test,2022-07-01,England,Birmingham,11,19,2,,,bowled,India in England 2022 — v England,yes,,Test # 2470,India in England 2022 — v England|England
+Test,2022-07-01,England,Birmingham,20,40,4,,,caught,India in England 2022 — v England,yes,,Test # 2470,India in England 2022 — v England|England
+T20I,2022-07-09,England,Birmingham,1,3,,,,caught,India in England 2022 — v England,yes,,T20I # 1628,India in England 2022 — v England|England
+T20I,2022-07-10,England,Nottingham,11,6,1,1,,caught,India in England 2022 — v England,yes,,T20I # 1631,India in England 2022 — v England|England
+ODI,2022-07-14,England,Lord's,16,25,3,,,caught,India in England 2022 — v England,yes,,ODI # 4428,India in England 2022 — v England|England
+ODI,2022-07-17,England,Manchester,17,22,3,,,caught,India in England 2022 — v England,yes,,ODI # 4433,India in England 2022 — v England|England
+T20I,2022-08-28,Pakistan,Dubai (DICS),35,34,3,1,,caught,Tournament in UAE 2022,yes,,T20I # 1750,Tournament in UAE 2022|Pakistan
+T20I,2022-08-31,Hong Kong,Dubai (DICS),59,44,1,3,yes,not out,Tournament in UAE 2022,yes,,T20I # 1754,Tournament in UAE 2022|Hong Kong
+T20I,2022-09-04,Pakistan,Dubai (DICS),60,44,4,1,,run out,Tournament in UAE 2022,yes,,T20I # 1758,Tournament in UAE 2022|Pakistan
+T20I,2022-09-06,Sri Lanka,Dubai (DICS),0,4,,,,bowled,Tournament in UAE 2022,yes,,T20I # 1759,Tournament in UAE 2022|Sri Lanka
+T20I,2022-09-08,Afghanistan,Dubai (DICS),122,61,12,6,yes,not out,Tournament in UAE 2022,yes,,T20I # 1761,Tournament in UAE 2022|Afghanistan
+T20I,2022-09-20,Australia,Mohali,2,7,,,,caught,v Australia in India 2022,no,,T20I # 1788,v Australia in India 2022|Australia
+T20I,2022-09-23,Australia,Nagpur,11,6,2,,,bowled,v Australia in India 2022,no,,T20I # 1794,v Australia in India 2022|Australia
+T20I,2022-09-25,Australia,Hyderabad,63,48,3,4,,caught,v Australia in India 2022,no,,T20I # 1796,v Australia in India 2022|Australia
+T20I,2022-09-28,South Africa,Thiruvananthapuram,3,9,,,,caught,v South Africa in India 2022,no,,T20I # 1800,v South Africa in India 2022|South Africa
+T20I,2022-10-02,South Africa,Guwahati,49,28,7,1,yes,not out,v South Africa in India 2022,no,,T20I # 1803,v South Africa in India 2022|South Africa
+T20I,2022-10-23,Pakistan,Melbourne,82,53,6,4,yes,not out,Tournament in Australia 2023,yes,,T20I # 1842,Tournament in Australia 2023|Pakistan
+T20I,2022-10-27,Netherlands,Sydney,62,44,3,2,yes,not out,Tournament in Australia 2023,yes,,T20I # 1848,Tournament in Australia 2023|Netherlands
+T20I,2022-10-30,South Africa,Perth,12,11,2,,,caught,Tournament in Australia 2023,yes,,T20I # 1853,Tournament in Australia 2023|South Africa
+T20I,2022-11-02,Bangladesh,Adelaide,64,44,8,1,yes,not out,Tournament in Australia 2023,yes,,T20I # 1860,Tournament in Australia 2023|Bangladesh
+T20I,2022-11-06,Zimbabwe,Melbourne,26,25,2,,,caught,Tournament in Australia 2023,yes,,T20I # 1873,Tournament in Australia 2023|Zimbabwe
+T20I,2022-11-10,England,Adelaide,50,40,4,1,,caught,Tournament in Australia 2023,yes,,T20I # 1878,Tournament in Australia 2023|England
+ODI,2022-12-04,Bangladesh,Mirpur,9,15,1,,,caught,India in Bangladesh 2022 — v Bangladesh,yes,,ODI # 4493,India in Bangladesh 2022 — v Bangladesh|Bangladesh
+ODI,2022-12-07,Bangladesh,Mirpur,5,6,1,,,bowled,India in Bangladesh 2022 — v Bangladesh,yes,,ODI # 4496,India in Bangladesh 2022 — v Bangladesh|Bangladesh
+ODI,2022-12-10,Bangladesh,Chattogram,113,91,11,2,,caught,India in Bangladesh 2022 — v Bangladesh,yes,,ODI # 4499,India in Bangladesh 2022 — v Bangladesh|Bangladesh
+Test,2022-12-14,Bangladesh,Chattogram,1,5,,,,lbw,India in Bangladesh 2022 — v Bangladesh,yes,,Test # 2481,India in Bangladesh 2022 — v Bangladesh|Bangladesh
+Test,2022-12-14,Bangladesh,Chattogram,19,29,,,yes,not out,India in Bangladesh 2022 — v Bangladesh,yes,,Test # 2481,India in Bangladesh 2022 — v Bangladesh|Bangladesh
+Test,2022-12-22,Bangladesh,Mirpur,24,73,3,,,caught,India in Bangladesh 2022 — v Bangladesh,yes,,Test # 2484,India in Bangladesh 2022 — v Bangladesh|Bangladesh
+Test,2022-12-22,Bangladesh,Mirpur,1,22,,,,caught,India in Bangladesh 2022 — v Bangladesh,yes,,Test # 2484,India in Bangladesh 2022 — v Bangladesh|Bangladesh
+ODI,2023-01-10,Sri Lanka,Guwahati,113,87,12,1,,caught,v Sri Lanka in India 2023,no,,ODI # 4501,v Sri Lanka in India 2023|Sri Lanka
+ODI,2023-01-12,Sri Lanka,Eden Gardens,4,9,1,,,bowled,v Sri Lanka in India 2023,no,,ODI # 4503,v Sri Lanka in India 2023|Sri Lanka
+ODI,2023-01-15,Sri Lanka,Thiruvananthapuram,166,110,13,8,yes,not out,v Sri Lanka in India 2023,no,,ODI # 4505,v Sri Lanka in India 2023|Sri Lanka
+ODI,2023-01-18,New Zealand,Hyderabad,8,10,1,,,bowled,v New Zealand in India 2023,no,,ODI # 4507,v New Zealand in India 2023|New Zealand
+ODI,2023-01-21,New Zealand,Raipur,11,9,2,,,stumped,v New Zealand in India 2023,no,,ODI # 4509,v New Zealand in India 2023|New Zealand
+ODI,2023-01-24,New Zealand,Indore,36,27,3,1,,caught,v New Zealand in India 2023,no,,ODI # 4511,v New Zealand in India 2023|New Zealand
+Test,2023-02-09,Australia,Nagpur,12,26,2,,,caught,v Australia in India 2023,no,,Test # 2490,v Australia in India 2023|Australia
+Test,2023-02-17,Australia,Delhi,44,84,4,,,lbw,v Australia in India 2023,no,,Test # 2493,v Australia in India 2023|Australia
+Test,2023-02-17,Australia,Delhi,20,31,3,,,stumped,v Australia in India 2023,no,,Test # 2493,v Australia in India 2023|Australia
+Test,2023-03-01,Australia,Indore,22,52,2,,,lbw,v Australia in India 2023,no,,Test # 2496,v Australia in India 2023|Australia
+Test,2023-03-01,Australia,Indore,13,26,2,,,lbw,v Australia in India 2023,no,,Test # 2496,v Australia in India 2023|Australia
+Test,2023-03-09,Australia,Ahmedabad,186,364,15,,,caught,v Australia in India 2023,no,,Test # 2499,v Australia in India 2023|Australia
+ODI,2023-03-17,Australia,Wankhede,4,9,1,,,lbw,v Australia in India 2023,no,,ODI # 4538,v Australia in India 2023|Australia
+ODI,2023-03-19,Australia,Visakhapatnam,31,35,4,,,lbw,v Australia in India 2023,no,,ODI # 4541,v Australia in India 2023|Australia
+ODI,2023-03-22,Australia,Chennai,54,72,2,1,,caught,v Australia in India 2023,no,,ODI # 4545,v Australia in India 2023|Australia
+IPL,2023-04-02,Mumbai Indians,"M Chinnaswamy Stadium, Bengaluru",82,53,6,5,,,,,IPL 2023,IPL-1359479,
+IPL,2023-04-06,Kolkata Knight Riders,"Eden Gardens, Kolkata",21,18,3,0,,bowled,,,IPL 2023,IPL-1359483,
+IPL,2023-04-10,Lucknow Super Giants,"M Chinnaswamy Stadium, Bengaluru",61,45,4,4,,caught (MP Stoinis),,,IPL 2023,IPL-1359489,
+IPL,2023-04-15,Delhi Capitals,"M Chinnaswamy Stadium, Bengaluru",50,35,6,1,,caught (YV Dhull),,,IPL 2023,IPL-1359494,
+IPL,2023-04-17,Chennai Super Kings,"M Chinnaswamy Stadium, Bengaluru",6,4,1,0,,bowled,,,IPL 2023,IPL-1359498,
+IPL,2023-04-20,Punjab Kings,"Punjab Cricket Association IS Bindra Stadium, Mohali, Chandigarh",59,48,5,1,,caught (JM Sharma),,,IPL 2023,IPL-1359501,
+IPL,2023-04-23,Rajasthan Royals,"M Chinnaswamy Stadium, Bengaluru",0,1,0,0,,lbw,,,IPL 2023,IPL-1359506,
+IPL,2023-04-26,Kolkata Knight Riders,"M Chinnaswamy Stadium, Bengaluru",54,38,6,0,,caught (VR Iyer),,,IPL 2023,IPL-1359510,
+IPL,2023-05-01,Lucknow Super Giants,"Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow",31,32,3,0,,stumped (N Pooran),,,IPL 2023,IPL-1359517,
+IPL,2023-05-06,Delhi Capitals,"Arun Jaitley Stadium, Delhi",55,47,5,0,,caught (KK Ahmed),,,IPL 2023,IPL-1359524,
+IPL,2023-05-09,Mumbai Indians,"Wankhede Stadium, Mumbai",1,4,0,0,,caught (Ishan Kishan),,,IPL 2023,IPL-1359528,
+IPL,2023-05-14,Rajasthan Royals,"Sawai Mansingh Stadium, Jaipur",18,20,1,0,,caught (YBK Jaiswal),,,IPL 2023,IPL-1359534,
+IPL,2023-05-18,Sunrisers Hyderabad,"Rajiv Gandhi International Stadium, Uppal, Hyderabad",100,65,12,4,,caught (GD Phillips),,,IPL 2023,IPL-1359539,
+IPL,2023-05-21,Gujarat Titans,"M Chinnaswamy Stadium, Bengaluru",101,63,13,1,,,,,IPL 2023,IPL-1359544,
+Test,2023-06-07,Australia,The Oval,14,31,2,,,caught,Tournament in England 2023,yes,,Test # 2505,Tournament in England 2023|Australia
+Test,2023-06-07,Australia,The Oval,49,78,7,,,caught,Tournament in England 2023,yes,,Test # 2505,Tournament in England 2023|Australia
+Test,2023-07-12,West Indies,Roseau,76,182,5,,,caught,India in West Indies 2023 — v West Indies,yes,,Test # 2510,India in West Indies 2023 — v West Indies|West Indies
+Test,2023-07-20,West Indies,Port of Spain,121,206,11,,,run out,India in West Indies 2023 — v West Indies,yes,,Test # 2513,India in West Indies 2023 — v West Indies|West Indies
+ODI,2023-09-02,Pakistan,Pallekele,4,7,1,,,bowled,Tournament in Sri Lanka 2023,yes,,ODI # 4630,Tournament in Sri Lanka 2023|Pakistan
+ODI,2023-09-10,Pakistan,Colombo (RPS),122,94,9,3,yes,not out,Tournament in Sri Lanka 2023,yes,,ODI # 4639,Tournament in Sri Lanka 2023|Pakistan
+ODI,2023-09-12,Sri Lanka,Colombo (RPS),3,12,,,,caught,India in Sri Lanka 2023 — v Sri Lanka,yes,,ODI # 4641,India in Sri Lanka 2023 — v Sri Lanka|Sri Lanka
+ODI,2023-09-27,Australia,Rajkot,56,61,5,1,,caught,v Australia in India 2023,no,,ODI # 4657,v Australia in India 2023|Australia
+ODI,2023-10-08,Australia,Chennai,85,116,6,,,caught,v Australia in India 2023,no,,ODI # 4662,v Australia in India 2023|Australia
+ODI,2023-10-11,Afghanistan,Delhi,55,56,6,,yes,not out,v Afghanistan in India 2023,no,,ODI # 4666,v Afghanistan in India 2023|Afghanistan
+ODI,2023-10-14,Pakistan,Ahmedabad,16,18,3,,,caught,v Pakistan in India 2023,no,,ODI # 4669,v Pakistan in India 2023|Pakistan
+ODI,2023-10-19,Bangladesh,Pune,103,97,6,4,yes,not out,v Bangladesh in India 2023,no,,ODI # 4674,v Bangladesh in India 2023|Bangladesh
+ODI,2023-10-22,New Zealand,Dharamsala,95,104,8,2,,caught,v New Zealand in India 2023,no,,ODI # 4678,v New Zealand in India 2023|New Zealand
+ODI,2023-10-29,England,Lucknow,0,9,,,,caught,v England in India 2023,no,,ODI # 4686,v England in India 2023|England
+ODI,2023-11-02,Sri Lanka,Wankhede,88,94,11,,,caught,v Sri Lanka in India 2023,no,,ODI # 4690,v Sri Lanka in India 2023|Sri Lanka
+ODI,2023-11-05,South Africa,Eden Gardens,101,121,10,,yes,not out,v South Africa in India 2023,no,,ODI # 4694,v South Africa in India 2023|South Africa
+ODI,2023-11-12,Netherlands,Bengaluru,51,56,5,1,,bowled,v Netherlands in India 2023,no,,ODI # 4702,v Netherlands in India 2023|Netherlands
+ODI,2023-11-15,New Zealand,Wankhede,117,113,9,2,,caught,v New Zealand in India 2023,no,,ODI # 4703,v New Zealand in India 2023|New Zealand
+ODI,2023-11-19,Australia,Ahmedabad,54,63,4,,,bowled,v Australia in India 2023,no,,ODI # 4705,v Australia in India 2023|Australia
+Test,2023-12-26,South Africa,Centurion,38,64,5,,,caught,India in South Africa 2024 — v South Africa,yes,,Test # 2520,India in South Africa 2024 — v South Africa|South Africa
+Test,2023-12-26,South Africa,Centurion,76,82,12,1,,caught,India in South Africa 2024 — v South Africa,yes,,Test # 2520,India in South Africa 2024 — v South Africa|South Africa
+Test,2024-01-03,South Africa,Cape Town,46,59,6,1,,caught,India in South Africa 2024 — v South Africa,yes,,Test # 2522,India in South Africa 2024 — v South Africa|South Africa
+Test,2024-01-03,South Africa,Cape Town,12,11,2,,,caught,India in South Africa 2024 — v South Africa,yes,,Test # 2522,India in South Africa 2024 — v South Africa|South Africa
+T20I,2024-01-14,Afghanistan,Indore,29,16,5,,,caught,v Afghanistan in India 2024,no,,T20I # 2431,v Afghanistan in India 2024|Afghanistan
+T20I,2024-01-17,Afghanistan,Bengaluru,0,1,,,,caught,v Afghanistan in India 2024,no,,T20I # 2435,v Afghanistan in India 2024|Afghanistan
+IPL,2024-03-22,Chennai Super Kings,"MA Chidambaram Stadium, Chepauk, Chennai",21,21,0,1,,caught (R Ravindra),,,IPL 2024,IPL-1422119,
+IPL,2024-03-25,Punjab Kings,"M Chinnaswamy Stadium, Bengaluru",77,52,11,2,,caught (Harpreet Brar),,,IPL 2024,IPL-1422124,
+IPL,2024-03-29,Kolkata Knight Riders,"M Chinnaswamy Stadium, Bengaluru",83,60,4,4,,,,,IPL 2024,IPL-1422128,
+IPL,2024-04-02,Lucknow Super Giants,"M Chinnaswamy Stadium, Bengaluru",22,16,2,1,,caught (D Padikkal),,,IPL 2024,IPL-1422133,
+IPL,2024-04-06,Rajasthan Royals,"Sawai Mansingh Stadium, Jaipur",113,77,12,4,,,,,IPL 2024,IPL-1422137,
+IPL,2024-04-11,Mumbai Indians,"Wankhede Stadium, Mumbai",3,9,0,0,,caught (Ishan Kishan),,,IPL 2024,IPL-1426263,
+IPL,2024-04-15,Sunrisers Hyderabad,"M Chinnaswamy Stadium, Bengaluru",42,20,6,2,,bowled,,,IPL 2024,IPL-1426268,
+IPL,2024-04-21,Kolkata Knight Riders,"Eden Gardens, Kolkata",18,7,1,2,,caught and bowled,,,IPL 2024,IPL-1426274,
+IPL,2024-04-25,Sunrisers Hyderabad,"Rajiv Gandhi International Stadium, Uppal, Hyderabad",51,43,4,1,,caught (Abdul Samad),,,IPL 2024,IPL-1426279,
+IPL,2024-04-28,Gujarat Titans,"Narendra Modi Stadium, Ahmedabad",70,45,6,3,,,,,IPL 2024,IPL-1426283,
+IPL,2024-05-04,Gujarat Titans,"M Chinnaswamy Stadium, Bengaluru",42,27,2,4,,caught (WP Saha),,,IPL 2024,IPL-1426290,
+IPL,2024-05-09,Punjab Kings,"Himachal Pradesh Cricket Association Stadium, Dharamsala",92,52,7,6,,caught (RR Rossouw),,,IPL 2024,IPL-1426296,
+IPL,2024-05-12,Delhi Capitals,"M Chinnaswamy Stadium, Bengaluru",27,14,1,3,,caught (Abishek Porel),,,IPL 2024,IPL-1426300,
+IPL,2024-05-18,Chennai Super Kings,"M Chinnaswamy Stadium, Bengaluru",47,30,3,4,,caught (DJ Mitchell),,,IPL 2024,IPL-1426306,
+IPL,2024-05-22,Rajasthan Royals,"Narendra Modi Stadium, Ahmedabad",33,24,3,1,,caught (D Ferreira),,,IPL 2024,IPL-1426310,
+T20I,2024-06-05,Ireland,New York,1,5,,,,caught,Tournament in USA 2024,yes,,T20I # 2639,Tournament in USA 2024|Ireland
+T20I,2024-06-09,Pakistan,New York,4,3,1,,,caught,Tournament in USA 2024,yes,,T20I # 2658,Tournament in USA 2024|Pakistan
+T20I,2024-06-12,U.S.A.,New York,0,1,,,,caught,Tournament in USA 2024,yes,,T20I # 2671,Tournament in USA 2024|U.S.A.
+T20I,2024-06-20,Afghanistan,Bridgetown,24,24,,1,,caught,Tournament in West Indies 2024,yes,,T20I # 2710,Tournament in West Indies 2024|Afghanistan
+T20I,2024-06-22,Bangladesh,North Sound,37,28,1,3,,bowled,Tournament in West Indies 2024,yes,,T20I # 2716,Tournament in West Indies 2024|Bangladesh
+T20I,2024-06-24,Australia,Gros Islet,0,5,,,,caught,Tournament in West Indies 2024,yes,,T20I # 2721,Tournament in West Indies 2024|Australia
+T20I,2024-06-27,England,Providence,9,9,,1,,bowled,Tournament in West Indies 2024,yes,,T20I # 2724,Tournament in West Indies 2024|England
+T20I,2024-06-29,South Africa,Bridgetown,76,59,6,2,,caught,Tournament in West Indies 2024,yes,,T20I # 2729,Tournament in West Indies 2024|South Africa
+ODI,2024-08-02,Sri Lanka,Colombo (RPS),24,32,2,,,lbw,India in Sri Lanka 2024 — v Sri Lanka,yes,,ODI # 4752,India in Sri Lanka 2024 — v Sri Lanka|Sri Lanka
+ODI,2024-08-04,Sri Lanka,Colombo (RPS),14,19,2,,,lbw,India in Sri Lanka 2024 — v Sri Lanka,yes,,ODI # 4753,India in Sri Lanka 2024 — v Sri Lanka|Sri Lanka
+ODI,2024-08-07,Sri Lanka,Colombo (RPS),20,18,4,,,lbw,India in Sri Lanka 2024 — v Sri Lanka,yes,,ODI # 4754,India in Sri Lanka 2024 — v Sri Lanka|Sri Lanka
+Test,2024-09-19,Bangladesh,Chennai,6,6,,,,caught,v Bangladesh in India 2024,no,,Test # 2550,v Bangladesh in India 2024|Bangladesh
+Test,2024-09-19,Bangladesh,Chennai,17,37,2,,,lbw,v Bangladesh in India 2024,no,,Test # 2550,v Bangladesh in India 2024|Bangladesh
+Test,2024-09-27,Bangladesh,Kanpur,47,35,4,1,,bowled,v Bangladesh in India 2024,no,,Test # 2552,v Bangladesh in India 2024|Bangladesh
+Test,2024-09-27,Bangladesh,Kanpur,29,37,4,,yes,not out,v Bangladesh in India 2024,no,,Test # 2552,v Bangladesh in India 2024|Bangladesh
+Test,2024-10-16,New Zealand,Bengaluru,0,9,,,,caught,v New Zealand in India 2024,no,,Test # 2555,v New Zealand in India 2024|New Zealand
+Test,2024-10-16,New Zealand,Bengaluru,70,102,8,1,,caught,v New Zealand in India 2024,no,,Test # 2555,v New Zealand in India 2024|New Zealand
+Test,2024-10-24,New Zealand,Pune,1,9,,,,bowled,v New Zealand in India 2024,no,,Test # 2557,v New Zealand in India 2024|New Zealand
+Test,2024-10-24,New Zealand,Pune,17,40,2,,,lbw,v New Zealand in India 2024,no,,Test # 2557,v New Zealand in India 2024|New Zealand
+Test,2024-11-01,New Zealand,Wankhede,4,6,1,,,run out,v New Zealand in India 2024,no,,Test # 2560,v New Zealand in India 2024|New Zealand
+Test,2024-11-01,New Zealand,Wankhede,1,7,,,,caught,v New Zealand in India 2024,no,,Test # 2560,v New Zealand in India 2024|New Zealand
+Test,2024-11-22,Australia,Perth,5,12,,,,caught,India in Australia 2025 — v Australia,yes,,Test # 2561,India in Australia 2025 — v Australia|Australia
+Test,2024-11-22,Australia,Perth,100,143,8,2,yes,not out,India in Australia 2025 — v Australia,yes,,Test # 2561,India in Australia 2025 — v Australia|Australia
+Test,2024-12-06,Australia,Adelaide,7,8,1,,,caught,India in Australia 2025 — v Australia,yes,,Test # 2568,India in Australia 2025 — v Australia|Australia
+Test,2024-12-06,Australia,Adelaide,11,21,1,,,caught,India in Australia 2025 — v Australia,yes,,Test # 2568,India in Australia 2025 — v Australia|Australia
+Test,2024-12-14,Australia,Brisbane,3,16,,,,caught,India in Australia 2025 — v Australia,yes,,Test # 2570,India in Australia 2025 — v Australia|Australia
+Test,2024-12-26,Australia,Melbourne,36,86,4,,,caught,India in Australia 2025 — v Australia,yes,,Test # 2571,India in Australia 2025 — v Australia|Australia
+Test,2024-12-26,Australia,Melbourne,5,29,,,,caught,India in Australia 2025 — v Australia,yes,,Test # 2571,India in Australia 2025 — v Australia|Australia
+Test,2025-01-03,Australia,Sydney,17,69,,,,caught,India in Australia 2025 — v Australia,yes,,Test # 2575,India in Australia 2025 — v Australia|Australia
+Test,2025-01-03,Australia,Sydney,6,12,1,,,caught,India in Australia 2025 — v Australia,yes,,Test # 2575,India in Australia 2025 — v Australia|Australia
+ODI,2025-02-09,England,Cuttack,5,8,1,,,caught,v England in India 2025,no,,ODI # 4828,v England in India 2025|England
+ODI,2025-02-12,England,Ahmedabad,52,55,7,1,,caught,v England in India 2025,no,,ODI # 4833,v England in India 2025|England
+ODI,2025-02-20,Bangladesh,Dubai (DICS),22,38,1,,,caught,Tournament in UAE 2025,yes,,ODI # 4844,Tournament in UAE 2025|Bangladesh
+ODI,2025-02-23,Pakistan,Dubai (DICS),100,111,7,,yes,not out,Tournament in UAE 2025,yes,,ODI # 4847,Tournament in UAE 2025|Pakistan
+ODI,2025-03-02,New Zealand,Dubai (DICS),11,14,2,,,caught,Tournament in UAE 2025,yes,,ODI # 4852,Tournament in UAE 2025|New Zealand
+ODI,2025-03-04,Australia,Dubai (DICS),84,98,5,,,caught,Tournament in UAE 2025,yes,,ODI # 4853,Tournament in UAE 2025|Australia
+ODI,2025-03-09,New Zealand,Dubai (DICS),1,2,,,,lbw,Tournament in UAE 2025,yes,,ODI # 4858,Tournament in UAE 2025|New Zealand
+IPL,2025-03-22,Kolkata Knight Riders,"Eden Gardens, Kolkata",59,36,4,3,,,,,IPL 2025,IPL-1473438,
+IPL,2025-03-28,Chennai Super Kings,"MA Chidambaram Stadium, Chepauk, Chennai",31,31,2,1,,caught (R Ravindra),,,IPL 2025,IPL-1473445,
+IPL,2025-04-02,Gujarat Titans,"M Chinnaswamy Stadium, Bengaluru",7,6,1,0,,caught (M Prasidh Krishna),,,IPL 2025,IPL-1473451,
+IPL,2025-04-07,Mumbai Indians,"Wankhede Stadium, Mumbai",67,43,8,2,,caught (Naman Dhir),,,IPL 2025,IPL-1473458,
+IPL,2025-04-10,Delhi Capitals,"M Chinnaswamy Stadium, Bengaluru",22,14,1,2,,caught (MA Starc),,,IPL 2025,IPL-1473461,
+IPL,2025-04-13,Rajasthan Royals,"Sawai Mansingh Stadium, Jaipur",62,47,4,2,,,,,IPL 2025,IPL-1473465,
+IPL,2025-04-18,Punjab Kings,"M Chinnaswamy Stadium, Bengaluru",1,3,0,0,,caught (M Jansen),,,IPL 2025,IPL-1473471,
+IPL,2025-04-20,Punjab Kings,"Maharaja Yadavindra Singh International Cricket Stadium, Mullanpur",73,55,7,1,,,,,IPL 2025,IPL-1473474,
+IPL,2025-04-24,Rajasthan Royals,"M Chinnaswamy Stadium, Bengaluru",70,44,8,2,,caught (N Rana),,,IPL 2025,IPL-1473479,
+IPL,2025-04-27,Delhi Capitals,"Arun Jaitley Stadium, Delhi",51,47,4,0,,caught (MA Starc),,,IPL 2025,IPL-1473483,
+IPL,2025-05-03,Chennai Super Kings,"M Chinnaswamy Stadium, Bengaluru",62,33,5,5,,caught (KK Ahmed),,,IPL 2025,IPL-1473489,
+IPL,2025-05-23,Sunrisers Hyderabad,"Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow",43,26,7,1,,caught (Abhishek Sharma),,,IPL 2025,IPL-1473503,
+IPL,2025-05-27,Lucknow Super Giants,"Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow",54,33,10,0,,caught (A Badoni),,,IPL 2025,IPL-1473507,
+IPL,2025-05-29,Punjab Kings,"Maharaja Yadavindra Singh International Cricket Stadium, Mullanpur",12,12,2,0,,caught (JP Inglis),,,IPL 2025,IPL-1473508,
+IPL,2025-06-03,Punjab Kings,"Narendra Modi Stadium, Ahmedabad",43,36,3,0,,caught and bowled,,,IPL 2025,IPL-1473511,
+ODI,2025-10-19,Australia,Perth,0,8,,,,caught,India in Australia 2025/26 — v Australia,yes,,ODI # 4911,India in Australia 2025/26 — v Australia|Australia
+ODI,2025-10-23,Australia,Adelaide,0,4,,,,lbw,India in Australia 2025/26 — v Australia,yes,,ODI # 4913,India in Australia 2025/26 — v Australia|Australia
+ODI,2025-10-25,Australia,Sydney,74,81,7,,yes,not out,India in Australia 2025/26 — v Australia,yes,,ODI # 4915,India in Australia 2025/26 — v Australia|Australia
+ODI,2025-11-30,South Africa,Ranchi,135,120,11,7,,caught,v South Africa in India 2025,no,,ODI # 4934,v South Africa in India 2025|South Africa
+ODI,2025-12-03,South Africa,Raipur,102,93,7,2,,caught,v South Africa in India 2025,no,,ODI # 4935,v South Africa in India 2025|South Africa
+ODI,2025-12-06,South Africa,Visakhapatnam,65,45,6,3,yes,not out,v South Africa in India 2025,no,,ODI # 4936,v South Africa in India 2025|South Africa
+ODI,2026-01-11,New Zealand,Vadodara,93,91,8,1,,caught,,no,,ODI # 4937,
+ODI,2026-01-14,New Zealand,Rajkot,23,29,2,,,bowled,,no,,ODI # 4938,
+ODI,2026-01-18,New Zealand,Indore,124,108,10,3,,caught,,no,,ODI # 4939,
+IPL,2026-03-28,Sunrisers Hyderabad,"M Chinnaswamy Stadium, Bengaluru",69,40,5,5,,,,,IPL 2026,IPL-1527674,
+IPL,2026-04-05,Chennai Super Kings,"M Chinnaswamy Stadium, Bengaluru",28,18,2,1,,caught (S Dube),,,IPL 2026,IPL-1527684,
+IPL,2026-04-10,Rajasthan Royals,"Barsapara Cricket Stadium, Guwahati",32,17,7,0,,bowled,,,IPL 2026,IPL-1527689,
+IPL,2026-04-12,Mumbai Indians,"Wankhede Stadium, Mumbai",50,41,5,1,,caught (SA Yadav),,,IPL 2026,IPL-1527693,
+IPL,2026-04-15,Lucknow Super Giants,"M Chinnaswamy Stadium, Bengaluru",49,35,6,1,,caught (N Pooran),,,IPL 2026,IPL-1529266,
+IPL,2026-04-18,Delhi Capitals,"M Chinnaswamy Stadium, Bengaluru",19,15,3,0,,caught (P Nissanka),,,IPL 2026,IPL-1529269,
+IPL,2026-04-24,Gujarat Titans,"M Chinnaswamy Stadium, Bengaluru",81,45,8,4,,bowled,,,IPL 2026,IPL-1529277,
+IPL,2026-04-27,Delhi Capitals,"Arun Jaitley Stadium, Delhi",23,15,1,2,,,,,IPL 2026,IPL-1529282,
+IPL,2026-04-30,Gujarat Titans,"Narendra Modi Stadium, Ahmedabad",28,14,5,1,,caught (Rashid Khan),,,IPL 2026,IPL-1529285,
+IPL,2026-05-07,Lucknow Super Giants,"Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow",0,2,0,0,,bowled,,,IPL 2026,IPL-1529293,
+IPL,2026-05-10,Mumbai Indians,"Shaheed Veer Narayan Singh International Stadium, Raipur",0,2,0,0,,caught (RA Bawa),,,IPL 2026,IPL-1529297,
+IPL,2026-05-13,Kolkata Knight Riders,"Shaheed Veer Narayan Singh International Stadium, Raipur",105,64,11,3,,,,,IPL 2026,IPL-1529300,
+IPL,2026-05-17,Punjab Kings,"Himachal Pradesh Cricket Association Stadium, Dharamsala",58,38,4,3,,caught (Priyansh Arya),,,IPL 2026,IPL-1529304,
+IPL,2026-05-22,Sunrisers Hyderabad,"Rajiv Gandhi International Stadium, Uppal, Hyderabad",15,12,2,0,,caught (R Smaran),,,IPL 2026,IPL-1529310,
+IPL,2026-05-26,Gujarat Titans,"Himachal Pradesh Cricket Association Stadium, Dharamsala",43,25,5,1,,bowled,,,IPL 2026,IPL-1535462,
+IPL,2026-05-31,Gujarat Titans,"Narendra Modi Stadium, Ahmedabad",75,42,9,3,,,,,IPL 2026,IPL-1535465,
+ODI,2026-07-14,England,Birmingham,5,6,1,,,lbw,,yes,,ODI # 4987,
+ODI,2026-07-16,England,Cardiff,65,66,8,,,caught,,yes,,ODI # 4988,
+ODI,2026-07-19,England,Lord's,74,60,4,3,,caught,,yes,,ODI # 4990,
