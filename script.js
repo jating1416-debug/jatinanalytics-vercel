@@ -972,7 +972,7 @@ async function loadProjectLiveData(project) {
 
   const files = filesForProject(tree, project.folder);
   const groups = groupFiles(files);
-  const images = files.filter(f => ['png', 'jpg', 'jpeg', 'webp', 'gif'].includes(f.ext));
+  const images = files.filter(f => ['png', 'jpg', 'jpeg', 'webp', 'gif'].includes(f.ext) && !(project.folder === 'Virat Kholi Analysis' && f.ext === 'webp'));
   const csvFiles = files.filter(f => f.ext === 'csv');
 
   /* --- Files --- */
