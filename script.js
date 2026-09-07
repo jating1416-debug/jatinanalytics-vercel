@@ -231,7 +231,41 @@ const PROJECTS = [
       ],
       tech: ['Python', 'Pandas', 'NumPy', 'Power BI', 'DAX', 'Power Query', 'Data Modelling', 'Pillow']
     }
-  }
+  },
+  {
+    id: 'virat Kholi',
+    title: 'VIRAT KOHLI CAREER ANALYTICS',
+    label: 'SPORTS ANALYTICS',
+    summary: 'A single-page Power BI career dashboard with SOLO, PARTNERSHIP and TOUR modes across Test, ODI, T20I and IPL.',
+    metric: '36,987 runs · 94 centuries · 868 innings · 88 tours',
+    tags: ['Power BI', 'DAX', 'Bookmarks', 'Data Modelling'],
+    alt: 'Virat Kohli Player 360 Power BI dashboard',
+    dashboard:'https://app.powerbi.com/view?r=eyJrIjoiNzJjMDIzZTMtYjgwOS00MTFhLTg2NmItNTZiNDQ5MGY5YWFmIiwidCI6IjUzMTVhNjkzLTM3MjktNDY0NS1hOTIyLWMxY2EwMTVjNWY1MiJ9',
+    source: 'https://github.com/jating1416-debug/jatinanalytics-vercel/tree/main/projects/Virat%20Kholi%20Analysis',
+    folder: 'Virat Kholi Analysis',
+    fallbackImage: `${RAW_BASE}/projects/Virat%20Kholi%20Analysis/Images/virat-tour-test.webp`, // temporary
+    // fallbackImage: `${RAW_BASE}/projects/Virat%20Kholi%20Analysis/Dashboard%20Image/Player%20360%20Dashboard.png`, // screenshot upload ke baad ye wali use karna
+    info: {
+      tagline: 'Career KPIs, partnership chemistry and tour-by-tour breakdown of Virat Kohli across Test, ODI, T20I and IPL.',
+      overview: 'Consolidated 868 batting innings (2008–2026) across Test, ODI, T20I and IPL with 20 partnership combinations, 88 international tours and 94 centuries into a single star-schema model (fact_innings + dimension tables). Built a 2250×1200 single-page Power BI dashboard with three switchable analysis modes — SOLO career, PARTNERSHIP chemistry and TOUR breakdown — driven entirely by bookmarks and selection groups, with 27 pre-baked WebP image cards for a flush, frame-less gallery design.',
+      objectives: [
+        'Track career KPIs: 36,987 runs, 777 matches, 94 centuries, 47.60 average and 87.9 strike rate with format-level splits (Test / ODI / T20I / IPL).',
+        'Build three analysis modes on one canvas — SOLO, PARTNER and TOUR — switched via bookmarks and selection groups without page navigation.',
+        'Rank top-5 batting partners per format (20 combinations) with partnership runs, highest stands, averages and share-of-partnership-runs.',
+        'Break down 88 international tours (2014–2026) by matches, runs, average, strike rate, venues and formats with a chronological innings table and top-innings view.'
+      ],
+      insights: [
+        'Career: 36,987 runs in 868 innings at 47.60 average and 87.9 strike rate — 94 centuries with a best of 254* vs South Africa (Pune, 2019).',
+        'ODI is the engine: 14,941 runs in 302 matches; Test 9,230 in 210; IPL 8,628 in 239; T20I 4,188 in 117.',
+        'Rohit Sharma is the strongest partner: 8,081 partnership runs across 169 stands, including 5,743 ODI runs at 55.8.',
+        'Best tour: England 2018 — 894 runs in 11 matches at 59.60 (Test 593 · ODI 191 · T20I 110).',
+        'Mode switching and zone visibility run entirely on bookmarks with transparent backgrounds — one canvas, three dashboards.',
+        'All 27 player and partner visuals use pre-baked WebP image cards (863×1050 duo / 580×1048 solo, 14px rounded, transparent outside) for a uniform frame-less look.'
+      ],
+      tech: ['Power BI', 'DAX', 'Power Query', 'Bookmarks', 'Star Schema', 'WebP Image Pipeline', 'GitHub CSV Source']
+    }
+  },
+
 ];
 
 /* ---------- DATASETS (edit here to add/change Kaggle datasets) ---------- */

@@ -1,129 +1,450 @@
-tour_id,tour,opponent,host_country,season,start_date,end_date,matches,formats,innings,runs,hs,avg,strike_rate,fours,sixes,away
-India in New Zealand 2014 — v New Zealand|New Zealand,India in New Zealand 2014 — v New Zealand,New Zealand,New Zealand,2014,2014-01-19,2014-02-14,7,Test+ODI,9,505,123,63.12,80.54,58,8,yes
-India in Bangladesh 2014 — v Bangladesh|Bangladesh,India in Bangladesh 2014 — v Bangladesh,Bangladesh,Bangladesh,2014,2014-02-26,2014-03-28,2,ODI+T20I,2,193,136,193,112.21,19,3,yes
-Tournament in Bangladesh 2014|Sri Lanka,Tournament in Bangladesh 2014,Sri Lanka,Bangladesh,2014,2014-02-28,2014-04-06,2,ODI+T20I,2,125,77,62.5,114.68,9,5,yes
-Tournament in Bangladesh 2014|Pakistan,Tournament in Bangladesh 2014,Pakistan,Bangladesh,2014,2014-03-02,2014-03-21,2,ODI+T20I,2,41,36*,41,95.35,4,1,yes
-Tournament in Bangladesh 2014|West Indies,Tournament in Bangladesh 2014,West Indies,Bangladesh,2014,2014-03-23,2014-03-23,1,T20I,1,54,54,54,131.71,5,1,yes
-Tournament in Bangladesh 2014|Australia,Tournament in Bangladesh 2014,Australia,Bangladesh,2014,2014-03-30,2014-03-30,1,T20I,1,23,23,23,104.55,2,1,yes
-Tournament in Bangladesh 2014|South Africa,Tournament in Bangladesh 2014,South Africa,Bangladesh,2014,2014-04-04,2014-04-04,1,T20I,1,72,72*,-,163.64,5,2,yes
-India in England 2014 — v England|England,India in England 2014 — v England,England,England,2014,2014-07-09,2014-09-07,10,Test+ODI+T20I,15,254,66,18.14,62.56,28,2,yes
-v West Indies in India 2014|West Indies,v West Indies in India 2014,West Indies,India,2014,2014-10-08,2014-10-17,3,ODI,3,191,127,63.67,96.95,18,3,no
-v Sri Lanka in India 2014|Sri Lanka,v Sri Lanka in India 2014,Sri Lanka,India,2014,2014-11-02,2014-11-16,5,ODI,5,329,139*,82.25,104.11,26,6,no
-India in Australia 2015 — v Australia|Australia,India in Australia 2015 — v Australia,Australia,Australia,2015,2014-12-09,2015-03-26,7,Test+ODI,11,705,169,70.5,62.33,77,1,yes
-Tournament in Australia 2015|England,Tournament in Australia 2015,England,Australia,2015,2015-01-20,2015-01-30,2,ODI,2,12,8,6,44.44,0,0,yes
-Tournament in Australia 2015|Pakistan,Tournament in Australia 2015,Pakistan,Australia,2015,2015-02-15,2015-02-15,1,ODI,1,107,107,107,84.92,8,0,yes
-Tournament in Australia 2015|South Africa,Tournament in Australia 2015,South Africa,Australia,2015,2015-02-22,2015-02-22,1,ODI,1,46,46,46,76.67,3,0,yes
-Tournament in Australia 2015|U.A.E.,Tournament in Australia 2015,U.A.E.,Australia,2015,2015-02-28,2015-02-28,1,ODI,1,33,33*,-,80.49,5,0,yes
-Tournament in Australia 2015|West Indies,Tournament in Australia 2015,West Indies,Australia,2015,2015-03-06,2015-03-06,1,ODI,1,33,33,33,91.67,5,0,yes
-Tournament in New Zealand 2015|Ireland,Tournament in New Zealand 2015,Ireland,New Zealand,2015,2015-03-10,2015-03-10,1,ODI,1,44,44*,-,104.76,4,1,yes
-Tournament in New Zealand 2015|Zimbabwe,Tournament in New Zealand 2015,Zimbabwe,New Zealand,2015,2015-03-14,2015-03-14,1,ODI,1,38,38,38,79.17,4,0,yes
-Tournament in Australia 2015|Bangladesh,Tournament in Australia 2015,Bangladesh,Australia,2015,2015-03-19,2015-03-19,1,ODI,1,3,3,3,37.5,0,0,yes
-India in Bangladesh 2015 — v Bangladesh|Bangladesh,India in Bangladesh 2015 — v Bangladesh,Bangladesh,Bangladesh,2015,2015-06-10,2015-06-24,4,Test+ODI,4,63,25,15.75,71.59,6,1,yes
-India in Sri Lanka 2015 — v Sri Lanka|Sri Lanka,India in Sri Lanka 2015 — v Sri Lanka,Sri Lanka,Sri Lanka,2015,2015-08-12,2015-08-28,3,Test,6,233,103,38.83,51.78,24,1,yes
-v South Africa in India 2015|South Africa,v South Africa in India 2015,South Africa,India,2015,2015-10-02,2015-12-03,10,Test+ODI+T20I,13,489,138,37.62,70.26,37,9,no
-India in Australia 2016 — v Australia|Australia,India in Australia 2016 — v Australia,Australia,Australia,2016,2016-01-12,2016-01-31,8,ODI+T20I,8,580,117,96.67,114.17,50,8,yes
-India in Bangladesh 2016 — v Bangladesh|Bangladesh,India in Bangladesh 2016 — v Bangladesh,Bangladesh,Bangladesh,2016,2016-02-24,2016-03-06,2,T20I,2,48,41*,48,120,6,0,yes
-Tournament in Bangladesh 2016|Pakistan,Tournament in Bangladesh 2016,Pakistan,Bangladesh,2016,2016-02-27,2016-02-27,1,T20I,1,49,49,49,96.08,7,0,yes
-Tournament in Bangladesh 2016|Sri Lanka,Tournament in Bangladesh 2016,Sri Lanka,Bangladesh,2016,2016-03-01,2016-03-01,1,T20I,1,56,56*,-,119.15,7,0,yes
-v New Zealand in India 2016|New Zealand,v New Zealand in India 2016,New Zealand,India,2016,2016-03-15,2016-10-29,9,Test+ODI+T20I,12,690,211,69,75.08,66,4,no
-v Pakistan in India 2016|Pakistan,v Pakistan in India 2016,Pakistan,India,2016,2016-03-19,2016-03-19,1,T20I,1,55,55*,-,148.65,7,1,no
-v Bangladesh in India 2016|Bangladesh,v Bangladesh in India 2016,Bangladesh,India,2016,2016-03-23,2016-03-23,1,T20I,1,24,24,24,100,0,1,no
-v Australia in India 2016|Australia,v Australia in India 2016,Australia,India,2016,2016-03-27,2016-03-27,1,T20I,1,82,82*,-,160.78,9,2,no
-v West Indies in India 2016|West Indies,v West Indies in India 2016,West Indies,India,2016,2016-03-31,2016-03-31,1,T20I,1,89,89*,-,189.36,11,1,no
-India in West Indies 2016 — v West Indies|West Indies,India in West Indies 2016 — v West Indies,West Indies,West Indies,2016,2016-07-21,2016-08-09,3,Test,4,251,200,62.75,63.07,28,1,yes
-Tournament in USA 2016|West Indies,Tournament in USA 2016,West Indies,USA,2016,2016-08-27,2016-08-27,1,T20I,1,16,16,16,177.78,3,0,yes
-v England in India 2016|England,v England in India 2016,England,India,2016,2016-11-09,2016-12-16,5,Test,8,655,235,109.17,60.87,72,1,no
-v England in India 2017|England,v England in India 2017,England,India,2017,2017-01-15,2017-02-01,6,ODI+T20I,6,237,122,39.5,108.72,24,6,no
-v Bangladesh in India 2017|Bangladesh,v Bangladesh in India 2017,Bangladesh,India,2017,2017-02-09,2017-02-09,1,Test,2,242,204,121,84.62,26,1,no
-v Australia in India 2017|Australia,v Australia in India 2017,Australia,India,2017,2017-02-23,2017-10-10,10,Test+ODI+T20I,12,248,92,22.55,72.51,22,0,no
-Tournament in England 2017|Pakistan,Tournament in England 2017,Pakistan,England,2017,2017-06-04,2017-06-18,2,ODI,2,86,81*,86,111.69,6,3,yes
-Tournament in England 2017|Sri Lanka,Tournament in England 2017,Sri Lanka,England,2017,2017-06-08,2017-06-08,1,ODI,1,0,0,0,0,0,0,yes
-Tournament in England 2017|South Africa,Tournament in England 2017,South Africa,England,2017,2017-06-11,2017-06-11,1,ODI,1,76,76*,-,75.25,7,1,yes
-Tournament in England 2017|Bangladesh,Tournament in England 2017,Bangladesh,England,2017,2017-06-15,2017-06-15,1,ODI,1,96,96*,-,123.08,13,0,yes
-India in West Indies 2017 — v West Indies|West Indies,India in West Indies 2017 — v West Indies,West Indies,West Indies,2017,2017-06-23,2017-07-09,6,ODI+T20I,6,283,111*,70.75,99.65,26,7,yes
-India in Sri Lanka 2017 — v Sri Lanka|Sri Lanka,India in Sri Lanka 2017 — v Sri Lanka,Sri Lanka,Sri Lanka,2017,2017-07-26,2017-09-06,9,Test+ODI+T20I,10,573,131,81.86,94.55,54,5,yes
-v New Zealand in India 2017|New Zealand,v New Zealand in India 2017,New Zealand,India,2017,2017-10-22,2017-11-07,6,ODI+T20I,6,367,121,73.4,115.05,30,9,no
-v Sri Lanka in India 2017|Sri Lanka,v Sri Lanka in India 2017,Sri Lanka,India,2017,2017-11-16,2017-12-02,3,Test,5,610,243,152.5,82.21,57,4,no
-India in South Africa 2018 — v South Africa|South Africa,India in South Africa 2018 — v South Africa,South Africa,South Africa,2018,2018-01-05,2018-02-21,11,Test+ODI+T20I,14,871,160*,79.18,82.09,91,7,yes
-India in Ireland 2018 — v Ireland|Ireland,India in Ireland 2018 — v Ireland,Ireland,Ireland,2018,2018-06-27,2018-06-29,2,T20I,2,9,9,4.5,90,1,0,yes
-India in England 2018 — v England|England,India in England 2018 — v England,England,England,2018,2018-07-03,2018-09-07,11,Test+ODI+T20I,16,894,149,59.6,67.52,87,6,yes
-v West Indies in India 2018|West Indies,v West Indies in India 2018,West Indies,India,2018,2018-10-04,2018-11-01,7,Test+ODI,7,637,157*,127.4,89.84,67,7,no
-India in Australia 2018/19 — v Australia|Australia,India in Australia 2018/19 — v Australia,Australia,Australia,2019,2018-11-21,2019-01-18,9,Test+ODI+T20I,12,500,123,45.45,54.64,43,5,yes
-India in New Zealand 2019 — v New Zealand|New Zealand,India in New Zealand 2019 — v New Zealand,New Zealand,New Zealand,2019,2019-01-23,2019-01-28,3,ODI,3,148,60,49.33,83.15,14,1,yes
-v Australia in India 2019|Australia,v Australia in India 2019,Australia,India,2019,2019-02-24,2019-03-13,7,ODI+T20I,7,406,123,67.67,118.37,40,8,no
-Tournament in England 2019|South Africa,Tournament in England 2019,South Africa,England,2019,2019-06-05,2019-06-05,1,ODI,1,18,18,18,52.94,1,0,yes
-Tournament in England 2019|Australia,Tournament in England 2019,Australia,England,2019,2019-06-09,2019-06-09,1,ODI,1,82,82,82,106.49,4,2,yes
-Tournament in England 2019|Pakistan,Tournament in England 2019,Pakistan,England,2019,2019-06-16,2019-06-16,1,ODI,1,77,77,77,118.46,7,0,yes
-Tournament in England 2019|Afghanistan,Tournament in England 2019,Afghanistan,England,2019,2019-06-22,2019-06-22,1,ODI,1,67,67,67,106.35,5,0,yes
-Tournament in England 2019|West Indies,Tournament in England 2019,West Indies,England,2019,2019-06-27,2019-06-27,1,ODI,1,72,72,72,87.8,8,0,yes
-India in England 2019 — v England|England,India in England 2019 — v England,England,England,2019,2019-06-30,2019-06-30,1,ODI,1,66,66,66,86.84,7,0,yes
-Tournament in England 2019|Bangladesh,Tournament in England 2019,Bangladesh,England,2019,2019-07-02,2019-07-02,1,ODI,1,26,26,26,96.3,3,0,yes
-Tournament in England 2019|Sri Lanka,Tournament in England 2019,Sri Lanka,England,2019,2019-07-06,2019-07-06,1,ODI,1,34,34*,-,82.93,3,0,yes
-Tournament in England 2019|New Zealand,Tournament in England 2019,New Zealand,England,2019,2019-07-09,2019-07-09,1,ODI,1,1,1,1,16.67,0,0,yes
-Tournament in USA 2019|West Indies,Tournament in USA 2019,West Indies,USA,2019,2019-08-03,2019-08-04,2,T20I,2,47,28,23.5,90.38,2,1,yes
-India in West Indies 2019 — v West Indies|West Indies,India in West Indies 2019 — v West Indies,West Indies,West Indies,2019,2019-08-06,2019-08-30,5,Test+ODI+T20I,7,429,120,71.5,76.88,48,1,yes
-v South Africa in India 2019|South Africa,v South Africa in India 2019,South Africa,India,2019,2019-09-18,2019-10-19,5,Test+T20I,6,398,254*,132.67,81.22,46,6,no
-v Bangladesh in India 2019|Bangladesh,v Bangladesh in India 2019,Bangladesh,India,2019,2019-11-14,2019-11-22,2,Test,2,136,136,68,69.39,18,0,no
-v West Indies in India 2019|West Indies,v West Indies in India 2019,West Indies,India,2019,2019-12-06,2019-12-22,6,ODI+T20I,6,272,94*,68,149.45,22,13,no
-v Sri Lanka in India 2020|Sri Lanka,v Sri Lanka in India 2020,Sri Lanka,India,2020,2020-01-07,2020-01-10,2,T20I,2,56,30*,56,164.71,3,3,no
-v Australia in India 2020|Australia,v Australia in India 2020,Australia,India,2020,2020-01-14,2020-01-19,3,ODI,3,183,89,61,101.1,14,1,no
-India in New Zealand 2020 — v New Zealand|New Zealand,India in New Zealand 2020 — v New Zealand,New Zealand,New Zealand,2020,2020-01-24,2020-02-29,9,Test+ODI+T20I,11,218,51,19.82,79.27,21,3,yes
-India in Australia 2020/21 — v Australia|Australia,India in Australia 2020/21 — v Australia,Australia,Australia,2021,2020-11-27,2020-12-17,7,Test+ODI+T20I,8,385,89,48.12,82.26,30,8,yes
-v England in India 2021|England,v England in India 2021,England,India,2021,2021-02-05,2021-03-28,12,Test+ODI+T20I,14,532,80*,48.36,78.47,49,10,no
-Tournament in England 2021|New Zealand,Tournament in England 2021,New Zealand,England,2021,2021-06-18,2021-06-18,1,Test,2,57,44,28.5,35.4,1,0,yes
-India in England 2021 — v England|England,India in England 2021 — v England,England,England,2021,2021-08-04,2021-09-02,4,Test,7,218,55,31.14,46.48,31,0,yes
-Tournament in UAE 2021|Pakistan,Tournament in UAE 2021,Pakistan,UAE,2021,2021-10-24,2021-10-24,1,T20I,1,57,57,57,116.33,5,1,yes
-Tournament in UAE 2021|New Zealand,Tournament in UAE 2021,New Zealand,UAE,2021,2021-10-31,2021-10-31,1,T20I,1,9,9,9,52.94,0,0,yes
-Tournament in UAE 2021|Scotland,Tournament in UAE 2021,Scotland,UAE,2021,2021-11-05,2021-11-05,1,T20I,1,2,2*,-,100,0,0,yes
-v New Zealand in India 2021|New Zealand,v New Zealand in India 2021,New Zealand,India,2021,2021-12-03,2021-12-03,1,Test,2,36,36,18,40.91,1,1,no
-India in South Africa 2022 — v South Africa|South Africa,India in South Africa 2022 — v South Africa,South Africa,South Africa,2022,2021-12-26,2022-01-23,5,Test+ODI,7,277,79,39.57,44.53,32,1,yes
-v West Indies in India 2022|West Indies,v West Indies in India 2022,West Indies,India,2022,2022-02-06,2022-02-18,5,ODI+T20I,5,95,52,19,105.56,13,1,no
-v Sri Lanka in India 2022|Sri Lanka,v Sri Lanka in India 2022,Sri Lanka,India,2022,2022-03-04,2022-03-12,2,Test,3,81,45,27,57.86,8,0,no
-India in England 2022 — v England|England,India in England 2022 — v England,England,England,2022,2022-07-01,2022-07-17,5,Test+ODI+T20I,6,76,20,12.67,66.09,13,1,yes
-Tournament in UAE 2022|Pakistan,Tournament in UAE 2022,Pakistan,UAE,2022,2022-08-28,2022-09-04,2,T20I,2,95,60,47.5,121.79,7,2,yes
-Tournament in UAE 2022|Hong Kong,Tournament in UAE 2022,Hong Kong,UAE,2022,2022-08-31,2022-08-31,1,T20I,1,59,59*,-,134.09,1,3,yes
-Tournament in UAE 2022|Sri Lanka,Tournament in UAE 2022,Sri Lanka,UAE,2022,2022-09-06,2022-09-06,1,T20I,1,0,0,0,0,0,0,yes
-Tournament in UAE 2022|Afghanistan,Tournament in UAE 2022,Afghanistan,UAE,2022,2022-09-08,2022-09-08,1,T20I,1,122,122*,-,200,12,6,yes
-v Australia in India 2022|Australia,v Australia in India 2022,Australia,India,2022,2022-09-20,2022-09-25,3,T20I,3,76,63,25.33,124.59,5,4,no
-v South Africa in India 2022|South Africa,v South Africa in India 2022,South Africa,India,2022,2022-09-28,2022-10-02,2,T20I,2,52,49*,52,140.54,7,1,no
-Tournament in Australia 2023|Pakistan,Tournament in Australia 2023,Pakistan,Australia,2023,2022-10-23,2022-10-23,1,T20I,1,82,82*,-,154.72,6,4,yes
-Tournament in Australia 2023|Netherlands,Tournament in Australia 2023,Netherlands,Australia,2023,2022-10-27,2022-10-27,1,T20I,1,62,62*,-,140.91,3,2,yes
-Tournament in Australia 2023|South Africa,Tournament in Australia 2023,South Africa,Australia,2023,2022-10-30,2022-10-30,1,T20I,1,12,12,12,109.09,2,0,yes
-Tournament in Australia 2023|Bangladesh,Tournament in Australia 2023,Bangladesh,Australia,2023,2022-11-02,2022-11-02,1,T20I,1,64,64*,-,145.45,8,1,yes
-Tournament in Australia 2023|Zimbabwe,Tournament in Australia 2023,Zimbabwe,Australia,2023,2022-11-06,2022-11-06,1,T20I,1,26,26,26,104,2,0,yes
-Tournament in Australia 2023|England,Tournament in Australia 2023,England,Australia,2023,2022-11-10,2022-11-10,1,T20I,1,50,50,50,125,4,1,yes
-India in Bangladesh 2022 — v Bangladesh|Bangladesh,India in Bangladesh 2022 — v Bangladesh,Bangladesh,Bangladesh,2022,2022-12-04,2022-12-22,5,Test+ODI,7,172,113,28.67,71.37,16,2,yes
-v Sri Lanka in India 2023|Sri Lanka,v Sri Lanka in India 2023,Sri Lanka,India,2023,2023-01-10,2023-11-02,4,ODI,4,371,166*,123.67,123.67,37,9,no
-v New Zealand in India 2023|New Zealand,v New Zealand in India 2023,New Zealand,India,2023,2023-01-18,2023-11-15,5,ODI,5,267,117,53.4,101.52,23,5,no
-v Australia in India 2023|Australia,v Australia in India 2023,Australia,India,2023,2023-02-09,2023-11-19,10,Test+ODI,12,581,186,48.42,61.87,50,2,no
-Tournament in England 2023|Australia,Tournament in England 2023,Australia,England,2023,2023-06-07,2023-06-07,1,Test,2,63,49,31.5,57.8,9,0,yes
-India in West Indies 2023 — v West Indies|West Indies,India in West Indies 2023 — v West Indies,West Indies,West Indies,2023,2023-07-12,2023-07-20,2,Test,2,197,121,98.5,50.77,16,0,yes
-Tournament in Sri Lanka 2023|Pakistan,Tournament in Sri Lanka 2023,Pakistan,Sri Lanka,2023,2023-09-02,2023-09-10,2,ODI,2,126,122*,126,124.75,10,3,yes
-India in Sri Lanka 2023 — v Sri Lanka|Sri Lanka,India in Sri Lanka 2023 — v Sri Lanka,Sri Lanka,Sri Lanka,2023,2023-09-12,2023-09-12,1,ODI,1,3,3,3,25,0,0,yes
-v Afghanistan in India 2023|Afghanistan,v Afghanistan in India 2023,Afghanistan,India,2023,2023-10-11,2023-10-11,1,ODI,1,55,55*,-,98.21,6,0,no
-v Pakistan in India 2023|Pakistan,v Pakistan in India 2023,Pakistan,India,2023,2023-10-14,2023-10-14,1,ODI,1,16,16,16,88.89,3,0,no
-v Bangladesh in India 2023|Bangladesh,v Bangladesh in India 2023,Bangladesh,India,2023,2023-10-19,2023-10-19,1,ODI,1,103,103*,-,106.19,6,4,no
-v England in India 2023|England,v England in India 2023,England,India,2023,2023-10-29,2023-10-29,1,ODI,1,0,0,0,0,0,0,no
-v South Africa in India 2023|South Africa,v South Africa in India 2023,South Africa,India,2023,2023-11-05,2023-11-05,1,ODI,1,101,101*,-,83.47,10,0,no
-v Netherlands in India 2023|Netherlands,v Netherlands in India 2023,Netherlands,India,2023,2023-11-12,2023-11-12,1,ODI,1,51,51,51,91.07,5,1,no
-India in South Africa 2024 — v South Africa|South Africa,India in South Africa 2024 — v South Africa,South Africa,South Africa,2024,2023-12-26,2024-01-03,2,Test,4,172,76,43,79.63,25,2,yes
-v Afghanistan in India 2024|Afghanistan,v Afghanistan in India 2024,Afghanistan,India,2024,2024-01-14,2024-01-17,2,T20I,2,29,29,14.5,170.59,5,0,no
-Tournament in USA 2024|Ireland,Tournament in USA 2024,Ireland,USA,2024,2024-06-05,2024-06-05,1,T20I,1,1,1,1,20,0,0,yes
-Tournament in USA 2024|Pakistan,Tournament in USA 2024,Pakistan,USA,2024,2024-06-09,2024-06-09,1,T20I,1,4,4,4,133.33,1,0,yes
-Tournament in USA 2024|U.S.A.,Tournament in USA 2024,U.S.A.,USA,2024,2024-06-12,2024-06-12,1,T20I,1,0,0,0,0,0,0,yes
-Tournament in West Indies 2024|Afghanistan,Tournament in West Indies 2024,Afghanistan,West Indies,2024,2024-06-20,2024-06-20,1,T20I,1,24,24,24,100,0,1,yes
-Tournament in West Indies 2024|Bangladesh,Tournament in West Indies 2024,Bangladesh,West Indies,2024,2024-06-22,2024-06-22,1,T20I,1,37,37,37,132.14,1,3,yes
-Tournament in West Indies 2024|Australia,Tournament in West Indies 2024,Australia,West Indies,2024,2024-06-24,2024-06-24,1,T20I,1,0,0,0,0,0,0,yes
-Tournament in West Indies 2024|England,Tournament in West Indies 2024,England,West Indies,2024,2024-06-27,2024-06-27,1,T20I,1,9,9,9,100,0,1,yes
-Tournament in West Indies 2024|South Africa,Tournament in West Indies 2024,South Africa,West Indies,2024,2024-06-29,2024-06-29,1,T20I,1,76,76,76,128.81,6,2,yes
-India in Sri Lanka 2024 — v Sri Lanka|Sri Lanka,India in Sri Lanka 2024 — v Sri Lanka,Sri Lanka,Sri Lanka,2024,2024-08-02,2024-08-07,3,ODI,3,58,24,19.33,84.06,8,0,yes
-v Bangladesh in India 2024|Bangladesh,v Bangladesh in India 2024,Bangladesh,India,2024,2024-09-19,2024-09-27,2,Test,4,99,47,33,86.09,10,1,no
-v New Zealand in India 2024|New Zealand,v New Zealand in India 2024,New Zealand,India,2024,2024-10-16,2024-11-01,3,Test,6,93,70,15.5,53.76,11,1,no
-India in Australia 2025 — v Australia|Australia,India in Australia 2025 — v Australia,Australia,Australia,2025,2024-11-22,2025-01-03,5,Test,9,190,100*,23.75,47.98,15,2,yes
-v England in India 2025|England,v England in India 2025,England,India,2025,2025-02-09,2025-02-12,2,ODI,2,57,52,28.5,90.48,8,1,no
-Tournament in UAE 2025|Bangladesh,Tournament in UAE 2025,Bangladesh,UAE,2025,2025-02-20,2025-02-20,1,ODI,1,22,22,22,57.89,1,0,yes
-Tournament in UAE 2025|Pakistan,Tournament in UAE 2025,Pakistan,UAE,2025,2025-02-23,2025-02-23,1,ODI,1,100,100*,-,90.09,7,0,yes
-Tournament in UAE 2025|New Zealand,Tournament in UAE 2025,New Zealand,UAE,2025,2025-03-02,2025-03-09,2,ODI,2,12,11,6,75,2,0,yes
-Tournament in UAE 2025|Australia,Tournament in UAE 2025,Australia,UAE,2025,2025-03-04,2025-03-04,1,ODI,1,84,84,84,85.71,5,0,yes
-India in Australia 2025/26 — v Australia|Australia,India in Australia 2025/26 — v Australia,Australia,Australia,2026,2025-10-19,2025-10-25,3,ODI,3,74,74*,37,79.57,7,0,yes
-v South Africa in India 2025|South Africa,v South Africa in India 2025,South Africa,India,2025,2025-11-30,2025-12-06,3,ODI,3,302,135,151,117.05,24,12,no
+tour_id,tour,year,format,date,opponent,venue,runs,balls,fours,sixes,not_out,dismissal,match_ref,away,innings_sr,tour_sort
+India in New Zealand 2014 — v New Zealand|New Zealand,India in New Zealand 2014 — v New Zealand,2014,ODI,2014-01-19,New Zealand,Napier,123,111,11,2,,caught,ODI # 3456,yes,110.81,20140119
+India in New Zealand 2014 — v New Zealand|New Zealand,India in New Zealand 2014 — v New Zealand,2014,ODI,2014-01-22,New Zealand,Hamilton,78,65,7,2,,caught,ODI # 3458,yes,120.0,20140119
+India in New Zealand 2014 — v New Zealand|New Zealand,India in New Zealand 2014 — v New Zealand,2014,ODI,2014-01-25,New Zealand,Auckland,6,20,1,,,caught,ODI # 3462,yes,30.0,20140119
+India in New Zealand 2014 — v New Zealand|New Zealand,India in New Zealand 2014 — v New Zealand,2014,ODI,2014-01-28,New Zealand,Hamilton,2,10,,,,caught,ODI # 3465,yes,20.0,20140119
+India in New Zealand 2014 — v New Zealand|New Zealand,India in New Zealand 2014 — v New Zealand,2014,ODI,2014-01-31,New Zealand,Wellington,82,78,7,3,,caught,ODI # 3467,yes,105.13,20140119
+India in New Zealand 2014 — v New Zealand|New Zealand,India in New Zealand 2014 — v New Zealand,2014,Test,2014-02-06,New Zealand,Auckland,4,13,1,,,caught,Test # 2118,yes,30.77,20140119
+India in New Zealand 2014 — v New Zealand|New Zealand,India in New Zealand 2014 — v New Zealand,2014,Test,2014-02-06,New Zealand,Auckland,67,102,12,,,caught,Test # 2118,yes,65.69,20140119
+India in New Zealand 2014 — v New Zealand|New Zealand,India in New Zealand 2014 — v New Zealand,2014,Test,2014-02-14,New Zealand,Wellington,38,93,4,,,caught,Test # 2120,yes,40.86,20140119
+India in New Zealand 2014 — v New Zealand|New Zealand,India in New Zealand 2014 — v New Zealand,2014,Test,2014-02-14,New Zealand,Wellington,105,135,15,1,yes,not out,Test # 2120,yes,77.78,20140119
+India in Bangladesh 2014 — v Bangladesh|Bangladesh,India in Bangladesh 2014 — v Bangladesh,2014,ODI,2014-02-26,Bangladesh,Fatullah,136,122,16,2,,bowled,ODI # 3474,yes,111.48,20140226
+Tournament in Bangladesh 2014|Sri Lanka,Tournament in Bangladesh 2014,2014,ODI,2014-02-28,Sri Lanka,Fatullah,48,51,4,1,,bowled,ODI # 3476,yes,94.12,20140228
+Tournament in Bangladesh 2014|Pakistan,Tournament in Bangladesh 2014,2014,ODI,2014-03-02,Pakistan,Mirpur,5,11,,,,caught,ODI # 3479,yes,45.45,20140228
+Tournament in Bangladesh 2014|Pakistan,Tournament in Bangladesh 2014,2014,T20I,2014-03-21,Pakistan,Mirpur,36,32,4,1,yes,not out,T20I # 378,yes,112.5,20140228
+Tournament in Bangladesh 2014|West Indies,Tournament in Bangladesh 2014,2014,T20I,2014-03-23,West Indies,Mirpur,54,41,5,1,,bowled,T20I # 382,yes,131.71,20140228
+India in Bangladesh 2014 — v Bangladesh|Bangladesh,India in Bangladesh 2014 — v Bangladesh,2014,T20I,2014-03-28,Bangladesh,Mirpur,57,50,3,1,yes,not out,T20I # 389,yes,114.0,20140226
+Tournament in Bangladesh 2014|Australia,Tournament in Bangladesh 2014,2014,T20I,2014-03-30,Australia,Mirpur,23,22,2,1,,caught,T20I # 393,yes,104.55,20140228
+Tournament in Bangladesh 2014|South Africa,Tournament in Bangladesh 2014,2014,T20I,2014-04-04,South Africa,Mirpur,72,44,5,2,yes,not out,T20I # 399,yes,163.64,20140228
+Tournament in Bangladesh 2014|Sri Lanka,Tournament in Bangladesh 2014,2014,T20I,2014-04-06,Sri Lanka,Mirpur,77,58,5,4,,run out,T20I # 400,yes,132.76,20140228
+India in England 2014 — v England|England,India in England 2014 — v England,2014,Test,2014-07-09,England,Nottingham,1,8,,,,caught,Test # 2128,yes,12.5,20140709
+India in England 2014 — v England|England,India in England 2014 — v England,2014,Test,2014-07-09,England,Nottingham,8,29,1,,,lbw,Test # 2128,yes,27.59,20140709
+India in England 2014 — v England|England,India in England 2014 — v England,2014,Test,2014-07-17,England,Lord's,25,34,4,,,caught,Test # 2130,yes,73.53,20140709
+India in England 2014 — v England|England,India in England 2014 — v England,2014,Test,2014-07-17,England,Lord's,0,1,,,,bowled,Test # 2130,yes,0.0,20140709
+India in England 2014 — v England|England,India in England 2014 — v England,2014,Test,2014-07-27,England,Southampton,39,75,3,,,caught,Test # 2132,yes,52.0,20140709
+India in England 2014 — v England|England,India in England 2014 — v England,2014,Test,2014-07-27,England,Southampton,28,56,3,,,caught,Test # 2132,yes,50.0,20140709
+India in England 2014 — v England|England,India in England 2014 — v England,2014,Test,2014-08-07,England,Manchester,0,2,,,,caught,Test # 2134,yes,0.0,20140709
+India in England 2014 — v England|England,India in England 2014 — v England,2014,Test,2014-08-07,England,Manchester,7,11,1,,,caught,Test # 2134,yes,63.64,20140709
+India in England 2014 — v England|England,India in England 2014 — v England,2014,Test,2014-08-15,England,The Oval,6,18,1,,,lbw,Test # 2137,yes,33.33,20140709
+India in England 2014 — v England|England,India in England 2014 — v England,2014,Test,2014-08-15,England,The Oval,20,54,2,,,caught,Test # 2137,yes,37.04,20140709
+India in England 2014 — v England|England,India in England 2014 — v England,2014,ODI,2014-08-27,England,Cardiff,0,3,,,,caught,ODI # 3517,yes,0.0,20140709
+India in England 2014 — v England|England,India in England 2014 — v England,2014,ODI,2014-08-30,England,Nottingham,40,50,2,1,,caught,ODI # 3520,yes,80.0,20140709
+India in England 2014 — v England|England,India in England 2014 — v England,2014,ODI,2014-09-02,England,Birmingham,1,3,,,yes,not out,ODI # 3523,yes,33.33,20140709
+India in England 2014 — v England|England,India in England 2014 — v England,2014,ODI,2014-09-05,England,Leeds,13,21,2,,,caught,ODI # 3525,yes,61.9,20140709
+India in England 2014 — v England|England,India in England 2014 — v England,2014,T20I,2014-09-07,England,Birmingham,66,41,9,1,,caught,T20I # 405,yes,160.98,20140709
+v West Indies in India 2014|West Indies,v West Indies in India 2014,2014,ODI,2014-10-08,West Indies,Kochi,2,5,,,,caught,ODI # 3531,no,40.0,20141008
+v West Indies in India 2014|West Indies,v West Indies in India 2014,2014,ODI,2014-10-11,West Indies,Delhi,62,78,5,,,caught,ODI # 3533,no,79.49,20141008
+v West Indies in India 2014|West Indies,v West Indies in India 2014,2014,ODI,2014-10-17,West Indies,Dharamsala,127,114,13,3,,run out,ODI # 3535,no,111.4,20141008
+v Sri Lanka in India 2014|Sri Lanka,v Sri Lanka in India 2014,2014,ODI,2014-11-02,Sri Lanka,Cuttack,22,21,2,,,caught,ODI # 3539,no,104.76,20141102
+v Sri Lanka in India 2014|Sri Lanka,v Sri Lanka in India 2014,2014,ODI,2014-11-06,Sri Lanka,Ahmedabad,49,44,2,2,,caught,ODI # 3540,no,111.36,20141102
+v Sri Lanka in India 2014|Sri Lanka,v Sri Lanka in India 2014,2014,ODI,2014-11-09,Sri Lanka,Hyderabad,53,61,4,1,,caught,ODI # 3543,no,86.89,20141102
+v Sri Lanka in India 2014|Sri Lanka,v Sri Lanka in India 2014,2014,ODI,2014-11-13,Sri Lanka,Eden Gardens,66,64,6,,,run out,ODI # 3544,no,103.12,20141102
+v Sri Lanka in India 2014|Sri Lanka,v Sri Lanka in India 2014,2014,ODI,2014-11-16,Sri Lanka,Ranchi,139,126,12,3,yes,not out,ODI # 3547,no,110.32,20141102
+India in Australia 2015 — v Australia|Australia,India in Australia 2015 — v Australia,2014,Test,2014-12-09,Australia,Adelaide,115,184,12,,,caught,Test # 2148,yes,62.5,20141209
+India in Australia 2015 — v Australia|Australia,India in Australia 2015 — v Australia,2014,Test,2014-12-09,Australia,Adelaide,141,175,16,1,,caught,Test # 2148,yes,80.57,20141209
+India in Australia 2015 — v Australia|Australia,India in Australia 2015 — v Australia,2014,Test,2014-12-17,Australia,Brisbane,19,27,1,,,caught,Test # 2149,yes,70.37,20141209
+India in Australia 2015 — v Australia|Australia,India in Australia 2015 — v Australia,2014,Test,2014-12-17,Australia,Brisbane,1,11,,,,bowled,Test # 2149,yes,9.09,20141209
+India in Australia 2015 — v Australia|Australia,India in Australia 2015 — v Australia,2014,Test,2014-12-26,Australia,Melbourne,169,272,18,,,caught,Test # 2152,yes,62.13,20141209
+India in Australia 2015 — v Australia|Australia,India in Australia 2015 — v Australia,2014,Test,2014-12-26,Australia,Melbourne,54,99,7,,,caught,Test # 2152,yes,54.55,20141209
+India in Australia 2015 — v Australia|Australia,India in Australia 2015 — v Australia,2015,Test,2015-01-06,Australia,Sydney,147,230,20,,,caught,Test # 2156,yes,63.91,20141209
+India in Australia 2015 — v Australia|Australia,India in Australia 2015 — v Australia,2015,Test,2015-01-06,Australia,Sydney,46,95,3,,,caught,Test # 2156,yes,48.42,20141209
+India in Australia 2015 — v Australia|Australia,India in Australia 2015 — v Australia,2015,ODI,2015-01-18,Australia,Melbourne,9,16,,,,caught,ODI # 3582,yes,56.25,20141209
+Tournament in Australia 2015|England,Tournament in Australia 2015,2015,ODI,2015-01-20,England,Brisbane,4,8,,,,caught,ODI # 3586,yes,50.0,20150120
+India in Australia 2015 — v Australia|Australia,India in Australia 2015 — v Australia,2015,ODI,2015-01-26,Australia,Sydney,3,9,,,yes,not out,ODI # 3592,yes,33.33,20141209
+Tournament in Australia 2015|England,Tournament in Australia 2015,2015,ODI,2015-01-30,England,W.A.C.A,8,19,,,,caught,ODI # 3595,yes,42.11,20150120
+Tournament in Australia 2015|Pakistan,Tournament in Australia 2015,2015,ODI,2015-02-15,Pakistan,Adelaide,107,126,8,,,caught,ODI # 3602,yes,84.92,20150120
+Tournament in Australia 2015|South Africa,Tournament in Australia 2015,2015,ODI,2015-02-22,South Africa,Melbourne,46,60,3,,,caught,ODI # 3610,yes,76.67,20150120
+Tournament in Australia 2015|U.A.E.,Tournament in Australia 2015,2015,ODI,2015-02-28,U.A.E.,W.A.C.A,33,41,5,,yes,not out,ODI # 3618,yes,80.49,20150120
+Tournament in Australia 2015|West Indies,Tournament in Australia 2015,2015,ODI,2015-03-06,West Indies,W.A.C.A,33,36,5,,,caught,ODI # 3625,yes,91.67,20150120
+Tournament in New Zealand 2015|Ireland,Tournament in New Zealand 2015,2015,ODI,2015-03-10,Ireland,Hamilton,44,42,4,1,yes,not out,ODI # 3631,yes,104.76,20150310
+Tournament in New Zealand 2015|Zimbabwe,Tournament in New Zealand 2015,2015,ODI,2015-03-14,Zimbabwe,Auckland,38,48,4,,,bowled,ODI # 3636,yes,79.17,20150310
+Tournament in Australia 2015|Bangladesh,Tournament in Australia 2015,2015,ODI,2015-03-19,Bangladesh,Melbourne,3,8,,,,caught,ODI # 3641,yes,37.5,20150120
+India in Australia 2015 — v Australia|Australia,India in Australia 2015 — v Australia,2015,ODI,2015-03-26,Australia,Sydney,1,13,,,,caught,ODI # 3645,yes,7.69,20141209
+India in Bangladesh 2015 — v Bangladesh|Bangladesh,India in Bangladesh 2015 — v Bangladesh,2015,Test,2015-06-10,Bangladesh,Fatullah,14,22,2,,,bowled,Test # 2165,yes,63.64,20150610
+India in Bangladesh 2015 — v Bangladesh|Bangladesh,India in Bangladesh 2015 — v Bangladesh,2015,ODI,2015-06-18,Bangladesh,Mirpur,1,4,,,,caught,ODI # 3658,yes,25.0,20150610
+India in Bangladesh 2015 — v Bangladesh|Bangladesh,India in Bangladesh 2015 — v Bangladesh,2015,ODI,2015-06-21,Bangladesh,Mirpur,23,27,3,1,,lbw,ODI # 3660,yes,85.19,20150610
+India in Bangladesh 2015 — v Bangladesh|Bangladesh,India in Bangladesh 2015 — v Bangladesh,2015,ODI,2015-06-24,Bangladesh,Mirpur,25,35,1,,,bowled,ODI # 3661,yes,71.43,20150610
+India in Sri Lanka 2015 — v Sri Lanka|Sri Lanka,India in Sri Lanka 2015 — v Sri Lanka,2015,Test,2015-08-12,Sri Lanka,Galle,103,191,11,,,lbw,Test # 2176,yes,53.93,20150812
+India in Sri Lanka 2015 — v Sri Lanka|Sri Lanka,India in Sri Lanka 2015 — v Sri Lanka,2015,Test,2015-08-12,Sri Lanka,Galle,3,10,,,,caught,Test # 2176,yes,30.0,20150812
+India in Sri Lanka 2015 — v Sri Lanka|Sri Lanka,India in Sri Lanka 2015 — v Sri Lanka,2015,Test,2015-08-20,Sri Lanka,Colombo (PSS),78,107,8,1,,caught,Test # 2177,yes,72.9,20150812
+India in Sri Lanka 2015 — v Sri Lanka|Sri Lanka,India in Sri Lanka 2015 — v Sri Lanka,2015,Test,2015-08-20,Sri Lanka,Colombo (PSS),10,19,,,,lbw,Test # 2177,yes,52.63,20150812
+India in Sri Lanka 2015 — v Sri Lanka|Sri Lanka,India in Sri Lanka 2015 — v Sri Lanka,2015,Test,2015-08-28,Sri Lanka,Colombo (SSC),18,60,3,,,caught,Test # 2179,yes,30.0,20150812
+India in Sri Lanka 2015 — v Sri Lanka|Sri Lanka,India in Sri Lanka 2015 — v Sri Lanka,2015,Test,2015-08-28,Sri Lanka,Colombo (SSC),21,63,2,,,caught,Test # 2179,yes,33.33,20150812
+v South Africa in India 2015|South Africa,v South Africa in India 2015,2015,T20I,2015-10-02,South Africa,Dharamsala,43,27,1,3,,caught,T20I # 456,no,159.26,20151002
+v South Africa in India 2015|South Africa,v South Africa in India 2015,2015,T20I,2015-10-05,South Africa,Cuttack,1,1,,,,run out,T20I # 457,no,100.0,20151002
+v South Africa in India 2015|South Africa,v South Africa in India 2015,2015,ODI,2015-10-11,South Africa,Kanpur,11,18,,,,caught,ODI # 3689,no,61.11,20151002
+v South Africa in India 2015|South Africa,v South Africa in India 2015,2015,ODI,2015-10-14,South Africa,Indore,12,18,,,,run out,ODI # 3692,no,66.67,20151002
+v South Africa in India 2015|South Africa,v South Africa in India 2015,2015,ODI,2015-10-18,South Africa,Rajkot,77,99,5,,,caught,ODI # 3695,no,77.78,20151002
+v South Africa in India 2015|South Africa,v South Africa in India 2015,2015,ODI,2015-10-22,South Africa,Chennai,138,140,6,5,,caught,ODI # 3698,no,98.57,20151002
+v South Africa in India 2015|South Africa,v South Africa in India 2015,2015,ODI,2015-10-25,South Africa,Wankhede,7,6,,1,,caught,ODI # 3700,no,116.67,20151002
+v South Africa in India 2015|South Africa,v South Africa in India 2015,2015,Test,2015-11-05,South Africa,Mohali,1,4,,,,caught,Test # 2186,no,25.0,20151002
+v South Africa in India 2015|South Africa,v South Africa in India 2015,2015,Test,2015-11-05,South Africa,Mohali,29,71,4,,,caught,Test # 2186,no,40.85,20151002
+v South Africa in India 2015|South Africa,v South Africa in India 2015,2015,Test,2015-11-25,South Africa,Nagpur,22,55,2,,,caught,Test # 2189,no,40.0,20151002
+v South Africa in India 2015|South Africa,v South Africa in India 2015,2015,Test,2015-11-25,South Africa,Nagpur,16,30,2,,,caught,Test # 2189,no,53.33,20151002
+v South Africa in India 2015|South Africa,v South Africa in India 2015,2015,Test,2015-12-03,South Africa,Delhi,44,62,7,,,caught,Test # 2191,no,70.97,20151002
+v South Africa in India 2015|South Africa,v South Africa in India 2015,2015,Test,2015-12-03,South Africa,Delhi,88,165,10,,,lbw,Test # 2191,no,53.33,20151002
+India in Australia 2016 — v Australia|Australia,India in Australia 2016 — v Australia,2016,ODI,2016-01-12,Australia,W.A.C.A,91,97,9,1,,caught,ODI # 3723,yes,93.81,20160112
+India in Australia 2016 — v Australia|Australia,India in Australia 2016 — v Australia,2016,ODI,2016-01-15,Australia,Brisbane,59,67,4,,,run out,ODI # 3724,yes,88.06,20160112
+India in Australia 2016 — v Australia|Australia,India in Australia 2016 — v Australia,2016,ODI,2016-01-17,Australia,Melbourne,117,117,7,2,,caught,ODI # 3725,yes,100.0,20160112
+India in Australia 2016 — v Australia|Australia,India in Australia 2016 — v Australia,2016,ODI,2016-01-20,Australia,Canberra,106,92,11,1,,caught,ODI # 3726,yes,115.22,20160112
+India in Australia 2016 — v Australia|Australia,India in Australia 2016 — v Australia,2016,ODI,2016-01-23,Australia,Sydney,8,11,1,,,caught,ODI # 3727,yes,72.73,20160112
+India in Australia 2016 — v Australia|Australia,India in Australia 2016 — v Australia,2016,T20I,2016-01-26,Australia,Adelaide,90,55,9,2,yes,not out,T20I # 485,yes,163.64,20160112
+India in Australia 2016 — v Australia|Australia,India in Australia 2016 — v Australia,2016,T20I,2016-01-29,Australia,Melbourne,59,33,7,1,yes,not out,T20I # 486,yes,178.79,20160112
+India in Australia 2016 — v Australia|Australia,India in Australia 2016 — v Australia,2016,T20I,2016-01-31,Australia,Sydney,50,36,2,1,,bowled,T20I # 489,yes,138.89,20160112
+India in Bangladesh 2016 — v Bangladesh|Bangladesh,India in Bangladesh 2016 — v Bangladesh,2016,T20I,2016-02-24,Bangladesh,Mirpur,7,12,1,,,caught,T20I # 509,yes,58.33,20160224
+Tournament in Bangladesh 2016|Pakistan,Tournament in Bangladesh 2016,2016,T20I,2016-02-27,Pakistan,Mirpur,49,51,7,,,lbw,T20I # 512,yes,96.08,20160227
+Tournament in Bangladesh 2016|Sri Lanka,Tournament in Bangladesh 2016,2016,T20I,2016-03-01,Sri Lanka,Mirpur,56,47,7,,yes,not out,T20I # 515,yes,119.15,20160227
+India in Bangladesh 2016 — v Bangladesh|Bangladesh,India in Bangladesh 2016 — v Bangladesh,2016,T20I,2016-03-06,Bangladesh,Mirpur,41,28,5,,yes,not out,T20I # 521,yes,146.43,20160224
+v New Zealand in India 2016|New Zealand,v New Zealand in India 2016,2016,T20I,2016-03-15,New Zealand,Nagpur,23,27,2,,,caught,T20I # 535,no,85.19,20160315
+v Pakistan in India 2016|Pakistan,v Pakistan in India 2016,2016,T20I,2016-03-19,Pakistan,Eden Gardens,55,37,7,1,yes,not out,T20I # 541,no,148.65,20160319
+v Bangladesh in India 2016|Bangladesh,v Bangladesh in India 2016,2016,T20I,2016-03-23,Bangladesh,Bengaluru,24,24,,1,,bowled,T20I # 547,no,100.0,20160323
+v Australia in India 2016|Australia,v Australia in India 2016,2016,T20I,2016-03-27,Australia,Mohali,82,51,9,2,yes,not out,T20I # 553,no,160.78,20160327
+v West Indies in India 2016|West Indies,v West Indies in India 2016,2016,T20I,2016-03-31,West Indies,Wankhede,89,47,11,1,yes,not out,T20I # 556,no,189.36,20160331
+India in West Indies 2016 — v West Indies|West Indies,India in West Indies 2016 — v West Indies,2016,Test,2016-07-21,West Indies,North Sound,200,283,24,,,bowled,Test # 2207,yes,70.67,20160721
+India in West Indies 2016 — v West Indies|West Indies,India in West Indies 2016 — v West Indies,2016,Test,2016-07-30,West Indies,Kingston,44,90,4,1,,caught,Test # 2211,yes,48.89,20160721
+India in West Indies 2016 — v West Indies|West Indies,India in West Indies 2016 — v West Indies,2016,Test,2016-08-09,West Indies,Gros Islet,3,8,,,,caught,Test # 2215,yes,37.5,20160721
+India in West Indies 2016 — v West Indies|West Indies,India in West Indies 2016 — v West Indies,2016,Test,2016-08-09,West Indies,Gros Islet,4,17,,,,lbw,Test # 2215,yes,23.53,20160721
+Tournament in USA 2016|West Indies,Tournament in USA 2016,2016,T20I,2016-08-27,West Indies,Lauderhill,16,9,3,,,caught,T20I # 562,yes,177.78,20160827
+v New Zealand in India 2016|New Zealand,v New Zealand in India 2016,2016,Test,2016-09-22,New Zealand,Kanpur,9,10,2,,,caught,Test # 2221,no,90.0,20160315
+v New Zealand in India 2016|New Zealand,v New Zealand in India 2016,2016,Test,2016-09-22,New Zealand,Kanpur,18,40,3,,,caught,Test # 2221,no,45.0,20160315
+v New Zealand in India 2016|New Zealand,v New Zealand in India 2016,2016,Test,2016-09-30,New Zealand,Eden Gardens,9,28,1,,,caught,Test # 2222,no,32.14,20160315
+v New Zealand in India 2016|New Zealand,v New Zealand in India 2016,2016,Test,2016-09-30,New Zealand,Eden Gardens,45,65,7,,,lbw,Test # 2222,no,69.23,20160315
+v New Zealand in India 2016|New Zealand,v New Zealand in India 2016,2016,Test,2016-10-08,New Zealand,Indore,211,366,20,,,lbw,Test # 2223,no,57.65,20160315
+v New Zealand in India 2016|New Zealand,v New Zealand in India 2016,2016,Test,2016-10-08,New Zealand,Indore,17,28,1,,,lbw,Test # 2223,no,60.71,20160315
+v New Zealand in India 2016|New Zealand,v New Zealand in India 2016,2016,ODI,2016-10-16,New Zealand,Dharamsala,85,81,9,1,yes,not out,ODI # 3796,no,104.94,20160315
+v New Zealand in India 2016|New Zealand,v New Zealand in India 2016,2016,ODI,2016-10-20,New Zealand,Delhi,9,13,1,,,caught,ODI # 3797,no,69.23,20160315
+v New Zealand in India 2016|New Zealand,v New Zealand in India 2016,2016,ODI,2016-10-23,New Zealand,Mohali,154,134,16,1,yes,not out,ODI # 3798,no,114.93,20160315
+v New Zealand in India 2016|New Zealand,v New Zealand in India 2016,2016,ODI,2016-10-26,New Zealand,Ranchi,45,51,2,1,,caught,ODI # 3799,no,88.24,20160315
+v New Zealand in India 2016|New Zealand,v New Zealand in India 2016,2016,ODI,2016-10-29,New Zealand,Visakhapatnam,65,76,2,1,,caught,ODI # 3800,no,85.53,20160315
+v England in India 2016|England,v England in India 2016,2016,Test,2016-11-09,England,Rajkot,40,95,5,,,hit wicket,Test # 2232,no,42.11,20161109
+v England in India 2016|England,v England in India 2016,2016,Test,2016-11-09,England,Rajkot,49,98,6,,yes,not out,Test # 2232,no,50.0,20161109
+v England in India 2016|England,v England in India 2016,2016,Test,2016-11-17,England,Visakhapatnam,167,267,18,,,caught,Test # 2235,no,62.55,20161109
+v England in India 2016|England,v England in India 2016,2016,Test,2016-11-17,England,Visakhapatnam,81,109,8,,,caught,Test # 2235,no,74.31,20161109
+v England in India 2016|England,v England in India 2016,2016,Test,2016-11-26,England,Mohali,62,127,9,,,caught,Test # 2238,no,48.82,20161109
+v England in India 2016|England,v England in India 2016,2016,Test,2016-11-26,England,Mohali,6,11,,,yes,not out,Test # 2238,no,54.55,20161109
+v England in India 2016|England,v England in India 2016,2016,Test,2016-12-08,England,Wankhede,235,340,25,1,,caught,Test # 2239,no,69.12,20161109
+v England in India 2016|England,v England in India 2016,2016,Test,2016-12-16,England,Chennai,15,29,1,,,caught,Test # 2241,no,51.72,20161109
+v England in India 2017|England,v England in India 2017,2017,ODI,2017-01-15,England,Pune,122,105,8,5,,caught,ODI # 3819,no,116.19,20170115
+v England in India 2017|England,v England in India 2017,2017,ODI,2017-01-19,England,Cuttack,8,5,2,,,caught,ODI # 3821,no,160.0,20170115
+v England in India 2017|England,v England in India 2017,2017,ODI,2017-01-22,England,Eden Gardens,55,63,8,,,caught,ODI # 3824,no,87.3,20170115
+v England in India 2017|England,v England in India 2017,2017,T20I,2017-01-26,England,Kanpur,29,26,4,,,caught,T20I # 592,no,111.54,20170115
+v England in India 2017|England,v England in India 2017,2017,T20I,2017-01-29,England,Nagpur,21,15,2,1,,caught,T20I # 593,no,140.0,20170115
+v England in India 2017|England,v England in India 2017,2017,T20I,2017-02-01,England,Bengaluru,2,4,,,,run out,T20I # 594,no,50.0,20170115
+v Bangladesh in India 2017|Bangladesh,v Bangladesh in India 2017,2017,Test,2017-02-09,Bangladesh,Hyderabad,204,246,24,,,lbw,Test # 2249,no,82.93,20170209
+v Bangladesh in India 2017|Bangladesh,v Bangladesh in India 2017,2017,Test,2017-02-09,Bangladesh,Hyderabad,38,40,2,1,,caught,Test # 2249,no,95.0,20170209
+v Australia in India 2017|Australia,v Australia in India 2017,2017,Test,2017-02-23,Australia,Pune,0,2,,,,caught,Test # 2250,no,0.0,20170223
+v Australia in India 2017|Australia,v Australia in India 2017,2017,Test,2017-02-23,Australia,Pune,13,37,1,,,bowled,Test # 2250,no,35.14,20170223
+v Australia in India 2017|Australia,v Australia in India 2017,2017,Test,2017-03-04,Australia,Bengaluru,12,17,2,,,lbw,Test # 2251,no,70.59,20170223
+v Australia in India 2017|Australia,v Australia in India 2017,2017,Test,2017-03-04,Australia,Bengaluru,15,25,1,,,lbw,Test # 2251,no,60.0,20170223
+v Australia in India 2017|Australia,v Australia in India 2017,2017,Test,2017-03-16,Australia,Ranchi,6,23,,,,caught,Test # 2256,no,26.09,20170223
+Tournament in England 2017|Pakistan,Tournament in England 2017,2017,ODI,2017-06-04,Pakistan,Birmingham,81,68,6,3,yes,not out,ODI # 3878,yes,119.12,20170604
+Tournament in England 2017|Sri Lanka,Tournament in England 2017,2017,ODI,2017-06-08,Sri Lanka,The Oval,0,5,,,,caught,ODI # 3882,yes,0.0,20170604
+Tournament in England 2017|South Africa,Tournament in England 2017,2017,ODI,2017-06-11,South Africa,The Oval,76,101,7,1,yes,not out,ODI # 3886,yes,75.25,20170604
+Tournament in England 2017|Bangladesh,Tournament in England 2017,2017,ODI,2017-06-15,Bangladesh,Birmingham,96,78,13,,yes,not out,ODI # 3891,yes,123.08,20170604
+Tournament in England 2017|Pakistan,Tournament in England 2017,2017,ODI,2017-06-18,Pakistan,The Oval,5,9,,,,caught,ODI # 3894,yes,55.56,20170604
+India in West Indies 2017 — v West Indies|West Indies,India in West Indies 2017 — v West Indies,2017,ODI,2017-06-23,West Indies,Port of Spain,32,47,1,,yes,not out,ODI # 3895,yes,68.09,20170623
+India in West Indies 2017 — v West Indies|West Indies,India in West Indies 2017 — v West Indies,2017,ODI,2017-06-25,West Indies,Port of Spain,87,66,4,4,,caught,ODI # 3896,yes,131.82,20170623
+India in West Indies 2017 — v West Indies|West Indies,India in West Indies 2017 — v West Indies,2017,ODI,2017-06-30,West Indies,North Sound,11,22,2,,,caught,ODI # 3898,yes,50.0,20170623
+India in West Indies 2017 — v West Indies|West Indies,India in West Indies 2017 — v West Indies,2017,ODI,2017-07-02,West Indies,North Sound,3,12,,,,caught,ODI # 3900,yes,25.0,20170623
+India in West Indies 2017 — v West Indies|West Indies,India in West Indies 2017 — v West Indies,2017,ODI,2017-07-06,West Indies,Kingston,111,115,12,2,yes,not out,ODI # 3902,yes,96.52,20170623
+India in West Indies 2017 — v West Indies|West Indies,India in West Indies 2017 — v West Indies,2017,T20I,2017-07-09,West Indies,Kingston,39,22,7,1,,caught,T20I # 617,yes,177.27,20170623
+India in Sri Lanka 2017 — v Sri Lanka|Sri Lanka,India in Sri Lanka 2017 — v Sri Lanka,2017,Test,2017-07-26,Sri Lanka,Galle,3,8,,,,caught,Test # 2265,yes,37.5,20170726
+India in Sri Lanka 2017 — v Sri Lanka|Sri Lanka,India in Sri Lanka 2017 — v Sri Lanka,2017,Test,2017-07-26,Sri Lanka,Galle,103,136,5,1,yes,not out,Test # 2265,yes,75.74,20170726
+India in Sri Lanka 2017 — v Sri Lanka|Sri Lanka,India in Sri Lanka 2017 — v Sri Lanka,2017,Test,2017-08-03,Sri Lanka,Colombo (SSC),13,29,2,,,caught,Test # 2267,yes,44.83,20170726
+India in Sri Lanka 2017 — v Sri Lanka|Sri Lanka,India in Sri Lanka 2017 — v Sri Lanka,2017,Test,2017-08-12,Sri Lanka,Pallekele,42,84,3,,,caught,Test # 2269,yes,50.0,20170726
+India in Sri Lanka 2017 — v Sri Lanka|Sri Lanka,India in Sri Lanka 2017 — v Sri Lanka,2017,ODI,2017-08-20,Sri Lanka,Dambulla,82,70,10,1,yes,not out,ODI # 3905,yes,117.14,20170726
+India in Sri Lanka 2017 — v Sri Lanka|Sri Lanka,India in Sri Lanka 2017 — v Sri Lanka,2017,ODI,2017-08-24,Sri Lanka,Pallekele,4,2,1,,,bowled,ODI # 3906,yes,200.0,20170726
+India in Sri Lanka 2017 — v Sri Lanka|Sri Lanka,India in Sri Lanka 2017 — v Sri Lanka,2017,ODI,2017-08-27,Sri Lanka,Pallekele,3,11,,,,caught,ODI # 3907,yes,27.27,20170726
+India in Sri Lanka 2017 — v Sri Lanka|Sri Lanka,India in Sri Lanka 2017 — v Sri Lanka,2017,ODI,2017-08-31,Sri Lanka,Colombo (RPS),131,96,17,2,,caught,ODI # 3908,yes,136.46,20170726
+India in Sri Lanka 2017 — v Sri Lanka|Sri Lanka,India in Sri Lanka 2017 — v Sri Lanka,2017,ODI,2017-09-03,Sri Lanka,Colombo (RPS),110,116,9,,yes,not out,ODI # 3909,yes,94.83,20170726
+India in Sri Lanka 2017 — v Sri Lanka|Sri Lanka,India in Sri Lanka 2017 — v Sri Lanka,2017,T20I,2017-09-06,Sri Lanka,Colombo (RPS),82,54,7,1,,caught,T20I # 618,yes,151.85,20170726
+v Australia in India 2017|Australia,v Australia in India 2017,2017,ODI,2017-09-17,Australia,Chennai,0,4,,,,caught,ODI # 3910,no,0.0,20170223
+v Australia in India 2017|Australia,v Australia in India 2017,2017,ODI,2017-09-21,Australia,Eden Gardens,92,107,8,,,bowled,ODI # 3912,no,85.98,20170223
+v Australia in India 2017|Australia,v Australia in India 2017,2017,ODI,2017-09-24,Australia,Indore,28,35,2,,,caught,ODI # 3914,no,80.0,20170223
+v Australia in India 2017|Australia,v Australia in India 2017,2017,ODI,2017-09-28,Australia,Bengaluru,21,21,3,,,bowled,ODI # 3917,no,100.0,20170223
+v Australia in India 2017|Australia,v Australia in India 2017,2017,ODI,2017-10-01,Australia,Nagpur,39,55,2,,,caught,ODI # 3919,no,70.91,20170223
+v Australia in India 2017|Australia,v Australia in India 2017,2017,T20I,2017-10-07,Australia,Ranchi,22,14,3,,yes,not out,T20I # 623,no,157.14,20170223
+v Australia in India 2017|Australia,v Australia in India 2017,2017,T20I,2017-10-10,Australia,Guwahati,0,2,,,,caught,T20I # 624,no,0.0,20170223
+v New Zealand in India 2017|New Zealand,v New Zealand in India 2017,2017,ODI,2017-10-22,New Zealand,Wankhede,121,125,9,2,,caught,ODI # 3928,no,96.8,20171022
+v New Zealand in India 2017|New Zealand,v New Zealand in India 2017,2017,ODI,2017-10-25,New Zealand,Pune,29,29,3,1,,caught,ODI # 3931,no,100.0,20171022
+v New Zealand in India 2017|New Zealand,v New Zealand in India 2017,2017,ODI,2017-10-29,New Zealand,Kanpur,113,106,9,1,,caught,ODI # 3932,no,106.6,20171022
+v New Zealand in India 2017|New Zealand,v New Zealand in India 2017,2017,T20I,2017-11-01,New Zealand,Delhi,26,11,,3,yes,not out,T20I # 630,no,236.36,20171022
+v New Zealand in India 2017|New Zealand,v New Zealand in India 2017,2017,T20I,2017-11-04,New Zealand,Rajkot,65,42,8,1,,caught,T20I # 631,no,154.76,20171022
+v New Zealand in India 2017|New Zealand,v New Zealand in India 2017,2017,T20I,2017-11-07,New Zealand,Thiruvananthapuram,13,6,1,1,,caught,T20I # 632,no,216.67,20171022
+v Sri Lanka in India 2017|Sri Lanka,v Sri Lanka in India 2017,2017,Test,2017-11-16,Sri Lanka,Eden Gardens,0,11,,,,lbw,Test # 2281,no,0.0,20171116
+v Sri Lanka in India 2017|Sri Lanka,v Sri Lanka in India 2017,2017,Test,2017-11-16,Sri Lanka,Eden Gardens,104,119,12,2,yes,not out,Test # 2281,no,87.39,20171116
+v Sri Lanka in India 2017|Sri Lanka,v Sri Lanka in India 2017,2017,Test,2017-11-24,Sri Lanka,Nagpur,213,267,17,2,,caught,Test # 2283,no,79.78,20171116
+v Sri Lanka in India 2017|Sri Lanka,v Sri Lanka in India 2017,2017,Test,2017-12-02,Sri Lanka,Delhi,243,287,25,,,lbw,Test # 2286,no,84.67,20171116
+v Sri Lanka in India 2017|Sri Lanka,v Sri Lanka in India 2017,2017,Test,2017-12-02,Sri Lanka,Delhi,50,58,3,,,caught,Test # 2286,no,86.21,20171116
+India in South Africa 2018 — v South Africa|South Africa,India in South Africa 2018 — v South Africa,2018,Test,2018-01-05,South Africa,Cape Town,5,13,,,,caught,Test # 2292,yes,38.46,20180105
+India in South Africa 2018 — v South Africa|South Africa,India in South Africa 2018 — v South Africa,2018,Test,2018-01-05,South Africa,Cape Town,28,40,4,,,lbw,Test # 2292,yes,70.0,20180105
+India in South Africa 2018 — v South Africa|South Africa,India in South Africa 2018 — v South Africa,2018,Test,2018-01-13,South Africa,Centurion,153,217,15,,,caught,Test # 2293,yes,70.51,20180105
+India in South Africa 2018 — v South Africa|South Africa,India in South Africa 2018 — v South Africa,2018,Test,2018-01-13,South Africa,Centurion,5,20,1,,,lbw,Test # 2293,yes,25.0,20180105
+India in South Africa 2018 — v South Africa|South Africa,India in South Africa 2018 — v South Africa,2018,Test,2018-01-24,South Africa,Johannesburg,54,106,9,,,caught,Test # 2294,yes,50.94,20180105
+India in South Africa 2018 — v South Africa|South Africa,India in South Africa 2018 — v South Africa,2018,Test,2018-01-24,South Africa,Johannesburg,41,79,6,,,bowled,Test # 2294,yes,51.9,20180105
+India in South Africa 2018 — v South Africa|South Africa,India in South Africa 2018 — v South Africa,2018,ODI,2018-02-01,South Africa,Durban,112,119,10,,,caught,ODI # 3969,yes,94.12,20180105
+India in South Africa 2018 — v South Africa|South Africa,India in South Africa 2018 — v South Africa,2018,ODI,2018-02-04,South Africa,Centurion,46,50,4,1,yes,not out,ODI # 3970,yes,92.0,20180105
+India in South Africa 2018 — v South Africa|South Africa,India in South Africa 2018 — v South Africa,2018,ODI,2018-02-07,South Africa,Cape Town,160,159,12,2,yes,not out,ODI # 3971,yes,100.63,20180105
+India in South Africa 2018 — v South Africa|South Africa,India in South Africa 2018 — v South Africa,2018,ODI,2018-02-10,South Africa,Johannesburg,75,83,7,1,,caught,ODI # 3973,yes,90.36,20180105
+India in South Africa 2018 — v South Africa|South Africa,India in South Africa 2018 — v South Africa,2018,ODI,2018-02-13,South Africa,Gqeberha,36,54,2,,,run out,ODI # 3976,yes,66.67,20180105
+India in South Africa 2018 — v South Africa|South Africa,India in South Africa 2018 — v South Africa,2018,ODI,2018-02-16,South Africa,Centurion,129,96,19,2,yes,not out,ODI # 3978,yes,134.38,20180105
+India in South Africa 2018 — v South Africa|South Africa,India in South Africa 2018 — v South Africa,2018,T20I,2018-02-18,South Africa,Johannesburg,26,20,2,1,,lbw,T20I # 652,yes,130.0,20180105
+India in South Africa 2018 — v South Africa|South Africa,India in South Africa 2018 — v South Africa,2018,T20I,2018-02-21,South Africa,Centurion,1,5,,,,caught,T20I # 654,yes,20.0,20180105
+India in Ireland 2018 — v Ireland|Ireland,India in Ireland 2018 — v Ireland,2018,T20I,2018-06-27,Ireland,Dublin (Malahide),0,2,,,,caught,T20I # 678,yes,0.0,20180627
+India in Ireland 2018 — v Ireland|Ireland,India in Ireland 2018 — v Ireland,2018,T20I,2018-06-29,Ireland,Dublin (Malahide),9,8,1,,,caught,T20I # 680,yes,112.5,20180627
+India in England 2018 — v England|England,India in England 2018 — v England,2018,T20I,2018-07-03,England,Manchester,20,22,,1,yes,not out,T20I # 684,yes,90.91,20180703
+India in England 2018 — v England|England,India in England 2018 — v England,2018,T20I,2018-07-06,England,Cardiff,47,38,1,2,,caught,T20I # 688,yes,123.68,20180703
+India in England 2018 — v England|England,India in England 2018 — v England,2018,T20I,2018-07-08,England,Bristol,43,29,2,2,,caught,T20I # 690,yes,148.28,20180703
+India in England 2018 — v England|England,India in England 2018 — v England,2018,ODI,2018-07-12,England,Nottingham,75,82,7,,,stumped,ODI # 4014,yes,91.46,20180703
+India in England 2018 — v England|England,India in England 2018 — v England,2018,ODI,2018-07-14,England,Lord's,45,56,2,,,lbw,ODI # 4016,yes,80.36,20180703
+India in England 2018 — v England|England,India in England 2018 — v England,2018,ODI,2018-07-17,England,Leeds,71,72,8,,,bowled,ODI # 4018,yes,98.61,20180703
+India in England 2018 — v England|England,India in England 2018 — v England,2018,Test,2018-08-01,England,Birmingham,149,225,22,1,,caught,Test # 2314,yes,66.22,20180703
+India in England 2018 — v England|England,India in England 2018 — v England,2018,Test,2018-08-01,England,Birmingham,51,93,4,,,lbw,Test # 2314,yes,54.84,20180703
+India in England 2018 — v England|England,India in England 2018 — v England,2018,Test,2018-08-09,England,Lord's,23,57,2,,,caught,Test # 2315,yes,40.35,20180703
+India in England 2018 — v England|England,India in England 2018 — v England,2018,Test,2018-08-09,England,Lord's,17,29,2,,,caught,Test # 2315,yes,58.62,20180703
+India in England 2018 — v England|England,India in England 2018 — v England,2018,Test,2018-08-18,England,Nottingham,97,152,11,,,caught,Test # 2316,yes,63.82,20180703
+India in England 2018 — v England|England,India in England 2018 — v England,2018,Test,2018-08-18,England,Nottingham,103,197,10,,,lbw,Test # 2316,yes,52.28,20180703
+India in England 2018 — v England|England,India in England 2018 — v England,2018,Test,2018-08-30,England,Southampton,46,71,6,,,caught,Test # 2317,yes,64.79,20180703
+India in England 2018 — v England|England,India in England 2018 — v England,2018,Test,2018-08-30,England,Southampton,58,130,4,,,caught,Test # 2317,yes,44.62,20180703
+India in England 2018 — v England|England,India in England 2018 — v England,2018,Test,2018-09-07,England,The Oval,49,70,6,,,caught,Test # 2318,yes,70.0,20180703
+India in England 2018 — v England|England,India in England 2018 — v England,2018,Test,2018-09-07,England,The Oval,0,1,,,,caught,Test # 2318,yes,0.0,20180703
+v West Indies in India 2018|West Indies,v West Indies in India 2018,2018,Test,2018-10-04,West Indies,Rajkot,139,230,10,,,caught,Test # 2319,no,60.43,20181004
+v West Indies in India 2018|West Indies,v West Indies in India 2018,2018,Test,2018-10-12,West Indies,Hyderabad,45,78,5,,,lbw,Test # 2321,no,57.69,20181004
+v West Indies in India 2018|West Indies,v West Indies in India 2018,2018,ODI,2018-10-21,West Indies,Guwahati,140,107,21,2,,stumped,ODI # 4056,no,130.84,20181004
+v West Indies in India 2018|West Indies,v West Indies in India 2018,2018,ODI,2018-10-24,West Indies,Visakhapatnam,157,129,13,4,yes,not out,ODI # 4059,no,121.71,20181004
+v West Indies in India 2018|West Indies,v West Indies in India 2018,2018,ODI,2018-10-27,West Indies,Pune,107,119,10,1,,bowled,ODI # 4062,no,89.92,20181004
+v West Indies in India 2018|West Indies,v West Indies in India 2018,2018,ODI,2018-10-29,West Indies,Brabourne,16,17,2,,,caught,ODI # 4063,no,94.12,20181004
+v West Indies in India 2018|West Indies,v West Indies in India 2018,2018,ODI,2018-11-01,West Indies,Thiruvananthapuram,33,29,6,,yes,not out,ODI # 4064,no,113.79,20181004
+India in Australia 2018/19 — v Australia|Australia,India in Australia 2018/19 — v Australia,2018,T20I,2018-11-21,Australia,Brisbane,4,8,,,,caught,T20I # 712,yes,50.0,20181121
+India in Australia 2018/19 — v Australia|Australia,India in Australia 2018/19 — v Australia,2018,T20I,2018-11-25,Australia,Sydney,61,41,4,2,yes,not out,T20I # 714,yes,148.78,20181121
+India in Australia 2018/19 — v Australia|Australia,India in Australia 2018/19 — v Australia,2018,Test,2018-12-06,Australia,Adelaide,3,16,,,,caught,Test # 2333,yes,18.75,20181121
+India in Australia 2018/19 — v Australia|Australia,India in Australia 2018/19 — v Australia,2018,Test,2018-12-06,Australia,Adelaide,34,104,3,,,caught,Test # 2333,yes,32.69,20181121
+India in Australia 2018/19 — v Australia|Australia,India in Australia 2018/19 — v Australia,2018,Test,2018-12-14,Australia,Perth,123,257,13,1,,caught,Test # 2334,yes,47.86,20181121
+India in Australia 2018/19 — v Australia|Australia,India in Australia 2018/19 — v Australia,2018,Test,2018-12-14,Australia,Perth,17,40,2,,,caught,Test # 2334,yes,42.5,20181121
+India in Australia 2018/19 — v Australia|Australia,India in Australia 2018/19 — v Australia,2018,Test,2018-12-26,Australia,Melbourne,82,204,9,,,caught,Test # 2337,yes,40.2,20181121
+India in Australia 2018/19 — v Australia|Australia,India in Australia 2018/19 — v Australia,2018,Test,2018-12-26,Australia,Melbourne,0,4,,,,caught,Test # 2337,yes,0.0,20181121
+India in Australia 2018/19 — v Australia|Australia,India in Australia 2018/19 — v Australia,2019,Test,2019-01-03,Australia,Sydney,23,59,4,,,caught,Test # 2339,yes,38.98,20181121
+India in Australia 2018/19 — v Australia|Australia,India in Australia 2018/19 — v Australia,2019,ODI,2019-01-12,Australia,Sydney,3,8,,,,caught,ODI # 4077,yes,37.5,20181121
+India in Australia 2018/19 — v Australia|Australia,India in Australia 2018/19 — v Australia,2019,ODI,2019-01-15,Australia,Adelaide,104,112,5,2,,caught,ODI # 4078,yes,92.86,20181121
+India in Australia 2018/19 — v Australia|Australia,India in Australia 2018/19 — v Australia,2019,ODI,2019-01-18,Australia,Melbourne,46,62,3,,,caught,ODI # 4079,yes,74.19,20181121
+India in New Zealand 2019 — v New Zealand|New Zealand,India in New Zealand 2019 — v New Zealand,2019,ODI,2019-01-23,New Zealand,Napier,45,59,3,,,caught,ODI # 4082,yes,76.27,20190123
+India in New Zealand 2019 — v New Zealand|New Zealand,India in New Zealand 2019 — v New Zealand,2019,ODI,2019-01-26,New Zealand,Mount Maunganui,43,45,5,,,caught,ODI # 4085,yes,95.56,20190123
+India in New Zealand 2019 — v New Zealand|New Zealand,India in New Zealand 2019 — v New Zealand,2019,ODI,2019-01-28,New Zealand,Mount Maunganui,60,74,6,1,,caught,ODI # 4088,yes,81.08,20190123
+v Australia in India 2019|Australia,v Australia in India 2019,2019,T20I,2019-02-24,Australia,Visakhapatnam,24,17,3,,,caught,T20I # 748,no,141.18,20190224
+v Australia in India 2019|Australia,v Australia in India 2019,2019,T20I,2019-02-27,Australia,Bengaluru,72,38,2,6,yes,not out,T20I # 749,no,189.47,20190224
+v Australia in India 2019|Australia,v Australia in India 2019,2019,ODI,2019-03-02,Australia,Hyderabad,44,45,6,1,,lbw,ODI # 4102,no,97.78,20190224
+v Australia in India 2019|Australia,v Australia in India 2019,2019,ODI,2019-03-05,Australia,Nagpur,116,120,10,,,caught,ODI # 4106,no,96.67,20190224
+v Australia in India 2019|Australia,v Australia in India 2019,2019,ODI,2019-03-08,Australia,Ranchi,123,95,16,1,,bowled,ODI # 4109,no,129.47,20190224
+v Australia in India 2019|Australia,v Australia in India 2019,2019,ODI,2019-03-10,Australia,Mohali,7,6,1,,,caught,ODI # 4111,no,116.67,20190224
+v Australia in India 2019|Australia,v Australia in India 2019,2019,ODI,2019-03-13,Australia,Delhi,20,22,2,,,caught,ODI # 4113,no,90.91,20190224
+Tournament in England 2019|South Africa,Tournament in England 2019,2019,ODI,2019-06-05,South Africa,Southampton,18,34,1,,,caught,ODI # 4150,yes,52.94,20190605
+Tournament in England 2019|Australia,Tournament in England 2019,2019,ODI,2019-06-09,Australia,The Oval,82,77,4,2,,caught,ODI # 4155,yes,106.49,20190605
+Tournament in England 2019|Pakistan,Tournament in England 2019,2019,ODI,2019-06-16,Pakistan,Manchester,77,65,7,,,caught,ODI # 4161,yes,118.46,20190605
+Tournament in England 2019|Afghanistan,Tournament in England 2019,2019,ODI,2019-06-22,Afghanistan,Southampton,67,63,5,,,caught,ODI # 4169,yes,106.35,20190605
+Tournament in England 2019|West Indies,Tournament in England 2019,2019,ODI,2019-06-27,West Indies,Manchester,72,82,8,,,caught,ODI # 4175,yes,87.8,20190605
+India in England 2019 — v England|England,India in England 2019 — v England,2019,ODI,2019-06-30,England,Birmingham,66,76,7,,,caught,ODI # 4179,yes,86.84,20190630
+Tournament in England 2019|Bangladesh,Tournament in England 2019,2019,ODI,2019-07-02,Bangladesh,Birmingham,26,27,3,,,caught,ODI # 4182,yes,96.3,20190605
+Tournament in England 2019|Sri Lanka,Tournament in England 2019,2019,ODI,2019-07-06,Sri Lanka,Leeds,34,41,3,,yes,not out,ODI # 4187,yes,82.93,20190605
+Tournament in England 2019|New Zealand,Tournament in England 2019,2019,ODI,2019-07-09,New Zealand,Manchester,1,6,,,,lbw,ODI # 4190,yes,16.67,20190605
+Tournament in USA 2019|West Indies,Tournament in USA 2019,2019,T20I,2019-08-03,West Indies,Lauderhill,19,29,1,,,caught,T20I # 842,yes,65.52,20190803
+Tournament in USA 2019|West Indies,Tournament in USA 2019,2019,T20I,2019-08-04,West Indies,Lauderhill,28,23,1,1,,bowled,T20I # 843,yes,121.74,20190803
+India in West Indies 2019 — v West Indies|West Indies,India in West Indies 2019 — v West Indies,2019,T20I,2019-08-06,West Indies,Providence,59,45,6,,,caught,T20I # 846,yes,131.11,20190806
+India in West Indies 2019 — v West Indies|West Indies,India in West Indies 2019 — v West Indies,2019,ODI,2019-08-11,West Indies,Port of Spain,120,125,14,1,,caught,ODI # 4197,yes,96.0,20190806
+India in West Indies 2019 — v West Indies|West Indies,India in West Indies 2019 — v West Indies,2019,ODI,2019-08-14,West Indies,Port of Spain,114,99,14,,yes,not out,ODI # 4199,yes,115.15,20190806
+India in West Indies 2019 — v West Indies|West Indies,India in West Indies 2019 — v West Indies,2019,Test,2019-08-22,West Indies,North Sound,9,12,2,,,caught,Test # 2358,yes,75.0,20190806
+India in West Indies 2019 — v West Indies|West Indies,India in West Indies 2019 — v West Indies,2019,Test,2019-08-22,West Indies,North Sound,51,113,2,,,caught,Test # 2358,yes,45.13,20190806
+India in West Indies 2019 — v West Indies|West Indies,India in West Indies 2019 — v West Indies,2019,Test,2019-08-30,West Indies,Kingston,76,163,10,,,caught,Test # 2359,yes,46.63,20190806
+India in West Indies 2019 — v West Indies|West Indies,India in West Indies 2019 — v West Indies,2019,Test,2019-08-30,West Indies,Kingston,0,1,,,,caught,Test # 2359,yes,0.0,20190806
+v South Africa in India 2019|South Africa,v South Africa in India 2019,2019,T20I,2019-09-18,South Africa,Mohali,72,52,4,3,yes,not out,T20I # 888,no,138.46,20190918
+v South Africa in India 2019|South Africa,v South Africa in India 2019,2019,T20I,2019-09-22,South Africa,Bengaluru,9,15,,,,caught,T20I # 893,no,60.0,20190918
+v South Africa in India 2019|South Africa,v South Africa in India 2019,2019,Test,2019-10-02,South Africa,Visakhapatnam,20,40,4,,,caught,Test # 2363,no,50.0,20190918
+v South Africa in India 2019|South Africa,v South Africa in India 2019,2019,Test,2019-10-02,South Africa,Visakhapatnam,31,25,3,1,yes,not out,Test # 2363,no,124.0,20190918
+v South Africa in India 2019|South Africa,v South Africa in India 2019,2019,Test,2019-10-10,South Africa,Pune,254,336,33,2,yes,not out,Test # 2364,no,75.6,20190918
+v South Africa in India 2019|South Africa,v South Africa in India 2019,2019,Test,2019-10-19,South Africa,Ranchi,12,22,2,,,lbw,Test # 2365,no,54.55,20190918
+v Bangladesh in India 2019|Bangladesh,v Bangladesh in India 2019,2019,Test,2019-11-14,Bangladesh,Indore,0,2,,,,lbw,Test # 2366,no,0.0,20191114
+v Bangladesh in India 2019|Bangladesh,v Bangladesh in India 2019,2019,Test,2019-11-22,Bangladesh,Eden Gardens,136,194,18,,,caught,Test # 2369,no,70.1,20191114
+v West Indies in India 2019|West Indies,v West Indies in India 2019,2019,T20I,2019-12-06,West Indies,Hyderabad,94,50,6,6,yes,not out,T20I # 1020,no,188.0,20191206
+v West Indies in India 2019|West Indies,v West Indies in India 2019,2019,T20I,2019-12-08,West Indies,Thiruvananthapuram,19,17,2,,,caught,T20I # 1022,no,111.76,20191206
+v West Indies in India 2019|West Indies,v West Indies in India 2019,2019,T20I,2019-12-11,West Indies,Wankhede,70,29,4,7,yes,not out,T20I # 1024,no,241.38,20191206
+v West Indies in India 2019|West Indies,v West Indies in India 2019,2019,ODI,2019-12-15,West Indies,Chennai,4,4,1,,,bowled,ODI # 4221,no,100.0,20191206
+v West Indies in India 2019|West Indies,v West Indies in India 2019,2019,ODI,2019-12-18,West Indies,Visakhapatnam,0,1,,,,caught,ODI # 4222,no,0.0,20191206
+v West Indies in India 2019|West Indies,v West Indies in India 2019,2019,ODI,2019-12-22,West Indies,Cuttack,85,81,9,,,bowled,ODI # 4223,no,104.94,20191206
+v Sri Lanka in India 2020|Sri Lanka,v Sri Lanka in India 2020,2020,T20I,2020-01-07,Sri Lanka,Indore,30,17,1,2,yes,not out,T20I # 1026,no,176.47,20200107
+v Sri Lanka in India 2020|Sri Lanka,v Sri Lanka in India 2020,2020,T20I,2020-01-10,Sri Lanka,Pune,26,17,2,1,,run out,T20I # 1027,no,152.94,20200107
+v Australia in India 2020|Australia,v Australia in India 2020,2020,ODI,2020-01-14,Australia,Wankhede,16,14,,1,,caught,ODI # 4231,no,114.29,20200114
+v Australia in India 2020|Australia,v Australia in India 2020,2020,ODI,2020-01-17,Australia,Rajkot,78,76,6,,,caught,ODI # 4232,no,102.63,20200114
+v Australia in India 2020|Australia,v Australia in India 2020,2020,ODI,2020-01-19,Australia,Bengaluru,89,91,8,,,bowled,ODI # 4233,no,97.8,20200114
+India in New Zealand 2020 — v New Zealand|New Zealand,India in New Zealand 2020 — v New Zealand,2020,T20I,2020-01-24,New Zealand,Auckland,45,32,3,1,,caught,T20I # 1031,yes,140.62,20200124
+India in New Zealand 2020 — v New Zealand|New Zealand,India in New Zealand 2020 — v New Zealand,2020,T20I,2020-01-26,New Zealand,Auckland,11,12,1,,,caught,T20I # 1034,yes,91.67,20200124
+India in New Zealand 2020 — v New Zealand|New Zealand,India in New Zealand 2020 — v New Zealand,2020,T20I,2020-01-29,New Zealand,Hamilton,38,27,2,1,,caught,T20I # 1035,yes,140.74,20200124
+India in New Zealand 2020 — v New Zealand|New Zealand,India in New Zealand 2020 — v New Zealand,2020,T20I,2020-01-31,New Zealand,Wellington,11,9,2,,,caught,T20I # 1036,yes,122.22,20200124
+India in New Zealand 2020 — v New Zealand|New Zealand,India in New Zealand 2020 — v New Zealand,2020,ODI,2020-02-05,New Zealand,Hamilton,51,63,6,,,bowled,ODI # 4235,yes,80.95,20200124
+India in New Zealand 2020 — v New Zealand|New Zealand,India in New Zealand 2020 — v New Zealand,2020,ODI,2020-02-08,New Zealand,Auckland,15,25,1,,,bowled,ODI # 4239,yes,60.0,20200124
+India in New Zealand 2020 — v New Zealand|New Zealand,India in New Zealand 2020 — v New Zealand,2020,ODI,2020-02-11,New Zealand,Mount Maunganui,9,12,,1,,caught,ODI # 4243,yes,75.0,20200124
+India in New Zealand 2020 — v New Zealand|New Zealand,India in New Zealand 2020 — v New Zealand,2020,Test,2020-02-21,New Zealand,Wellington,2,7,,,,caught,Test # 2385,yes,28.57,20200124
+India in New Zealand 2020 — v New Zealand|New Zealand,India in New Zealand 2020 — v New Zealand,2020,Test,2020-02-21,New Zealand,Wellington,19,43,3,,,caught,Test # 2385,yes,44.19,20200124
+India in New Zealand 2020 — v New Zealand|New Zealand,India in New Zealand 2020 — v New Zealand,2020,Test,2020-02-29,New Zealand,Christchurch,3,15,,,,lbw,Test # 2387,yes,20.0,20200124
+India in New Zealand 2020 — v New Zealand|New Zealand,India in New Zealand 2020 — v New Zealand,2020,Test,2020-02-29,New Zealand,Christchurch,14,30,3,,,lbw,Test # 2387,yes,46.67,20200124
+India in Australia 2020/21 — v Australia|Australia,India in Australia 2020/21 — v Australia,2020,ODI,2020-11-27,Australia,Sydney,21,21,2,1,,caught,ODI # 4265,yes,100.0,20201127
+India in Australia 2020/21 — v Australia|Australia,India in Australia 2020/21 — v Australia,2020,ODI,2020-11-29,Australia,Sydney,89,87,7,2,,caught,ODI # 4266,yes,102.3,20201127
+India in Australia 2020/21 — v Australia|Australia,India in Australia 2020/21 — v Australia,2020,ODI,2020-12-02,Australia,Canberra,63,78,5,,,caught,ODI # 4267,yes,80.77,20201127
+India in Australia 2020/21 — v Australia|Australia,India in Australia 2020/21 — v Australia,2020,T20I,2020-12-04,Australia,Canberra,9,9,1,,,caught,T20I # 1114,yes,100.0,20201127
+India in Australia 2020/21 — v Australia|Australia,India in Australia 2020/21 — v Australia,2020,T20I,2020-12-06,Australia,Sydney,40,24,2,2,,caught,T20I # 1115,yes,166.67,20201127
+India in Australia 2020/21 — v Australia|Australia,India in Australia 2020/21 — v Australia,2020,T20I,2020-12-08,Australia,Sydney,85,61,4,3,,caught,T20I # 1116,yes,139.34,20201127
+India in Australia 2020/21 — v Australia|Australia,India in Australia 2020/21 — v Australia,2020,Test,2020-12-17,Australia,Adelaide,74,180,8,,,run out,Test # 2396,yes,41.11,20201127
+India in Australia 2020/21 — v Australia|Australia,India in Australia 2020/21 — v Australia,2020,Test,2020-12-17,Australia,Adelaide,4,8,1,,,caught,Test # 2396,yes,50.0,20201127
+v England in India 2021|England,v England in India 2021,2021,Test,2021-02-05,England,Chennai,11,48,,,,caught,Test # 2409,no,22.92,20210205
+v England in India 2021|England,v England in India 2021,2021,Test,2021-02-05,England,Chennai,72,104,9,,,bowled,Test # 2409,no,69.23,20210205
+v England in India 2021|England,v England in India 2021,2021,Test,2021-02-13,England,Chennai,0,5,,,,bowled,Test # 2411,no,0.0,20210205
+v England in India 2021|England,v England in India 2021,2021,Test,2021-02-13,England,Chennai,62,149,7,,,lbw,Test # 2411,no,41.61,20210205
+v England in India 2021|England,v England in India 2021,2021,Test,2021-02-24,England,Ahmedabad,27,58,3,,,bowled,Test # 2412,no,46.55,20210205
+v England in India 2021|England,v England in India 2021,2021,Test,2021-03-04,England,Ahmedabad,0,8,,,,caught,Test # 2414,no,0.0,20210205
+v England in India 2021|England,v England in India 2021,2021,T20I,2021-03-12,England,Ahmedabad,0,5,,,,caught,T20I # 1131,no,0.0,20210205
+v England in India 2021|England,v England in India 2021,2021,T20I,2021-03-14,England,Ahmedabad,73,49,5,3,yes,not out,T20I # 1132,no,148.98,20210205
+v England in India 2021|England,v England in India 2021,2021,T20I,2021-03-16,England,Ahmedabad,77,46,8,4,yes,not out,T20I # 1133,no,167.39,20210205
+v England in India 2021|England,v England in India 2021,2021,T20I,2021-03-18,England,Ahmedabad,1,5,,,,stumped,T20I # 1135,no,20.0,20210205
+v England in India 2021|England,v England in India 2021,2021,T20I,2021-03-20,England,Ahmedabad,80,52,7,2,yes,not out,T20I # 1138,no,153.85,20210205
+v England in India 2021|England,v England in India 2021,2021,ODI,2021-03-23,England,Pune,56,60,6,,,caught,ODI # 4281,no,93.33,20210205
+v England in India 2021|England,v England in India 2021,2021,ODI,2021-03-26,England,Pune,66,79,3,1,,caught,ODI # 4283,no,83.54,20210205
+v England in India 2021|England,v England in India 2021,2021,ODI,2021-03-28,England,Pune,7,10,1,,,bowled,ODI # 4284,no,70.0,20210205
+Tournament in England 2021|New Zealand,Tournament in England 2021,2021,Test,2021-06-18,New Zealand,Southampton,44,132,1,,,lbw,Test # 2425,yes,33.33,20210618
+Tournament in England 2021|New Zealand,Tournament in England 2021,2021,Test,2021-06-18,New Zealand,Southampton,13,29,,,,caught,Test # 2425,yes,44.83,20210618
+India in England 2021 — v England|England,India in England 2021 — v England,2021,Test,2021-08-04,England,Nottingham,0,1,,,,caught,Test # 2428,yes,0.0,20210804
+India in England 2021 — v England|England,India in England 2021 — v England,2021,Test,2021-08-12,England,Lord's,42,103,3,,,caught,Test # 2429,yes,40.78,20210804
+India in England 2021 — v England|England,India in England 2021 — v England,2021,Test,2021-08-12,England,Lord's,20,31,4,,,caught,Test # 2429,yes,64.52,20210804
+India in England 2021 — v England|England,India in England 2021 — v England,2021,Test,2021-08-25,England,Leeds,7,17,1,,,caught,Test # 2432,yes,41.18,20210804
+India in England 2021 — v England|England,India in England 2021 — v England,2021,Test,2021-08-25,England,Leeds,55,125,8,,,caught,Test # 2432,yes,44.0,20210804
+India in England 2021 — v England|England,India in England 2021 — v England,2021,Test,2021-09-02,England,The Oval,50,96,8,,,caught,Test # 2433,yes,52.08,20210804
+India in England 2021 — v England|England,India in England 2021 — v England,2021,Test,2021-09-02,England,The Oval,44,96,7,,,caught,Test # 2433,yes,45.83,20210804
+Tournament in UAE 2021|Pakistan,Tournament in UAE 2021,2021,T20I,2021-10-24,Pakistan,Dubai (DICS),57,49,5,1,,caught,T20I # 1361,yes,116.33,20211024
+Tournament in UAE 2021|New Zealand,Tournament in UAE 2021,2021,T20I,2021-10-31,New Zealand,Dubai (DICS),9,17,,,,caught,T20I # 1381,yes,52.94,20211024
+Tournament in UAE 2021|Scotland,Tournament in UAE 2021,2021,T20I,2021-11-05,Scotland,Dubai (DICS),2,2,,,yes,not out,T20I # 1396,yes,100.0,20211024
+v New Zealand in India 2021|New Zealand,v New Zealand in India 2021,2021,Test,2021-12-03,New Zealand,Wankhede,0,4,,,,lbw,Test # 2438,no,0.0,20211203
+v New Zealand in India 2021|New Zealand,v New Zealand in India 2021,2021,Test,2021-12-03,New Zealand,Wankhede,36,84,1,1,,bowled,Test # 2438,no,42.86,20211203
+India in South Africa 2022 — v South Africa|South Africa,India in South Africa 2022 — v South Africa,2021,Test,2021-12-26,South Africa,Centurion,35,94,4,,,caught,Test # 2443,yes,37.23,20211226
+India in South Africa 2022 — v South Africa|South Africa,India in South Africa 2022 — v South Africa,2021,Test,2021-12-26,South Africa,Centurion,18,32,4,,,caught,Test # 2443,yes,56.25,20211226
+India in South Africa 2022 — v South Africa|South Africa,India in South Africa 2022 — v South Africa,2022,Test,2022-01-11,South Africa,Cape Town,79,201,12,1,,caught,Test # 2448,yes,39.3,20211226
+India in South Africa 2022 — v South Africa|South Africa,India in South Africa 2022 — v South Africa,2022,Test,2022-01-11,South Africa,Cape Town,29,143,4,,,caught,Test # 2448,yes,20.28,20211226
+India in South Africa 2022 — v South Africa|South Africa,India in South Africa 2022 — v South Africa,2022,ODI,2022-01-19,South Africa,Paarl,51,63,3,,,caught,ODI # 4344,yes,80.95,20211226
+India in South Africa 2022 — v South Africa|South Africa,India in South Africa 2022 — v South Africa,2022,ODI,2022-01-21,South Africa,Paarl,0,5,,,,caught,ODI # 4346,yes,0.0,20211226
+India in South Africa 2022 — v South Africa|South Africa,India in South Africa 2022 — v South Africa,2022,ODI,2022-01-23,South Africa,Cape Town,65,84,5,,,caught,ODI # 4349,yes,77.38,20211226
+v West Indies in India 2022|West Indies,v West Indies in India 2022,2022,ODI,2022-02-06,West Indies,Ahmedabad,8,4,2,,,caught,ODI # 4353,no,200.0,20220206
+v West Indies in India 2022|West Indies,v West Indies in India 2022,2022,ODI,2022-02-09,West Indies,Ahmedabad,18,30,3,,,caught,ODI # 4355,no,60.0,20220206
+v West Indies in India 2022|West Indies,v West Indies in India 2022,2022,ODI,2022-02-11,West Indies,Ahmedabad,0,2,,,,caught,ODI # 4356,no,0.0,20220206
+v West Indies in India 2022|West Indies,v West Indies in India 2022,2022,T20I,2022-02-16,West Indies,Eden Gardens,17,13,1,,,caught,T20I # 1467,no,130.77,20220206
+v West Indies in India 2022|West Indies,v West Indies in India 2022,2022,T20I,2022-02-18,West Indies,Eden Gardens,52,41,7,1,,bowled,T20I # 1473,no,126.83,20220206
+v Sri Lanka in India 2022|Sri Lanka,v Sri Lanka in India 2022,2022,Test,2022-03-04,Sri Lanka,Mohali,45,76,5,,,bowled,Test # 2452,no,59.21,20220304
+v Sri Lanka in India 2022|Sri Lanka,v Sri Lanka in India 2022,2022,Test,2022-03-12,Sri Lanka,Bengaluru,23,48,2,,,lbw,Test # 2456,no,47.92,20220304
+v Sri Lanka in India 2022|Sri Lanka,v Sri Lanka in India 2022,2022,Test,2022-03-12,Sri Lanka,Bengaluru,13,16,1,,,lbw,Test # 2456,no,81.25,20220304
+India in England 2022 — v England|England,India in England 2022 — v England,2022,Test,2022-07-01,England,Birmingham,11,19,2,,,bowled,Test # 2470,yes,57.89,20220701
+India in England 2022 — v England|England,India in England 2022 — v England,2022,Test,2022-07-01,England,Birmingham,20,40,4,,,caught,Test # 2470,yes,50.0,20220701
+India in England 2022 — v England|England,India in England 2022 — v England,2022,T20I,2022-07-09,England,Birmingham,1,3,,,,caught,T20I # 1628,yes,33.33,20220701
+India in England 2022 — v England|England,India in England 2022 — v England,2022,T20I,2022-07-10,England,Nottingham,11,6,1,1,,caught,T20I # 1631,yes,183.33,20220701
+India in England 2022 — v England|England,India in England 2022 — v England,2022,ODI,2022-07-14,England,Lord's,16,25,3,,,caught,ODI # 4428,yes,64.0,20220701
+India in England 2022 — v England|England,India in England 2022 — v England,2022,ODI,2022-07-17,England,Manchester,17,22,3,,,caught,ODI # 4433,yes,77.27,20220701
+Tournament in UAE 2022|Pakistan,Tournament in UAE 2022,2022,T20I,2022-08-28,Pakistan,Dubai (DICS),35,34,3,1,,caught,T20I # 1750,yes,102.94,20220828
+Tournament in UAE 2022|Hong Kong,Tournament in UAE 2022,2022,T20I,2022-08-31,Hong Kong,Dubai (DICS),59,44,1,3,yes,not out,T20I # 1754,yes,134.09,20220828
+Tournament in UAE 2022|Pakistan,Tournament in UAE 2022,2022,T20I,2022-09-04,Pakistan,Dubai (DICS),60,44,4,1,,run out,T20I # 1758,yes,136.36,20220828
+Tournament in UAE 2022|Sri Lanka,Tournament in UAE 2022,2022,T20I,2022-09-06,Sri Lanka,Dubai (DICS),0,4,,,,bowled,T20I # 1759,yes,0.0,20220828
+Tournament in UAE 2022|Afghanistan,Tournament in UAE 2022,2022,T20I,2022-09-08,Afghanistan,Dubai (DICS),122,61,12,6,yes,not out,T20I # 1761,yes,200.0,20220828
+v Australia in India 2022|Australia,v Australia in India 2022,2022,T20I,2022-09-20,Australia,Mohali,2,7,,,,caught,T20I # 1788,no,28.57,20220920
+v Australia in India 2022|Australia,v Australia in India 2022,2022,T20I,2022-09-23,Australia,Nagpur,11,6,2,,,bowled,T20I # 1794,no,183.33,20220920
+v Australia in India 2022|Australia,v Australia in India 2022,2022,T20I,2022-09-25,Australia,Hyderabad,63,48,3,4,,caught,T20I # 1796,no,131.25,20220920
+v South Africa in India 2022|South Africa,v South Africa in India 2022,2022,T20I,2022-09-28,South Africa,Thiruvananthapuram,3,9,,,,caught,T20I # 1800,no,33.33,20220928
+v South Africa in India 2022|South Africa,v South Africa in India 2022,2022,T20I,2022-10-02,South Africa,Guwahati,49,28,7,1,yes,not out,T20I # 1803,no,175.0,20220928
+Tournament in Australia 2023|Pakistan,Tournament in Australia 2023,2022,T20I,2022-10-23,Pakistan,Melbourne,82,53,6,4,yes,not out,T20I # 1842,yes,154.72,20221023
+Tournament in Australia 2023|Netherlands,Tournament in Australia 2023,2022,T20I,2022-10-27,Netherlands,Sydney,62,44,3,2,yes,not out,T20I # 1848,yes,140.91,20221023
+Tournament in Australia 2023|South Africa,Tournament in Australia 2023,2022,T20I,2022-10-30,South Africa,Perth,12,11,2,,,caught,T20I # 1853,yes,109.09,20221023
+Tournament in Australia 2023|Bangladesh,Tournament in Australia 2023,2022,T20I,2022-11-02,Bangladesh,Adelaide,64,44,8,1,yes,not out,T20I # 1860,yes,145.45,20221023
+Tournament in Australia 2023|Zimbabwe,Tournament in Australia 2023,2022,T20I,2022-11-06,Zimbabwe,Melbourne,26,25,2,,,caught,T20I # 1873,yes,104.0,20221023
+Tournament in Australia 2023|England,Tournament in Australia 2023,2022,T20I,2022-11-10,England,Adelaide,50,40,4,1,,caught,T20I # 1878,yes,125.0,20221023
+India in Bangladesh 2022 — v Bangladesh|Bangladesh,India in Bangladesh 2022 — v Bangladesh,2022,ODI,2022-12-04,Bangladesh,Mirpur,9,15,1,,,caught,ODI # 4493,yes,60.0,20221204
+India in Bangladesh 2022 — v Bangladesh|Bangladesh,India in Bangladesh 2022 — v Bangladesh,2022,ODI,2022-12-07,Bangladesh,Mirpur,5,6,1,,,bowled,ODI # 4496,yes,83.33,20221204
+India in Bangladesh 2022 — v Bangladesh|Bangladesh,India in Bangladesh 2022 — v Bangladesh,2022,ODI,2022-12-10,Bangladesh,Chattogram,113,91,11,2,,caught,ODI # 4499,yes,124.18,20221204
+India in Bangladesh 2022 — v Bangladesh|Bangladesh,India in Bangladesh 2022 — v Bangladesh,2022,Test,2022-12-14,Bangladesh,Chattogram,1,5,,,,lbw,Test # 2481,yes,20.0,20221204
+India in Bangladesh 2022 — v Bangladesh|Bangladesh,India in Bangladesh 2022 — v Bangladesh,2022,Test,2022-12-14,Bangladesh,Chattogram,19,29,,,yes,not out,Test # 2481,yes,65.52,20221204
+India in Bangladesh 2022 — v Bangladesh|Bangladesh,India in Bangladesh 2022 — v Bangladesh,2022,Test,2022-12-22,Bangladesh,Mirpur,24,73,3,,,caught,Test # 2484,yes,32.88,20221204
+India in Bangladesh 2022 — v Bangladesh|Bangladesh,India in Bangladesh 2022 — v Bangladesh,2022,Test,2022-12-22,Bangladesh,Mirpur,1,22,,,,caught,Test # 2484,yes,4.55,20221204
+v Sri Lanka in India 2023|Sri Lanka,v Sri Lanka in India 2023,2023,ODI,2023-01-10,Sri Lanka,Guwahati,113,87,12,1,,caught,ODI # 4501,no,129.89,20230110
+v Sri Lanka in India 2023|Sri Lanka,v Sri Lanka in India 2023,2023,ODI,2023-01-12,Sri Lanka,Eden Gardens,4,9,1,,,bowled,ODI # 4503,no,44.44,20230110
+v Sri Lanka in India 2023|Sri Lanka,v Sri Lanka in India 2023,2023,ODI,2023-01-15,Sri Lanka,Thiruvananthapuram,166,110,13,8,yes,not out,ODI # 4505,no,150.91,20230110
+v New Zealand in India 2023|New Zealand,v New Zealand in India 2023,2023,ODI,2023-01-18,New Zealand,Hyderabad,8,10,1,,,bowled,ODI # 4507,no,80.0,20230118
+v New Zealand in India 2023|New Zealand,v New Zealand in India 2023,2023,ODI,2023-01-21,New Zealand,Raipur,11,9,2,,,stumped,ODI # 4509,no,122.22,20230118
+v New Zealand in India 2023|New Zealand,v New Zealand in India 2023,2023,ODI,2023-01-24,New Zealand,Indore,36,27,3,1,,caught,ODI # 4511,no,133.33,20230118
+v Australia in India 2023|Australia,v Australia in India 2023,2023,Test,2023-02-09,Australia,Nagpur,12,26,2,,,caught,Test # 2490,no,46.15,20230209
+v Australia in India 2023|Australia,v Australia in India 2023,2023,Test,2023-02-17,Australia,Delhi,44,84,4,,,lbw,Test # 2493,no,52.38,20230209
+v Australia in India 2023|Australia,v Australia in India 2023,2023,Test,2023-02-17,Australia,Delhi,20,31,3,,,stumped,Test # 2493,no,64.52,20230209
+v Australia in India 2023|Australia,v Australia in India 2023,2023,Test,2023-03-01,Australia,Indore,22,52,2,,,lbw,Test # 2496,no,42.31,20230209
+v Australia in India 2023|Australia,v Australia in India 2023,2023,Test,2023-03-01,Australia,Indore,13,26,2,,,lbw,Test # 2496,no,50.0,20230209
+v Australia in India 2023|Australia,v Australia in India 2023,2023,Test,2023-03-09,Australia,Ahmedabad,186,364,15,,,caught,Test # 2499,no,51.1,20230209
+v Australia in India 2023|Australia,v Australia in India 2023,2023,ODI,2023-03-17,Australia,Wankhede,4,9,1,,,lbw,ODI # 4538,no,44.44,20230209
+v Australia in India 2023|Australia,v Australia in India 2023,2023,ODI,2023-03-19,Australia,Visakhapatnam,31,35,4,,,lbw,ODI # 4541,no,88.57,20230209
+v Australia in India 2023|Australia,v Australia in India 2023,2023,ODI,2023-03-22,Australia,Chennai,54,72,2,1,,caught,ODI # 4545,no,75.0,20230209
+Tournament in England 2023|Australia,Tournament in England 2023,2023,Test,2023-06-07,Australia,The Oval,14,31,2,,,caught,Test # 2505,yes,45.16,20230607
+Tournament in England 2023|Australia,Tournament in England 2023,2023,Test,2023-06-07,Australia,The Oval,49,78,7,,,caught,Test # 2505,yes,62.82,20230607
+India in West Indies 2023 — v West Indies|West Indies,India in West Indies 2023 — v West Indies,2023,Test,2023-07-12,West Indies,Roseau,76,182,5,,,caught,Test # 2510,yes,41.76,20230712
+India in West Indies 2023 — v West Indies|West Indies,India in West Indies 2023 — v West Indies,2023,Test,2023-07-20,West Indies,Port of Spain,121,206,11,,,run out,Test # 2513,yes,58.74,20230712
+Tournament in Sri Lanka 2023|Pakistan,Tournament in Sri Lanka 2023,2023,ODI,2023-09-02,Pakistan,Pallekele,4,7,1,,,bowled,ODI # 4630,yes,57.14,20230902
+Tournament in Sri Lanka 2023|Pakistan,Tournament in Sri Lanka 2023,2023,ODI,2023-09-10,Pakistan,Colombo (RPS),122,94,9,3,yes,not out,ODI # 4639,yes,129.79,20230902
+India in Sri Lanka 2023 — v Sri Lanka|Sri Lanka,India in Sri Lanka 2023 — v Sri Lanka,2023,ODI,2023-09-12,Sri Lanka,Colombo (RPS),3,12,,,,caught,ODI # 4641,yes,25.0,20230912
+v Australia in India 2023|Australia,v Australia in India 2023,2023,ODI,2023-09-27,Australia,Rajkot,56,61,5,1,,caught,ODI # 4657,no,91.8,20230209
+v Australia in India 2023|Australia,v Australia in India 2023,2023,ODI,2023-10-08,Australia,Chennai,85,116,6,,,caught,ODI # 4662,no,73.28,20230209
+v Afghanistan in India 2023|Afghanistan,v Afghanistan in India 2023,2023,ODI,2023-10-11,Afghanistan,Delhi,55,56,6,,yes,not out,ODI # 4666,no,98.21,20231011
+v Pakistan in India 2023|Pakistan,v Pakistan in India 2023,2023,ODI,2023-10-14,Pakistan,Ahmedabad,16,18,3,,,caught,ODI # 4669,no,88.89,20231014
+v Bangladesh in India 2023|Bangladesh,v Bangladesh in India 2023,2023,ODI,2023-10-19,Bangladesh,Pune,103,97,6,4,yes,not out,ODI # 4674,no,106.19,20231019
+v New Zealand in India 2023|New Zealand,v New Zealand in India 2023,2023,ODI,2023-10-22,New Zealand,Dharamsala,95,104,8,2,,caught,ODI # 4678,no,91.35,20230118
+v England in India 2023|England,v England in India 2023,2023,ODI,2023-10-29,England,Lucknow,0,9,,,,caught,ODI # 4686,no,0.0,20231029
+v Sri Lanka in India 2023|Sri Lanka,v Sri Lanka in India 2023,2023,ODI,2023-11-02,Sri Lanka,Wankhede,88,94,11,,,caught,ODI # 4690,no,93.62,20230110
+v South Africa in India 2023|South Africa,v South Africa in India 2023,2023,ODI,2023-11-05,South Africa,Eden Gardens,101,121,10,,yes,not out,ODI # 4694,no,83.47,20231105
+v Netherlands in India 2023|Netherlands,v Netherlands in India 2023,2023,ODI,2023-11-12,Netherlands,Bengaluru,51,56,5,1,,bowled,ODI # 4702,no,91.07,20231112
+v New Zealand in India 2023|New Zealand,v New Zealand in India 2023,2023,ODI,2023-11-15,New Zealand,Wankhede,117,113,9,2,,caught,ODI # 4703,no,103.54,20230118
+v Australia in India 2023|Australia,v Australia in India 2023,2023,ODI,2023-11-19,Australia,Ahmedabad,54,63,4,,,bowled,ODI # 4705,no,85.71,20230209
+India in South Africa 2024 — v South Africa|South Africa,India in South Africa 2024 — v South Africa,2023,Test,2023-12-26,South Africa,Centurion,38,64,5,,,caught,Test # 2520,yes,59.38,20231226
+India in South Africa 2024 — v South Africa|South Africa,India in South Africa 2024 — v South Africa,2023,Test,2023-12-26,South Africa,Centurion,76,82,12,1,,caught,Test # 2520,yes,92.68,20231226
+India in South Africa 2024 — v South Africa|South Africa,India in South Africa 2024 — v South Africa,2024,Test,2024-01-03,South Africa,Cape Town,46,59,6,1,,caught,Test # 2522,yes,77.97,20231226
+India in South Africa 2024 — v South Africa|South Africa,India in South Africa 2024 — v South Africa,2024,Test,2024-01-03,South Africa,Cape Town,12,11,2,,,caught,Test # 2522,yes,109.09,20231226
+v Afghanistan in India 2024|Afghanistan,v Afghanistan in India 2024,2024,T20I,2024-01-14,Afghanistan,Indore,29,16,5,,,caught,T20I # 2431,no,181.25,20240114
+v Afghanistan in India 2024|Afghanistan,v Afghanistan in India 2024,2024,T20I,2024-01-17,Afghanistan,Bengaluru,0,1,,,,caught,T20I # 2435,no,0.0,20240114
+Tournament in USA 2024|Ireland,Tournament in USA 2024,2024,T20I,2024-06-05,Ireland,New York,1,5,,,,caught,T20I # 2639,yes,20.0,20240605
+Tournament in USA 2024|Pakistan,Tournament in USA 2024,2024,T20I,2024-06-09,Pakistan,New York,4,3,1,,,caught,T20I # 2658,yes,133.33,20240605
+Tournament in USA 2024|U.S.A.,Tournament in USA 2024,2024,T20I,2024-06-12,U.S.A.,New York,0,1,,,,caught,T20I # 2671,yes,0.0,20240605
+Tournament in West Indies 2024|Afghanistan,Tournament in West Indies 2024,2024,T20I,2024-06-20,Afghanistan,Bridgetown,24,24,,1,,caught,T20I # 2710,yes,100.0,20240620
+Tournament in West Indies 2024|Bangladesh,Tournament in West Indies 2024,2024,T20I,2024-06-22,Bangladesh,North Sound,37,28,1,3,,bowled,T20I # 2716,yes,132.14,20240620
+Tournament in West Indies 2024|Australia,Tournament in West Indies 2024,2024,T20I,2024-06-24,Australia,Gros Islet,0,5,,,,caught,T20I # 2721,yes,0.0,20240620
+Tournament in West Indies 2024|England,Tournament in West Indies 2024,2024,T20I,2024-06-27,England,Providence,9,9,,1,,bowled,T20I # 2724,yes,100.0,20240620
+Tournament in West Indies 2024|South Africa,Tournament in West Indies 2024,2024,T20I,2024-06-29,South Africa,Bridgetown,76,59,6,2,,caught,T20I # 2729,yes,128.81,20240620
+India in Sri Lanka 2024 — v Sri Lanka|Sri Lanka,India in Sri Lanka 2024 — v Sri Lanka,2024,ODI,2024-08-02,Sri Lanka,Colombo (RPS),24,32,2,,,lbw,ODI # 4752,yes,75.0,20240802
+India in Sri Lanka 2024 — v Sri Lanka|Sri Lanka,India in Sri Lanka 2024 — v Sri Lanka,2024,ODI,2024-08-04,Sri Lanka,Colombo (RPS),14,19,2,,,lbw,ODI # 4753,yes,73.68,20240802
+India in Sri Lanka 2024 — v Sri Lanka|Sri Lanka,India in Sri Lanka 2024 — v Sri Lanka,2024,ODI,2024-08-07,Sri Lanka,Colombo (RPS),20,18,4,,,lbw,ODI # 4754,yes,111.11,20240802
+v Bangladesh in India 2024|Bangladesh,v Bangladesh in India 2024,2024,Test,2024-09-19,Bangladesh,Chennai,6,6,,,,caught,Test # 2550,no,100.0,20240919
+v Bangladesh in India 2024|Bangladesh,v Bangladesh in India 2024,2024,Test,2024-09-19,Bangladesh,Chennai,17,37,2,,,lbw,Test # 2550,no,45.95,20240919
+v Bangladesh in India 2024|Bangladesh,v Bangladesh in India 2024,2024,Test,2024-09-27,Bangladesh,Kanpur,47,35,4,1,,bowled,Test # 2552,no,134.29,20240919
+v Bangladesh in India 2024|Bangladesh,v Bangladesh in India 2024,2024,Test,2024-09-27,Bangladesh,Kanpur,29,37,4,,yes,not out,Test # 2552,no,78.38,20240919
+v New Zealand in India 2024|New Zealand,v New Zealand in India 2024,2024,Test,2024-10-16,New Zealand,Bengaluru,0,9,,,,caught,Test # 2555,no,0.0,20241016
+v New Zealand in India 2024|New Zealand,v New Zealand in India 2024,2024,Test,2024-10-16,New Zealand,Bengaluru,70,102,8,1,,caught,Test # 2555,no,68.63,20241016
+v New Zealand in India 2024|New Zealand,v New Zealand in India 2024,2024,Test,2024-10-24,New Zealand,Pune,1,9,,,,bowled,Test # 2557,no,11.11,20241016
+v New Zealand in India 2024|New Zealand,v New Zealand in India 2024,2024,Test,2024-10-24,New Zealand,Pune,17,40,2,,,lbw,Test # 2557,no,42.5,20241016
+v New Zealand in India 2024|New Zealand,v New Zealand in India 2024,2024,Test,2024-11-01,New Zealand,Wankhede,4,6,1,,,run out,Test # 2560,no,66.67,20241016
+v New Zealand in India 2024|New Zealand,v New Zealand in India 2024,2024,Test,2024-11-01,New Zealand,Wankhede,1,7,,,,caught,Test # 2560,no,14.29,20241016
+India in Australia 2025 — v Australia|Australia,India in Australia 2025 — v Australia,2024,Test,2024-11-22,Australia,Perth,5,12,,,,caught,Test # 2561,yes,41.67,20241122
+India in Australia 2025 — v Australia|Australia,India in Australia 2025 — v Australia,2024,Test,2024-11-22,Australia,Perth,100,143,8,2,yes,not out,Test # 2561,yes,69.93,20241122
+India in Australia 2025 — v Australia|Australia,India in Australia 2025 — v Australia,2024,Test,2024-12-06,Australia,Adelaide,7,8,1,,,caught,Test # 2568,yes,87.5,20241122
+India in Australia 2025 — v Australia|Australia,India in Australia 2025 — v Australia,2024,Test,2024-12-06,Australia,Adelaide,11,21,1,,,caught,Test # 2568,yes,52.38,20241122
+India in Australia 2025 — v Australia|Australia,India in Australia 2025 — v Australia,2024,Test,2024-12-14,Australia,Brisbane,3,16,,,,caught,Test # 2570,yes,18.75,20241122
+India in Australia 2025 — v Australia|Australia,India in Australia 2025 — v Australia,2024,Test,2024-12-26,Australia,Melbourne,36,86,4,,,caught,Test # 2571,yes,41.86,20241122
+India in Australia 2025 — v Australia|Australia,India in Australia 2025 — v Australia,2024,Test,2024-12-26,Australia,Melbourne,5,29,,,,caught,Test # 2571,yes,17.24,20241122
+India in Australia 2025 — v Australia|Australia,India in Australia 2025 — v Australia,2025,Test,2025-01-03,Australia,Sydney,17,69,,,,caught,Test # 2575,yes,24.64,20241122
+India in Australia 2025 — v Australia|Australia,India in Australia 2025 — v Australia,2025,Test,2025-01-03,Australia,Sydney,6,12,1,,,caught,Test # 2575,yes,50.0,20241122
+v England in India 2025|England,v England in India 2025,2025,ODI,2025-02-09,England,Cuttack,5,8,1,,,caught,ODI # 4828,no,62.5,20250209
+v England in India 2025|England,v England in India 2025,2025,ODI,2025-02-12,England,Ahmedabad,52,55,7,1,,caught,ODI # 4833,no,94.55,20250209
+Tournament in UAE 2025|Bangladesh,Tournament in UAE 2025,2025,ODI,2025-02-20,Bangladesh,Dubai (DICS),22,38,1,,,caught,ODI # 4844,yes,57.89,20250220
+Tournament in UAE 2025|Pakistan,Tournament in UAE 2025,2025,ODI,2025-02-23,Pakistan,Dubai (DICS),100,111,7,,yes,not out,ODI # 4847,yes,90.09,20250220
+Tournament in UAE 2025|New Zealand,Tournament in UAE 2025,2025,ODI,2025-03-02,New Zealand,Dubai (DICS),11,14,2,,,caught,ODI # 4852,yes,78.57,20250220
+Tournament in UAE 2025|Australia,Tournament in UAE 2025,2025,ODI,2025-03-04,Australia,Dubai (DICS),84,98,5,,,caught,ODI # 4853,yes,85.71,20250220
+Tournament in UAE 2025|New Zealand,Tournament in UAE 2025,2025,ODI,2025-03-09,New Zealand,Dubai (DICS),1,2,,,,lbw,ODI # 4858,yes,50.0,20250220
+India in Australia 2025/26 — v Australia|Australia,India in Australia 2025/26 — v Australia,2025,ODI,2025-10-19,Australia,Perth,0,8,,,,caught,ODI # 4911,yes,0.0,20251019
+India in Australia 2025/26 — v Australia|Australia,India in Australia 2025/26 — v Australia,2025,ODI,2025-10-23,Australia,Adelaide,0,4,,,,lbw,ODI # 4913,yes,0.0,20251019
+India in Australia 2025/26 — v Australia|Australia,India in Australia 2025/26 — v Australia,2025,ODI,2025-10-25,Australia,Sydney,74,81,7,,yes,not out,ODI # 4915,yes,91.36,20251019
+v South Africa in India 2025|South Africa,v South Africa in India 2025,2025,ODI,2025-11-30,South Africa,Ranchi,135,120,11,7,,caught,ODI # 4934,no,112.5,20251130
+v South Africa in India 2025|South Africa,v South Africa in India 2025,2025,ODI,2025-12-03,South Africa,Raipur,102,93,7,2,,caught,ODI # 4935,no,109.68,20251130
+v South Africa in India 2025|South Africa,v South Africa in India 2025,2025,ODI,2025-12-06,South Africa,Visakhapatnam,65,45,6,3,yes,not out,ODI # 4936,no,144.44,20251130

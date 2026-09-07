@@ -1,0 +1,158 @@
+=====================================================================
+VIRAT KOHLI · PLAYER 360 — SAARE DAX MEASURES (final, verified)
+Tables: fact_innings · dim_tours (449-row tour table) · dim_partners
+        dim_kits · dim_formats · dim_dates
+=====================================================================
+
+---------------- GLOBAL / SOLO ----------------
+Selected Format =
+IF (
+    ISFILTERED ( 'dim_formats'[Format] ),
+    SELECTEDVALUE ( 'dim_formats'[Format], "Multiple Formats" ),
+    "All Formats"
+)
+
+Jersey URL =
+SWITCH (
+    [Selected Format],
+    "Test", MAXX ( FILTER ( 'dim_kits', 'dim_kits'[Format] = "TEST" ), 'dim_kits'[image_url] ),
+    "ODI",  MAXX ( FILTER ( 'dim_kits', 'dim_kits'[Format] = "ODI" ),  'dim_kits'[image_url] ),
+    "T20I", MAXX ( FILTER ( 'dim_kits', 'dim_kits'[Format] = "T20I" ), 'dim_kits'[image_url] ),
+    "IPL",  MAXX ( FILTER ( 'dim_kits', 'dim_kits'[Format] = "IPL" ),  'dim_kits'[image_url] ),
+    MAXX ( FILTER ( 'dim_kits', 'dim_kits'[Format] = "TEST" ), 'dim_kits'[image_url] )
+)
+
+Total Runs    = SUM ( 'fact_innings'[runs] )
+Total Matches = DISTINCTCOUNT ( 'fact_innings'[match_ref] )
+Total Innings = COUNT ( 'fact_innings'[runs] )
+High Score    = MAX ( 'fact_innings'[runs] )
+
+Batting Avg =
+DIVIDE (
+    [Total Runs],
+    [Total Innings]
+        - COUNTROWS ( FILTER ( 'fact_innings', 'fact_innings'[not_out] = "yes" ) )
+)
+
+Strike Rate = DIVIDE ( [Total Runs], SUM ( 'fact_innings'[balls] ) )
+Hundreds    = COUNTROWS ( FILTER ( 'fact_innings', 'fact_innings'[runs] >= 100 ) )
+Fifties     = COUNTROWS ( FILTER ( 'fact_innings', 'fact_innings'[runs] >= 50 && 'fact_innings'[runs] < 100 ) )
+Total Fours = SUM ( 'fact_innings'[fours] )
+Total Sixes = SUM ( 'fact_innings'[sixes] )
+
+KPI Runs    = IF ( [Total Runs] > 0, FORMAT ( [Total Runs], "#,0" ), "—" )
+KPI Matches = IF ( [Total Matches] > 0, FORMAT ( [Total Matches], "#,0" ), "—" )
+KPI HS      = IF ( ISBLANK ( [High Score] ), "—", FORMAT ( [High Score], "#,0" ) )
+KPI Avg     = IF ( ISBLANK ( [Batting Avg] ), "—", FORMAT ( [Batting Avg], "0.00" ) )
+KPI SR      = IF ( ISBLANK ( [Strike Rate] ), "—", FORMAT ( [Strike Rate], "0.1" ) )
+KPI 100s50s = FORMAT ( [Hundreds], "#,0" ) & " / " & FORMAT ( [Fifties], "#,0" )
+KPI 4s6s    = FORMAT ( [Total Fours], "#,0" ) & " / " & FORMAT ( [Total Sixes], "#,0" )
+
+---------------- PARTNER ----------------
+Selected Partner =
+IF (
+    HASONEVALUE ( 'dim_partners'[partner] ),
+    MAX ( 'dim_partners'[partner] ),
+    "All Partners"
+)
+
+Partner Image URL =
+VAR _u = SELECTEDVALUE ( 'dim_partners'[image_url] )
+RETURN IF ( ISBLANK ( _u ), "", _u )
+
+Partner Total Runs = SUM ( 'dim_partners'[total_runs] )
+Partner Highest    = MAX ( 'dim_partners'[highest] )
+Partner Count      = SUM ( 'dim_partners'[partnerships] )
+Partner Avg        = DIVIDE ( [Partner Total Runs], [Partner Count] )
+
+Partner Competitions =
+CONCATENATEX (
+    VALUES ( 'dim_partners'[competition] ),
+    'dim_partners'[competition],
+    " + "
+)
+
+Partner Caption =
+VAR _p =
+    IF (
+        HASONEVALUE ( 'dim_partners'[partner] ),
+        MAX ( 'dim_partners'[partner] ),
+        "All Partners"
+    )
+VAR _c =
+    CONCATENATEX (
+        VALUES ( 'dim_partners'[competition] ),
+        'dim_partners'[competition],
+        " + "
+    )
+RETURN
+    _p & UNICHAR ( 10 ) & _c
+
+P Total All =
+CALCULATE ( [Partner Total Runs], ALLSELECTED ( 'dim_partners'[partner] ) )
+
+P Share % = DIVIDE ( [Partner Total Runs], [P Total All] )
+
+KPI P Total   = IF ( [Partner Total Runs] > 0, FORMAT ( [Partner Total Runs], "#,0" ), "—" )
+KPI P Highest = IF ( ISBLANK ( [Partner Highest] ), "—", FORMAT ( [Partner Highest], "#,0" ) )
+KPI P Count   = IF ( [Partner Count] > 0, FORMAT ( [Partner Count], "#,0" ), "—" )
+KPI P Avg     = IF ( ISBLANK ( [Partner Avg] ), "—", FORMAT ( [Partner Avg], "0.1" ) )
+
+---------------- TOUR (table: dim_tours) ----------------
+Selected Tour =
+IF (
+    ISFILTERED ( 'dim_tours'[tour] ),
+    SELECTEDVALUE ( 'dim_tours'[tour], "Multiple Tours" ),
+    "All Tours 2014-2026"
+)
+
+T Matches = DISTINCTCOUNT ( 'dim_tours'[match_ref] )
+
+T Avg =
+DIVIDE (
+    SUM ( 'dim_tours'[runs] ),
+    COUNTROWS ( FILTER ( 'dim_tours', 'dim_tours'[not_out] <> "yes" ) )
+)
+
+T SR =
+DIVIDE ( SUM ( 'dim_tours'[runs] ), SUM ( 'dim_tours'[balls] ) ) * 100
+
+Tour Span =
+VAR _s = MIN ( 'dim_tours'[date] )
+VAR _e = MAX ( 'dim_tours'[date] )
+RETURN
+    IF (
+        ISBLANK ( _s ), "—",
+        FORMAT ( _s, "MMM YYYY" ) & " – " & FORMAT ( _e, "MMM YYYY" )
+    )
+
+Tour Formats =
+CONCATENATEX (
+    VALUES ( 'dim_tours'[format] ),
+    'dim_tours'[format],
+    " + ",
+    CALCULATE ( MIN ( 'dim_tours'[date] ) )
+)
+
+Tour Mode Tag =
+IF (
+    NOT ISFILTERED ( 'dim_tours'[tour] ),
+    "ALL TOURS",
+    IF ( MAX ( 'dim_tours'[away] ) = "yes", "AWAY TOUR", "HOME SERIES" )
+)
+
+Tour Image =
+SWITCH (
+    TRUE (),
+    CONTAINSSTRING ( [Tour Formats], "Test" ),
+        MAXX ( FILTER ( 'dim_kits', 'dim_kits'[Format] = "TOUR_TEST" ), 'dim_kits'[image_url] ),
+    CONTAINSSTRING ( [Tour Formats], "ODI" ),
+        MAXX ( FILTER ( 'dim_kits', 'dim_kits'[Format] = "TOUR_ODI" ), 'dim_kits'[image_url] ),
+    MAXX ( FILTER ( 'dim_kits', 'dim_kits'[Format] = "TOUR_T20I" ), 'dim_kits'[image_url] )
+)
+
+---------------- DYNAMIC TITLES (title pe fx → Field value) ----------------
+Title Line Chart   = "RUNS PER INNINGS — " & UPPER ( [Selected Tour] )
+Title Venue Bar    = "RUNS BY VENUE — " & UPPER ( [Selected Tour] )
+Title Format Donut = "RUNS BY FORMAT — " & UPPER ( [Selected Tour] )
+=====================================================================
