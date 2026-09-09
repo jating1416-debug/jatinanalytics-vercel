@@ -8,7 +8,7 @@ GitHub are used as-is — card images, data previews, code/SQL/Power BI files, e
 
 ## What V2 includes
 
-- **Projects** — 7 cards with a **search box + tool filters** (Power BI / SQL / Python / DAX).
+- **Projects** — 8 cards with a **search box + tool filters** (Power BI / SQL / Python / DAX).
   Each card has three actions:
   - **View details** → full project dialog: overview, objectives, key insights, tech stack,
     automatic source-file list, **live data preview** (first rows of the real CSVs + quick

@@ -1762,7 +1762,7 @@ const ASSISTANT_TOPICS = [
   },
   {
     keywords: ['resume', 'cv', 'education', 'degree', 'mba', 'bca', 'diploma', 'university', 'qualification', 'study'],
-    answer: 'Professional experience: 2 years as a Registered Pharmacist (dispensing, patient counselling and pharmacy operations). Education: MBA in Operations Management (Vivekananda Global University, pursuing), BCA (Sikkim Alpine University, 2022–2025) and Diploma in Pharmacy (Apeejay Stya University, 2020–2022). The full resume PDF is in the navbar and the Resume section.'
+    answer: 'Professional experience: 2 years as a Registered Pharmacist (dispensing, patient counselling and pharmacy operations). Education: MBA in Operations Management — Online (Vivekananda Global University, pursuing), BCA (Sikkim Alpine University, 2022–2025) and Diploma in Pharmacy (Apeejay Stya University, 2020–2022). The full resume PDF is in the navbar and the Resume section.'
   },
   {
     keywords: ['skill', 'skills', 'tool', 'tools', 'stack', 'sql', 'python', 'excel', 'pandas', 'numpy', 'dax', 'mysql', 'technology'],
@@ -1778,11 +1778,11 @@ const ASSISTANT_TOPICS = [
   },
   {
     keywords: ['project', 'projects', 'work', 'portfolio', 'built', 'supply chain', 'zomato', 'bank', 'fraud', 'hr'],
-    answer: 'There are 7 end-to-end projects: Supply Chain & Logistics, Indian Financial Fraud, E-Commerce Sales, Bank Analytics, HR Analytics, Zomato and Synthetic Health Risk. Use the search box above the grid (try "fraud" or "DAX"), and each card has View details, Live dashboard and Source.'
+    answer: 'There are 8 end-to-end projects: Supply Chain & Logistics, Indian Financial Fraud, E-Commerce Sales, Bank Analytics, HR Analytics, Zomato, Synthetic Health Risk and Virat Kohli Career Analytics. Use the search box above the grid (try "fraud" or "DAX"), and each card has View details, Live dashboard and Source.'
   },
   {
     keywords: ['about', 'who', 'background', 'self', 'introduce', 'jatin', 'experience', 'fresher'],
-    answer: 'Jatin Kumar is a fresher Data Analyst from India, actively seeking his first analyst job. His first profession was pharmacy — he worked as a Registered Pharmacist for 2 years — before he moved into self-taught data analytics. He builds end-to-end projects across operations, finance, retail, HR and healthcare with Python, SQL and Power BI, and is currently pursuing an MBA in Operations Management.'
+    answer: 'Jatin Kumar is a fresher Data Analyst from India, open to entry-level roles. He previously worked as a Registered Pharmacist for 2 years before moving into self-taught data analytics. He builds end-to-end projects across operations, finance, retail, HR and healthcare with Python, SQL and Power BI, and is currently pursuing an online MBA in Operations Management.'
   },
   {
     keywords: ['hello', 'hi', 'hey', 'hii', 'namaste', 'good morning', 'good evening', 'good afternoon'],
