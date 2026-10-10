@@ -274,7 +274,7 @@ const PROJECTS = [
     tags: ['Microsoft Fabric', 'PySpark', 'T-SQL', 'Power BI'],
     alt: 'Microsoft Fabric end-to-end sales analytics dashboard',
 
-    dashboard: 'POWER_BI_EMBED_LINK_YAHAN_PASTE_KARO',
+    dashboard: '',
 
     source: 'https://github.com/jating1416-debug/jatinanalytics-vercel/tree/main/projects/Fabric-Sales-Analytics-E2E',
 
