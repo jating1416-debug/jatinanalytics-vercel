@@ -265,6 +265,60 @@ const PROJECTS = [
       tech: ['Power BI', 'DAX', 'Power Query', 'Bookmarks', 'Star Schema', 'WebP Image Pipeline', 'GitHub CSV Source']
     }
   },
+      {
+    id: 'fabric-sales-e2e',
+    title: 'Sales Analytics — Microsoft Fabric End-to-End',
+    label: 'MICROSOFT FABRIC · ANALYTICS ENGINEERING',
+    summary: 'An end-to-end analytics solution that transforms raw sales data through Bronze, Silver and Gold layers into a star-schema semantic model and interactive Power BI dashboard.',
+    metric: '1,505 orders · ₹13.47M revenue · Bronze–Silver–Gold',
+    tags: ['Microsoft Fabric', 'PySpark', 'T-SQL', 'Power BI'],
+    alt: 'Microsoft Fabric end-to-end sales analytics dashboard',
+
+    dashboard: 'POWER_BI_EMBED_LINK_YAHAN_PASTE_KARO',
+
+    source: 'https://github.com/jating1416-debug/jatinanalytics-vercel/tree/main/projects/Fabric-Sales-Analytics-E2E',
+
+    folder: 'Fabric-Sales-Analytics-E2E',
+
+    fallbackImage: `${RAW_BASE}/projects/Fabric-Sales-Analytics-E2E/Fabric_Dashboard.webp`,
+
+    info: {
+      tagline: 'Raw sales data transformed into trusted analytical models and an interactive Power BI dashboard.',
+
+      overview: 'Built an end-to-end sales analytics solution in Microsoft Fabric. Raw CSV data is ingested into a Lakehouse, cleaned and standardized through Bronze and Silver layers, and transformed into Gold fact and dimension tables. A Power BI semantic model and dashboard provide validated KPIs, monthly trends, regional performance, category analysis and Top-10 customer insights.',
+
+      objectives: [
+        'Build a Bronze, Silver and Gold data transformation workflow in Microsoft Fabric.',
+        'Clean sales data using data-type correction, null handling, standardization and duplicate removal.',
+        'Create a star schema using fact_sales and customer, product, region and date dimensions.',
+        'Build a Power BI semantic model with DAX KPIs and interactive business analysis.',
+        'Validate dashboard results against SQL and Lakehouse calculations.'
+      ],
+
+      insights: [
+        'The data-quality audit identified 20 duplicate order rows, reducing the dataset from 1,525 to 1,505 valid orders.',
+        'Electronics generated the largest share of revenue among the available product categories.',
+        'Regional revenue was relatively balanced, while the South region recorded the lowest contribution.',
+        'Revenue, order count and other KPIs were verified across the transformation and reporting layers.',
+        'The star schema separates transaction-level facts from reusable customer, product, region and date dimensions.'
+      ],
+
+      tech: [
+        'Microsoft Fabric',
+        'Fabric Lakehouse',
+        'Fabric Warehouse',
+        'PySpark',
+        'Spark SQL',
+        'T-SQL',
+        'Delta Lake',
+        'Data Pipeline',
+        'Dataflow Gen2',
+        'Star Schema',
+        'Power BI',
+        'DAX'
+      ]
+    }
+  },
 
 ];
 
@@ -500,7 +554,9 @@ function projectCard(project) {
         <div class="project-tags">${tags}</div>
         <div class="card-actions">
           <button class="card-embed-button" type="button" data-details-id="${escapeHTML(project.id)}">View details</button>
-          <button class="card-link" type="button" data-dashboard-id="${escapeHTML(project.id)}">Live dashboard</button>
+          ${project.dashboard
+  ? `<button class="card-link" type="button" data-dashboard-id="${escapeHTML(project.id)}">Live dashboard</button>`
+  : ''}
           <a class="card-link" href="${escapeHTML(project.source)}" target="_blank" rel="noopener">Source</a>
         </div>
       </div>
@@ -942,7 +998,9 @@ function projectDetailsSkeleton(project) {
     </section>
     <div class="detail-footer-actions">
       <button class="detail-back-link" type="button" data-back-to-work>&#8592; Back to projects</button>
-      <button class="button button-secondary" type="button" data-dashboard-id="${escapeHTML(project.id)}">Open live dashboard</button>
+      ${project.dashboard
+  ? `<button class="button button-secondary" type="button" data-dashboard-id="${escapeHTML(project.id)}">Open live dashboard</button>`
+  : ''}
       <a class="button button-primary" href="${escapeHTML(project.source)}" target="_blank" rel="noopener">Open source on GitHub</a>
       <button class="detail-copy-link" type="button" data-copy-id="project:${escapeHTML(project.id)}">Copy project link</button>
     </div>`;
