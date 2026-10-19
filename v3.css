@@ -127,17 +127,28 @@ h3 { letter-spacing: -.035em; }
 }
 .profile-intro { margin-bottom: 38px; }
 .profile-photo-frame {
-  width: 118px;
-  min-width: 118px;
-  min-height: 146px;
+  width: 142px;
+  min-width: 142px;
+  min-height: 178px;
   overflow: hidden;
-  border-color: rgba(255, 52, 77, .3);
-  border-radius: 24px 24px 58px 24px;
-  background: radial-gradient(circle at 25% 10%, rgba(255, 52, 77, .24), transparent 58%), var(--surface);
-  box-shadow: 0 24px 70px rgba(0,0,0,.2);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
 }
-:root[data-theme="dark"] .profile-photo-frame { border-color: rgba(255,52,77,.28); background: radial-gradient(circle at 25% 10%, rgba(255,52,77,.2), transparent 58%), #131316; }
-.profile-photo-frame img { max-height: 190px; border-radius: 22px 22px 56px 22px; }
+:root[data-theme="dark"] .profile-photo-frame {
+  border-color: var(--line);
+  border-radius: 14px;
+  background: var(--surface);
+}
+.profile-photo-frame img {
+  width: 100%;
+  height: auto;
+  max-height: 236px;
+  object-fit: contain;
+  display: block;
+  border-radius: 12px;
+}
 .profile-photo-placeholder { background: var(--blue); }
 .profile-role { font-size: 23px; }
 .profile-location { max-width: 420px; font-size: 11px; letter-spacing: .025em; }
@@ -316,8 +327,8 @@ h3 { letter-spacing: -.035em; }
 @media (max-width: 560px) {
   h1 { font-size: clamp(48px, 15.5vw, 68px); }
   h2 { font-size: clamp(34px, 11vw, 48px); }
-  .profile-photo-frame { width: 96px; min-width: 96px; min-height: 120px; border-radius: 20px 20px 44px 20px; }
-  .profile-photo-frame img { border-radius: 18px 18px 42px 18px; }
+  .profile-photo-frame { width: 112px; min-width: 112px; min-height: 140px; border-radius: 14px; }
+  .profile-photo-frame img { border-radius: 12px; }
   .hero { padding-top: 48px; }
   .hero-stack span { font-size: 8px; }
   .pipeline-map { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 13px; }
