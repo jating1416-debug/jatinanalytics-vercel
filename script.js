@@ -271,7 +271,7 @@ const PROJECTS = [
     label: 'MICROSOFT FABRIC · ANALYTICS ENGINEERING',
     summary: 'An end-to-end analytics solution that transforms raw sales data through Bronze, Silver and Gold layers into a star-schema semantic model and interactive Power BI dashboard.',
     metric: '1,505 orders · ₹13.47M revenue · Bronze–Silver–Gold',
-    tags: ['Microsoft Fabric', 'PySpark', 'T-SQL', 'Power BI'],
+    tags: ['Analytics Engineering', 'Microsoft Fabric', 'Basic PySpark', 'T-SQL', 'Power BI'],
     alt: 'Microsoft Fabric end-to-end sales analytics dashboard',
 
     dashboard: '',
@@ -321,6 +321,14 @@ const PROJECTS = [
   },
 
 ];
+
+// Recruiter-first order: feature the end-to-end engineering project, then BI work.
+const FEATURED_PROJECT_ORDER = ['fabric-sales-e2e', 'supply-chain', 'financial-fraud', 'ecommerce', 'bank', 'hr', 'zomato', 'virat Kholi', 'smoking-health'];
+const projectRank = id => {
+  const rank = FEATURED_PROJECT_ORDER.indexOf(id);
+  return rank === -1 ? FEATURED_PROJECT_ORDER.length : rank;
+};
+PROJECTS.sort((a, b) => projectRank(a.id) - projectRank(b.id));
 
 /* ---------- DATASETS (edit here to add/change Kaggle datasets) ---------- */
 const DATASETS = [
@@ -1238,7 +1246,7 @@ function initLightbox() {
   document.body.addEventListener('click', event => {
     const profileImg = event.target.closest('#profile-photo');
     if (profileImg && !profileImg.hidden && profileImg.currentSrc) {
-      openLightbox(profileImg.currentSrc, 'Jatin Kumar — Data Analyst');
+      openLightbox(profileImg.currentSrc, 'Jatin Kumar — Analytics Engineer and Data Analyst');
       return;
     }
     const cardImg = event.target.closest('.project-card-img');
@@ -1820,19 +1828,19 @@ const ASSISTANT_TOPICS = [
   },
   {
     keywords: ['resume', 'cv', 'education', 'degree', 'mba', 'bca', 'diploma', 'university', 'qualification', 'study'],
-    answer: 'Professional experience: 2 years as a Registered Pharmacist (dispensing, patient counselling and pharmacy operations). Education: MBA in Operations Management — Online (Vivekananda Global University, pursuing), BCA (Sikkim Alpine University, 2022–2025) and Diploma in Pharmacy (Apeejay Stya University, 2020–2022). The full resume PDF is in the navbar and the Resume section.'
+    answer: 'Current profile: Analytics Engineer and Data Analyst with hands-on projects in Microsoft Fabric, Snowflake, SQL, basic PySpark and Power BI. Education: MBA in Operations Management — Online (pursuing), BCA (2022–2025) and Diploma in Pharmacy (2020–2022). The current two-page resume is available in the navbar and Resume section.'
   },
   {
     keywords: ['skill', 'skills', 'tool', 'tools', 'stack', 'sql', 'python', 'excel', 'pandas', 'numpy', 'dax', 'mysql', 'technology'],
-    answer: 'The core toolkit: Power BI + DAX, SQL/MySQL, Python (Pandas, NumPy), Excel and Matplotlib/Seaborn. The focus is the full pipeline — cleaning, data modelling, KPI analysis and dashboard storytelling. The Skills section has a card for each area.'
+    answer: 'The core toolkit spans Microsoft Fabric, Snowflake, SQL/T-SQL, basic PySpark, Power BI and DAX, dimensional modelling, data quality and Git/GitHub. dbt Core and Databricks fundamentals are currently in progress. The Skills section separates platforms, modelling, quality and BI capabilities.'
   },
   {
     keywords: ['process', 'method', 'methodology', 'approach', 'workflow', 'eda', 'steps', 'how do you work'],
-    answer: 'Every project follows the same 6 steps: Understand the business problem → Clean the data → Exploratory analysis → Analyse (KPIs, segments, trends) → Visualise in Power BI → Turn findings into recommendations. The full breakdown is in the Analytics Process section.'
+    answer: 'The delivery workflow is: land raw data → profile and validate → transform → model dimensions and facts → test and reconcile → serve semantic models and dashboards. It combines analytics engineering discipline with business analysis.'
   },
   {
     keywords: ['contact', 'email', 'mail', 'reach', 'hire', 'hiring', 'opportunity', 'opportunities', 'job', 'jobs', 'internship', 'intern', 'apply', 'career', 'remote', 'available', 'salary'],
-    answer: 'You can email jating1416@gmail.com directly or use the contact form in the Contact section — it lands straight in the inbox. Jatin — with 2 years of registered pharmacist experience — is open to entry-level Data Analyst, BI Analyst, internship and remote opportunities.'
+    answer: 'You can email jating1416@gmail.com directly or use the Contact form. Jatin is open to Analytics Engineer, Data Analyst and BI Analyst opportunities across Delhi, Gurugram, Delhi NCR, relocation and remote.'
   },
   {
     keywords: ['project', 'projects', 'work', 'portfolio', 'built', 'supply chain', 'zomato', 'bank', 'fraud', 'hr'],
@@ -1840,7 +1848,7 @@ const ASSISTANT_TOPICS = [
   },
   {
     keywords: ['about', 'who', 'background', 'self', 'introduce', 'jatin', 'experience', 'fresher'],
-    answer: 'Jatin Kumar is a fresher Data Analyst from India, open to entry-level roles. He previously worked as a Registered Pharmacist for 2 years before moving into self-taught data analytics. He builds end-to-end projects across operations, finance, retail, HR and healthcare with Python, SQL and Power BI, and is currently pursuing an online MBA in Operations Management.'
+    answer: 'Jatin Kumar is an Analytics Engineer and Data Analyst focused on reliable analytical models, data quality and decision-ready BI. He has hands-on projects across Microsoft Fabric, Snowflake, SQL, basic PySpark and Power BI, and is currently learning dbt Core and Databricks fundamentals while pursuing an online MBA in Operations Management.'
   },
   {
     keywords: ['hello', 'hi', 'hey', 'hii', 'namaste', 'good morning', 'good evening', 'good afternoon'],
