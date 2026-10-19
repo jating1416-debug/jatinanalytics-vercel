@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0b1220">
+  <meta name="theme-color" content="#09090b">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230b1220'/><text x='50' y='68' font-size='52' font-family='monospace' fill='%2376a8ff' text-anchor='middle' font-weight='bold'>JK</text></svg>">
   <script>document.documentElement.classList.add('js');</script>
-  <title>Jatin Kumar | Data Analyst Portfolio - Python, Power BI, SQL</title>
-  <meta name="description" content="Jatin Kumar is a Data Analyst creating practical Power BI, SQL and Python analytics projects across operations, finance and e-commerce.">
+  <title>Jatin Kumar | Analytics Engineer & Data Analyst</title>
+  <meta name="description" content="Jatin Kumar is an Analytics Engineer and Data Analyst building reliable analytical models, data pipelines and decision-ready dashboards with Microsoft Fabric, Snowflake, dbt, SQL and Power BI.">
   <link rel="canonical" href="https://jatinanalytics.co.in/">
 
-  <meta property="og:title" content="Jatin Kumar | Data Analyst Portfolio">
-  <meta property="og:description" content="Practical analytics projects in Power BI, SQL and Python.">
+  <meta property="og:title" content="Jatin Kumar | Analytics Engineer & Data Analyst">
+  <meta property="og:description" content="Analytics engineering and business intelligence projects in Microsoft Fabric, Snowflake, dbt, SQL and Power BI.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://jatinanalytics.co.in/">
   <meta property="og:image" content="https://jatinanalytics.co.in/og-image.webp">
@@ -19,8 +19,8 @@
   <meta property="og:image:height" content="630">
   <meta property="og:site_name" content="Jatin Kumar Portfolio">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Jatin Kumar | Data Analyst Portfolio">
-  <meta name="twitter:description" content="Practical analytics projects in Power BI, SQL and Python.">
+  <meta name="twitter:title" content="Jatin Kumar | Analytics Engineer & Data Analyst">
+  <meta name="twitter:description" content="Analytics engineering and business intelligence projects in Microsoft Fabric, Snowflake, dbt, SQL and Power BI.">
   <meta name="twitter:image" content="https://jatinanalytics.co.in/og-image.webp">
 
   <!-- Google tag (gtag.js) -->
@@ -37,7 +37,7 @@
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Jatin Kumar",
-    "jobTitle": "Data Analyst",
+    "jobTitle": "Analytics Engineer and Data Analyst",
     "url": "https://jatinanalytics.co.in/",
     "email": "jating1416@gmail.com",
     "sameAs": [
@@ -45,7 +45,7 @@
       "https://github.com/jating1416-debug",
       "https://www.kaggle.com/jatinkhandelwal112"
     ],
-    "knowsAbout": ["Python", "SQL", "Power BI", "Excel", "Pandas", "DAX", "Data Visualization"]
+    "knowsAbout": ["Microsoft Fabric", "Snowflake", "dbt Core", "SQL", "Power BI", "DAX", "Python", "PySpark", "Dimensional Modeling", "Data Quality"]
   }
   </script>
 
@@ -53,11 +53,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="v3.css">
   <script>
     (function () {
       var t = null;
       try { t = localStorage.getItem('jatin-theme'); } catch (e) {}
-      document.documentElement.setAttribute('data-theme', t === 'dark' ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', t === 'light' ? 'light' : 'dark');
     })();
   </script>
 </head>
@@ -69,7 +70,7 @@
     <div class="nav-shell">
       <a class="brand" href="#about" aria-label="Jatin Kumar, About me">
         <span class="brand-mark" aria-hidden="true">JK</span>
-        <span class="brand-text">Jatin Kumar <small>Data Analyst</small></span>
+        <span class="brand-text">Jatin Kumar <small>Analytics Engineer · Data Analyst</small></span>
       </a>
 
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">Menu</button>
@@ -102,139 +103,144 @@
         <div class="profile-intro">
           <div class="profile-photo-frame" aria-label="Jatin Kumar profile photo">
             <span class="profile-photo-placeholder" id="profile-photo-placeholder" aria-hidden="true">JK</span>
-            <img id="profile-photo" alt="Jatin Kumar, Data Analyst" hidden>
+            <img id="profile-photo" alt="Jatin Kumar, Analytics Engineer and Data Analyst" hidden>
           </div>
           <div>
-            <p class="eyebrow">ABOUT ME</p>
-            <p class="profile-role">Jatin Kumar · Data Analyst (Fresher)</p>
-            <p class="profile-location">India · Former Registered Pharmacist (2 Years)</p>
+            <p class="eyebrow">ANALYTICS ENGINEERING · BUSINESS INTELLIGENCE</p>
+            <p class="profile-role">Jatin Kumar</p>
+            <p class="profile-location">Delhi · Gurugram · Delhi NCR · Open to relocation &amp; remote</p>
           </div>
         </div>
-        <h1 id="about-title">About Me</h1>
-        <p class="hero-statement">After working as a Registered Pharmacist, I moved into data analytics — the field I’m truly passionate about. I’m a fresher Data Analyst with an 8-project portfolio, focused on uncovering insights from data and creating impactful visualizations.</p>
-        <p class="hero-intro">With hands-on experience in <strong>Python, SQL, Excel and Power BI</strong>, I specialize in turning raw data into useful, decision-ready analysis.</p>
 
-        <div class="about-specialities" aria-label="Analytics specialities">
-          <article><p>01</p><h3>Data cleaning &amp; transformation</h3><span>Turning messy data into structured, reliable datasets.</span></article>
-          <article><p>02</p><h3>Dashboard development</h3><span>Building interactive Power BI dashboards that make performance clear.</span></article>
-          <article><p>03</p><h3>Statistical analysis</h3><span>Finding meaningful patterns, trends and anomalies in the data.</span></article>
-          <article><p>04</p><h3>Business intelligence</h3><span>Converting analysis into actionable recommendations.</span></article>
+        <p class="hero-kicker">FROM RAW DATA TO DECISION-READY MODELS</p>
+        <h1 id="about-title">Analytics Engineer <span class="accent-text">&amp; Data Analyst.</span></h1>
+        <p class="hero-statement">I build reliable data models, analytical pipelines and dashboards that turn fragmented data into trusted business decisions.</p>
+        <p class="hero-intro">My work connects <strong>Microsoft Fabric, Snowflake, SQL, dbt Core, basic PySpark and Power BI</strong>—from ingestion and data-quality checks to dimensional models, semantic layers and executive reporting.</p>
+
+        <div class="hero-stack" aria-label="Core technology stack">
+          <span>Microsoft Fabric</span><span>Snowflake</span><span>dbt Core</span><span>SQL</span><span>Power BI</span><span>Basic PySpark</span>
+        </div>
+
+        <div class="about-specialities" aria-label="Professional specialities">
+          <article><p>01</p><h3>Analytics engineering</h3><span>Bronze–Silver–Gold transformations, reusable staging models and business-ready marts.</span></article>
+          <article><p>02</p><h3>Dimensional modelling</h3><span>Clear grain, narrow fact tables, descriptive dimensions and performant star schemas.</span></article>
+          <article><p>03</p><h3>Data quality</h3><span>Null, duplicate, referential-integrity and source-to-target reconciliation checks.</span></article>
+          <article><p>04</p><h3>Business intelligence</h3><span>Semantic models, DAX KPIs and decision-focused Power BI experiences.</span></article>
         </div>
 
         <div class="about-context" aria-label="Professional profile highlights">
-          <article><span>BACKGROUND</span><p>Registered Pharmacist for 2 years, then self-taught data analytics through courses and practical projects.</p></article>
-          <article><span>CURRENTLY</span><p>Open to entry-level Data Analyst roles · Ready to join</p></article>
-          <article><span>STRENGTH</span><p>Quick learner with strong problem-solving skills.</p></article>
+          <article><span>COMPLETED</span><p>Microsoft Fabric project · Snowflake fundamentals</p></article>
+          <article><span>CURRENTLY BUILDING</span><p>dbt Core · Databricks fundamentals</p></article>
+          <article><span>OPEN TO</span><p>Analytics Engineer · Data Analyst · BI Analyst</p></article>
         </div>
 
         <div class="hero-actions">
-          <a class="button button-primary" href="#work">Explore projects</a>
-          <a class="button button-secondary" href="#contact">Start a conversation</a>
+          <a class="button button-primary" href="#work">View selected work <span aria-hidden="true">↗</span></a>
+          <a class="button button-secondary" href="resume.pdf" download>Download resume</a>
+          <a class="text-link" href="#contact">Start a conversation →</a>
         </div>
       </div>
 
-      <aside class="analytics-panel reveal delay-1" aria-label="Illustrative analytics summary">
+      <aside class="analytics-panel reveal delay-1" aria-label="Analytics engineering architecture">
         <div class="panel-topline">
-          <span>ANALYTICS SNAPSHOT</span>
-          <span class="availability">Open to opportunities</span>
+          <span>END-TO-END DELIVERY</span>
+          <span class="availability">Available for opportunities</span>
         </div>
         <div class="panel-main">
           <div>
-            <p class="panel-label">Focus</p>
-            <p class="panel-value">Business intelligence</p>
+            <p class="panel-label">Current direction</p>
+            <p class="panel-value">Trusted analytics products</p>
           </div>
-          <div class="panel-stat"><strong data-count="8">8</strong><span>projects</span></div>
+          <div class="panel-stat"><strong data-count="9">9</strong><span>portfolio projects</span></div>
         </div>
-        <div class="panel-stats-row" aria-label="Profile highlights">
-          <div><strong data-count="3">3</strong><span>Kaggle datasets</span></div>
-          <div><strong data-count="89" data-suffix="h">89h</strong><span>certified training</span></div>
-          <div><strong>1M+</strong><span>rows analyzed</span></div>
+
+        <div class="pipeline-map" aria-label="Data delivery pipeline">
+          <div><b>01</b><span>LAND</span><small>Raw / Bronze</small></div>
+          <i aria-hidden="true">→</i>
+          <div><b>02</b><span>TRANSFORM</span><small>Silver / Staging</small></div>
+          <i aria-hidden="true">→</i>
+          <div><b>03</b><span>MODEL</span><small>Facts / Dimensions</small></div>
+          <i aria-hidden="true">→</i>
+          <div><b>04</b><span>SERVE</span><small>Semantic / BI</small></div>
         </div>
-        <div class="mini-chart" aria-hidden="true">
-          <div class="chart-grid"></div>
-          <svg viewBox="0 0 420 160" preserveAspectRatio="none" focusable="false">
-            <polyline points="0,128 48,108 92,120 142,72 188,88 240,46 290,76 338,34 420,18" fill="none" stroke="currentColor" stroke-width="4" vector-effect="non-scaling-stroke"></polyline>
-            <circle cx="338" cy="34" r="6" fill="currentColor"></circle>
-            <circle cx="420" cy="18" r="6" fill="currentColor"></circle>
-          </svg>
+
+        <div class="panel-stats-row" aria-label="Portfolio highlights">
+          <div><strong>₹13.47M</strong><span>validated Fabric revenue</span></div>
+          <div><strong>1M+</strong><span>rows analysed</span></div>
+          <div><strong>3</strong><span>published datasets</span></div>
         </div>
-        <div class="panel-breakdown">
-          <div><span>Prepare</span><b style="--bar: 82%"></b></div>
-          <div><span>Analyse</span><b style="--bar: 68%"></b></div>
-          <div><span>Communicate</span><b style="--bar: 91%"></b></div>
+
+        <div class="architecture-card">
+          <p>PLATFORM STACK</p>
+          <div><span>FABRIC</span><span>SNOWFLAKE</span><span>DBT</span><span>POWER BI</span></div>
+          <small>Version-controlled · tested · documented · decision-ready</small>
         </div>
-        <p class="panel-footnote">A concise, decision-first analytics workflow.</p>
       </aside>
     </section>
 
     <section class="journey-section section-shell" id="journey" aria-labelledby="journey-title">
-      <p class="eyebrow">MY JOURNEY</p>
+      <p class="eyebrow">LEARNING → BUILDING → DELIVERING</p>
       <div class="journey-heading">
-        <h2 id="journey-title">From pharmacy counter to analytics dashboards</h2>
-        <p>Two years as a Registered Pharmacist taught me precision, compliance and dealing with real people. Now I bring that same discipline to data — cleaning, modelling and visualising it into dashboards that support real decisions.</p>
+        <h2 id="journey-title">An analytics foundation expanding into engineering.</h2>
+        <p>I started with SQL, Python and Power BI, then moved upstream into data platforms, medallion architecture, dimensional modelling, transformation testing and reliable analytical delivery.</p>
       </div>
 
       <div class="timeline">
-
         <div class="milestone reveal">
           <div class="milestone-card">
-            <div class="milestone-top">
-              <span class="milestone-year">2024 – 2026</span>
-              <span class="milestone-role">Registered Pharmacist</span>
-            </div>
-            <p class="milestone-org">2 years of full-time experience</p>
-            <p>Worked as a Registered Pharmacist — prescription verification, inventory and stock management, customer counselling and strict regulatory compliance. Every day was about accuracy, record-keeping and process discipline: the same skills that power clean data workflows.</p>
-            <div class="milestone-tags"><span>PRECISION</span><span>COMPLIANCE</span><span>STOCK &amp; RECORDS</span><span>CUSTOMER HANDLING</span></div>
+            <div class="milestone-top"><span class="milestone-year">FOUNDATION</span><span class="milestone-role">Data Analytics &amp; Business Intelligence</span></div>
+            <p class="milestone-org">SQL · Python · Power BI · DAX</p>
+            <p>Built a practical analytics foundation across data cleaning, exploratory analysis, KPI design, dimensional modelling and stakeholder-ready dashboard storytelling.</p>
+            <div class="milestone-tags"><span>SQL</span><span>PYTHON</span><span>POWER BI</span><span>DAX</span></div>
           </div>
         </div>
 
         <div class="milestone reveal delay-1">
           <div class="milestone-card">
-            <div class="milestone-top">
-              <span class="milestone-year">JUL 2026</span>
-              <span class="milestone-role">Certified — Complete Data Analyst Bootcamp</span>
-            </div>
-            <p class="milestone-org">89-hour certification · Krish Naik / KRISHAI Technologies</p>
-            <p>Structured training across the full analytics stack — SQL, Python, data modelling and Power BI — with a verified certificate. Paired it with self-driven practice on real project datasets.</p>
-            <div class="milestone-tags"><span>SQL</span><span>PYTHON</span><span>POWER BI</span><span>DAX</span></div>
+            <div class="milestone-top"><span class="milestone-year">JUL 2026</span><span class="milestone-role">Complete Data Analyst Bootcamp</span></div>
+            <p class="milestone-org">89 hours · verified Udemy certificate</p>
+            <p>Completed structured training across SQL, Python, data modelling and Power BI, reinforced through independent implementation on multi-table business datasets.</p>
+            <div class="milestone-tags"><span>DATA QUALITY</span><span>EDA</span><span>MODELLING</span><span>REPORTING</span></div>
           </div>
         </div>
 
         <div class="milestone reveal delay-2">
           <div class="milestone-card">
-            <div class="milestone-top">
-              <span class="milestone-year">2026</span>
-              <span class="milestone-role">8 End-to-End Analytics Projects</span>
-            </div>
-            <p class="milestone-org">Self-taught portfolio · Power BI + SQL + Python</p>
-            <p>Built and deployed eight complete analytics projects — from a 200K-order supply chain control tower to multi-table bank fraud analysis — each with a live Power BI dashboard, documented data previews and full source on GitHub.</p>
-            <div class="milestone-tags"><span>200K+ ROWS ANALYSED</span><span>LIVE DASHBOARDS</span><span>GITHUB SOURCE</span></div>
+            <div class="milestone-top"><span class="milestone-year">2026</span><span class="milestone-role">Microsoft Fabric End-to-End Analytics</span></div>
+            <p class="milestone-org">OneLake · Lakehouse · Warehouse · Power BI</p>
+            <p>Built a Bronze–Silver–Gold sales solution, created narrow fact and descriptive dimension tables, validated KPIs across layers and served a star-schema semantic model to Power BI.</p>
+            <div class="milestone-tags"><span>MICROSOFT FABRIC</span><span>BASIC PYSPARK</span><span>T-SQL</span><span>STAR SCHEMA</span></div>
           </div>
         </div>
 
-        <div class="milestone is-active reveal delay-3">
+        <div class="milestone reveal delay-3">
           <div class="milestone-card">
-            <span class="milestone-status">OPEN TO OFFERS</span>
-            <div class="milestone-top">
-              <span class="milestone-year">NOW →</span>
-              <span class="milestone-role">Fresher Data Analyst — open to entry-level roles</span>
-            </div>
-            <p class="milestone-org">India · Ready to join</p>
-            <p>Open to entry-level Data Analyst and BI Analyst positions. Bringing 2 years of professional discipline from pharmacy, a certified analytics foundation, and a portfolio that proves the full pipeline — from raw CSV to executive dashboard.</p>
-            <div class="milestone-tags"><span>DATA ANALYST</span><span>BUSINESS INTELLIGENCE</span><span>ENTRY LEVEL</span></div>
+            <div class="milestone-top"><span class="milestone-year">2026</span><span class="milestone-role">Snowflake &amp; Modern ELT</span></div>
+            <p class="milestone-org">Warehouses · stages · COPY INTO · Time Travel · RBAC</p>
+            <p>Completed Snowflake fundamentals and hands-on warehouse workflows, including loading patterns, caching, cloning, streams/tasks awareness and secure cloud-stage concepts.</p>
+            <div class="milestone-tags"><span>SNOWFLAKE</span><span>DATA LOADING</span><span>TIME TRAVEL</span><span>DATA QUALITY</span></div>
           </div>
         </div>
 
+        <div class="milestone is-active reveal delay-4">
+          <div class="milestone-card">
+            <span class="milestone-status">CURRENT FOCUS</span>
+            <div class="milestone-top"><span class="milestone-year">NOW →</span><span class="milestone-role">Analytics Engineer &amp; Data Analyst</span></div>
+            <p class="milestone-org">dbt Core and Databricks fundamentals in progress</p>
+            <p>Developing modular SQL transformation workflows with dbt while extending lakehouse skills through Databricks and basic PySpark. Open to Analytics Engineer, Data Analyst and BI Analyst opportunities.</p>
+            <div class="milestone-tags"><span>DBT CORE</span><span>DATABRICKS</span><span>ANALYTICS ENGINEERING</span><span>OPEN TO WORK</span></div>
+          </div>
+        </div>
       </div>
     </section>
 
     <section class="section-shell work-section" id="work" aria-labelledby="work-title">
       <div class="section-heading reveal">
         <div>
-          <p class="eyebrow">PORTFOLIO PROJECTS</p>
-          <h2 id="work-title">All analytics work in one place.</h2>
+          <p class="eyebrow">SELECTED WORK · ENGINEERING + ANALYTICS</p>
+          <h2 id="work-title">Proof in models, metrics and decisions.</h2>
         </div>
-        <p>Every project can be viewed here, with its source code and live Power BI dashboard.</p>
+        <p>Engineering work is featured first, followed by business intelligence projects with measurable outcomes, source files and live dashboards.</p>
       </div>
       <div class="project-toolbar reveal" aria-label="Project search and filters">
         <label class="project-search">
@@ -249,96 +255,58 @@
 
     <section class="section-shell process-section" id="process" aria-labelledby="process-title">
       <div class="section-heading reveal">
-        <div>
-          <p class="eyebrow">ANALYTICS PROCESS</p>
-          <h2 id="process-title">A repeatable route from raw data to action.</h2>
-        </div>
-        <p>Good dashboards start with a clear business question—not a chart selection.</p>
+        <div><p class="eyebrow">DELIVERY SYSTEM</p><h2 id="process-title">From raw data to a trusted analytics product.</h2></div>
+        <p>A repeatable workflow that combines engineering discipline with business analysis.</p>
       </div>
       <ol class="process-grid process-grid--six">
-        <li class="reveal delay-1">
-          <span>01</span><p class="process-phase">UNDERSTAND</p><h3>Step 1 — Understand the Data</h3>
-          <p>Before touching any tool, I first understand the <strong>business problem</strong>: what question needs to be answered, what each column means and what outcome is expected. This defines the direction of analysis.</p>
-          <div class="process-tags"><b>Problem definition</b><b>Domain understanding</b><b>Stakeholder goals</b></div>
-        </li>
-        <li class="reveal delay-2">
-          <span>02</span><p class="process-phase">CLEAN</p><h3>Step 2 — Data Cleaning</h3>
-          <p>Raw data is often messy. I handle <strong>missing values, duplicates, inconsistent formats, outliers</strong> and incorrect data types with Python or Excel, so analysis begins with a reliable foundation.</p>
-          <div class="process-tags"><b>Python / Pandas</b><b>Excel</b><b>Data quality</b></div>
-        </li>
-        <li class="reveal delay-3">
-          <span>03</span><p class="process-phase">EXPLORE</p><h3>Step 3 — Exploratory Data Analysis (EDA)</h3>
-          <p>I examine <strong>distributions, correlations, trends and anomalies</strong>. This is where patterns emerge and useful hypotheses are formed before focused analysis begins.</p>
-          <div class="process-tags"><b>NumPy</b><b>Statistical analysis</b><b>Pattern recognition</b></div>
-        </li>
-        <li class="reveal delay-4">
-          <span>04</span><p class="process-phase">ANALYSE</p><h3>Step 4 — Analyze</h3>
-          <p>With clean data and EDA complete, I use <strong>segmentation, aggregations, KPI calculations</strong> and trend analysis to answer the business questions set out in Step 1.</p>
-          <div class="process-tags"><b>SQL / MySQL</b><b>DAX</b><b>KPI analysis</b></div>
-        </li>
-        <li class="reveal delay-1">
-          <span>05</span><p class="process-phase">VISUALISE</p><h3>Step 5 — Visualization &amp; Dashboard</h3>
-          <p>Numbers alone do not convince. I build interactive <strong>Power BI dashboards</strong> and visualizations with Matplotlib and Seaborn that tell a clear story for technical and non-technical audiences.</p>
-          <div class="process-tags"><b>Power BI</b><b>Matplotlib</b><b>Seaborn</b></div>
-        </li>
-        <li class="reveal delay-2">
-          <span>06</span><p class="process-phase">RECOMMEND</p><h3>Step 6 — Insights &amp; Recommendations</h3>
-          <p>The final and most important step is translating findings into <strong>clear business recommendations</strong>: what action to take, which risk exists and what opportunity the data reveals.</p>
-          <div class="process-tags"><b>Business intelligence</b><b>Storytelling</b><b>Decision support</b></div>
-        </li>
+        <li class="reveal delay-1"><span>01</span><p class="process-phase">LAND</p><h3>Ingest &amp; organise</h3><p>Land source data in governed raw layers while preserving traceability and clear source ownership.</p><div class="process-tags"><b>OneLake</b><b>Lakehouse</b><b>Stages</b></div></li>
+        <li class="reveal delay-2"><span>02</span><p class="process-phase">PROFILE</p><h3>Validate the source</h3><p>Profile schemas, nulls, duplicates, data types and row counts before transformation begins.</p><div class="process-tags"><b>Data quality</b><b>Reconciliation</b><b>Audit</b></div></li>
+        <li class="reveal delay-3"><span>03</span><p class="process-phase">TRANSFORM</p><h3>Standardise &amp; enrich</h3><p>Build modular transformations that clean, type, join and enrich data without hiding business rules.</p><div class="process-tags"><b>SQL</b><b>dbt Core</b><b>Basic PySpark</b></div></li>
+        <li class="reveal delay-4"><span>04</span><p class="process-phase">MODEL</p><h3>Design facts &amp; dimensions</h3><p>Define business grain, descriptive dimensions and narrow facts for maintainable analytical queries.</p><div class="process-tags"><b>Star schema</b><b>Dimensions</b><b>Facts</b></div></li>
+        <li class="reveal delay-1"><span>05</span><p class="process-phase">TEST</p><h3>Reconcile &amp; document</h3><p>Verify totals, keys and relationships, then document assumptions, lineage and reusable logic.</p><div class="process-tags"><b>dbt tests</b><b>GitHub</b><b>Lineage</b></div></li>
+        <li class="reveal delay-2"><span>06</span><p class="process-phase">SERVE</p><h3>Analyse &amp; communicate</h3><p>Deliver semantic models, KPIs and dashboards that answer clear stakeholder questions.</p><div class="process-tags"><b>Power BI</b><b>DAX</b><b>Decision support</b></div></li>
       </ol>
     </section>
 
     <section class="section-shell skills-section" id="skills" aria-labelledby="skills-title">
       <div class="section-heading reveal">
-        <div>
-          <p class="eyebrow">TOOLKIT</p>
-          <h2 id="skills-title">Practical tools for end-to-end analytics.</h2>
-        </div>
-        <p>A balanced stack for cleaning data, querying databases, modelling metrics and communicating results.</p>
+        <div><p class="eyebrow">TOOLKIT</p><h2 id="skills-title">A balanced analytics engineering stack.</h2></div>
+        <p>Platform, modelling and BI capabilities—presented honestly at current working level.</p>
       </div>
       <div class="skills-grid">
-        <article class="skill-card reveal delay-1"><p class="skill-index">01</p><h3>Data analysis</h3><p>Python, Pandas, NumPy, Excel and data quality workflows.</p><ul><li>Data cleaning</li><li>Exploratory analysis</li><li>Statistical summaries</li></ul></article>
-        <article class="skill-card reveal delay-2"><p class="skill-index">02</p><h3>Business intelligence</h3><p>Power BI, DAX, data modelling and interactive dashboard development.</p><ul><li>KPI design</li><li>Star schemas</li><li>Decision-ready reporting</li></ul></article>
-        <article class="skill-card reveal delay-3"><p class="skill-index">03</p><h3>Data querying</h3><p>SQL and MySQL for joins, aggregations, analysis and structured reporting.</p><ul><li>Joins and CTEs</li><li>Window functions</li><li>Business queries</li></ul></article>
-        <article class="skill-card reveal delay-4"><p class="skill-index">04</p><h3>Communication</h3><p>Clear visual storytelling for technical and non-technical audiences.</p><ul><li>Dashboard design</li><li>Insight narratives</li><li>Recommendations</li></ul></article>
+        <article class="skill-card reveal delay-1"><p class="skill-index">01 · PLATFORMS</p><h3>Data platforms</h3><p>Cloud analytical environments for governed storage, compute and warehouse workloads.</p><ul><li>Microsoft Fabric · OneLake</li><li>Lakehouse &amp; Warehouse</li><li>Snowflake fundamentals</li></ul></article>
+        <article class="skill-card reveal delay-2"><p class="skill-index">02 · MODELLING</p><h3>Transformation &amp; modelling</h3><p>Reusable SQL transformations and dimensional structures designed for analytics.</p><ul><li>SQL · T-SQL · Spark SQL</li><li>Star schema · facts · dimensions</li><li>dbt Core — currently learning</li></ul></article>
+        <article class="skill-card reveal delay-3"><p class="skill-index">03 · QUALITY</p><h3>Data quality &amp; engineering</h3><p>Checks and practices that make analytical outputs reliable and maintainable.</p><ul><li>Null, duplicate &amp; key checks</li><li>Source-to-target reconciliation</li><li>Git · GitHub · documentation</li></ul></article>
+        <article class="skill-card reveal delay-4"><p class="skill-index">04 · ANALYTICS</p><h3>BI &amp; data analysis</h3><p>Business-facing models and visual experiences that turn metrics into action.</p><ul><li>Power BI · DAX · semantic models</li><li>Python · Pandas · NumPy</li><li>Excel · EDA · KPI storytelling</li></ul></article>
+      </div>
+      <div class="learning-strip reveal" aria-label="Current learning status">
+        <span>CURRENTLY LEARNING</span><b>dbt Core</b><i>+</i><b>Databricks fundamentals</b><small>Snowflake completed · PySpark remains basic</small>
       </div>
     </section>
 
     <section class="section-shell resume-section" id="resume" aria-labelledby="resume-title">
       <div class="section-heading reveal">
-        <div>
-          <p class="eyebrow">RESUME & PROFILE</p>
-          <h2 id="resume-title">Professional background and education.</h2>
-        </div>
-        <p>A concise profile of my professional experience, academic background, technical focus and current career direction.</p>
+        <div><p class="eyebrow">RESUME &amp; CREDENTIALS</p><h2 id="resume-title">Ready for analytics engineering and BI teams.</h2></div>
+        <p>A concise, ATS-friendly profile aligned to the projects and skills shown on this site.</p>
       </div>
       <div class="resume-layout">
         <article class="resume-summary-card reveal delay-1">
           <p class="resume-label">CURRENT FOCUS</p>
-          <h3>Entry-level Data Analyst and BI Analyst opportunities.</h3>
-          <p>Previously worked 2 years as a Registered Pharmacist in a regulated hospital environment. As a fresher Data Analyst, I bring that precision, compliance mindset and attention to detail into end-to-end analytics projects across finance, retail, operations, HR and data products.</p>
+          <h3>Analytics Engineer · Data Analyst · BI Analyst</h3>
+          <p>Hands-on across Microsoft Fabric, Snowflake, SQL, basic PySpark and Power BI, with a strong focus on dimensional modelling, data quality, reconciliation and business-ready analytical outputs.</p>
           <div class="resume-actions"><a class="button button-primary" href="resume.pdf" download>Download full resume</a><a class="button button-secondary" href="#contact">Contact me</a></div>
         </article>
         <div class="education-list reveal delay-2">
-          <article class="is-experience"><p>2 YRS</p><div><h3>Registered Pharmacist — 2 Years of Experience</h3><span>Dispensing, patient counselling and pharmacy operations · before shifting into data analytics</span></div></article>
-          <article><p>MBA</p><div><h3>Operations Management (Online)</h3><span>Vivekananda Global University · Pursuing</span></div></article>
+          <article class="is-experience"><p>AE</p><div><h3>Analytics Engineering Focus</h3><span>Microsoft Fabric · Snowflake · dbt Core · Power BI</span></div></article>
+          <article><p>MBA</p><div><h3>Operations Management (Online)</h3><span>Vivekananda Global University · Jan 2026–Present</span></div></article>
           <article><p>BCA</p><div><h3>Bachelor of Computer Applications</h3><span>Sikkim Alpine University · 2022–2025</span></div></article>
           <article><p>DIP</p><div><h3>Diploma in Pharmacy</h3><span>Apeejay Stya University · 2020–2022</span></div></article>
         </div>
       </div>
-      <div class="resume-skills reveal delay-3"><span>Python</span><span>SQL / MySQL</span><span>Power BI</span><span>DAX</span><span>Excel</span><span>Pandas / NumPy</span><span>Matplotlib / Seaborn</span></div>
+      <div class="resume-skills reveal delay-3"><span>Microsoft Fabric</span><span>Snowflake</span><span>SQL / T-SQL</span><span>dbt Core</span><span>Basic PySpark</span><span>Power BI</span><span>DAX</span><span>Dimensional Modelling</span><span>Git / GitHub</span></div>
       <article class="certificate-card reveal delay-4" aria-label="Professional certificate">
-        <div class="certificate-copy">
-          <p class="certificate-label">CERTIFICATE</p>
-          <h3>Complete Data Analyst Bootcamp — From Basics to Advanced</h3>
-          <p>89 hours of hands-on data analytics training · Krish Naik, Jayant Topnani &amp; KRISHAI Technologies (Udemy) · Completed July 11, 2026.</p>
-          <a class="certificate-verify" href="https://ude.my/UC-0424329d-4d67-4fb8-b596-33cc47844312" target="_blank" rel="noopener">Verify certificate on Udemy →</a>
-        </div>
-        <div class="certificate-actions">
-          <a class="button button-secondary" href="certificate.pdf" target="_blank" rel="noopener">View certificate</a>
-          <a class="button button-primary" href="certificate.pdf" download>Download PDF</a>
-        </div>
+        <div class="certificate-copy"><p class="certificate-label">VERIFIED CERTIFICATE</p><h3>Complete Data Analyst Bootcamp — From Basics to Advanced</h3><p>89 hours of hands-on analytics training · Krish Naik, Jayant Topnani &amp; KRISHAI Technologies (Udemy) · Completed July 11, 2026.</p><a class="certificate-verify" href="https://ude.my/UC-0424329d-4d67-4fb8-b596-33cc47844312" target="_blank" rel="noopener">Verify certificate on Udemy →</a></div>
+        <div class="certificate-actions"><a class="button button-secondary" href="certificate.pdf" target="_blank" rel="noopener">View certificate</a><a class="button button-primary" href="certificate.pdf" download>Download PDF</a></div>
       </article>
     </section>
 
@@ -359,7 +327,7 @@
         <div class="contact-copy reveal">
           <p class="eyebrow">CONTACT</p>
           <h2 id="contact-title">Let’s discuss the data problem you need to solve.</h2>
-          <p>Open to entry-level Data Analyst, BI Analyst, internship and remote opportunities.</p>
+          <p>Open to Analytics Engineer, Data Analyst and BI Analyst opportunities across Delhi, Gurugram, Delhi NCR, relocation and remote.</p>
           <div class="contact-links">
             <a href="mailto:jating1416@gmail.com">jating1416@gmail.com</a>
             <button class="copy-email" type="button" data-copy-email="jating1416@gmail.com" title="Copy email address">⧉ Copy email</button>
@@ -387,7 +355,7 @@
 
   <footer class="site-footer">
     <div class="footer-shell">
-      <p>Jatin Kumar <span>Data Analyst Portfolio</span></p>
+      <p>Jatin Kumar <span>Analytics Engineer · Data Analyst</span></p>
       <div>
         <a href="https://www.linkedin.com/in/jatin-kumar-5a46a720a" target="_blank" rel="noopener">LinkedIn</a>
         <a href="https://github.com/jating1416-debug" target="_blank" rel="noopener">GitHub</a>
@@ -395,7 +363,7 @@
         <a href="#top">Back to top</a>
         <a href="resume.pdf" download>Resume</a>
       </div>
-      <p class="copyright">© <span id="current-year"></span> · <span class="build-tag" title="Site build version">v2.16 · 04.09.26</span></p>
+      <p class="copyright">© <span id="current-year"></span> · <span class="build-tag" title="Site build version">v3.0 · 19.10.26</span></p>
     </div>
   </footer>
 
