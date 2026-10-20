@@ -87,7 +87,7 @@ assets/profile-photo.jpeg
   tags: ['Power BI', 'SQL', 'Python'],
   alt: 'Short description of the dashboard preview image',
   dashboard: 'https://app.powerbi.com/view?r=YOUR_PUBLISHED_REPORT_LINK',
-  source: 'https://github.com/jating1416-debug/jatinanalytics-vercel/tree/main/projects/My-New-Project',
+  source: 'https://github.com/jatinkumar-analytics/jatinanalytics-vercel/tree/main/projects/My-New-Project',
   folder: 'My-New-Project',      // ← the exact folder name inside projects/ on GitHub
   fallbackImage: 'https://raw.githubusercontent.com/.../any-known-screenshot.png',
   info: {

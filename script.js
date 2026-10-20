@@ -4,14 +4,16 @@
    all rendered from the data blocks at the top of this file.
    ============================================================ */
 
-/* ---------- GitHub source (where live data & files are fetched) ---------- */
+/* ---------- GitHub source (change `user` here once if you rename your GitHub username) ---------- */
 const GITHUB = {
-  user: 'jating1416-debug',
+  user: 'jatinkumar-analytics',
   repo: 'jatinanalytics-vercel',
   branch: 'main'
 };
 const RAW_BASE = `https://raw.githubusercontent.com/${GITHUB.user}/${GITHUB.repo}/${GITHUB.branch}`;
 const TREE_API = `https://api.github.com/repos/${GITHUB.user}/${GITHUB.repo}/git/trees/${GITHUB.branch}?recursive=1`;
+const repoFolderUrl = folder =>
+  `https://github.com/${GITHUB.user}/${GITHUB.repo}/tree/${GITHUB.branch}/projects/${folder.split('/').map(encodeURIComponent).join('/')}`;
 
 /* ---------- PROJECTS (edit here to add/change projects) ---------- */
 const PROJECTS = [
@@ -24,7 +26,7 @@ const PROJECTS = [
     tags: ['Power BI', 'DAX', 'Data Modelling'],
     alt: 'Supply chain and logistics Power BI dashboard',
     dashboard: 'https://app.powerbi.com/view?r=eyJrIjoiMzAzMGViOTMtYjliNy00NjlhLWIxMzktMTFjYzVjZTYwOGVkIiwidCI6IjUzMTVhNjkzLTM3MjktNDY0NS1hOTIyLWMxY2EwMTVjNWY1MiJ9',
-    source: 'https://github.com/jating1416-debug/jatinanalytics-vercel/tree/main/projects/Supply%20Chain%20Analytics',
+    source: repoFolderUrl('Supply Chain Analytics'),
     folder: 'Supply Chain Analytics',
     fallbackImage: `${RAW_BASE}/projects/Supply%20Chain%20Analytics/Dashboard%20Image/Supply%20Chain%20Analytics.png`,
     info: {
@@ -56,7 +58,7 @@ const PROJECTS = [
     tags: ['Power BI', 'SQL', 'Python'],
     alt: 'Financial fraud analytics dashboard',
     dashboard: 'https://app.powerbi.com/view?r=eyJrIjoiMmMxZGU0NDgtNTA5Yy00NTM0LWEwODctYjA4MTQ0NTk3MjAyIiwidCI6IjUzMTVhNjkzLTM3MjktNDY0NS1hOTIyLWMxY2EwMTVjNWY1MiJ9',
-    source: 'https://github.com/jating1416-debug/jatinanalytics-vercel/tree/main/projects/Indian-Financial-Fraud-Detection',
+    source: repoFolderUrl('Indian-Financial-Fraud-Detection'),
     folder: 'Indian-Financial-Fraud-Detection',
     fallbackImage: `${RAW_BASE}/projects/Indian-Financial-Fraud-Detection/Dashboard%20Image/Fraud%20Analytics%20Dashboard%20Image.png`,
     info: {
@@ -87,7 +89,7 @@ const PROJECTS = [
     tags: ['Power BI', 'Python', 'SQL'],
     alt: 'E-commerce sales Power BI dashboard',
     dashboard: 'https://app.powerbi.com/view?r=eyJrIjoiNjdkNDFkMjEtN2VlYS00M2JiLTg2YjgtNTA4NWEwMmM1YzBkIiwidCI6IjUzMTVhNjkzLTM3MjktNDY0NS1hOTIyLWMxY2EwMTVjNWY1MiJ9',
-    source: 'https://github.com/jating1416-debug/jatinanalytics-vercel/tree/main/projects/Ecommerce-Sales-Analysis',
+    source: repoFolderUrl('Ecommerce-Sales-Analysis'),
     folder: 'Ecommerce-Sales-Analysis',
     fallbackImage: `${RAW_BASE}/projects/Ecommerce-Sales-Analysis/Ecommerce_dashboard%20page1.png`,
     info: {
@@ -118,7 +120,7 @@ const PROJECTS = [
     tags: ['Power BI', 'SQL', 'Python'],
     alt: 'Bank analytics dashboard',
     dashboard: 'https://app.powerbi.com/view?r=eyJrIjoiMDdjZGM2OGYtMzNjOS00OWI3LWEzOTctMzQyYmY4ZTA3Y2U2IiwidCI6IjUzMTVhNjkzLTM3MjktNDY0NS1hOTIyLWMxY2EwMTVjNWY1MiJ9',
-    source: 'https://github.com/jating1416-debug/jatinanalytics-vercel/tree/main/projects/Bank%20Analytics',
+    source: repoFolderUrl('Bank Analytics'),
     folder: 'Bank Analytics',
     fallbackImage: `${RAW_BASE}/projects/Bank%20Analytics/Dashboard%20Image/Bank_analytics_image%20page%201.png`,
     info: {
@@ -148,7 +150,7 @@ const PROJECTS = [
     tags: ['Power BI', 'SQL', 'Python'],
     alt: 'Human resources analytics dashboard',
     dashboard: 'https://app.powerbi.com/view?r=eyJrIjoiYTY1YmQxMGMtY2M5NC00YTQ5LTk4YjItY2QyOTgxZGZkZjZjIiwidCI6IjUzMTVhNjkzLTM3MjktNDY0NS1hOTIyLWMxY2EwMTVjNWY1MiJ9',
-    source: 'https://github.com/jating1416-debug/jatinanalytics-vercel/tree/main/projects/HR-Analytics',
+    source: repoFolderUrl('HR-Analytics'),
     folder: 'HR-Analytics',
     fallbackImage: `${RAW_BASE}/projects/HR-Analytics/Images/HR_analytics_Dashboard.png`,
     info: {
@@ -178,7 +180,7 @@ const PROJECTS = [
     tags: ['Power BI', 'SQL', 'Python'],
     alt: 'Zomato analytics dashboard',
     dashboard: 'https://app.powerbi.com/view?r=eyJrIjoiNmFiYjQ3MzMtMzU3Ny00OTNlLTg0ZjEtMTBjNzBkOTczNzlhIiwidCI6IjUzMTVhNjkzLTM3MjktNDY0NS1hOTIyLWMxY2EwMTVjNWY1MiJ9',
-    source: 'https://github.com/jating1416-debug/jatinanalytics-vercel/tree/main/projects/Zomato%20Analytics',
+    source: repoFolderUrl('Zomato Analytics'),
     folder: 'Zomato Analytics',
     fallbackImage: `${RAW_BASE}/projects/Zomato%20Analytics/Dashboard_Image/Zomato_analytics.png`,
     info: {
@@ -209,7 +211,7 @@ const PROJECTS = [
     tags: ['Power BI', 'DAX', 'Python'],
     alt: 'Synthetic health risk analytics dashboard',
     dashboard: 'https://app.powerbi.com/view?r=eyJrIjoiMTZjZTliZjAtNTk3ZS00YWFiLTkxM2QtYTQ2ZTg2MzNmN2JjIiwidCI6IjUzMTVhNjkzLTM3MjktNDY0NS1hOTIyLWMxY2EwMTVjNWY1MiJ9',
-    source: 'https://github.com/jating1416-debug/jatinanalytics-vercel/tree/main/projects/Smoking%20Health%20Risk%20Analytics',
+    source: repoFolderUrl('Smoking Health Risk Analytics'),
     folder: 'Smoking Health Risk Analytics',
     fallbackImage: `${RAW_BASE}/projects/Smoking%20Health%20Risk%20Analytics/Dashboard%20Image/Smoking%20%26%20Health%20Analytics%20Dashboard.png`,
     info: {
@@ -234,17 +236,16 @@ const PROJECTS = [
   },
   {
     id: 'virat Kholi',
-    title: 'VIRAT KOHLI CAREER ANALYTICS',
+    title: 'Virat Kohli Career Analytics',
     label: 'SPORTS ANALYTICS',
     summary: 'A single-page Power BI career dashboard with SOLO, PARTNERSHIP and TOUR modes across Test, ODI, T20I and IPL.',
     metric: '36,987 runs · 94 centuries · 868 innings · 88 tours',
     tags: ['Power BI', 'DAX', 'Bookmarks', 'Data Modelling'],
     alt: 'Virat Kohli Player 360 Power BI dashboard',
     dashboard:'https://app.powerbi.com/view?r=eyJrIjoiNzJjMDIzZTMtYjgwOS00MTFhLTg2NmItNTZiNDQ5MGY5YWFmIiwidCI6IjUzMTVhNjkzLTM3MjktNDY0NS1hOTIyLWMxY2EwMTVjNWY1MiJ9',
-    source: 'https://github.com/jating1416-debug/jatinanalytics-vercel/tree/main/projects/Virat%20Kholi%20Analysis',
+    source: repoFolderUrl('Virat Kholi Analysis'),
     folder: 'Virat Kholi Analysis',
-    fallbackImage: `${RAW_BASE}/projects/Virat%20Kholi%20Analysis/Images/virat-tour-test.webp`, // temporary
-    // fallbackImage: `${RAW_BASE}/projects/Virat%20Kholi%20Analysis/Dashboard%20Image/Player%20360%20Dashboard.png`, // screenshot upload ke baad ye wali use karna
+    fallbackImage: `${RAW_BASE}/projects/Virat%20Kholi%20Analysis/Images/Dashboard%201.png`,
     info: {
       tagline: 'Career KPIs, partnership chemistry and tour-by-tour breakdown of Virat Kohli across Test, ODI, T20I and IPL.',
       overview: 'Consolidated 868 batting innings (2008–2026) across Test, ODI, T20I and IPL with 20 partnership combinations, 88 international tours and 94 centuries into a single star-schema model (fact_innings + dimension tables). Built a 2250×1200 single-page Power BI dashboard with three switchable analysis modes — SOLO career, PARTNERSHIP chemistry and TOUR breakdown — driven entirely by bookmarks and selection groups, with 27 pre-baked WebP image cards for a flush, frame-less gallery design.',
@@ -276,11 +277,11 @@ const PROJECTS = [
 
     dashboard: '',
 
-    source: 'https://github.com/jating1416-debug/jatinanalytics-vercel/tree/main/projects/Fabric-Sales-Analytics-E2E',
+    source: repoFolderUrl('Fabric-Sales-Analytics-E2E'),
 
     folder: 'Fabric-Sales-Analytics-E2E',
 
-    fallbackImage: `${RAW_BASE}/projects/Fabric-Sales-Analytics-E2E/Fabric_Dashboard.webp`,
+    fallbackImage: `${RAW_BASE}/projects/Fabric-Sales-Analytics-E2E/images/Fabric_Dashboard.webp`,
 
     info: {
       tagline: 'Raw sales data transformed into trusted analytical models and an interactive Power BI dashboard.',
@@ -439,7 +440,7 @@ const CASE_STUDIES = {
       'Customers with account age under 6 months are disproportionately targeted for velocity fraud attacks.'
     ],
     kaggle: 'https://www.kaggle.com/datasets/jatinkhandelwal112/indian-financial-fraud-dataset',
-    github: 'https://github.com/jating1416-debug/jatinanalytics-vercel/tree/main/projects/Indian-Financial-Fraud-Detection'
+    github: 'https://github.com/jatinkumar-analytics/jatinanalytics-vercel/tree/main/projects/Indian-Financial-Fraud-Detection'
   },
   'ecommerce-dataset': {
     intro: 'I engineer these synthetic datasets from scratch using Python. Because real e-commerce marketplace data contains confidential customer details, pricing strategies and transaction-level business information, I built a dataset that behaves like a production ecosystem — suitable for SQL joins, Power BI dashboards, Python EDA and retail analysis.',
@@ -482,7 +483,7 @@ const CASE_STUDIES = {
       'Uttar Pradesh records the highest state-level transaction amount at approximately ₹76.84 crore.'
     ],
     kaggle: 'https://www.kaggle.com/datasets/jatinkhandelwal112/indian-e-commerce-sales-analytics-dataset',
-    github: 'https://github.com/jating1416-debug/jatinanalytics-vercel/tree/main/projects/Ecommerce-Sales-Analysis'
+    github: 'https://github.com/jatinkumar-analytics/jatinanalytics-vercel/tree/main/projects/Ecommerce-Sales-Analysis'
   }
 };
 
@@ -572,26 +573,40 @@ function projectCard(project) {
 }
 
 const IMAGE_EXTS = ['png', 'jpg', 'jpeg', 'webp', 'gif'];
-const PROJECT_TOOL_FILTERS = ['All'];
+const PROJECT_TOOL_FILTERS = ['All', 'Analytics Engineering', 'Microsoft Fabric', 'SQL', 'Python', 'Star Schema', 'Power BI'];
 
-/* Card images load automatically from the project's GitHub folder —
-   whatever image file (any name) exists in projects/<folder>/ is used.
-   fallbackImage is only a last resort if GitHub cannot be reached. */
+/* Card images try fast local WebP first (same-origin Vercel CDN), then local
+   repo path, then GitHub tree auto-discovery & raw fallback — so existing
+   projects load instantaneously AND newly added project folders show up
+   automatically with zero extra build steps. */
 const projectState = { query: '', tool: 'All' };
 const dynamicImageByProject = {};
+const slugifyProjectId = id => String(id || '').trim().toLowerCase().replace(/\s+/g, '-');
 
 function projectMatches(project) {
   const q = projectState.query.trim().toLowerCase();
-  const haystack = [project.title, project.label, project.summary, project.metric,
-    ...(project.tags || []), ...((project.info && project.info.tech) || [])].join(' ').toLowerCase();
+  const allTech = [...(project.tags || []), ...((project.info && project.info.tech) || [])];
+  const haystack = [project.title, project.label, project.summary, project.metric, ...allTech].join(' ').toLowerCase();
   const queryOk = !q || haystack.includes(q);
-  const toolOk = projectState.tool === 'All'
-    || (project.tags || []).some(tag => tag.toLowerCase() === projectState.tool.toLowerCase());
+  const selectedTool = projectState.tool.toLowerCase();
+  const toolOk = selectedTool === 'all' || allTech.some(tag => {
+    const t = tag.toLowerCase();
+    if (selectedTool === 'sql') return t === 'sql' || t.includes('sql');
+    return t === selectedTool || t.includes(selectedTool);
+  });
   return queryOk && toolOk;
 }
 
 function cardImageCandidates(project) {
-  return [dynamicImageByProject[project.id], project.fallbackImage, `images/${project.id}-dashboard.png`].filter(Boolean);
+  const localFromRaw = project.fallbackImage && project.fallbackImage.startsWith(RAW_BASE + '/')
+    ? project.fallbackImage.slice(RAW_BASE.length + 1)
+    : '';
+  return [
+    localFromRaw,
+    dynamicImageByProject[project.id],
+    project.fallbackImage,
+    `images/${project.id}-dashboard.png`
+  ].filter(Boolean);
 }
 
 function attachCardImages(scope) {
@@ -647,25 +662,41 @@ function initProjectSearch() {
   });
 }
 
+function syncDynamicPortfolioCounts() {
+  document.querySelectorAll('.panel-stat [data-count]').forEach(el => {
+    el.dataset.count = String(PROJECTS.length);
+    el.textContent = String(PROJECTS.length);
+  });
+  const profileUrl = `https://github.com/${GITHUB.user}`;
+  document.querySelectorAll('a[href^="https://github.com/jatinkumar-analytics"]').forEach(a => {
+    if (a.getAttribute('href') === 'https://github.com/jatinkumar-analytics') {
+      a.setAttribute('href', profileUrl);
+    }
+  });
+}
+
 function initProjectLibrary() {
   const projectGrid = document.getElementById('project-grid');
+  syncDynamicPortfolioCounts();
   if (!projectGrid) return;
   renderProjectGrid();
   initProjectSearch();
 
-  // Once the GitHub tree is known, use the first image actually present in
-  // each project folder (so newly added screenshots show up automatically).
+  // Once the GitHub tree is known, populate dynamicImageByProject for any newly
+  // added project folders that don't yet have a local fallback screenshot.
   getGitHubTree().then(tree => {
-    let changed = false;
+    let needsRefresh = false;
     PROJECTS.forEach(project => {
-      const images = filesForProject(tree, project.folder).filter(f => IMAGE_EXTS.includes(f.ext));
+      const images = filesForProject(tree, project.folder).filter(
+        f => IMAGE_EXTS.includes(f.ext) && !(project.folder === 'Virat Kholi Analysis' && f.ext === 'webp')
+      );
       if (images.length) {
         dynamicImageByProject[project.id] = rawUrl(images[0].fullPath);
-        changed = true;
+        if (!project.fallbackImage) needsRefresh = true;
       }
     });
-    if (changed) renderProjectGrid();
-  }).catch(() => { /* fallback images already shown */ });
+    if (needsRefresh) renderProjectGrid();
+  }).catch(() => { /* local & fallback images already shown */ });
 }
 
 /* ============================================================
@@ -1736,13 +1767,33 @@ function initReveal() {
 function initActiveNavigation() {
   const navLinks = [...document.querySelectorAll('.primary-nav a')];
   const sections = navLinks.map(link => document.querySelector(link.getAttribute('href'))).filter(Boolean);
-  if (!('IntersectionObserver' in window)) return;
-  const observer = new IntersectionObserver(entries => {
-    const visible = entries.filter(entry => entry.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-    if (!visible) return;
-    navLinks.forEach(link => link.classList.toggle('is-current', link.getAttribute('href') === `#${visible.target.id}`));
-  }, { rootMargin: '-25% 0px -65% 0px', threshold: [0.1, 0.4, 0.7] });
-  sections.forEach(section => observer.observe(section));
+  const updateCurrent = () => {
+    const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 24;
+    const marker = window.scrollY + window.innerHeight * 0.3;
+    let current = sections[0];
+    if (atBottom) {
+      current = sections[sections.length - 1];
+    } else {
+      for (const section of sections) {
+        if (section.offsetTop <= marker) current = section;
+      }
+    }
+    if (current) {
+      navLinks.forEach(link => link.classList.toggle('is-current', link.getAttribute('href') === `#${current.id}`));
+    }
+  };
+  let ticking = false;
+  const onScroll = () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => {
+      updateCurrent();
+      ticking = false;
+    });
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll, { passive: true });
+  updateCurrent();
 }
 
 /* ============================================================
@@ -1843,8 +1894,10 @@ const ASSISTANT_TOPICS = [
     answer: 'You can email jating1416@gmail.com directly or use the Contact form. Jatin is open to Analytics Engineer, Data Analyst and BI Analyst opportunities across Delhi, Gurugram, Delhi NCR, relocation and remote.'
   },
   {
-    keywords: ['project', 'projects', 'work', 'portfolio', 'built', 'supply chain', 'zomato', 'bank', 'fraud', 'hr'],
-    answer: 'There are 8 end-to-end projects: Supply Chain & Logistics, Indian Financial Fraud, E-Commerce Sales, Bank Analytics, HR Analytics, Zomato, Synthetic Health Risk and Virat Kohli Career Analytics. Use the search box above the grid (try "fraud" or "DAX"), and each card has View details, Live dashboard and Source.'
+    keywords: ['project', 'projects', 'work', 'portfolio', 'built', 'fabric', 'supply chain', 'zomato', 'bank', 'fraud', 'hr'],
+    get answer() {
+      return `There are ${PROJECTS.length} portfolio projects: ${PROJECTS.map(p => p.title).join(', ')}. Use the search box or tool filter chips above the grid (try "Fabric", "fraud" or "DAX"), and each card has View details, source files and live Power BI dashboards.`;
+    }
   },
   {
     keywords: ['about', 'who', 'background', 'self', 'introduce', 'jatin', 'experience', 'fresher'],

@@ -6,7 +6,7 @@
       "id": "hospital-analytics",
       "category": "🏥 Healthcare Analytics",
       "name": "Gurugram Hospital Analytics Dataset",
-      "cover_image": "images/hospital-dataset-cover.png",
+      "cover_image": "images/hospital-dataset-cover.webp",
       "kaggle_link": "https://www.kaggle.com/datasets/jatinkhandelwal112/gurugram-hospital-analytics-dataset",
       "tags": ["Data Engineering", "Python Faker", "SQL", "Power BI"],
 
@@ -55,9 +55,9 @@
       "id": "financial-fraud-dataset",
       "category": "💰 Financial Fraud",
       "name": "Indian Financial Fraud Dataset",
-      "cover_image": "images/fraud-dataset-cover.png",
+      "cover_image": "images/fraud-dataset-cover.webp",
       "kaggle_link": "https://www.kaggle.com/datasets/jatinkhandelwal112/indian-financial-fraud-dataset",
-      "github_link":  "https://github.com/jating1416-debug/jatinanalytics-vercel/tree/main/projects/Indian-Financial-Fraud-Detection",
+      "github_link":  "https://github.com/jatinkumar-analytics/jatinanalytics-vercel/tree/main/projects/Indian-Financial-Fraud-Detection",
       "tags": ["Anomaly Detection", "Python", "Fraud Analytics", "ML"],
 
       "problem_statement": "Banking transaction data with actual fraud labels is virtually impossible to access publicly due to RBI compliance. I engineered a 250,000-row dataset across 4 relational tables. Instead of randomizing fraud, I programmed specific behavioral 'Fraud Signatures' that mimic how real financial cybercrimes occur in the Indian banking system.",
@@ -106,9 +106,9 @@
   "id": "indian-ecommerce-sales-analytics",
   "category": "🛒 E-Commerce Analytics",
   "name": "Indian E-Commerce Sales Analytics Dataset",
-  "cover_image": "images/ecommerce-dataset-cover.png",
+  "cover_image": "images/ecommerce-dataset-cover.webp",
   "kaggle_link": "https://www.kaggle.com/datasets/jatinkhandelwal112/indian-e-commerce-sales-analytics-dataset",
-  "github_link": "https://github.com/jating1416-debug/jatinanalytics-vercel/tree/main/projects/Ecommerce-Sales-Analysis",
+  "github_link": "https://github.com/jatinkumar-analytics/jatinanalytics-vercel/tree/main/projects/Ecommerce-Sales-Analysis",
   "tags": [
     "E-Commerce Analytics",
     "Retail Analytics",

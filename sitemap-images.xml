@@ -1,56 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-
-  <!-- Bank Analytics -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://jatinanalytics.co.in/#tab-projects</loc>
+    <loc>https://jatinanalytics.co.in/</loc>
     <image:image>
-      <image:loc>https://raw.githubusercontent.com/jating1416-debug/jatinanalytics-vercel/main/projects/Bank%20Analytics/Dashboard%20Image/Bank_analytics_image%20page%201.png</image:loc>
-      <image:title>Bank Analytics Power BI Dashboard Page 1 - Jatin Kumar</image:title>
-      <image:caption>Interactive Banking Intelligence Dashboard showing customer analytics, loan portfolio and transaction data - Built by Jatin Kumar, Data Analyst</image:caption>
+      <image:loc>https://jatinanalytics.co.in/assets/profile-photo.webp</image:loc>
+      <image:title>Jatin Kumar — Analytics Engineer &amp; Data Analyst</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://raw.githubusercontent.com/jating1416-debug/jatinanalytics-vercel/main/projects/Bank%20Analytics/Dashboard%20Image/Bank_analytics_image%20page%202.png</image:loc>
-      <image:title>Bank Analytics Power BI Dashboard Page 2 - Jatin Kumar</image:title>
-      <image:caption>Banking dashboard executive overview with KPIs, transaction trends and credit score analysis - Jatin Kumar Portfolio</image:caption>
+      <image:loc>https://jatinanalytics.co.in/projects/Fabric-Sales-Analytics-E2E/images/Fabric_Dashboard.webp</image:loc>
+      <image:title>Sales Analytics — Microsoft Fabric End-to-End</image:title>
     </image:image>
-  </url>
-
-  <!-- Ecommerce Sales Analysis -->
-  <url>
-    <loc>https://jatinanalytics.co.in/#tab-projects</loc>
     <image:image>
-      <image:loc>https://raw.githubusercontent.com/jating1416-debug/jatinanalytics-vercel/main/projects/Ecommerce-Sales-Analysis/Dashboard%20Image/ecommerce_dashboard.png</image:loc>
-      <image:title>Ecommerce Sales Analysis Dashboard - Jatin Kumar</image:title>
-      <image:caption>Power BI Ecommerce sales dashboard with revenue trends and customer insights - Jatin Kumar Data Analyst Portfolio</image:caption>
+      <image:loc>https://jatinanalytics.co.in/projects/Supply%20Chain%20Analytics/Dashboard%20Image/Supply%20Chain%20Analytics.png</image:loc>
+      <image:title>Supply Chain &amp; Logistics Control Tower</image:title>
     </image:image>
-  </url>
-
-  <!-- HR Analytics -->
-  <url>
-    <loc>https://jatinanalytics.co.in/#tab-projects</loc>
     <image:image>
-      <image:loc>https://raw.githubusercontent.com/jating1416-debug/jatinanalytics-vercel/main/projects/HR-Analytics/Dashboard%20Image/hr_dashboard.png</image:loc>
-      <image:title>HR Analytics Dashboard - Jatin Kumar</image:title>
-      <image:caption>Human Resources analytics dashboard showing employee performance and attrition analysis - Jatin Kumar Portfolio</image:caption>
+      <image:loc>https://jatinanalytics.co.in/projects/Indian-Financial-Fraud-Detection/Dashboard%20Image/Fraud%20Analytics%20Dashboard%20Image.png</image:loc>
+      <image:title>Indian Financial Fraud Analytics</image:title>
     </image:image>
-  </url>
-
-  <!-- Zomato Analytics -->
-  <url>
-    <loc>https://jatinanalytics.co.in/#tab-projects</loc>
     <image:image>
-      <image:loc>https://raw.githubusercontent.com/jating1416-debug/jatinanalytics-vercel/main/projects/Zomato%20Analytics/Dashboard%20Image/zomato_dashboard.png</image:loc>
-      <image:title>Zomato Food Analytics Dashboard - Jatin Kumar</image:title>
-      <image:caption>Zomato restaurant data analysis showing food trends and city-wise performance - Jatin Kumar Data Analyst</image:caption>
+      <image:loc>https://jatinanalytics.co.in/projects/Ecommerce-Sales-Analysis/Ecommerce_dashboard%20page1.png</image:loc>
+      <image:title>E-Commerce Sales Analytics</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://jatinanalytics.co.in/projects/Bank%20Analytics/Dashboard%20Image/Bank_analytics_image%20page%201.png</image:loc>
+      <image:title>Bank Analytics Dashboard</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://jatinanalytics.co.in/projects/HR-Analytics/Images/HR_analytics_Dashboard.png</image:loc>
+      <image:title>HR Analytics Dashboard</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://jatinanalytics.co.in/projects/Zomato%20Analytics/Dashboard_Image/Zomato_analytics.png</image:loc>
+      <image:title>Zomato Analytics Dashboard</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://jatinanalytics.co.in/projects/Virat%20Kholi%20Analysis/Images/Dashboard%201.png</image:loc>
+      <image:title>Virat Kohli Career Analytics</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://jatinanalytics.co.in/projects/Smoking%20Health%20Risk%20Analytics/Dashboard%20Image/Smoking%20%26%20Health%20Analytics%20Dashboard.png</image:loc>
+      <image:title>Synthetic Health Risk Analytics</image:title>
     </image:image>
   </url>
-
-  <!-- Gallery Page -->
-  <url>
-    <loc>https://jatinanalytics.co.in/#tab-gallery</loc>
-  </url>
-
 </urlset>
