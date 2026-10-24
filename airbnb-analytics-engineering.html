@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#09090b">
+  <title>Airbnb Analytics Engineering Pipeline | Jatin Kumar</title>
+  <meta name="description" content="An end-to-end analytics engineering project using AWS S3, Snowflake and dbt to create tested Fact and Dimension models from Airbnb booking data.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="v3.css">
+  <style>
+    .case-page { width: min(calc(100% - 40px), 980px); margin: 0 auto; padding: 72px 0 100px; }
+    .case-back { display: inline-flex; margin-bottom: 42px; color: var(--blue); font-size: 12px; font-weight: 800; }
+    .case-hero { padding-bottom: 42px; border-bottom: 1px solid var(--line); }
+    .case-hero h1 { max-width: 900px; margin: 14px 0 20px; font-size: clamp(42px, 7vw, 76px); }
+    .case-lead { max-width: 780px; color: var(--ink-soft); font-size: 18px; line-height: 1.75; }
+    .case-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; }
+    .case-meta span { padding: 7px 10px; color: var(--ink-soft); border: 1px solid var(--line); border-radius: 999px; background: var(--surface); font: 500 9px/1 "DM Mono", monospace; text-transform: uppercase; }
+    .case-section { padding: 48px 0; border-bottom: 1px solid var(--line); }
+    .case-section h2 { margin-bottom: 22px; font-size: clamp(28px, 4vw, 42px); }
+    .case-section h3 { margin: 30px 0 10px; }
+    .case-section p, .case-section li { color: var(--ink-soft); font-size: 14px; line-height: 1.8; }
+    .case-section ul { margin: 0; padding-left: 20px; }
+    .case-section li + li { margin-top: 8px; }
+    .case-flow { padding: 20px 22px; color: var(--ink); border: 1px solid var(--line); border-radius: 14px; background: var(--surface); font: 500 12px/1.8 "DM Mono", monospace; text-align: center; }
+    .case-model { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 14px; margin-top: 20px; }
+    .case-model article { padding: 20px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
+    .case-model h3 { margin: 0 0 7px; font-size: 15px; }
+    .case-model p { margin: 0; font-size: 12px; }
+    .case-figure { margin: 28px 0 0; overflow: hidden; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); }
+    .case-figure img { display: block; width: 100%; height: auto; }
+    .case-placeholder { display: grid; min-height: 260px; place-items: center; padding: 32px; color: var(--muted); background: var(--surface-soft); font: 500 11px/1.6 "DM Mono", monospace; text-align: center; }
+    .case-figure figcaption { padding: 12px 16px; color: var(--muted); border-top: 1px solid var(--line); font-size: 11px; }
+    .case-footer-actions { display: flex; flex-wrap: wrap; gap: 10px; padding-top: 38px; }
+    @media (max-width: 650px) { .case-page { width: min(calc(100% - 28px), 980px); padding-top: 36px; } .case-model { grid-template-columns: 1fr; } .case-lead { font-size: 16px; } }
+  </style>
+  <script>
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem('jatin-theme'); } catch (e) {}
+      document.documentElement.setAttribute('data-theme', t === 'light' ? 'light' : 'dark');
+    })();
+  </script>
+</head>
+<body>
+  <main class="case-page">
+    <a class="case-back" href="index.html#work">← Back to projects</a>
+
+    <header class="case-hero">
+      <p class="eyebrow">ANALYTICS ENGINEERING · AWS · SNOWFLAKE · DBT</p>
+      <h1>Airbnb Analytics Engineering Pipeline</h1>
+      <p class="case-lead">An end-to-end analytics engineering project that converts raw Airbnb booking, listing and host files into tested, analytics-ready Fact and Dimension tables.</p>
+      <div class="case-meta" aria-label="Project technologies">
+        <span>AWS S3</span><span>Snowflake</span><span>dbt Core</span><span>SQL</span><span>Jinja</span><span>GitHub</span>
+      </div>
+    </header>
+
+    <figure class="case-figure">
+      <img src="images/airbnb/airbnb-architecture.webp" alt="Airbnb analytics engineering pipeline architecture" onerror="this.hidden=true;this.nextElementSibling.hidden=false">
+      <div class="case-placeholder" hidden>Add image: images/airbnb/airbnb-architecture.webp</div>
+      <figcaption>End-to-end project architecture</figcaption>
+    </figure>
+
+    <section class="case-section">
+      <p class="eyebrow">PROJECT OVERVIEW</p>
+      <h2>From cloud files to trusted analytical models.</h2>
+      <p>The source data was provided in three separate CSV files containing 5,000 bookings, 500 listings and 200 hosts. I stored the files in AWS S3, loaded them into Snowflake and used dbt to build a layered transformation pipeline.</p>
+      <p>The final Gold layer contains a booking Fact table, three business Dimensions, historical snapshot tables and an optional wide table for ad hoc analysis.</p>
+    </section>
+
+    <section class="case-section">
+      <p class="eyebrow">OBJECTIVE</p>
+      <h2>Build a model that is modular, testable and easy to understand.</h2>
+      <ul>
+        <li>Load cloud-based source files into a Snowflake warehouse.</li>
+        <li>Separate raw, cleaned and analytics-ready transformation layers.</li>
+        <li>Preserve historical changes to Listing and Host attributes.</li>
+        <li>Create a booking-grain Fact table with reusable business Dimensions.</li>
+        <li>Validate keys, relationships and calculated booking values with dbt tests.</li>
+      </ul>
+    </section>
+
+    <section class="case-section">
+      <p class="eyebrow">ARCHITECTURE</p>
+      <h2>Pipeline flow</h2>
+      <div class="case-flow">Airbnb CSV Files → AWS S3 → Snowflake Staging → dbt Bronze → dbt Silver → dbt Snapshots and Gold Models</div>
+      <figure class="case-figure">
+        <img src="images/airbnb/airbnb-aws-s3-source-files.webp" alt="Airbnb CSV source files stored in AWS S3" onerror="this.hidden=true;this.nextElementSibling.hidden=false">
+        <div class="case-placeholder" hidden>Add image: images/airbnb/airbnb-aws-s3-source-files.webp</div>
+        <figcaption>AWS S3 source files</figcaption>
+      </figure>
+      <figure class="case-figure">
+        <img src="images/airbnb/airbnb-snowflake-schemas.webp" alt="Airbnb schemas and tables in Snowflake" onerror="this.hidden=true;this.nextElementSibling.hidden=false">
+        <div class="case-placeholder" hidden>Add image: images/airbnb/airbnb-snowflake-schemas.webp</div>
+        <figcaption>Snowflake warehouse schemas and tables</figcaption>
+      </figure>
+    </section>
+
+    <section class="case-section">
+      <p class="eyebrow">TRANSFORMATION LAYERS</p>
+      <h2>Bronze, Silver, Snapshots and Gold</h2>
+      <h3>Bronze</h3>
+      <p>The Bronze layer contains source-aligned models for Bookings, Listings and Hosts.</p>
+      <h3>Silver</h3>
+      <p>The Silver layer cleans the source data and adds reusable business fields, including booking totals, additional fees, listing categories and host segments.</p>
+      <h3>Snapshots</h3>
+      <p>I implemented SCD Type 2 snapshots for Listings and Hosts so changes to their attributes can be preserved over time.</p>
+      <h3>Gold</h3>
+      <p>The Gold layer contains FACT_BOOKINGS, DIM_LISTINGS, DIM_HOSTS, DIM_DATE and an optional OBT for ad hoc analysis.</p>
+      <figure class="case-figure">
+        <img src="images/airbnb/airbnb-dbt-vscode-project.webp" alt="Airbnb dbt project structure in Visual Studio Code" onerror="this.hidden=true;this.nextElementSibling.hidden=false">
+        <div class="case-placeholder" hidden>Add image: images/airbnb/airbnb-dbt-vscode-project.webp</div>
+        <figcaption>dbt project structure in Visual Studio Code</figcaption>
+      </figure>
+      <figure class="case-figure">
+        <img src="images/airbnb/airbnb-dbt-lineage.webp" alt="Airbnb dbt model lineage graph" onerror="this.hidden=true;this.nextElementSibling.hidden=false">
+        <div class="case-placeholder" hidden>Add image: images/airbnb/airbnb-dbt-lineage.webp</div>
+        <figcaption>dbt model lineage</figcaption>
+      </figure>
+    </section>
+
+    <section class="case-section">
+      <p class="eyebrow">DATA MODEL</p>
+      <h2>A booking-grain Fact connected to three Dimensions.</h2>
+      <p>FACT_BOOKINGS contains one row per booking and connects to Listing, Host and Date Dimensions. The Dimensions contain selected business attributes for filtering and grouping, while historical versions remain available in the snapshot tables.</p>
+      <div class="case-model">
+        <article><h3>FACT_BOOKINGS</h3><p>Booking measures with Listing, Host and Date foreign keys.</p></article>
+        <article><h3>DIM_LISTINGS</h3><p>Current property, room, location, capacity and price segments.</p></article>
+        <article><h3>DIM_HOSTS</h3><p>Current host, superhost, response quality and host segment attributes.</p></article>
+        <article><h3>DIM_DATE</h3><p>Calendar attributes for date-based analysis.</p></article>
+      </div>
+      <figure class="case-figure">
+        <img src="images/airbnb/airbnb-star-schema.webp" alt="Airbnb Fact and Dimension star schema" onerror="this.hidden=true;this.nextElementSibling.hidden=false">
+        <div class="case-placeholder" hidden>Add image: images/airbnb/airbnb-star-schema.webp</div>
+        <figcaption>Final Fact and Dimension model</figcaption>
+      </figure>
+    </section>
+
+    <section class="case-section">
+      <p class="eyebrow">DATA QUALITY</p>
+      <h2>32 dbt tests across the project.</h2>
+      <ul>
+        <li>Unique tests for business and primary keys.</li>
+        <li>Not-null tests for required identifiers and measures.</li>
+        <li>Relationship tests between FACT_BOOKINGS and all three Dimensions.</li>
+        <li>A custom test for positive calculated booking amounts.</li>
+      </ul>
+      <figure class="case-figure">
+        <img src="images/airbnb/airbnb-dbt-build-success.webp" alt="Successful dbt build for the Airbnb analytics project" onerror="this.hidden=true;this.nextElementSibling.hidden=false">
+        <div class="case-placeholder" hidden>Add image: images/airbnb/airbnb-dbt-build-success.webp</div>
+        <figcaption>Successful dbt build and test execution</figcaption>
+      </figure>
+    </section>
+
+    <section class="case-section">
+      <p class="eyebrow">CHALLENGES RESOLVED</p>
+      <h2>Problems fixed during implementation</h2>
+      <ul>
+        <li>Fixed a project-wide parsing issue that was preventing snapshots from running.</li>
+        <li>Corrected the Host relationship while building the booking Fact table.</li>
+        <li>Exposed calculated booking fields required by the custom data test.</li>
+        <li>Corrected YAML structure for Fact-to-Dimension relationship tests.</li>
+        <li>Reduced the Gold Dimensions to business-relevant attributes.</li>
+      </ul>
+    </section>
+
+    <section class="case-section">
+      <p class="eyebrow">DATASET LIMITATION</p>
+      <h2>Reporting the source data responsibly.</h2>
+      <p>Approximately 49% of the supplied booking records are cancelled. Because this is a learning dataset, I do not treat this rate as representative of real Airbnb operations.</p>
+      <p>For production reporting, completed bookings, cancellations, refunds and cancellation reasons should be modelled separately before calculating executive revenue KPIs.</p>
+    </section>
+
+    <section class="case-section">
+      <p class="eyebrow">FINAL OUTCOME</p>
+      <h2>Practical analytics engineering experience across the full pipeline.</h2>
+      <ul>
+        <li>AWS S3 data ingestion</li>
+        <li>Snowflake warehouse modelling</li>
+        <li>dbt transformations and lineage</li>
+        <li>Reusable SQL and Jinja logic</li>
+        <li>SCD Type 2 snapshots</li>
+        <li>Fact and Dimension modelling</li>
+        <li>Data-quality testing</li>
+        <li>GitHub version control</li>
+      </ul>
+      <div class="case-footer-actions">
+        <a class="button button-primary" href="https://github.com/jatinkumar-analytics/airbnb-dbt-snowflake" target="_blank" rel="noopener">Open GitHub repository</a>
+        <a class="button button-secondary" href="index.html#work">Back to projects</a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
