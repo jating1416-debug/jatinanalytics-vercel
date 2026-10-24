@@ -19,21 +19,20 @@
     .case-lead { max-width: 780px; color: var(--ink-soft); font-size: 18px; line-height: 1.75; }
     .case-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; }
     .case-meta span { padding: 7px 10px; color: var(--ink-soft); border: 1px solid var(--line); border-radius: 999px; background: var(--surface); font: 500 9px/1 "DM Mono", monospace; text-transform: uppercase; }
-    .case-section { padding: 48px 0; border-bottom: 1px solid var(--line); }
+    .case-section { padding: 38px 0; border-bottom: 1px solid var(--line); }
     .case-section h2 { margin-bottom: 22px; font-size: clamp(28px, 4vw, 42px); }
     .case-section h3 { margin: 30px 0 10px; }
     .case-section p, .case-section li { color: var(--ink-soft); font-size: 14px; line-height: 1.8; }
     .case-section ul { margin: 0; padding-left: 20px; }
     .case-section li + li { margin-top: 8px; }
-    .case-flow { padding: 20px 22px; color: var(--ink); border: 1px solid var(--line); border-radius: 14px; background: var(--surface); font: 500 12px/1.8 "DM Mono", monospace; text-align: center; }
     .case-model { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 14px; margin-top: 20px; }
     .case-model article { padding: 20px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
     .case-model h3 { margin: 0 0 7px; font-size: 15px; }
     .case-model p { margin: 0; font-size: 12px; }
-    .case-figure { margin: 28px 0 0; overflow: hidden; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); }
+    .case-figure { margin: 20px 0 0; overflow: hidden; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); }
     .case-figure img { display: block; width: 100%; height: auto; }
     .case-placeholder { display: grid; min-height: 260px; place-items: center; padding: 32px; color: var(--muted); background: var(--surface-soft); font: 500 11px/1.6 "DM Mono", monospace; text-align: center; }
-    .case-figure figcaption { padding: 12px 16px; color: var(--muted); border-top: 1px solid var(--line); font-size: 11px; }
+    .case-figure figcaption { padding: 9px 14px; color: var(--muted); border-top: 1px solid var(--line); font-size: 11px; }
     .case-footer-actions { display: flex; flex-wrap: wrap; gap: 10px; padding-top: 38px; }
     @media (max-width: 650px) { .case-page { width: min(calc(100% - 28px), 980px); padding-top: 36px; } .case-model { grid-template-columns: 1fr; } .case-lead { font-size: 16px; } }
   </style>
@@ -84,9 +83,8 @@
     </section>
 
     <section class="case-section">
-      <p class="eyebrow">ARCHITECTURE</p>
-      <h2>Pipeline flow</h2>
-      <div class="case-flow">Airbnb CSV Files → AWS S3 → Snowflake Staging → dbt Bronze → dbt Silver → dbt Snapshots and Gold Models</div>
+      <p class="eyebrow">DATA INGESTION</p>
+      <h2>Cloud source and warehouse setup.</h2>
       <figure class="case-figure">
         <img src="images/airbnb/airbnb-aws-s3-source-files.webp" alt="Airbnb CSV source files stored in AWS S3" onerror="this.hidden=true;this.nextElementSibling.hidden=false">
         <div class="case-placeholder" hidden>Add image: images/airbnb/airbnb-aws-s3-source-files.webp</div>
